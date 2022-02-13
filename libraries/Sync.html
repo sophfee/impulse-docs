@@ -1,0 +1,871 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Sync - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Sync - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="A fast entity based synchronous networking system" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Chat.html">Chat</a></li>
+								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/Skills.html">Skills</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+						</ul>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Sync</h1>
+					<h2>A fast entity based synchronous networking system</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm shared"></span><a href="#entMeta:GetSyncVar">entMeta:GetSyncVar(varID, fallback)</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SetSyncVar">entMeta:SetSyncVar(varID, value[, instantSync=false])</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SyncRemove">entMeta:SyncRemove()</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SyncRemoveVar">entMeta:SyncRemoveVar(varID)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Sync.DoType">impulse.Sync.DoType(type, value)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Sync.RegisterVar">impulse.Sync.RegisterVar(type[, conditional=false])</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetLocalSyncVar">meta:SetLocalSyncVar(varID, value)</a></li>
+							</ul>
+							<h2>Tables</h2>
+							<ul>
+									<li><span class="realm shared"></span><a href="#SyncDefaults">SyncDefaults</a></li>
+									<li><span class="realm shared"></span><a href="#SyncTypes">SyncTypes</a></li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+								<aside>
+										<pre><code>local xp = ply:GetSyncVar(SYNC_XP, 0)
+</code></pre>
+								</aside>
+							<header>
+								<a class="anchor" id="entMeta:GetSyncVar">
+									<h1><span class="realm shared"></span>entMeta:GetSyncVar(varID, fallback)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L88">View source &raquo;</a>
+
+								<p>Gets the Sync variable on an entity</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">varID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Sync variable (EG: SYNC_MONEY)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">fallback</span>
+
+
+
+												<p> If we don't know the value we will fallback to this value</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="tag type">any</span>
+
+												<p>value</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+								<aside>
+										<pre><code>ply:SetSyncVar(SYNC_XP, 60, true) -- sets money to 60 and networks the new value to all players
+</code></pre>
+								</aside>
+							<header>
+								<a class="anchor" id="entMeta:SetSyncVar">
+									<h1><span class="realm server"></span>entMeta:SetSyncVar(varID, value[, instantSync=false])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L188">View source &raquo;</a>
+
+								<p>Sets the Sync var on an entity</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">varID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Sync variable (EG: SYNC_MONEY)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">value</span>
+
+
+
+												<p> Value to set</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">instantSync</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> If we should network this to all players</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="entMeta:SyncRemove">
+									<h1><span class="realm server"></span>entMeta:SyncRemove()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L155">View source &raquo;</a>
+
+								<p>Removes all SyncVar's from an entity and update all players</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="entMeta:SyncRemoveVar">
+									<h1><span class="realm server"></span>entMeta:SyncRemoveVar(varID)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L169">View source &raquo;</a>
+
+								<p>Removes a specific SyncVar from an entity and update all players</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">varID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Sync variable</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Sync.DoType">
+									<h1><span class="realm shared"></span>impulse.Sync.DoType(type, value)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L77">View source &raquo;</a>
+
+								<p>Reads or writes a value based on the SyncType provided</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">type</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> SyncType</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">value</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+								<aside>
+										<pre><code>SYNC_XP = impulse.Sync.RegisterVar(SYNC_INT)
+</code></pre>
+								</aside>
+							<header>
+								<a class="anchor" id="impulse.Sync.RegisterVar">
+									<h1><span class="realm shared"></span>impulse.Sync.RegisterVar(type[, conditional=false])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L52">View source &raquo;</a>
+
+								<p>Registers a new Sync variable for usage.  <strong>Must be called in the shared realm</strong></p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">type</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> SyncType</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">conditional</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> Is conditional</p>
+											</li>
+									</ul>
+
+
+								<h3>See Also</h3>
+								<ul>
+										<li><a href="../libraries/Sync.html#SyncTypes">SyncTypes</a></li>
+								</ul>
+						</section>
+						<section class="method">
+								<aside>
+										<pre><code>ply:SetLocalSyncVar(SYNC_BANKMONEY, 600)
+</code></pre>
+								</aside>
+							<header>
+								<a class="anchor" id="meta:SetLocalSyncVar">
+									<h1><span class="realm server"></span>meta:SetLocalSyncVar(varID, value)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L213">View source &raquo;</a>
+
+								<p>Sets the Sync var on an entity but only updates the player who it is being set on</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">varID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Sync variable (EG: SYNC_MONEY)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">value</span>
+
+
+
+												<p> Value to set</p>
+											</li>
+									</ul>
+
+
+						</section>
+					<h1 class="title">Tables</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="SyncDefaults">
+									<h1><span class="realm shared"></span>SyncDefaults</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L215">View source &raquo;</a>
+
+								<p>Default Sync variables</p>
+							</header>
+
+
+									<h3>Fields</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_RPNAME</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_XP</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNX_MONEY</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_BANKMONEY</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_WEPRAISED</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_CLASS</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_RANK</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_ARRESTED</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_HUNGER</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_TYPING</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_BROKENLEGS</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_PROPCOUNT</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_CRAFTLEVEL</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_THROPHYPOINTS</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_INCOGNITO</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_GROUP_NAME</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_GROUP_RANK</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_COS_FACE</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_COS_HEAD</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_COS_CHEST</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_DOOR_NAME</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_DOOR_GROUP</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_DOOR_BUYABLE</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_DOOR_OWNERS</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="SyncTypes">
+									<h1><span class="realm shared"></span>SyncTypes</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L33">View source &raquo;</a>
+
+								<p>Types of Sync variable</p>
+							</header>
+
+
+									<h3>Fields</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_BOOL</span>
+
+
+
+												<p> A boolean</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_STRING</span>
+
+
+
+												<p> An ASCII string of any length</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_INT</span>
+
+
+
+												<p> An unsigned 8 bit integer</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_BIGINT</span>
+
+
+
+												<p> An unsigned 16 bit integer</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_HUGEINT</span>
+
+
+
+												<p> An unsigned 32 bit integer</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_MINITABLE</span>
+
+
+
+												<p> (Avoid using) A 32 bit compressed table</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">SYNC_INTSTACK</span>
+
+
+
+												<p> A collection of up to 255 8 bit unsigned integers</p>
+											</li>
+									</ul>
+
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>

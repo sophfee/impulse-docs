@@ -1,0 +1,188 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Hunger - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Hunger - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="Helper functions for the players hunger" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Chat.html">Chat</a></li>
+								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/Skills.html">Skills</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+						</ul>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Hunger</h1>
+					<h2>Helper functions for the players hunger</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm server"></span><a href="#meta:FeedHunger">meta:FeedHunger(amount)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetHunger">meta:SetHunger(amount)</a></li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:FeedHunger">
+									<h1><span class="realm server"></span>meta:FeedHunger(amount)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_hunger.lua#L15">View source &raquo;</a>
+
+								<p>Gives the player the amount of hunger</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount of hunger (0-100)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetHunger">
+									<h1><span class="realm server"></span>meta:SetHunger(amount)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_hunger.lua#L8">View source &raquo;</a>
+
+								<p>Set the hunger amount of a player</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount of hunger (0-100)</p>
+											</li>
+									</ul>
+
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>

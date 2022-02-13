@@ -1,0 +1,600 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Player - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Player - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="A physical player in the server" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Chat.html">Chat</a></li>
+								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/Skills.html">Skills</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
+						</ul>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Player</h1>
+					<h2>A physical player in the server</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:CanArrest">Player:CanArrest(target)</a></li>
+									<li><span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:InSpawn">Player:InSpawn()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsCharacterFemale">Player:IsCharacterFemale()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsDeveloper">Player:IsDeveloper()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsDonator">Player:IsDonator()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsLeadAdmin">Player:IsLeadAdmin()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:KnownName">Player:KnownName()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:Name">Player:Name()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message, class)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:SteamName">Player:SteamName()</a></li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:AddChatText">
+									<h1><span class="realm server"></span>Player:AddChatText(...)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L12">View source &raquo;</a>
+
+								<p>Acts as a chat.AddText(...) but sent from the server.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">...</span>
+
+
+
+												<p> Message to send to the player's chatbox</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanArrest">
+									<h1><span class="realm shared"></span>Player:CanArrest(target)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_arrest.lua#L47">View source &raquo;</a>
+
+								<p>Returns if a player can arrest the target</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">target</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The target who would be arrested</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can arrest</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetSavedRPName">
+									<h1><span class="realm server"></span>Player:GetSavedRPName()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L27">View source &raquo;</a>
+
+								<p>Gets the player's database RP name.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>Player's RP name.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:InSpawn">
+									<h1><span class="realm shared"></span>Player:InSpawn()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L126">View source &raquo;</a>
+
+								<p>Returns if a player is in the spawn zone</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is in spawn</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsArrested">
+									<h1><span class="realm shared"></span>Player:IsArrested()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_arrest.lua#L62">View source &raquo;</a>
+
+								<p>Returns if a player is arrested</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is arrested</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsCharacterFemale">
+									<h1><span class="realm shared"></span>Player:IsCharacterFemale()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L217">View source &raquo;</a>
+
+								<p>Returns if the player has a female character</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is female</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsDeveloper">
+									<h1><span class="realm shared"></span>Player:IsDeveloper()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L58">View source &raquo;</a>
+
+								<p>Returns if a player is an impulse framework developer</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is developer</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsDonator">
+									<h1><span class="realm shared"></span>Player:IsDonator()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L65">View source &raquo;</a>
+
+								<p>Returns if a player has donator status</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is donator</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsLeadAdmin">
+									<h1><span class="realm shared"></span>Player:IsLeadAdmin()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L95">View source &raquo;</a>
+
+								<p>Returns if the player is a lead moderator or higher</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is Lead Admin</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:KnownName">
+									<h1><span class="realm shared"></span>Player:KnownName()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L277">View source &raquo;</a>
+
+								<p>Returns the player's name that appears above their head, runs the "PlayerGetKnownName" hook to override the RP name.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>Player's visible name.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:Name">
+									<h1><span class="realm shared"></span>Player:Name()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L270">View source &raquo;</a>
+
+								<p>Returns the player's RP name.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>The player's RP name if they have one, otherwise returns their Steam Name.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:Notify">
+									<h1><span class="realm shared"></span>Player:Notify(message, class)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L156">View source &raquo;</a>
+
+								<p>Sends a notification to a player.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">message</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> The notification message</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Notification class ID.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetHandsBehindBack">
+									<h1><span class="realm shared"></span>Player:SetHandsBehindBack(state)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_arrest.lua#L7">View source &raquo;</a>
+
+								<p>Sets if players hands are behind their back, this can be called on the server but always be called on the client to avoid lag</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">state</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetRPName">
+									<h1><span class="realm server"></span>Player:SetRPName(name, save)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L9">View source &raquo;</a>
+
+								<p>Changes the player's RP name.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Name to change to.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">save</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Should this save to your database.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SteamName">
+									<h1><span class="realm shared"></span>Player:SteamName()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L263">View source &raquo;</a>
+
+								<p>Gets the player's steam name, replaces meta:Name().</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>Player's steam name.</p>
+											</li>
+
+								</ul>
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>

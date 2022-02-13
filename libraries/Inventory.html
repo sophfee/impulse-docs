@@ -1,0 +1,2092 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Inventory - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Inventory - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="Allows interactions with the players inventory" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Chat.html">Chat</a></li>
+								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/Skills.html">Skills</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+						</ul>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Inventory</h1>
+					<h2>Allows interactions with the players inventory</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm shared"></span><a href="#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID(class)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Inventory.DBAddItem">impulse.Inventory.DBAddItem(ownerid, class[, storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Inventory.DBClearInventory">impulse.Inventory.DBClearInventory(ownerid[, storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Inventory.DBRemoveItem">impulse.Inventory.DBRemoveItem(ownerid, class[, storageType=1[, limit=1]])</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Inventory.DBUpdateStoreType">impulse.Inventory.DBUpdateStoreType(ownerid, classname[, limit=1], oldStorageType, newStorageType)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Inventory.GetCraftingTime">impulse.Inventory.GetCraftingTime(class)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Inventory.PickRandomCraftSound">impulse.Inventory.PickRandomCraftSound([craftType=generic])</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Inventory.SpawnBench">impulse.Inventory.SpawnBench(class, pos, ang)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Inventory.SpawnItem">impulse.Inventory.SpawnItem(class, pos[, bannedPlayer[, killTime]])</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.RegisterBench">impulse.RegisterBench(benchData)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.RegisterItem">impulse.RegisterItem(itemData)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.RegisterMixture">impulse.RegisterMixture(mixData)</a></li>
+									<li><span class="realm server"></span><a href="#meta:CanHoldItem">meta:CanHoldItem(class[, amount=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:CanHoldItemStorage">meta:CanHoldItemStorage(class[, amount=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:CanMakeMix">meta:CanMakeMix(class)</a></li>
+									<li><span class="realm server"></span><a href="#meta:ClearIllegalInventory">meta:ClearIllegalInventory([storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:ClearInventory">meta:ClearInventory([storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:ClearRestrictedInventory">meta:ClearRestrictedInventory([storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:DropInventoryItem">meta:DropInventoryItem(itemid)</a></li>
+									<li><span class="realm server"></span><a href="#meta:GetInventory">meta:GetInventory([storageType=1])</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetMaxInventoryStorage">meta:GetMaxInventoryStorage()</a></li>
+									<li><span class="realm server"></span><a href="#meta:GiveInventoryItem">meta:GiveInventoryItem(itemclass[, storageType=1[, restricted=false[, isLoaded=false[, moving=false[, clip]]]]])</a></li>
+									<li><span class="realm server"></span><a href="#meta:HasIllegalInventoryItem">meta:HasIllegalInventoryItem([storageType=1])</a></li>
+									<li><span class="realm client"></span><a href="#meta:HasInventoryItem">meta:HasInventoryItem(itemId)</a></li>
+									<li><span class="realm server"></span><a href="#meta:HasInventoryItem">meta:HasInventoryItem(class[, amount=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:HasInventoryItemSpecific">meta:HasInventoryItemSpecific(itemID[, storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:HasInventoryItemStorage">meta:HasInventoryItemStorage(class[, amount=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:IsInventoryItemRestricted">meta:IsInventoryItemRestricted(itemID[, storageType=1])</a></li>
+									<li><span class="realm server"></span><a href="#meta:MoveInventoryItem">meta:MoveInventoryItem(itemid, from, to)</a></li>
+									<li><span class="realm server"></span><a href="#meta:MoveInventoryItemMass">meta:MoveInventoryItemMass(class, from, to, amount)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetInventoryItemEquipped">meta:SetInventoryItemEquipped(itemID, state)</a></li>
+									<li><span class="realm server"></span><a href="#meta:TakeInventoryItem">meta:TakeInventoryItem(itemID[, storageType=1[, moving=false]])</a></li>
+									<li><span class="realm server"></span><a href="#meta:TakeInventoryItemClass">meta:TakeInventoryItemClass(class[, storageType=1[, amount=1]])</a></li>
+									<li><span class="realm server"></span><a href="#meta:UnEquipInventory">meta:UnEquipInventory()</a></li>
+									<li><span class="realm server"></span><a href="#meta:UseInventoryItem">meta:UseInventoryItem(itemid)</a></li>
+							</ul>
+							<h2>Tables</h2>
+							<ul>
+									<li><span class="realm client"></span><a href="#CraftingTypes">CraftingTypes</a></li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.ClassToNetID">
+									<h1><span class="realm shared"></span>impulse.Inventory.ClassToNetID(class)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L159">View source &raquo;</a>
+
+								<p>Used to convert the class to the item's NetID (or table ref)</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Item net ID</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.DBAddItem">
+									<h1><span class="realm server"></span>impulse.Inventory.DBAddItem(ownerid, class[, storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L16">View source &raquo;</a>
+
+								<p>Inserts an inventory item into the database.  This can be used to control the inventory of offline users</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ownerid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> OwnerID number</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Class name of the item to add</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.DBClearInventory">
+									<h1><span class="realm server"></span>impulse.Inventory.DBClearInventory(ownerid[, storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L44">View source &raquo;</a>
+
+								<p>Clears a players inventory.  This can be used to control the inventory of offline users</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ownerid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> OwnerID number</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.DBRemoveItem">
+									<h1><span class="realm server"></span>impulse.Inventory.DBRemoveItem(ownerid, class[, storageType=1[, limit=1]])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L30">View source &raquo;</a>
+
+								<p>Deletes an inventory item from the database.  This can be used to control the inventory of offline users</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ownerid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> OwnerID number</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Class name of the item to remove</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">limit</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> The amount of items to remove</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.DBUpdateStoreType">
+									<h1><span class="realm server"></span>impulse.Inventory.DBUpdateStoreType(ownerid, classname[, limit=1], oldStorageType, newStorageType)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L58">View source &raquo;</a>
+
+								<p>Updates the storage type for an existing item.  This can be used to control the inventory of offline users</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ownerid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> OwnerID number</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">classname</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Class name of the item to update</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">limit</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> The amount of items to update</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">oldStorageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Old storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">newStorageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> New storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.GetCraftingTime">
+									<h1><span class="realm shared"></span>impulse.Inventory.GetCraftingTime(class)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L168">View source &raquo;</a>
+
+								<p>Used to get the crafting time and the sounds to play</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Time</p>
+											</li>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
+												<p>Table of sounds</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.PickRandomCraftSound">
+									<h1><span class="realm shared"></span>impulse.Inventory.PickRandomCraftSound([craftType=generic])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L214">View source &raquo;</a>
+
+								<p>Used to pick a random crafting sound for the correct crafting type</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">craftType</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+													<span class="tag default">default: generic</span>
+
+												<p> Crafting type</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>The random crafting sound based on the crafting type (eg: if type is wood then return wood2.wav)</p>
+											</li>
+
+								</ul>
+
+								<h3>See Also</h3>
+								<ul>
+										<li><a href="../libraries/Inventory.html#CraftingTypes">CraftingTypes</a></li>
+								</ul>
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.SpawnBench">
+									<h1><span class="realm server"></span>impulse.Inventory.SpawnBench(class, pos, ang)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L115">View source &raquo;</a>
+
+								<p>Spawns a workbench</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Class name of the workbench</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">pos</span>
+
+													<span class="tag"><span class="type">vector</span></span>
+
+
+												<p> limit The spawn position</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ang</span>
+
+													<span class="tag"><span class="type">angle</span></span>
+
+
+												<p> The spawn angle</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">entity</span>
+
+												<p>Spawned workbench</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Inventory.SpawnItem">
+									<h1><span class="realm server"></span>impulse.Inventory.SpawnItem(class, pos[, bannedPlayer[, killTime]])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L88">View source &raquo;</a>
+
+								<p>Spawns an inventory item as an Entity</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Class name of the item to spawn</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">pos</span>
+
+													<span class="tag"><span class="type">vector</span></span>
+
+
+												<p> limit The spawn position</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">bannedPlayer</span>
+
+													<span class="tag"><span class="type">player</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Player to ban from picking up</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">killTime</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Time until the item is removed automatically</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">entity</span>
+
+												<p>Spawned item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.RegisterBench">
+									<h1><span class="realm shared"></span>impulse.RegisterBench(benchData)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L122">View source &raquo;</a>
+
+								<p>Registers a new workbench</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">benchData</span>
+
+
+
+												<p> Bench data</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.RegisterItem">
+									<h1><span class="realm shared"></span>impulse.RegisterItem(itemData)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L27">View source &raquo;</a>
+
+								<p>Registers a new inventory item</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemData</span>
+
+
+
+												<p> Item data</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.RegisterMixture">
+									<h1><span class="realm shared"></span>impulse.RegisterMixture(mixData)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L133">View source &raquo;</a>
+
+								<p>Registers a new mixture</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">mixData</span>
+
+
+
+												<p> Mixture data</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanHoldItem">
+									<h1><span class="realm server"></span>meta:CanHoldItem(class[, amount=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L141">View source &raquo;</a>
+
+								<p>Returns if a player can hold an item in their local inventory</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Amount of the item</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can hold item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanHoldItemStorage">
+									<h1><span class="realm server"></span>meta:CanHoldItemStorage(class[, amount=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L153">View source &raquo;</a>
+
+								<p>Returns if a player can hold an item in their storage chest</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Amount of the item</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can hold item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanMakeMix">
+									<h1><span class="realm server"></span>meta:CanMakeMix(class)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L683">View source &raquo;</a>
+
+								<p>Returns if a player can make a mix</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Mixture class name</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can make mixture</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:ClearIllegalInventory">
+									<h1><span class="realm server"></span>meta:ClearIllegalInventory([storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L429">View source &raquo;</a>
+
+								<p>Clears illegal items from a players inventory</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:ClearInventory">
+									<h1><span class="realm server"></span>meta:ClearInventory([storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L389">View source &raquo;</a>
+
+								<p>Clears a players inventory</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:ClearRestrictedInventory">
+									<h1><span class="realm server"></span>meta:ClearRestrictedInventory([storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L409">View source &raquo;</a>
+
+								<p>Clears restricted items from a players inventory</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:DropInventoryItem">
+									<h1><span class="realm server"></span>meta:DropInventoryItem(itemid)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L543">View source &raquo;</a>
+
+								<p>Drops a specific inventory item</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetInventory">
+									<h1><span class="realm server"></span>meta:GetInventory([storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L132">View source &raquo;</a>
+
+								<p>Gets a players inventory table</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
+												<p>Inventory</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetMaxInventoryStorage">
+									<h1><span class="realm shared"></span>meta:GetMaxInventoryStorage()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L227">View source &raquo;</a>
+
+								<p>Returns the max capacity of the players storage box</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Capacity (in kg)</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GiveInventoryItem">
+									<h1><span class="realm server"></span>meta:GiveInventoryItem(itemclass[, storageType=1[, restricted=false[, isLoaded=false[, moving=false[, clip]]]]])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L275">View source &raquo;</a>
+
+								<p>Gives an inventory item to a player</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemclass</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">restricted</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> Is item restricted</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">isLoaded</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> (INTERNAL) Used for first time setup when player connects</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">moving</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> (INTERNAL) Is item just being moved? (stops database requests)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">clip</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> (INTERNAL) (Only used for weapons) Item clip</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>ItemID</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasIllegalInventoryItem">
+									<h1><span class="realm server"></span>meta:HasIllegalInventoryItem([storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L232">View source &raquo;</a>
+
+								<p>Returns if a player has an illegal inventory item</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has illegal item</p>
+											</li>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Item ID of illegal item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasInventoryItem">
+									<h1><span class="realm client"></span>meta:HasInventoryItem(itemId)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L242">View source &raquo;</a>
+
+								<p>Returns if a client has an inventory item and how much they have</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemId</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item Network ID (use impulse.Inventory.ClassToNetID)</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has item</p>
+											</li>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Amount</p>
+											</li>
+
+								</ul>
+
+								<h3>See Also</h3>
+								<ul>
+										<li><a href="../libraries/Inventory.html#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID</a></li>
+								</ul>
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasInventoryItem">
+									<h1><span class="realm server"></span>meta:HasInventoryItem(class[, amount=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L169">View source &raquo;</a>
+
+								<p>Returns if a player has an item in their local inventory</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Amount of the item</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasInventoryItemSpecific">
+									<h1><span class="realm server"></span>meta:HasInventoryItemSpecific(itemID[, storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L215">View source &raquo;</a>
+
+								<p>Returns if a player has an specific item.  This is used to check if they have the exact item, not just an item of the class specified</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasInventoryItemStorage">
+									<h1><span class="realm server"></span>meta:HasInventoryItemStorage(class[, amount=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L192">View source &raquo;</a>
+
+								<p>Returns if a player has an item in their storage chest</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Amount of the item</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has item</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsInventoryItemRestricted">
+									<h1><span class="realm server"></span>meta:IsInventoryItemRestricted(itemID[, storageType=1])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L254">View source &raquo;</a>
+
+								<p>Returns if a specific inventory item is restricted</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is restricted</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:MoveInventoryItem">
+									<h1><span class="realm server"></span>meta:MoveInventoryItem(itemid, from, to)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L630">View source &raquo;</a>
+
+								<p>Moves a specific inventory item across storages (to move several of the same items use MoveInventoryItemMass as it is faster)</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">from</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Old storage type</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">to</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> New storage type</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:MoveInventoryItemMass">
+									<h1><span class="realm server"></span>meta:MoveInventoryItemMass(class, from, to, amount)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L654">View source &raquo;</a>
+
+								<p>Moves a collection of the same items across storages</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">from</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Old storage type</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">to</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> New storage type</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount to move</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetInventoryItemEquipped">
+									<h1><span class="realm server"></span>meta:SetInventoryItemEquipped(itemID, state)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L473">View source &raquo;</a>
+
+								<p>Sets a specific inventory item as equipped or not</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">state</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Is equipped</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:TakeInventoryItem">
+									<h1><span class="realm server"></span>meta:TakeInventoryItem(itemID[, storageType=1[, moving=false]])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L331">View source &raquo;</a>
+
+								<p>Takes an inventory item from a player</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">moving</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> (INTERNAL) Is item just being moved? (stops database requests)</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Clip</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:TakeInventoryItemClass">
+									<h1><span class="realm server"></span>meta:TakeInventoryItemClass(class[, storageType=1[, amount=1]])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L449">View source &raquo;</a>
+
+								<p>Takes an item from a players inventory by class name</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Item class name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storageType</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Storage type (1 is player inventory, 2 is storage)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: 1</span>
+
+												<p> Amount to take</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:UnEquipInventory">
+									<h1><span class="realm server"></span>meta:UnEquipInventory()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L528">View source &raquo;</a>
+
+								<p>Un equips all iventory items for a player</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:UseInventoryItem">
+									<h1><span class="realm server"></span>meta:UseInventoryItem(itemid)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_inventory.lua#L596">View source &raquo;</a>
+
+								<p>Uses a specific inventory item</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">itemid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Item ID</p>
+											</li>
+									</ul>
+
+
+						</section>
+					<h1 class="title">Tables</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="CraftingTypes">
+									<h1><span class="realm client"></span>CraftingTypes</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_inventory.lua#L193">View source &raquo;</a>
+
+								<p>A collection of crafting types, each uses a different set of sounds</p>
+							</header>
+
+
+									<h3>Fields</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[chemical]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[electronics]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[fabric]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[fuel]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[generic]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[gunmetal]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[metal]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[nuclear]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[plastic]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[powder]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[rock]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[water]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">[wood]</span>
+
+
+
+												<p>
+
+</p>
+											</li>
+									</ul>
+
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>
