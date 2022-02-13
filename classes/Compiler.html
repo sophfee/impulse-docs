@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>IPS - impulse documentation</title>
+		<title>Compiler - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="IPS - impulse documentation" />
+		<meta property="og:title" content="Compiler - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="A replacement to Expression 2 for Landis/impulse, impulse Player Script." />
+			<meta property="og:description" content="Main compiler for IPS." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -24,6 +24,22 @@
 
 			<!-- project contents -->
 			<section>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Compiler.html">Compiler</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+								<li><a href="../classes/Token.html">Token</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
 						<h2>Libraries</h2>
 
 						<ul>
@@ -49,22 +65,6 @@
 								<li><a href="../libraries/Teams.html">Teams</a></li>
 								<li><a href="../libraries/Tween.html">Tween</a></li>
 						</ul>
-						<h2>Hooks</h2>
-
-						<ul>
-								<li><a href="../hooks/General.html">General</a></li>
-						</ul>
-						<h2>Classes</h2>
-
-						<ul>
-								<li><a href="../classes/Player.html">Player</a></li>
-								<li><a href="../classes/Entity.html">Entity</a></li>
-								<li><a href="../classes/Vendor.html">Vendor</a></li>
-								<li><a href="../classes/Compiler.html">Compiler</a></li>
-								<li><a href="../classes/Parser.html">Parser</a></li>
-								<li><a href="../classes/Process.html">Process</a></li>
-								<li><a href="../classes/Token.html">Token</a></li>
-						</ul>
 						<h2>Manual</h2>
 
 						<ul>
@@ -80,8 +80,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>IPS</h1>
-					<h2>A replacement to Expression 2 for Landis/impulse, impulse Player Script.</h2>
+					<h1>Compiler</h1>
+					<h2>Main compiler for IPS.</h2>
 				</header>
 
 				<!-- description -->
@@ -94,30 +94,32 @@
 					<summary>Reference</summary>
 
 					<div class="contents">
-							<h2>Functions</h2>
+							<h2>Methods</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#GetVar">GetVar(key)</a></li>
-									<li><span class="realm shared"></span><a href="#IsStrict">IsStrict(key)</a></li>
-									<li><span class="realm shared"></span><a href="#SetVar">SetVar(key, value)</a></li>
+									<li><span class="realm shared"></span><a href="#Compiler:Feed">Compiler:Feed(buffer)</a></li>
+									<li><span class="realm shared"></span><a href="#Compiler:New">Compiler:New()</a></li>
+									<li><span class="realm shared"></span><a href="#Compiler:ProcessAll">Compiler:ProcessAll()</a></li>
+									<li><span class="realm shared"></span><a href="#Compiler:RetrieveNextBuffer">Compiler:RetrieveNextBuffer()</a></li>
 							</ul>
 					</div>
 				</details>
 
 				<!-- methods -->
-					<h1 class="title">Functions</h1>
+					<h1 class="title">Methods</h1>
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="GetVar">
-									<h1><span class="realm shared"></span>GetVar(key)</h1>
+								<a class="anchor" id="Compiler:Feed">
+									<h1><span class="realm shared"></span>Compiler:Feed(buffer)</h1>
 								</a>
 
+									<div class="internal"></div>
 
 									<div class="indev"></div>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_variables.lua#L16">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_compile.lua#L24">View source &raquo;</a>
 
-								<p>Retrieves a variable.</p>
+								<p>Queues a new buffer to read.</p>
 							</header>
 
 
@@ -127,23 +129,41 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">key</span>
+												<span class="tag parameter">buffer</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> The key of the variable.</p>
+												<p> Buffer code.</p>
 											</li>
 									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Compiler:New">
+									<h1><span class="realm shared"></span>Compiler:New()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_compile.lua#L13">View source &raquo;</a>
+
+								<p>Constructs a new Compiler instance.</p>
+							</header>
+
 
 
 								<h3>Returns</h3>
 								<ul>
 
 											<li>
-													<span class="type">any</span>
+													<span class="type">IPS_Compiler</span>
 
-												<p>value.</p>
+												<p>A new compiler instance.</p>
 											</li>
 
 								</ul>
@@ -151,88 +171,49 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="IsStrict">
-									<h1><span class="realm shared"></span>IsStrict(key)</h1>
+								<a class="anchor" id="Compiler:ProcessAll">
+									<h1><span class="realm shared"></span>Compiler:ProcessAll()</h1>
 								</a>
 
+									<div class="internal"></div>
 
 									<div class="indev"></div>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_variables.lua#L25">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_compile.lua#L48">View source &raquo;</a>
 
-								<p>Returns true if a variables value type is strict (cannot be changed)</p>
+								<p>Processes all queued buffers.</p>
 							</header>
 
 
-									<h3>Parameters</h3>
 
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Compiler:RetrieveNextBuffer">
+									<h1><span class="realm shared"></span>Compiler:RetrieveNextBuffer()</h1>
+								</a>
 
-									<ul>
+									<div class="internal"></div>
 
-											<li>
-												<span class="tag parameter">key</span>
+									<div class="indev"></div>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_compile.lua#L34">View source &raquo;</a>
 
+								<p>Fetches the newest buffer in queue.</p>
+							</header>
 
-												<p> Variable key.</p>
-											</li>
-									</ul>
 
 
 								<h3>Returns</h3>
 								<ul>
 
 											<li>
-													<span class="type">bool</span>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
 
-												<p>Is strict</p>
+												<p>latest buffer.</p>
 											</li>
 
 								</ul>
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="SetVar">
-									<h1><span class="realm shared"></span>SetVar(key, value)</h1>
-								</a>
-
-
-									<div class="indev"></div>
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_variables.lua#L34">View source &raquo;</a>
-
-								<p>Creates/Updates a variable.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">key</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> var key.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">value</span>
-
-
-
-												<p> any value.</p>
-											</li>
-									</ul>
-
 
 						</section>
 		</article>
