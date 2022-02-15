@@ -82,7 +82,69 @@ lol..." />
 		<article>
 
 <h1>Making an item</h1>
-<p>lol</p>
+<pre><code> ITEM Example:
+	--FOOD--
+  	local ITEM = {}
+
+	ITEM.UniqueID = "food_orange"
+	ITEM.Name = "Orange"
+	ITEM.Desc =  "A not-so freshly grown orange."
+	ITEM.Category = "Food"
+	ITEM.Model = Model("models/bioshockinfinite/hext_orange.mdl")
+	ITEM.FOV = 18
+	ITEM.Weight = 0.2
+	ITEM.NoCenter = true
+
+	ITEM.Droppable = true
+	ITEM.DropOnDeath = false
+
+	ITEM.Illegal = false
+	ITEM.CanStack = true
+
+	ITEM.UseName = "Eat"
+	ITEM.UseWorkBarTime = 1
+	ITEM.UseWorkBarName = "Eating..."
+	ITEM.UseWorkBarSound = "impulse/eat.wav"
+
+	ITEM.Food = 15
+
+	function ITEM:OnUse(ply)
+		ply:FeedHunger(self.Food)
+		return true
+	end
+
+	impulse.RegisterItem(ITEM)
+</code></pre>
+<pre><code> ITEM Example 2:
+	--Weapon--
+	local ITEM = {}
+
+	ITEM.UniqueID = "wep_ar2"
+	ITEM.Name = "AR-2 Assault Rifle"
+	ITEM.Desc =  "A heavy-weight, high-tech combine AR. Fires special AR2 energy ammunition."
+	ITEM.Category = "Weapons"
+	ITEM.Model = Model("models/weapons/w_irifle.mdl")
+	ITEM.FOV = 46.239255014327
+	ITEM.CamPos = Vector(32.664756774902, -19.484241485596, 9.1690540313721)
+	ITEM.NoCenter = true
+	ITEM.Weight = 8
+
+	ITEM.Droppable = true
+	ITEM.DropOnDeath = true
+
+	ITEM.DropIfRestricted = false
+	ITEM.DropOnDeathIfRestricted = false
+	ITEM.CraftIfRestricted = false
+
+	ITEM.Illegal = true
+	ITEM.Equipable = true
+	ITEM.EquipGroup = "primary"
+	ITEM.CanStack = false
+
+	ITEM.WeaponClass = "ls_ar2"
+
+	impulse.RegisterItem(ITEM)
+</code></pre>
 
 		</article>
 
