@@ -39,6 +39,7 @@
 								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
@@ -96,6 +97,7 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
+									<li><span class="realm client"></span><a href="#impulse.BlurRect">impulse.BlurRect(x, y, w, h)</a></li>
 									<li><span class="realm client"></span><a href="#impulse.MakeWorkbar">impulse.MakeWorkbar(time[, text[, onDone[, popup=false]]])</a></li>
 									<li><span class="realm client"></span><a href="#impulse.blur">impulse.blur(panel, layers, density, alpha)</a></li>
 							</ul>
@@ -107,13 +109,81 @@
 
 						<section class="method">
 							<header>
+								<a class="anchor" id="impulse.BlurRect">
+									<h1><span class="realm client"></span>impulse.BlurRect(x, y, w, h)</h1>
+								</a>
+
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_main.lua#L71">View source &raquo;</a>
+
+								<p>Blurs a rectangle at specified points.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">x</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> X pos.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">y</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Y pos.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">w</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Width.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">h</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Height.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="impulse.MakeWorkbar">
 									<h1><span class="realm client"></span>impulse.MakeWorkbar(time[, text[, onDone[, popup=false]]])</h1>
 								</a>
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_main.lua#L99">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_main.lua#L130">View source &raquo;</a>
 
 								<p>Creates a work bar on the players screen</p>
 							</header>
@@ -183,7 +253,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_main.lua#L70">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_main.lua#L101">View source &raquo;</a>
 
 								<p>Renders a blur effect on a panel.  Call this inside PANEL:Paint</p>
 							</header>

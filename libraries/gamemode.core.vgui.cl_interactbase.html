@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Schema - impulse documentation</title>
+		<title>gamemode.core.vgui.cl_interactbase - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Schema - impulse documentation" />
+		<meta property="og:title" content="gamemode.core.vgui.cl_interactbase - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="Allows for control of the boot process of the schema such as piggybacking from other schemas" />
+			<meta property="og:description" content="DPanel or DButton with more features." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -49,6 +49,8 @@
 								<li><a href="../libraries/Sync.html">Sync</a></li>
 								<li><a href="../libraries/Teams.html">Teams</a></li>
 								<li><a href="../libraries/Tween.html">Tween</a></li>
+								<li><a href="../libraries/gamemode.core.vgui.cl_interactbase.html">gamemode.core.vgui.cl_interactbase</a></li>
+								<li><a href="../libraries/gamemode.core.vgui.cl_slider.html">gamemode.core.vgui.cl_slider</a></li>
 						</ul>
 						<h2>Hooks</h2>
 
@@ -81,8 +83,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Schema</h1>
-					<h2>Allows for control of the boot process of the schema such as piggybacking from other schemas</h2>
+					<h1>gamemode.core.vgui.cl_interactbase</h1>
+					<h2>DPanel or DButton with more features.</h2>
 				</header>
 
 				<!-- description -->
@@ -97,10 +99,9 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.Boot">impulse.Schema.Boot()</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBoot">impulse.Schema.PiggyBoot(name, object)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBootEntities">impulse.Schema.PiggyBootEntities(name)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBootPlugin">impulse.Schema.PiggyBootPlugin(name, plugin)</a></li>
+									<li><span class="realm client"></span><a href="#PANEL:AddEvent">PANEL:AddEvent(interaction)</a></li>
+									<li><span class="realm client"></span><a href="#PANEL:Fire">PANEL:Fire(interaction, ...)</a></li>
+									<li><span class="realm client"></span><a href="#PANEL:LerpHook">PANEL:LerpHook(interaction, callback)</a></li>
 							</ul>
 					</div>
 				</details>
@@ -110,32 +111,17 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.Boot">
-									<h1><span class="realm shared"></span>impulse.Schema.Boot()</h1>
+								<a class="anchor" id="PANEL:AddEvent">
+									<h1><span class="realm client"></span>PANEL:AddEvent(interaction)</h1>
 								</a>
 
 									<div class="internal"></div>
 
+									<div class="indev"></div>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L11">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_interactbase.lua#L22">View source &raquo;</a>
 
-								<p>Starts the Schema boot sequence</p>
-							</header>
-
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBoot">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBoot(name, object)</h1>
-								</a>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L89">View source &raquo;</a>
-
-								<p>Boots a specified object from a foreign schema using the piggbacking system</p>
+								<p>Sets up a new lerp interaction.</p>
 							</header>
 
 
@@ -145,24 +131,12 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">interaction</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">object</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The folder in the schema to load</p>
+												<p> Identifier to run lerp listeners</p>
 											</li>
 									</ul>
 
@@ -170,15 +144,17 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBootEntities">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBootEntities(name)</h1>
+								<a class="anchor" id="PANEL:Fire">
+									<h1><span class="realm client"></span>PANEL:Fire(interaction, ...)</h1>
 								</a>
 
+									<div class="internal"></div>
 
+									<div class="indev"></div>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L106">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_interactbase.lua#L32">View source &raquo;</a>
 
-								<p>Boots all entities from a foreign schema using the piggbacking system</p>
+								<p>Trigger a new interaction.</p>
 							</header>
 
 
@@ -188,12 +164,23 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">interaction</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
+												<p> Identifier to run lerp listeners</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">...</span>
+
+
+
+												<p> Any parameters</p>
 											</li>
 									</ul>
 
@@ -201,15 +188,16 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBootPlugin">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBootPlugin(name, plugin)</h1>
+								<a class="anchor" id="PANEL:LerpHook">
+									<h1><span class="realm client"></span>PANEL:LerpHook(interaction, callback)</h1>
 								</a>
 
 
+									<div class="indev"></div>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L98">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_interactbase.lua#L45">View source &raquo;</a>
 
-								<p>Boots a specified plugin from a foreign schema using the piggbacking system</p>
+								<p>Sets up a new lerp system built upon an interaction</p>
 							</header>
 
 
@@ -219,24 +207,24 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">interaction</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
+												<p> What will run this?</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">plugin</span>
+												<span class="tag parameter">callback</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><span class="type">function</span></span>
 
 
-												<p> The plugin folder name</p>
+												<p> runs when interaction called.</p>
 											</li>
 									</ul>
 

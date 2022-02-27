@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Schema - impulse documentation</title>
+		<title>Refunds - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Schema - impulse documentation" />
+		<meta property="og:title" content="Refunds - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="Allows for control of the boot process of the schema such as piggybacking from other schemas" />
+			<meta property="og:description" content="Handles processing refunds from server crashes." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -81,8 +81,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Schema</h1>
-					<h2>Allows for control of the boot process of the schema such as piggybacking from other schemas</h2>
+					<h1>Refunds</h1>
+					<h2>Handles processing refunds from server crashes.</h2>
 				</header>
 
 				<!-- description -->
@@ -97,10 +97,10 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.Boot">impulse.Schema.Boot()</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBoot">impulse.Schema.PiggyBoot(name, object)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBootEntities">impulse.Schema.PiggyBootEntities(name)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBootPlugin">impulse.Schema.PiggyBootPlugin(name, plugin)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Refunds.Add">impulse.Refunds.Add(steamid, item)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Refunds.Clean">impulse.Refunds.Clean()</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Refunds.Remove">impulse.Refunds.Remove(steamid, item)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.Refunds.RemoveAll">impulse.Refunds.RemoveAll(steamid)</a></li>
 							</ul>
 					</div>
 				</details>
@@ -110,32 +110,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.Boot">
-									<h1><span class="realm shared"></span>impulse.Schema.Boot()</h1>
+								<a class="anchor" id="impulse.Refunds.Add">
+									<h1><span class="realm server"></span>impulse.Refunds.Add(steamid, item)</h1>
 								</a>
 
 									<div class="internal"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L11">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_refunds.lua#L45">View source &raquo;</a>
 
-								<p>Starts the Schema boot sequence</p>
-							</header>
-
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBoot">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBoot(name, object)</h1>
-								</a>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L89">View source &raquo;</a>
-
-								<p>Boots a specified object from a foreign schema using the piggbacking system</p>
+								<p>Creates a new refund entry.</p>
 							</header>
 
 
@@ -145,24 +129,24 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">steamid</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
+												<p> The SteamID 32 of the player.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">object</span>
+												<span class="tag parameter">item</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> The folder in the schema to load</p>
+												<p> The item to refund.</p>
 											</li>
 									</ul>
 
@@ -170,15 +154,33 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBootEntities">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBootEntities(name)</h1>
+								<a class="anchor" id="impulse.Refunds.Clean">
+									<h1><span class="realm server"></span>impulse.Refunds.Clean()</h1>
 								</a>
 
+									<div class="internal"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L106">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_refunds.lua#L11">View source &raquo;</a>
 
-								<p>Boots all entities from a foreign schema using the piggbacking system</p>
+								<p>Clears any old (more than 24 hours old) refunds.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Refunds.Remove">
+									<h1><span class="realm server"></span>impulse.Refunds.Remove(steamid, item)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_refunds.lua#L22">View source &raquo;</a>
+
+								<p>Removes a specific refund entry.</p>
 							</header>
 
 
@@ -188,12 +190,24 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">steamid</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
+												<p> The SteamID 32 of the player.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">item</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> The item to refund.</p>
 											</li>
 									</ul>
 
@@ -201,15 +215,16 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBootPlugin">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBootPlugin(name, plugin)</h1>
+								<a class="anchor" id="impulse.Refunds.RemoveAll">
+									<h1><span class="realm server"></span>impulse.Refunds.RemoveAll(steamid)</h1>
 								</a>
 
+									<div class="internal"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L98">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_refunds.lua#L34">View source &raquo;</a>
 
-								<p>Boots a specified plugin from a foreign schema using the piggbacking system</p>
+								<p>Removes all refund entries.</p>
 							</header>
 
 
@@ -219,24 +234,12 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">steamid</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">plugin</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The plugin folder name</p>
+												<p> The SteamID 32 of the player.</p>
 											</li>
 									</ul>
 

@@ -45,10 +45,11 @@
 								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
 								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Skills.html">Skills</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
-								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Signals.html">Signals</a></li>
 								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Teams.html">Teams</a></li>
@@ -105,6 +106,7 @@
 									<li><span class="realm client"></span><a href="#CheckMenuInput">GENERAL:CheckMenuInput()</a></li>
 									<li><span class="realm server"></span><a href="#ContainerPasscodeSet">GENERAL:ContainerPasscodeSet(ply, container)</a></li>
 									<li><span class="realm client"></span><a href="#CreateMenuMessages">GENERAL:CreateMenuMessages()</a></li>
+									<li><span class="realm client"></span><a href="#CreateSubMenu">GENERAL:CreateSubMenu(identifier)</a></li>
 									<li><span class="realm client"></span><a href="#DefineSettings">GENERAL:DefineSettings()</a></li>
 									<li><span class="realm client"></span><a href="#DisplayMenuMessages">GENERAL:DisplayMenuMessages()</a></li>
 									<li><span class="realm server"></span><a href="#DoInventorySearch">GENERAL:DoInventorySearch(ply, target)</a></li>
@@ -126,8 +128,8 @@
 									<li><span class="realm shared"></span><a href="#PlayerGetKnownName">GENERAL:PlayerGetKnownName(ply)</a></li>
 									<li><span class="realm server"></span><a href="#PlayerGetXP">GENERAL:PlayerGetXP(ply, xp)</a></li>
 									<li><span class="realm server"></span><a href="#PlayerInitialSpawnLoaded">GENERAL:PlayerInitialSpawnLoaded(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, storage)</a></li>
 									<li><span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, box)</a></li>
+									<li><span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, storage)</a></li>
 									<li><span class="realm server"></span><a href="#PlayerPurchaseDoor">GENERAL:PlayerPurchaseDoor(ply, door)</a></li>
 									<li><span class="realm server"></span><a href="#PlayerRagdollPreSpawn">GENERAL:PlayerRagdollPreSpawn(ragdoll, ply, attacker)</a></li>
 									<li><span class="realm server"></span><a href="#PlayerSellDoor">GENERAL:PlayerSellDoor(ply, door)</a></li>
@@ -572,6 +574,47 @@
 								<ul>
 										<li><a href="../libraries/MenuMessage.html#">MenuMessage</a></li>
 								</ul>
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="CreateSubMenu">
+									<h1><span class="realm client"></span>GENERAL:CreateSubMenu(identifier)</h1>
+								</a>
+
+
+
+
+								<p>Called when a new menu panel is opened.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">identifier</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Submenu identifier.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">func</span>
+
+												<p>Panel creation function.</p>
+											</li>
+
+								</ul>
+
 						</section>
 						<section class="method">
 							<header>
@@ -1406,48 +1449,6 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="PlayerOpenStorage">
-									<h1><span class="realm server"></span>GENERAL:PlayerOpenStorage(ply, storage)</h1>
-								</a>
-
-
-
-
-								<p>Called when the player accesses their storage container</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">ply</span>
-
-													<span class="tag"><span class="type">entity</span></span>
-
-
-												<p> The player who opened their storage</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">storage</span>
-
-													<span class="tag"><span class="type">entity</span></span>
-
-
-												<p> The storage box</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="PlayerOpenStorage">
 									<h1><span class="realm server"></span>GENERAL:PlayerOpenStorage(ply, box)</h1>
 								</a>
 
@@ -1477,6 +1478,48 @@
 
 											<li>
 												<span class="tag parameter">box</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The storage box</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="PlayerOpenStorage">
+									<h1><span class="realm server"></span>GENERAL:PlayerOpenStorage(ply, storage)</h1>
+								</a>
+
+
+
+
+								<p>Called when the player accesses their storage container</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ply</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The player who opened their storage</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">storage</span>
 
 													<span class="tag"><span class="type">entity</span></span>
 

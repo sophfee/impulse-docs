@@ -39,6 +39,7 @@
 								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
@@ -94,10 +95,160 @@
 					<summary>Reference</summary>
 
 					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm shared"></span><a href="#meta:GroupHasPermission">meta:GroupHasPermission(act)</a></li>
+							</ul>
+							<h2>Tables</h2>
+							<ul>
+									<li><span class="realm shared"></span><a href="#RPGROUP_Enums">RPGROUP_Enums</a></li>
+							</ul>
 					</div>
 				</details>
 
 				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GroupHasPermission">
+									<h1><span class="realm shared"></span>meta:GroupHasPermission(act)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_rpgroup.lua#L44">View source &raquo;</a>
+
+								<p>Does the player have permission to perform an action for their group.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">act</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Action enum.</p>
+											</li>
+									</ul>
+
+
+						</section>
+					<h1 class="title">Tables</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="RPGROUP_Enums">
+									<h1><span class="realm shared"></span>RPGROUP_Enums</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_rpgroup.lua#L19">View source &raquo;</a>
+
+								<p>Different permissions that can be assigned to group roles</p>
+							</header>
+
+
+									<h3>Fields</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_DEFAULT</span>
+
+
+
+												<p> Is default group.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_POST</span>
+
+
+
+												<p> Post to group chat.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_ADD_MEMBER</span>
+
+
+
+												<p> Can add members.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_RMV_MEMBER</span>
+
+
+
+												<p> Can remove members.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_MNG_MEMBER</span>
+
+
+
+												<p> Can promote/demote members.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_RANK_EDITOR</span>
+
+
+
+												<p> Can edit ranks.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_INFO_EDITOR</span>
+
+
+
+												<p> Can edit info page.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">RPGROUP_OWNER</span>
+
+
+
+												<p> Is owner of group.</p>
+											</li>
+									</ul>
+
+
+						</section>
 		</article>
 
 		<footer>

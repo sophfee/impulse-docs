@@ -55,6 +55,7 @@
 								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
@@ -97,6 +98,12 @@
 							<h2>Methods</h2>
 							<ul>
 									<li><span class="realm shared"></span><a href="#Process:Buffer">Process:Buffer()</a></li>
+									<li><span class="realm shared"></span><a href="#Process:Ex">Process:Ex(msg)</a></li>
+									<li><span class="realm shared"></span><a href="#Process:Head">Process:Head()</a></li>
+									<li><span class="realm shared"></span><a href="#Process:MoveHead">Process:MoveHead(len)</a></li>
+									<li><span class="realm shared"></span><a href="#Process:New">Process:New(buffer)</a></li>
+									<li><span class="realm shared"></span><a href="#Process:Read">Process:Read(len)</a></li>
+									<li><span class="realm shared"></span><a href="#Process:Run">Process:Run()</a></li>
 									<li><span class="realm shared"></span><a href="#Process:Single">Process:Single()</a></li>
 							</ul>
 					</div>
@@ -114,7 +121,7 @@
 									<div class="internal"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L25">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L29">View source &raquo;</a>
 
 								<p>Returns the raw buffer to read.</p>
 							</header>
@@ -135,6 +142,183 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="Process:Ex">
+									<h1><span class="realm shared"></span>Process:Ex(msg)</h1>
+								</a>
+
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L15">View source &raquo;</a>
+
+								<p>Creates a special error for the process.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">msg</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Error message.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Process:Head">
+									<h1><span class="realm shared"></span>Process:Head()</h1>
+								</a>
+
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L42">View source &raquo;</a>
+
+								<p>Returns the position of the reader.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Cursor head.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Process:MoveHead">
+									<h1><span class="realm shared"></span>Process:MoveHead(len)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L70">View source &raquo;</a>
+
+								<p>Moves the cursor head.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">len</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount to move the cursor head.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Process:New">
+									<h1><span class="realm shared"></span>Process:New(buffer)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L113">View source &raquo;</a>
+
+								<p>Start a new process.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">buffer</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Raw string to parse and process.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Process:Read">
+									<h1><span class="realm shared"></span>Process:Read(len)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L51">View source &raquo;</a>
+
+								<p>Reads a specified length in the Processes buffer.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">len</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Read length.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="Process:Run">
+									<h1><span class="realm shared"></span>Process:Run()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+									<div class="indev"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L98">View source &raquo;</a>
+
+								<p>[incomplete] Does the main systems of the Process (find token, resolve token parameters, execute, pass all variables to scopes).</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="Process:Single">
 									<h1><span class="realm shared"></span>Process:Single()</h1>
 								</a>
@@ -142,7 +326,7 @@
 									<div class="internal"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L69">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_process.lua#L88">View source &raquo;</a>
 
 								<p>Reads a single character of the buffer.</p>
 							</header>

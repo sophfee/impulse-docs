@@ -12,7 +12,11 @@
 		<meta property="og:site_name" content="impulse documentation" />
 
 			<meta property="og:description" content="
-lol..." />
+Plugins are fairly straight forward to develop, as it is just a matter of file execution order and scope.
+Plugins at their core, just execute code like any other script, they do have some special properties though.
+
+ Path load order
+In a normal scenario ..." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -54,6 +58,7 @@ lol..." />
 								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
@@ -82,7 +87,46 @@ lol..." />
 		<article>
 
 <h1>Making a plugin</h1>
-<p>lol</p>
+<p>Plugins are fairly straight forward to develop, as it is just a matter of file execution order and scope.
+Plugins at their core, just execute code like any other script, they do have some special properties though.</p>
+
+<p><a name="Path_load_order"></a></p>
+<h2>Path load order</h2>
+<p>In a normal scenario with the default boot loader, plugins will load these file paths in order:
+1. /setup
+2. / (Root directory)
+3. /vgui
+4. /entities (Loads as entities)
+5. /hooks
+6. /items
+7. /benches
+8. /mixtures
+9. /buyables
+10. /vendors</p>
+
+<p><a name="Hooks"></a></p>
+<h2>Hooks</h2>
+<p>Similar to how the GM table works, plugins have a global PLUGIN table created to load hooks, for example:</p>
+
+<pre>
+<span class="keyword">function</span> PLUGIN:PlayerSay(ply,text)
+  <span class="global">print</span>(ply:NameID() .. <span class="string">" said "</span> .. text)
+<span class="keyword">end</span>
+</pre>
+
+<p>This would create a new hook for the <code>PlayerSay</code> event.</p>
+
+<p><a name="_NEW_1_10__Metadata"></a></p>
+<h2>[NEW 1.10] Metadata</h2>
+<p>Plugins now have metadata stored to identify which version of the plugin as a way to identify errors in old versions of a plugin.</p>
+
+<p>These values can be set to identify your plugin:
+- <code>PLUGIN.Name</code>
+- <code>PLUGIN.Desc</code>
+- <code>PLUGIN.Author</code>
+- <code>PLUGIN.Version</code></p>
+
+<p>These values can be found in a menu for developers, or in the event of a LUA error, will be supplied in the console for users to create a bug report.</p>
 
 		</article>
 
