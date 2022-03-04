@@ -97,6 +97,7 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
+									<li><span class="realm server"></span><a href="#impulse.Group.DBCreate">impulse.Group.DBCreate(name, ownerid, maxsize[, maxstorage=true[, ranks=true[, callback]]])</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GroupHasPermission">meta:GroupHasPermission(act)</a></li>
 							</ul>
 							<h2>Tables</h2>
@@ -109,6 +110,100 @@
 				<!-- methods -->
 					<h1 class="title">Functions</h1>
 
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Group.DBCreate">
+									<h1><span class="realm server"></span>impulse.Group.DBCreate(name, ownerid, maxsize[, maxstorage=true[, ranks=true[, callback]]])</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_rpgroup.lua#L31">View source &raquo;</a>
+
+								<p>Creates a new RP Group in the database.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Group name.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ownerid</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Owners impulse DB Id.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">maxsize</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Max players in the group.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">maxstorage</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">default: true</span>
+
+												<p> Max storage, goes unused.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ranks</span>
+
+
+													<span class="tag default">default: true</span>
+
+												<p> Ranks within the group.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">callback</span>
+
+													<span class="tag"><span class="type">function</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> optional callback.</p>
+											</li>
+									</ul>
+
+
+						</section>
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:GroupHasPermission">

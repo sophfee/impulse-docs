@@ -98,20 +98,37 @@
 							<h2>Functions</h2>
 							<ul>
 									<li><span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a></li>
+									<li><span class="realm server"></span><a href="#meta:AddSkillXP">Player:AddSkillXP(name, value)</a></li>
+									<li><span class="realm server"></span><a href="#meta:AddXP">Player:AddXP(amount)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:CanArrest">Player:CanArrest(target)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:CanBuyDoor">Player:CanBuyDoor(table, doorBuyable)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:CanLockUnlockDoor">Player:CanLockUnlockDoor(table, doorBuyable)</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a></li>
+									<li><span class="realm server"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetXP">Player:GetXP()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetZone">Player:GetZone()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetZoneName">Player:GetZoneName()</a></li>
+									<li><span class="realm server"></span><a href="#meta:GiveTimedXP">Player:GiveTimedXP()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:InSpawn">Player:InSpawn()</a></li>
+									<li><span class="realm server"></span><a href="#meta:IsAFK">Player:IsAFK()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsCharacterFemale">Player:IsCharacterFemale()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDeveloper">Player:IsDeveloper()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDonator">Player:IsDonator()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsDoorOwner">Player:IsDoorOwner(table)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsLeadAdmin">Player:IsLeadAdmin()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:KnownName">Player:KnownName()</a></li>
+									<li><span class="realm server"></span><a href="#meta:MakeAFK">Player:MakeAFK()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:Name">Player:Name()</a></li>
+									<li><span class="realm server"></span><a href="#meta:NetworkSkill">Player:NetworkSkill(name, value)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message, class)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetSkillXP">Player:SetSkillXP(name, value)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetXP">Player:SetXP(amount)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetZone">Player:SetZone(id)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SteamName">Player:SteamName()</a></li>
+									<li><span class="realm server"></span><a href="#meta:UnMakeAFK">Player:UnMakeAFK()</a></li>
 							</ul>
 					</div>
 				</details>
@@ -144,6 +161,80 @@
 
 
 												<p> Message to send to the player's chatbox</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:AddSkillXP">
+									<h1><span class="realm server"></span>Player:AddSkillXP(name, value)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_skills.lua#L59">View source &raquo;</a>
+
+								<p>Adds XP to a specified skill.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> internal identifier.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">value</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> XP amount to add.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:AddXP">
+									<h1><span class="realm server"></span>Player:AddXP(amount)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_xp.lua#L31">View source &raquo;</a>
+
+								<p>Adds XP to the players total XP count.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount to add.</p>
 											</li>
 									</ul>
 
@@ -193,6 +284,112 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:CanBuyDoor">
+									<h1><span class="realm shared"></span>Player:CanBuyDoor(table, doorBuyable)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_doors.lua#L59">View source &raquo;</a>
+
+								<p>Retruns if a user can own a door given the parameters.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> doorOwners</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">doorBuyable</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> is the door buyable?</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>can buy door.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanLockUnlockDoor">
+									<h1><span class="realm shared"></span>Player:CanLockUnlockDoor(table, doorBuyable)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_doors.lua#L12">View source &raquo;</a>
+
+								<p>Can the user lock or unlock the door.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> doorOwners</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">doorBuyable</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> is the door buyable?</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>can buy door.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:GetSavedRPName">
 									<h1><span class="realm server"></span>Player:GetSavedRPName()</h1>
 								</a>
@@ -220,6 +417,146 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:GetSkillXP">
+									<h1><span class="realm server"></span>Player:GetSkillXP(name)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_skills.lua#L8">View source &raquo;</a>
+
+								<p>Returns the players XP in a given skill.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> internal identifier of the given skill.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>skill xp amount or 0.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetXP">
+									<h1><span class="realm shared"></span>Player:GetXP()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_xp.lua#L7">View source &raquo;</a>
+
+								<p>Returns the players XP gained on the server.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>xp</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetZone">
+									<h1><span class="realm shared"></span>Player:GetZone()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_zones.lua#L16">View source &raquo;</a>
+
+								<p>Returns the zone ID the player currently is in.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>zone id</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetZoneName">
+									<h1><span class="realm shared"></span>Player:GetZoneName()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_zones.lua#L23">View source &raquo;</a>
+
+								<p>Returns the name of the current zone the player is in.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>zone name.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GiveTimedXP">
+									<h1><span class="realm server"></span>Player:GiveTimedXP()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_xp.lua#L42">View source &raquo;</a>
+
+								<p>Adds amount based off of XP times, ran automatically.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:InSpawn">
 									<h1><span class="realm shared"></span>Player:InSpawn()</h1>
 								</a>
@@ -240,6 +577,33 @@
 													<span class="type">bool</span>
 
 												<p>Is in spawn</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsAFK">
+									<h1><span class="realm server"></span>Player:IsAFK()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L43">View source &raquo;</a>
+
+								<p>Returns if a player is AFK.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">afk</span>
+
+												<p>is afk.</p>
 											</li>
 
 								</ul>
@@ -355,6 +719,47 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:IsDoorOwner">
+									<h1><span class="realm shared"></span>Player:IsDoorOwner(table)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_doors.lua#L47">View source &raquo;</a>
+
+								<p>Retruns if a user is an owner of a set of door owners.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> doorOwners</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>is owner.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:IsLeadAdmin">
 									<h1><span class="realm shared"></span>Player:IsLeadAdmin()</h1>
 								</a>
@@ -409,6 +814,22 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:MakeAFK">
+									<h1><span class="realm server"></span>Player:MakeAFK()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L6">View source &raquo;</a>
+
+								<p>Makes a player AFK.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:Name">
 									<h1><span class="realm shared"></span>Player:Name()</h1>
 								</a>
@@ -432,6 +853,50 @@
 											</li>
 
 								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:NetworkSkill">
+									<h1><span class="realm server"></span>Player:NetworkSkill(name, value)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_skills.lua#L48">View source &raquo;</a>
+
+								<p>Networks a skills XP to a specified value.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> internal identifier.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">value</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> XP amount.</p>
+											</li>
+									</ul>
+
 
 						</section>
 						<section class="method">
@@ -555,6 +1020,112 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:SetSkillXP">
+									<h1><span class="realm server"></span>Player:SetSkillXP(name, value)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_skills.lua#L23">View source &raquo;</a>
+
+								<p>Sets a skills XP to a specified value.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> internal identifier.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">value</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> XP amount.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetXP">
+									<h1><span class="realm server"></span>Player:SetXP(amount)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_xp.lua#L16">View source &raquo;</a>
+
+								<p>Sets the players XP gained on the server.  Probably should use Player:AddXP</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> XP to set to.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetZone">
+									<h1><span class="realm server"></span>Player:SetZone(id)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_zones.lua#L36">View source &raquo;</a>
+
+								<p>Updates the players zone and syncs to LOCAL client.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">id</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> zone id.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:SteamName">
 									<h1><span class="realm shared"></span>Player:SteamName()</h1>
 								</a>
@@ -578,6 +1149,22 @@
 											</li>
 
 								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:UnMakeAFK">
+									<h1><span class="realm server"></span>Player:UnMakeAFK()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L35">View source &raquo;</a>
+
+								<p>Makes a player NOT AFK.</p>
+							</header>
+
+
 
 						</section>
 		</article>

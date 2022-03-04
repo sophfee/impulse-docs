@@ -99,8 +99,10 @@
 							<ul>
 									<li><span class="realm shared"></span><a href="#entMeta:GetSyncVar">entMeta:GetSyncVar(varID, fallback)</a></li>
 									<li><span class="realm server"></span><a href="#entMeta:SetSyncVar">entMeta:SetSyncVar(varID, value[, instantSync=false])</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:Sync">entMeta:Sync([target=true])</a></li>
 									<li><span class="realm server"></span><a href="#entMeta:SyncRemove">entMeta:SyncRemove()</a></li>
 									<li><span class="realm server"></span><a href="#entMeta:SyncRemoveVar">entMeta:SyncRemoveVar(varID)</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SyncSingle">entMeta:SyncSingle(varID[, target=true])</a></li>
 									<li><span class="realm shared"></span><a href="#impulse.Sync.DoType">impulse.Sync.DoType(type, value)</a></li>
 									<li><span class="realm shared"></span><a href="#impulse.Sync.RegisterVar">impulse.Sync.RegisterVar(type[, conditional=false])</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetLocalSyncVar">meta:SetLocalSyncVar(varID, value)</a></li>
@@ -185,7 +187,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L188">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L193">View source &raquo;</a>
 
 								<p>Sets the Sync var on an entity</p>
 							</header>
@@ -234,13 +236,45 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="entMeta:Sync">
+									<h1><span class="realm server"></span>entMeta:Sync([target=true])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L14">View source &raquo;</a>
+
+								<p>Sync will take the player and sync their all SyncVars with all clients or the single target if provided.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">target</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+													<span class="tag default">default: true</span>
+
+												<p> Sync to a single target, if empty, syncs to all players.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="entMeta:SyncRemove">
 									<h1><span class="realm server"></span>entMeta:SyncRemove()</h1>
 								</a>
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L155">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L160">View source &raquo;</a>
 
 								<p>Removes all SyncVar's from an entity and update all players</p>
 							</header>
@@ -256,7 +290,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L169">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L174">View source &raquo;</a>
 
 								<p>Removes a specific SyncVar from an entity and update all players</p>
 							</header>
@@ -274,6 +308,50 @@
 
 
 												<p> Sync variable</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="entMeta:SyncSingle">
+									<h1><span class="realm server"></span>entMeta:SyncSingle(varID[, target=true])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L89">View source &raquo;</a>
+
+								<p>Syncs a single variable ID.  target is optional. SyncSingle will take the player and sync the SyncVar provided with all clients or the single target if provided.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">varID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Sync var ID.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">target</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+													<span class="tag default">default: true</span>
+
+												<p> Sync to a single target, if empty, syncs to all players.</p>
 											</li>
 									</ul>
 
@@ -388,7 +466,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L213">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L218">View source &raquo;</a>
 
 								<p>Sets the Sync var on an entity but only updates the player who it is being set on</p>
 							</header>
