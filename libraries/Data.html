@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Vendor - impulse documentation</title>
+		<title>Data - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Vendor - impulse documentation" />
+		<meta property="og:title" content="Data - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="An NPC system used to purchase items." />
+			<meta property="og:description" content="Handles custom data on players saved to the database." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -24,22 +24,6 @@
 
 			<!-- project contents -->
 			<section>
-						<h2>Classes</h2>
-
-						<ul>
-								<li><a href="../classes/Compiler.html">Compiler</a></li>
-								<li><a href="../classes/Entity.html">Entity</a></li>
-								<li><a href="../classes/Parser.html">Parser</a></li>
-								<li><a href="../classes/Player.html">Player</a></li>
-								<li><a href="../classes/Process.html">Process</a></li>
-								<li><a href="../classes/Token.html">Token</a></li>
-								<li><a href="../classes/Vendor.html">Vendor</a></li>
-						</ul>
-						<h2>Hooks</h2>
-
-						<ul>
-								<li><a href="../hooks/General.html">General</a></li>
-						</ul>
 						<h2>Libraries</h2>
 
 						<ul>
@@ -67,6 +51,22 @@
 								<li><a href="../libraries/Teams.html">Teams</a></li>
 								<li><a href="../libraries/Tween.html">Tween</a></li>
 						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/Compiler.html">Compiler</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+								<li><a href="../classes/Token.html">Token</a></li>
+						</ul>
 						<h2>Manual</h2>
 
 						<ul>
@@ -82,8 +82,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Vendor</h1>
-					<h2>An NPC system used to purchase items.</h2>
+					<h1>Data</h1>
+					<h2>Handles custom data on players saved to the database.</h2>
 				</header>
 
 				<!-- description -->
@@ -96,27 +96,56 @@
 					<summary>Reference</summary>
 
 					<div class="contents">
-							<h2>Methods</h2>
+							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#Vendor:ThisIsAWIP">Vendor:ThisIsAWIP()</a></li>
+									<li><span class="realm server"></span><a href="#meta:GetData">meta:GetData()</a></li>
+									<li><span class="realm server"></span><a href="#meta:SaveData">meta:SaveData()</a></li>
 							</ul>
 					</div>
 				</details>
 
 				<!-- methods -->
-					<h1 class="title">Methods</h1>
+					<h1 class="title">Functions</h1>
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="Vendor:ThisIsAWIP">
-									<h1><span class="realm shared"></span>Vendor:ThisIsAWIP()</h1>
+								<a class="anchor" id="meta:GetData">
+									<h1><span class="realm server"></span>meta:GetData()</h1>
 								</a>
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_vendor.lua#L8">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_data.lua#L9">View source &raquo;</a>
 
-								<p>this is a wip.</p>
+								<p>Get a table of data retrieved from the database.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
+												<p>Data table.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SaveData">
+									<h1><span class="realm server"></span>meta:SaveData()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_data.lua#L16">View source &raquo;</a>
+
+								<p>Saves data to the database.</p>
 							</header>
 
 

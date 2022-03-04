@@ -48,6 +48,7 @@
 								<li><a href="../libraries/Business.html">Business</a></li>
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Data.html">Data</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
 								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/IPS.html">IPS</a></li>
@@ -97,14 +98,25 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
+									<li><span class="realm shared"></span><a href="#impulse.FindPlayer">Playerimpulse.FindPlayer(searchKey)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Teams.Define">Playerimpulse.Teams.Define(teamData)</a></li>
 									<li><span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a></li>
 									<li><span class="realm server"></span><a href="#meta:AddSkillXP">Player:AddSkillXP(name, value)</a></li>
 									<li><span class="realm server"></span><a href="#meta:AddXP">Player:AddXP(amount)</a></li>
+									<li><span class="realm server"></span><a href="#meta:Arrest">Player:Arrest()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:CanArrest">Player:CanArrest(target)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:CanBecomeTeam">Player:CanBecomeTeam(teamID, notify)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:CanBecomeTeamClass">Player:CanBecomeTeamClass(classID, notify)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:CanBecomeTeamRank">Player:CanBecomeTeamRank(rankID, notify)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:CanBuyDoor">Player:CanBuyDoor(table, doorBuyable)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:CanLockUnlockDoor">Player:CanLockUnlockDoor(table, doorBuyable)</a></li>
+									<li><span class="realm server"></span><a href="#meta:DragPlayer">Player:DragPlayer(ply)</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetTeamClass">Player:GetTeamClass()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetTeamClassName">Player:GetTeamClassName()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetTeamRank">Player:GetTeamRank()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:GetTeamRankName">Player:GetTeamRankName()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetXP">Player:GetXP()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetZone">Player:GetZone()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetZoneName">Player:GetZoneName()</a></li>
@@ -113,21 +125,27 @@
 									<li><span class="realm server"></span><a href="#meta:IsAFK">Player:IsAFK()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsCharacterFemale">Player:IsCharacterFemale()</a></li>
+									<li><span class="realm shared"></span><a href="#meta:IsCommunityManager">Player:IsCommunityManager()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDeveloper">Player:IsDeveloper()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDonator">Player:IsDonator()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDoorOwner">Player:IsDoorOwner(table)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsLeadAdmin">Player:IsLeadAdmin()</a></li>
+									<li><span class="realm server"></span><a href="#meta:Jail">Player:Jail(time, table)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:KnownName">Player:KnownName()</a></li>
 									<li><span class="realm server"></span><a href="#meta:MakeAFK">Player:MakeAFK()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:Name">Player:Name()</a></li>
 									<li><span class="realm server"></span><a href="#meta:NetworkSkill">Player:NetworkSkill(name, value)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message, class)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SendJailInfo">Player:SendJailInfo(time, table)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetSkillXP">Player:SetSkillXP(name, value)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetXP">Player:SetXP(amount)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetZone">Player:SetZone(id)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SteamName">Player:SteamName()</a></li>
+									<li><span class="realm server"></span><a href="#meta:StopDrag">Player:StopDrag()</a></li>
+									<li><span class="realm server"></span><a href="#meta:UnArrest">Player:UnArrest()</a></li>
+									<li><span class="realm server"></span><a href="#meta:UnJail">Player:UnJail()</a></li>
 									<li><span class="realm server"></span><a href="#meta:UnMakeAFK">Player:UnMakeAFK()</a></li>
 							</ul>
 					</div>
@@ -136,6 +154,89 @@
 				<!-- methods -->
 					<h1 class="title">Functions</h1>
 
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.FindPlayer">
+									<h1><span class="realm shared"></span>Playerimpulse.FindPlayer(searchKey)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L220">View source &raquo;</a>
+
+								<p>Finds a player by a specific search key, if not found returns nil.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">searchKey</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Players name, RP name, or Steam ID 32.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="../classes/Player.html#">Player</a>
+
+												<p>Player found, or nil.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Teams.Define">
+									<h1><span class="realm shared"></span>Playerimpulse.Teams.Define(teamData)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L20">View source &raquo;</a>
+
+								<p>Creates a new team, should run on both client and server.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">teamData</span>
+
+
+
+												<p> teamsData, see teamData structure.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">teamID</span>
+
+												<p>Teams identifier, save this as a global variable.</p>
+											</li>
+
+								</ul>
+
+						</section>
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:AddChatText">
@@ -242,6 +343,22 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:Arrest">
+									<h1><span class="realm server"></span>Player:Arrest()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L13">View source &raquo;</a>
+
+								<p>Detains the player, does not put them in jail.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:CanArrest">
 									<h1><span class="realm shared"></span>Player:CanArrest(target)</h1>
 								</a>
@@ -277,6 +394,168 @@
 													<span class="type">bool</span>
 
 												<p>Can arrest</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanBecomeTeam">
+									<h1><span class="realm shared"></span>Player:CanBecomeTeam(teamID, notify)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L50">View source &raquo;</a>
+
+								<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">teamID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> ID of team wanting to join.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">notify</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Should automatically notify the player.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can player become team.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanBecomeTeamClass">
+									<h1><span class="realm shared"></span>Player:CanBecomeTeamClass(classID, notify)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L117">View source &raquo;</a>
+
+								<p>Returns if a player can join a team's class.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">classID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> ID of class wanting to join.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">notify</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Should automatically notify the player.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can player become class.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:CanBecomeTeamRank">
+									<h1><span class="realm shared"></span>Player:CanBecomeTeamRank(rankID, notify)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L176">View source &raquo;</a>
+
+								<p>Returns if a player can join a team's rank.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">rankID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> ID of rank wanting to join.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">notify</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Should automatically notify the player.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can player become rank.</p>
 											</li>
 
 								</ul>
@@ -390,6 +669,37 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:DragPlayer">
+									<h1><span class="realm server"></span>Player:DragPlayer(ply)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L56">View source &raquo;</a>
+
+								<p>Drags the specified player if they pass the Player:CanArrest check.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ply</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> Player to drag.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:GetSavedRPName">
 									<h1><span class="realm server"></span>Player:GetSavedRPName()</h1>
 								</a>
@@ -452,6 +762,114 @@
 													<span class="type">int</span>
 
 												<p>skill xp amount or 0.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetTeamClass">
+									<h1><span class="realm shared"></span>Player:GetTeamClass()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L248">View source &raquo;</a>
+
+								<p>Returns the players class ID.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>classID of the player.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetTeamClassName">
+									<h1><span class="realm shared"></span>Player:GetTeamClassName()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L232">View source &raquo;</a>
+
+								<p>Returns the players rank name.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>class name of the player.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetTeamRank">
+									<h1><span class="realm shared"></span>Player:GetTeamRank()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L269">View source &raquo;</a>
+
+								<p>Returns the players rank ID.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>rankID of the player.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetTeamRankName">
+									<h1><span class="realm shared"></span>Player:GetTeamRankName()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L255">View source &raquo;</a>
+
+								<p>Returns the players rank name.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>rank name of the player.</p>
 											</li>
 
 								</ul>
@@ -563,7 +981,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L126">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L117">View source &raquo;</a>
 
 								<p>Returns if a player is in the spawn zone</p>
 							</header>
@@ -644,7 +1062,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L217">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L208">View source &raquo;</a>
 
 								<p>Returns if the player has a female character</p>
 							</header>
@@ -665,13 +1083,40 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:IsCommunityManager">
+									<h1><span class="realm shared"></span>Player:IsCommunityManager()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L102">View source &raquo;</a>
+
+								<p>Returns if the player is a Community Manager or higher</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is Community Manager</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:IsDeveloper">
 									<h1><span class="realm shared"></span>Player:IsDeveloper()</h1>
 								</a>
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L58">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L46">View source &raquo;</a>
 
 								<p>Returns if a player is an impulse framework developer</p>
 							</header>
@@ -698,7 +1143,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L65">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L53">View source &raquo;</a>
 
 								<p>Returns if a player has donator status</p>
 							</header>
@@ -766,7 +1211,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L95">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L83">View source &raquo;</a>
 
 								<p>Returns if the player is a lead moderator or higher</p>
 							</header>
@@ -783,6 +1228,48 @@
 											</li>
 
 								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:Jail">
+									<h1><span class="realm server"></span>Player:Jail(time, table)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L102">View source &raquo;</a>
+
+								<p>Puts the player in prison.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">time</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> A 16-bit unsigned integer.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> Data for the players jail sentence.</p>
+											</li>
+									</ul>
+
 
 						</section>
 						<section class="method">
@@ -907,7 +1394,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L156">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L147">View source &raquo;</a>
 
 								<p>Sends a notification to a player.</p>
 							</header>
@@ -937,6 +1424,49 @@
 
 
 												<p> Notification class ID.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SendJailInfo">
+									<h1><span class="realm server"></span>Player:SendJailInfo(time, table)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L84">View source &raquo;</a>
+
+								<p>Networks specified jail data to the player.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">time</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> A 16-bit unsigned integer.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> Data for the players jail sentence.</p>
 											</li>
 									</ul>
 
@@ -1149,6 +1679,54 @@
 											</li>
 
 								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:StopDrag">
+									<h1><span class="realm server"></span>Player:StopDrag()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L68">View source &raquo;</a>
+
+								<p>Stops dragging anyone if the player is dragging someone.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:UnArrest">
+									<h1><span class="realm server"></span>Player:UnArrest()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L30">View source &raquo;</a>
+
+								<p>Unrestrains the player, does not remove them in jail.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:UnJail">
+									<h1><span class="realm server"></span>Player:UnJail()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L173">View source &raquo;</a>
+
+								<p>Frees the player from prison.</p>
+							</header>
+
+
 
 						</section>
 						<section class="method">
