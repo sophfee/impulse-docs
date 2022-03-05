@@ -99,8 +99,8 @@
 							<h2>Functions</h2>
 							<ul>
 									<li><span class="realm shared"></span><a href="#impulse.FindPlayer">Playerimpulse.FindPlayer(searchKey)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Teams.Define">Playerimpulse.Teams.Define(teamData)</a></li>
 									<li><span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a></li>
+									<li><span class="realm server"></span><a href="#meta:AddPropCount">Player:AddPropCount(ent)</a></li>
 									<li><span class="realm server"></span><a href="#meta:AddSkillXP">Player:AddSkillXP(name, value)</a></li>
 									<li><span class="realm server"></span><a href="#meta:AddXP">Player:AddXP(amount)</a></li>
 									<li><span class="realm server"></span><a href="#meta:Arrest">Player:Arrest()</a></li>
@@ -111,16 +111,19 @@
 									<li><span class="realm shared"></span><a href="#meta:CanBuyDoor">Player:CanBuyDoor(table, doorBuyable)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:CanLockUnlockDoor">Player:CanLockUnlockDoor(table, doorBuyable)</a></li>
 									<li><span class="realm server"></span><a href="#meta:DragPlayer">Player:DragPlayer(ply)</a></li>
+									<li><span class="realm server"></span><a href="#meta:GetPropCount">Player:GetPropCount([skip=true])</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetTeamClass">Player:GetTeamClass()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetTeamClassName">Player:GetTeamClassName()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetTeamRank">Player:GetTeamRank()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetTeamRankName">Player:GetTeamRankName()</a></li>
+									<li><span class="realm server"></span><a href="#meta:GetTeamWhitelist">Player:GetTeamWhitelist([team])</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetXP">Player:GetXP()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetZone">Player:GetZone()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:GetZoneName">Player:GetZoneName()</a></li>
 									<li><span class="realm server"></span><a href="#meta:GiveTimedXP">Player:GiveTimedXP()</a></li>
+									<li><span class="realm server"></span><a href="#meta:HasTeamWhitelist">Player:HasTeamWhitelist(team, level)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:InSpawn">Player:InSpawn()</a></li>
 									<li><span class="realm server"></span><a href="#meta:IsAFK">Player:IsAFK()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a></li>
@@ -136,12 +139,17 @@
 									<li><span class="realm shared"></span><a href="#meta:Name">Player:Name()</a></li>
 									<li><span class="realm server"></span><a href="#meta:NetworkSkill">Player:NetworkSkill(name, value)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message, class)</a></li>
+									<li><span class="realm server"></span><a href="#meta:ResetSubMaterials">Player:ResetSubMaterials()</a></li>
 									<li><span class="realm server"></span><a href="#meta:SendJailInfo">Player:SendJailInfo(time, table)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetSkillXP">Player:SetSkillXP(name, value)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetTeam">Player:SetTeam(teamID)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetTeamClass">Player:SetTeamClass(classID[, skipLoadout])</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetTeamRank">Player:SetTeamRank(rankID)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetXP">Player:SetXP(amount)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetZone">Player:SetZone(id)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetupWhitelists">Player:SetupWhitelists()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SteamName">Player:SteamName()</a></li>
 									<li><span class="realm server"></span><a href="#meta:StopDrag">Player:StopDrag()</a></li>
 									<li><span class="realm server"></span><a href="#meta:UnArrest">Player:UnArrest()</a></li>
@@ -198,47 +206,6 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Teams.Define">
-									<h1><span class="realm shared"></span>Playerimpulse.Teams.Define(teamData)</h1>
-								</a>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L20">View source &raquo;</a>
-
-								<p>Creates a new team, should run on both client and server.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">teamData</span>
-
-
-
-												<p> teamsData, see teamData structure.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">teamID</span>
-
-												<p>Teams identifier, save this as a global variable.</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
 								<a class="anchor" id="meta:AddChatText">
 									<h1><span class="realm server"></span>Player:AddChatText(...)</h1>
 								</a>
@@ -262,6 +229,38 @@
 
 
 												<p> Message to send to the player's chatbox</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:AddPropCount">
+									<h1><span class="realm server"></span>Player:AddPropCount(ent)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L127">View source &raquo;</a>
+
+								<p>Adds a prop to the players prop list.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ent</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> Entity to add.</p>
 											</li>
 									</ul>
 
@@ -407,7 +406,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L50">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L53">View source &raquo;</a>
 
 								<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
 							</header>
@@ -461,7 +460,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L117">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L120">View source &raquo;</a>
 
 								<p>Returns if a player can join a team's class.</p>
 							</header>
@@ -515,7 +514,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L176">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L179">View source &raquo;</a>
 
 								<p>Returns if a player can join a team's rank.</p>
 							</header>
@@ -700,6 +699,49 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:GetPropCount">
+									<h1><span class="realm server"></span>Player:GetPropCount([skip=true])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L95">View source &raquo;</a>
+
+								<p>Returns the players prop count.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">skip</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: true</span>
+
+												<p> Skip syncing the prop count to the player.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Prop count.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:GetSavedRPName">
 									<h1><span class="realm server"></span>Player:GetSavedRPName()</h1>
 								</a>
@@ -775,7 +817,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L248">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L251">View source &raquo;</a>
 
 								<p>Returns the players class ID.</p>
 							</header>
@@ -802,7 +844,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L232">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L235">View source &raquo;</a>
 
 								<p>Returns the players rank name.</p>
 							</header>
@@ -829,7 +871,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L269">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L272">View source &raquo;</a>
 
 								<p>Returns the players rank ID.</p>
 							</header>
@@ -856,7 +898,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L255">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L258">View source &raquo;</a>
 
 								<p>Returns the players rank name.</p>
 							</header>
@@ -870,6 +912,49 @@
 													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
 
 												<p>rank name of the player.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetTeamWhitelist">
+									<h1><span class="realm server"></span>Player:GetTeamWhitelist([team])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L320">View source &raquo;</a>
+
+								<p>Returns if the player has a whitelist for the specified team and level</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">team</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+													<span class="tag default">optional</span>
+
+												<p> The whitelist identifier (doesn't really need to be a team.) Defaults to player's active team whitelist.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Whitelist level</p>
 											</li>
 
 								</ul>
@@ -971,6 +1056,60 @@
 							</header>
 
 
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasTeamWhitelist">
+									<h1><span class="realm server"></span>Player:HasTeamWhitelist(team, level)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L334">View source &raquo;</a>
+
+								<p>Returns if the player has a whitelist for the specified team and level</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">team</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> The whitelist identifier (doesn't really need to be a team.)</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">level</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> The level to check for</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has whitelist</p>
+											</li>
+
+								</ul>
 
 						</section>
 						<section class="method">
@@ -1431,6 +1570,22 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:ResetSubMaterials">
+									<h1><span class="realm server"></span>Player:ResetSubMaterials()</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L143">View source &raquo;</a>
+
+								<p>Resets the players submaterials on their model.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:SendJailInfo">
 									<h1><span class="realm server"></span>Player:SendJailInfo(time, table)</h1>
 								</a>
@@ -1593,6 +1748,112 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:SetTeam">
+									<h1><span class="realm server"></span>Player:SetTeam(teamID)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L11">View source &raquo;</a>
+
+								<p>Sets the player to a team.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">teamID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> The ID of the team to switch to.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetTeamClass">
+									<h1><span class="realm server"></span>Player:SetTeamClass(classID[, skipLoadout])</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L86">View source &raquo;</a>
+
+								<p>Changes the player's class.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">classID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> the ID of the team's class.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">skipLoadout</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Should it skip giving the player items / weapons?</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetTeamRank">
+									<h1><span class="realm server"></span>Player:SetTeamRank(rankID)</h1>
+								</a>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L191">View source &raquo;</a>
+
+								<p>Changes the player's rank.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">rankID</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> the ID of the team's rank.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:SetXP">
 									<h1><span class="realm server"></span>Player:SetXP(amount)</h1>
 								</a>
@@ -1651,6 +1912,23 @@
 												<p> zone id.</p>
 											</li>
 									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetupWhitelists">
+									<h1><span class="realm server"></span>Player:SetupWhitelists()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L355">View source &raquo;</a>
+
+								<p>Initializes the whitelists for a user</p>
+							</header>
+
 
 
 						</section>
