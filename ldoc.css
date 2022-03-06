@@ -92,6 +92,17 @@ a.reference {
 	padding: 8px;
 }
 
+.deprecated::before {
+	content: "This function is deprecated! It will likely be removed soon and shouldn't be used.";
+}
+
+.deprecated {
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 159, 10);
+	margin-top: 8px;
+	padding: 8px;
+}
+
 body {
 	display: grid;
 
