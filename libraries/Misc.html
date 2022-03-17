@@ -100,6 +100,7 @@
 							<ul>
 									<li><span class="realm client"></span><a href="#impulse.BlurRect">impulse.BlurRect(x, y, w, h)</a></li>
 									<li><span class="realm server"></span><a href="#impulse.CinematicIntro">impulse.CinematicIntro(message)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.FindPlayer">impulse.FindPlayer(searchKey)</a></li>
 									<li><span class="realm server"></span><a href="#impulse.IsEmpty">impulse.IsEmpty(vector, table)</a></li>
 									<li><span class="realm client"></span><a href="#impulse.MakeWorkbar">impulse.MakeWorkbar(time[, text[, onDone[, popup=false]]])</a></li>
 									<li><span class="realm client"></span><a href="#impulse.blur">impulse.blur(panel, layers, density, alpha)</a></li>
@@ -209,6 +210,49 @@
 											</li>
 									</ul>
 
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.FindPlayer">
+									<h1><span class="realm shared"></span>impulse.FindPlayer(searchKey)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L225">View source &raquo;</a>
+
+								<p>Finds a player by a specific search key, if not found returns nil.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">searchKey</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Players name, RP name, or Steam ID 32.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="../classes/Player.html#">Player</a>
+
+												<p>Player found, or nil.</p>
+											</li>
+
+								</ul>
 
 						</section>
 						<section class="method">
