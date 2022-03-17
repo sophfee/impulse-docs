@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Scenes - impulse documentation</title>
+		<title>File - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Scenes - impulse documentation" />
+		<meta property="og:title" content="File - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="A cutscene playing system, best used with the event tools." />
+			<meta property="og:description" content="impulse Unique File storage system, using custom written .dat files" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -82,8 +82,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Scenes</h1>
-					<h2>A cutscene playing system, best used with the event tools.</h2>
+					<h1>File</h1>
+					<h2>impulse Unique File storage system, using custom written .dat files</h2>
 				</header>
 
 				<!-- description -->
@@ -98,8 +98,10 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm client"></span><a href="#impulse.Scenes.Play">impulse.Scenes.Play(stage, sceneData[, onDone=true], skipPVS, preLoad)</a></li>
-									<li><span class="realm client"></span><a href="#impulse.Scenes.PlaySet">impulse.Scenes.PlaySet(set, music, onDone)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.File.DoType">impulse.File.DoType(class)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.File.HandleType">impulse.File.HandleType(class, func)</a></li>
+									<li><span class="realm server"></span><a href="#impulse.File.Read">impulse.File.Read(name[, handle])</a></li>
+									<li><span class="realm server"></span><a href="#impulse.File.Write">impulse.File.Write(name, header, Data)</a></li>
 							</ul>
 					</div>
 				</details>
@@ -109,17 +111,17 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Scenes.Play">
-									<h1><span class="realm client"></span>impulse.Scenes.Play(stage, sceneData[, onDone=true], skipPVS, preLoad)</h1>
+								<a class="anchor" id="impulse.File.DoType">
+									<h1><span class="realm server"></span>impulse.File.DoType(class)</h1>
 								</a>
 
-									<div class="internal"></div>
+
+									<div class="indev"></div>
 
 
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_data.lua#L92">View source &raquo;</a>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_scenes.lua#L45">View source &raquo;</a>
-
-								<p>Plays a singular scene.</p>
+								<p>Returns a function to use for the given header</p>
 							</header>
 
 
@@ -129,60 +131,69 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">stage</span>
+												<span class="tag parameter">class</span>
 
-													<span class="tag"><span class="type">int</span></span>
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Stage of the set that is currently playing.</p>
+												<p> Header class</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">func</span>
+
+												<p>Header function</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.File.HandleType">
+									<h1><span class="realm server"></span>impulse.File.HandleType(class, func)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+									<div class="indev"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_data.lua#L83">View source &raquo;</a>
+
+								<p>Sets a new way to handle a header</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">class</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Header string class</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">sceneData</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-
-
-												<p> Data used to play the scene</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">onDone</span>
+												<span class="tag parameter">func</span>
 
 													<span class="tag"><span class="type">function</span></span>
 
-													<span class="tag default">default: true</span>
 
-												<p> Callback function when done.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">skipPVS</span>
-
-													<span class="tag"><span class="type">boolean</span></span>
-
-
-												<p> Skips adding the Scene's PVS to clients.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">preLoad</span>
-
-
-
-												<p> should preload</p>
+												<p> Callback function, table data given as parameter.</p>
 											</li>
 									</ul>
 
@@ -190,16 +201,16 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Scenes.PlaySet">
-									<h1><span class="realm client"></span>impulse.Scenes.PlaySet(set, music, onDone)</h1>
+								<a class="anchor" id="impulse.File.Read">
+									<h1><span class="realm server"></span>impulse.File.Read(name[, handle])</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_scenes.lua#L161">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_data.lua#L101">View source &raquo;</a>
 
-								<p>Plays a set of scenes.</p>
+								<p>Reads a file, optionally handles all the data by default header functions.</p>
 							</header>
 
 
@@ -209,36 +220,91 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">set</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-
-
-												<p> Set of scenes to play.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">music</span>
+												<span class="tag parameter">name</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Can be a sound file path OR a CDN URL (Content Download Network).</p>
+												<p> File name, relative to impulse/, omit .dat from name</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">onDone</span>
+												<span class="tag parameter">handle</span>
 
-													<span class="tag"><span class="type">function</span></span>
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Give true to use solver functions.</p>
+											</li>
+									</ul>
 
 
-												<p> Callback func.</p>
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">any</span>
+
+												<p>Data from the file.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.File.Write">
+									<h1><span class="realm server"></span>impulse.File.Write(name, header, Data)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_data.lua#L130">View source &raquo;</a>
+
+								<p>Writes a file.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> File name, relative to impulse/, omit .dat from name</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">header</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Header class</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">Data</span>
+
+
+
+												<p>, should be a table.</p>
 											</li>
 									</ul>
 

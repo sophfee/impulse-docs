@@ -33,8 +33,8 @@
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/IPS.html">IPS</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
 								<li><a href="../libraries/Medical.html">Medical</a></li>
@@ -99,6 +99,11 @@
 							<h2>Functions</h2>
 							<ul>
 									<li><span class="realm shared"></span><a href="#impulse.Schema.Boot">impulse.Schema.Boot()</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Schema.LoadBenches">impulse.Schema.LoadBenches(directory)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Schema.LoadEntites">impulse.Schema.LoadEntites(path)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Schema.LoadItems">impulse.Schema.LoadItems(directory)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Schema.LoadMixtures">impulse.Schema.LoadMixtures(directory)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Schema.LoadVendors">impulse.Schema.LoadVendors(directory)</a></li>
 									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBoot">impulse.Schema.PiggyBoot(name, object)</a></li>
 									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBootEntities">impulse.Schema.PiggyBootEntities(name)</a></li>
 									<li><span class="realm shared"></span><a href="#impulse.Schema.PiggyBootPlugin">impulse.Schema.PiggyBootPlugin(name, plugin)</a></li>
@@ -124,6 +129,171 @@
 								<p>Starts the Schema boot sequence</p>
 							</header>
 
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Schema.LoadBenches">
+									<h1><span class="realm shared"></span>impulse.Schema.LoadBenches(directory)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L220">View source &raquo;</a>
+
+								<p>Loads a directory of benches, automatically creates tables and registers them.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">directory</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> load directory.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Schema.LoadEntites">
+									<h1><span class="realm shared"></span>impulse.Schema.LoadEntites(path)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L114">View source &raquo;</a>
+
+								<p>Loads entities from a selected path.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">path</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Path to the entities.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Schema.LoadItems">
+									<h1><span class="realm shared"></span>impulse.Schema.LoadItems(directory)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L205">View source &raquo;</a>
+
+								<p>Loads a directory of items, automatically creates tables and registers them.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">directory</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> load directory.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Schema.LoadMixtures">
+									<h1><span class="realm shared"></span>impulse.Schema.LoadMixtures(directory)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L250">View source &raquo;</a>
+
+								<p>Loads a directory of mixtures, automatically creates tables and registers them.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">directory</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> load directory.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Schema.LoadVendors">
+									<h1><span class="realm shared"></span>impulse.Schema.LoadVendors(directory)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L235">View source &raquo;</a>
+
+								<p>Loads a directory of vendors, automatically creates tables and registers them.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">directory</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> load directory.</p>
+											</li>
+									</ul>
 
 
 						</section>

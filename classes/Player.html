@@ -49,8 +49,8 @@
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/IPS.html">IPS</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
 								<li><a href="../libraries/Medical.html">Medical</a></li>
@@ -111,6 +111,7 @@
 									<li><span class="realm shared"></span><a href="#meta:CanBuyDoor">Player:CanBuyDoor(table, doorBuyable)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:CanLockUnlockDoor">Player:CanLockUnlockDoor(table, doorBuyable)</a></li>
 									<li><span class="realm server"></span><a href="#meta:DragPlayer">Player:DragPlayer(ply)</a></li>
+									<li><span class="realm server"></span><a href="#meta:FeedHunger">Player:FeedHunger(amount)</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetPropCount">Player:GetPropCount([skip=true])</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a></li>
 									<li><span class="realm server"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a></li>
@@ -142,6 +143,7 @@
 									<li><span class="realm server"></span><a href="#meta:ResetSubMaterials">Player:ResetSubMaterials()</a></li>
 									<li><span class="realm server"></span><a href="#meta:SendJailInfo">Player:SendJailInfo(time, table)</a></li>
 									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetHunger">Player:SetHunger(amount)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetSkillXP">Player:SetSkillXP(name, value)</a></li>
 									<li><span class="realm server"></span><a href="#meta:SetTeam">Player:SetTeam(teamID)</a></li>
@@ -171,7 +173,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L220">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L230">View source &raquo;</a>
 
 								<p>Finds a player by a specific search key, if not found returns nil.</p>
 							</header>
@@ -687,7 +689,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L56">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L58">View source &raquo;</a>
 
 								<p>Drags the specified player if they pass the Player:CanArrest check.</p>
 							</header>
@@ -705,6 +707,38 @@
 
 
 												<p> Player to drag.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:FeedHunger">
+									<h1><span class="realm server"></span>Player:FeedHunger(amount)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_hunger.lua#L15">View source &raquo;</a>
+
+								<p>Gives the player the amount of hunger</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount of hunger (0-100)</p>
 											</li>
 									</ul>
 
@@ -946,7 +980,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L320">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L321">View source &raquo;</a>
 
 								<p>Returns if the player has a whitelist for the specified team and level</p>
 							</header>
@@ -1092,7 +1126,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L334">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L335">View source &raquo;</a>
 
 								<p>Returns if the player has a whitelist for the specified team and level</p>
 							</header>
@@ -1147,7 +1181,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L117">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L127">View source &raquo;</a>
 
 								<p>Returns if a player is in the spawn zone</p>
 							</header>
@@ -1231,7 +1265,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L208">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L218">View source &raquo;</a>
 
 								<p>Returns if the player has a female character</p>
 							</header>
@@ -1259,7 +1293,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L102">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L112">View source &raquo;</a>
 
 								<p>Returns if the player is a Community Manager or higher</p>
 							</header>
@@ -1385,7 +1419,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L83">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L93">View source &raquo;</a>
 
 								<p>Returns if the player is a lead moderator or higher</p>
 							</header>
@@ -1413,7 +1447,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L102">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L104">View source &raquo;</a>
 
 								<p>Puts the player in prison.</p>
 							</header>
@@ -1574,7 +1608,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L147">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L157">View source &raquo;</a>
 
 								<p>Sends a notification to a player.</p>
 							</header>
@@ -1636,7 +1670,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L84">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L86">View source &raquo;</a>
 
 								<p>Networks specified jail data to the player.</p>
 							</header>
@@ -1699,6 +1733,38 @@
 												<p>
 
 </p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetHunger">
+									<h1><span class="realm server"></span>Player:SetHunger(amount)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_hunger.lua#L8">View source &raquo;</a>
+
+								<p>Set the hunger amount of a player</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">amount</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Amount of hunger (0-100)</p>
 											</li>
 									</ul>
 
@@ -1878,7 +1944,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L191">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L192">View source &raquo;</a>
 
 								<p>Changes the player's rank.</p>
 							</header>
@@ -1976,7 +2042,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L355">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_teams.lua#L356">View source &raquo;</a>
 
 								<p>Initializes the whitelists for a user</p>
 							</header>
@@ -2021,7 +2087,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L68">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L70">View source &raquo;</a>
 
 								<p>Stops dragging anyone if the player is dragging someone.</p>
 							</header>
@@ -2055,7 +2121,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L173">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L175">View source &raquo;</a>
 
 								<p>Frees the player from prison.</p>
 							</header>
