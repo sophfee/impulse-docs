@@ -98,64 +98,244 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a></li>
-									<li><span class="realm server"></span><a href="#meta:AddPropCount">Player:AddPropCount(ent)</a></li>
-									<li><span class="realm server"></span><a href="#meta:AddSkillXP">Player:AddSkillXP(name, value)</a></li>
-									<li><span class="realm server"></span><a href="#meta:AddXP">Player:AddXP(amount)</a></li>
-									<li><span class="realm server"></span><a href="#meta:Arrest">Player:Arrest()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:CanArrest">Player:CanArrest(target)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:CanBecomeTeam">Player:CanBecomeTeam(teamID, notify)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:CanBecomeTeamClass">Player:CanBecomeTeamClass(classID, notify)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:CanBecomeTeamRank">Player:CanBecomeTeamRank(rankID, notify)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:CanBuyDoor">Player:CanBuyDoor(table, doorBuyable)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:CanLockUnlockDoor">Player:CanLockUnlockDoor(table, doorBuyable)</a></li>
-									<li><span class="realm server"></span><a href="#meta:DragPlayer">Player:DragPlayer(ply)</a></li>
-									<li><span class="realm server"></span><a href="#meta:FeedHunger">Player:FeedHunger(amount)</a></li>
-									<li><span class="realm server"></span><a href="#meta:GetPropCount">Player:GetPropCount([skip=true])</a></li>
-									<li><span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a></li>
-									<li><span class="realm server"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetTeamClass">Player:GetTeamClass()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetTeamClassName">Player:GetTeamClassName()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetTeamRank">Player:GetTeamRank()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetTeamRankName">Player:GetTeamRankName()</a></li>
-									<li><span class="realm server"></span><a href="#meta:GetTeamWhitelist">Player:GetTeamWhitelist([team])</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetXP">Player:GetXP()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetZone">Player:GetZone()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetZoneName">Player:GetZoneName()</a></li>
-									<li><span class="realm server"></span><a href="#meta:GiveTimedXP">Player:GiveTimedXP()</a></li>
-									<li><span class="realm server"></span><a href="#meta:HasTeamWhitelist">Player:HasTeamWhitelist(team, level)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:InSpawn">Player:InSpawn()</a></li>
-									<li><span class="realm server"></span><a href="#meta:IsAFK">Player:IsAFK()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsCharacterFemale">Player:IsCharacterFemale()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsCommunityManager">Player:IsCommunityManager()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsDeveloper">Player:IsDeveloper()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsDonator">Player:IsDonator()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsDoorOwner">Player:IsDoorOwner(table)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsLeadAdmin">Player:IsLeadAdmin()</a></li>
-									<li><span class="realm server"></span><a href="#meta:Jail">Player:Jail(time, table)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:KnownName">Player:KnownName()</a></li>
-									<li><span class="realm server"></span><a href="#meta:MakeAFK">Player:MakeAFK()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:Name">Player:Name()</a></li>
-									<li><span class="realm server"></span><a href="#meta:NetworkSkill">Player:NetworkSkill(name, value)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message, class)</a></li>
-									<li><span class="realm server"></span><a href="#meta:ResetSubMaterials">Player:ResetSubMaterials()</a></li>
-									<li><span class="realm server"></span><a href="#meta:SendJailInfo">Player:SendJailInfo(time, table)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetHunger">Player:SetHunger(amount)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetSkillXP">Player:SetSkillXP(name, value)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetTeam">Player:SetTeam(teamID)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetTeamClass">Player:SetTeamClass(classID[, skipLoadout])</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetTeamRank">Player:SetTeamRank(rankID)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetXP">Player:SetXP(amount)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetZone">Player:SetZone(id)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetupWhitelists">Player:SetupWhitelists()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:SteamName">Player:SteamName()</a></li>
-									<li><span class="realm server"></span><a href="#meta:StopDrag">Player:StopDrag()</a></li>
-									<li><span class="realm server"></span><a href="#meta:UnArrest">Player:UnArrest()</a></li>
-									<li><span class="realm server"></span><a href="#meta:UnJail">Player:UnJail()</a></li>
-									<li><span class="realm server"></span><a href="#meta:UnMakeAFK">Player:UnMakeAFK()</a></li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:AddPropCount">Player:AddPropCount(ent)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:AddSkillXP">Player:AddSkillXP(name, value)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:AddXP">Player:AddXP(amount)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:Arrest">Player:Arrest()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:CanArrest">Player:CanArrest(target)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:CanBecomeTeam">Player:CanBecomeTeam(teamID, notify)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:CanBecomeTeamClass">Player:CanBecomeTeamClass(classID, notify)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:CanBecomeTeamRank">Player:CanBecomeTeamRank(rankID, notify)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:CanBuyDoor">Player:CanBuyDoor(table, doorBuyable)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:CanLockUnlockDoor">Player:CanLockUnlockDoor(table, doorBuyable)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:DragPlayer">Player:DragPlayer(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:FeedHunger">Player:FeedHunger(amount)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GetPropCount">Player:GetPropCount([skip=true])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GetSavedRPName">Player:GetSavedRPName()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetTeamClass">Player:GetTeamClass()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetTeamClassName">Player:GetTeamClassName()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetTeamRank">Player:GetTeamRank()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetTeamRankName">Player:GetTeamRankName()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GetTeamWhitelist">Player:GetTeamWhitelist([team])</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetXP">Player:GetXP()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetZone">Player:GetZone()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetZoneName">Player:GetZoneName()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GiveTimedXP">Player:GiveTimedXP()</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:HasTeamWhitelist">Player:HasTeamWhitelist(team, level)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:InSpawn">Player:InSpawn()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:IsAFK">Player:IsAFK()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsCharacterFemale">Player:IsCharacterFemale()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsCommunityManager">Player:IsCommunityManager()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsDeveloper">Player:IsDeveloper()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsDonator">Player:IsDonator()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsDoorOwner">Player:IsDoorOwner(table)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsLeadAdmin">Player:IsLeadAdmin()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:Jail">Player:Jail(time, table)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:KnownName">Player:KnownName()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:MakeAFK">Player:MakeAFK()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:Name">Player:Name()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:NetworkSkill">Player:NetworkSkill(name, value)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message, class)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:ResetSubMaterials">Player:ResetSubMaterials()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SendJailInfo">Player:SendJailInfo(time, table)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetHunger">Player:SetHunger(amount)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetRPName">Player:SetRPName(name, save)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetSkillXP">Player:SetSkillXP(name, value)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetTeam">Player:SetTeam(teamID)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetTeamClass">Player:SetTeamClass(classID[, skipLoadout])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetTeamRank">Player:SetTeamRank(rankID)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetXP">Player:SetXP(amount)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetZone">Player:SetZone(id)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetupWhitelists">Player:SetupWhitelists()</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:SteamName">Player:SteamName()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:StopDrag">Player:StopDrag()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:UnArrest">Player:UnArrest()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:UnJail">Player:UnJail()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:UnMakeAFK">Player:UnMakeAFK()</a>
+									</li>
 							</ul>
 					</div>
 				</details>

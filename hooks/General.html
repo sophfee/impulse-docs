@@ -98,58 +98,215 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm server"></span><a href="#CanEditDoor">GENERAL:CanEditDoor(ply, door)</a></li>
-									<li><span class="realm shared"></span><a href="#CanPlayerChangeTeam">GENERAL:CanPlayerChangeTeam(ply, team)</a></li>
-									<li><span class="realm server"></span><a href="#CanStoreItem">GENERAL:CanStoreItem(ply, storage, itemclass, from)</a></li>
-									<li><span class="realm shared"></span><a href="#CanUseInventory">GENERAL:CanUseInventory(ply)</a></li>
-									<li><span class="realm server"></span><a href="#ChatClassMessageSend">GENERAL:ChatClassMessageSend(chatClass, sender, message)</a></li>
-									<li><span class="realm server"></span><a href="#ChatStateChanged">GENERAL:ChatStateChanged(ply, oldState, newState)</a></li>
-									<li><span class="realm client"></span><a href="#CheckMenuInput">GENERAL:CheckMenuInput()</a></li>
-									<li><span class="realm server"></span><a href="#ContainerPasscodeSet">GENERAL:ContainerPasscodeSet(ply, container)</a></li>
-									<li><span class="realm client"></span><a href="#CreateMenuMessages">GENERAL:CreateMenuMessages()</a></li>
-									<li><span class="realm client"></span><a href="#CreateSubMenu">GENERAL:CreateSubMenu(identifier)</a></li>
-									<li><span class="realm client"></span><a href="#DefineSettings">GENERAL:DefineSettings()</a></li>
-									<li><span class="realm client"></span><a href="#DisplayMenuMessages">GENERAL:DisplayMenuMessages()</a></li>
-									<li><span class="realm server"></span><a href="#DoInventorySearch">GENERAL:DoInventorySearch(ply, target)</a></li>
-									<li><span class="realm client"></span><a href="#GetDeathSound">GENERAL:GetDeathSound()</a></li>
-									<li><span class="realm shared"></span><a href="#LoadAnimationClasses">GENERAL:LoadAnimationClasses()</a></li>
-									<li><span class="realm shared"></span><a href="#OnSchemaLoaded">GENERAL:OnSchemaLoaded()</a></li>
-									<li><span class="realm shared"></span><a href="#OnSyncUpdate">GENERAL:OnSyncUpdate(varID, targetID, any)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerAddUserToDoor">GENERAL:PlayerAddUserToDoor(ply, owners)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerArrested">GENERAL:PlayerArrested(convict, officer)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerBuyablePurchase">GENERAL:PlayerBuyablePurchase(ply, buyable)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerCanHearCheck">GENERAL:PlayerCanHearCheck(listener, speaker)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerChangeRPName">GENERAL:PlayerChangeRPName(ply, name)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerConfiscateItem">GENERAL:PlayerConfiscateItem(ply, targ, itemclass)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerCraftItem">GENERAL:PlayerCraftItem(ply, output)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerDropDeathItems">GENERAL:PlayerDropDeathItems(ply, killer, pos, dropped, inv)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerDropItem">GENERAL:PlayerDropItem(ply, itemData, invID)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerDropMoney">GENERAL:PlayerDropMoney(ply, money)</a></li>
-									<li><span class="realm client"></span><a href="#PlayerGetJailData">GENERAL:PlayerGetJailData(endTime, jailData)</a></li>
-									<li><span class="realm shared"></span><a href="#PlayerGetKnownName">GENERAL:PlayerGetKnownName(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerGetXP">GENERAL:PlayerGetXP(ply, xp)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerInitialSpawnLoaded">GENERAL:PlayerInitialSpawnLoaded(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, box)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, storage)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerPurchaseDoor">GENERAL:PlayerPurchaseDoor(ply, door)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerRagdollPreSpawn">GENERAL:PlayerRagdollPreSpawn(ragdoll, ply, attacker)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerSellDoor">GENERAL:PlayerSellDoor(ply, door)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerShouldBreakLegs">GENERAL:PlayerShouldBreakLegs(ply, damage)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerShouldGetHungry">GENERAL:PlayerShouldGetHungry(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerUnArrested">GENERAL:PlayerUnArrested(convict, officer)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerUnJailed">GENERAL:PlayerUnJailed(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerVendorBuy">GENERAL:PlayerVendorBuy(ply, vendor, itemclass, cost)</a></li>
-									<li><span class="realm server"></span><a href="#PlayerZoneChanged">GENERAL:PlayerZoneChanged(ply, id)</a></li>
-									<li><span class="realm server"></span><a href="#PostChatClassMessageSend">GENERAL:PostChatClassMessageSend(chatClass, message, sender)</a></li>
-									<li><span class="realm shared"></span><a href="#PostConfigLoad">GENERAL:PostConfigLoad()</a></li>
-									<li><span class="realm server"></span><a href="#PostInitPostEntity">GENERAL:PostInitPostEntity()</a></li>
-									<li><span class="realm server"></span><a href="#PostInventorySetup">GENERAL:PostInventorySetup(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PostSetupPlayer">GENERAL:PostSetupPlayer(ply)</a></li>
-									<li><span class="realm server"></span><a href="#PreEarlyInventorySetup">GENERAL:PreEarlyInventorySetup(ply)</a></li>
-									<li><span class="realm server"></span><a href="#ProcessICChatMessage">GENERAL:ProcessICChatMessage(sender, message)</a></li>
-									<li><span class="realm server"></span><a href="#ProcessOOCMessage">GENERAL:ProcessOOCMessage(message)</a></li>
-									<li><span class="realm server"></span><a href="#RadioMessageFallback">GENERAL:RadioMessageFallback(ply, message)</a></li>
-									<li><span class="realm client"></span><a href="#ShouldDrawHUDBox">GENERAL:ShouldDrawHUDBox()</a></li>
+									<li>
+
+										<span class="realm server"></span><a href="#CanEditDoor">GENERAL:CanEditDoor(ply, door)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#CanPlayerChangeTeam">GENERAL:CanPlayerChangeTeam(ply, team)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#CanStoreItem">GENERAL:CanStoreItem(ply, storage, itemclass, from)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#CanUseInventory">GENERAL:CanUseInventory(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#ChatClassMessageSend">GENERAL:ChatClassMessageSend(chatClass, sender, message)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#ChatStateChanged">GENERAL:ChatStateChanged(ply, oldState, newState)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#CheckMenuInput">GENERAL:CheckMenuInput()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#ContainerPasscodeSet">GENERAL:ContainerPasscodeSet(ply, container)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#CreateMenuMessages">GENERAL:CreateMenuMessages()</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#CreateSubMenu">GENERAL:CreateSubMenu(identifier)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#DefineSettings">GENERAL:DefineSettings()</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#DisplayMenuMessages">GENERAL:DisplayMenuMessages()</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#DoInventorySearch">GENERAL:DoInventorySearch(ply, target)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#GetDeathSound">GENERAL:GetDeathSound()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#LoadAnimationClasses">GENERAL:LoadAnimationClasses()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#OnSchemaLoaded">GENERAL:OnSchemaLoaded()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#OnSyncUpdate">GENERAL:OnSyncUpdate(varID, targetID, any)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerAddUserToDoor">GENERAL:PlayerAddUserToDoor(ply, owners)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerArrested">GENERAL:PlayerArrested(convict, officer)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerBuyablePurchase">GENERAL:PlayerBuyablePurchase(ply, buyable)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerCanHearCheck">GENERAL:PlayerCanHearCheck(listener, speaker)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerChangeRPName">GENERAL:PlayerChangeRPName(ply, name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerConfiscateItem">GENERAL:PlayerConfiscateItem(ply, targ, itemclass)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerCraftItem">GENERAL:PlayerCraftItem(ply, output)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerDropDeathItems">GENERAL:PlayerDropDeathItems(ply, killer, pos, dropped, inv)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerDropItem">GENERAL:PlayerDropItem(ply, itemData, invID)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerDropMoney">GENERAL:PlayerDropMoney(ply, money)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#PlayerGetJailData">GENERAL:PlayerGetJailData(endTime, jailData)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#PlayerGetKnownName">GENERAL:PlayerGetKnownName(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerGetXP">GENERAL:PlayerGetXP(ply, xp)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerInitialSpawnLoaded">GENERAL:PlayerInitialSpawnLoaded(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, box)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerOpenStorage">GENERAL:PlayerOpenStorage(ply, storage)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerPurchaseDoor">GENERAL:PlayerPurchaseDoor(ply, door)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerRagdollPreSpawn">GENERAL:PlayerRagdollPreSpawn(ragdoll, ply, attacker)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerSellDoor">GENERAL:PlayerSellDoor(ply, door)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerShouldBreakLegs">GENERAL:PlayerShouldBreakLegs(ply, damage)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerShouldGetHungry">GENERAL:PlayerShouldGetHungry(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerUnArrested">GENERAL:PlayerUnArrested(convict, officer)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerUnJailed">GENERAL:PlayerUnJailed(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerVendorBuy">GENERAL:PlayerVendorBuy(ply, vendor, itemclass, cost)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PlayerZoneChanged">GENERAL:PlayerZoneChanged(ply, id)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PostChatClassMessageSend">GENERAL:PostChatClassMessageSend(chatClass, message, sender)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#PostConfigLoad">GENERAL:PostConfigLoad()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PostInitPostEntity">GENERAL:PostInitPostEntity()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PostInventorySetup">GENERAL:PostInventorySetup(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PostSetupPlayer">GENERAL:PostSetupPlayer(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#PreEarlyInventorySetup">GENERAL:PreEarlyInventorySetup(ply)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#ProcessICChatMessage">GENERAL:ProcessICChatMessage(sender, message)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#ProcessOOCMessage">GENERAL:ProcessOOCMessage(message)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#RadioMessageFallback">GENERAL:RadioMessageFallback(ply, message)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#ShouldDrawHUDBox">GENERAL:ShouldDrawHUDBox()</a>
+									</li>
 							</ul>
 					</div>
 				</details>

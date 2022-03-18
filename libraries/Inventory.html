@@ -98,49 +98,172 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID(class)</a></li>
-									<li><span class="realm server"></span><a href="#impulse.Inventory.DBAddItem">impulse.Inventory.DBAddItem(ownerid, class[, storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#impulse.Inventory.DBClearInventory">impulse.Inventory.DBClearInventory(ownerid[, storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#impulse.Inventory.DBRemoveItem">impulse.Inventory.DBRemoveItem(ownerid, class[, storageType=1[, limit=1]])</a></li>
-									<li><span class="realm server"></span><a href="#impulse.Inventory.DBUpdateStoreType">impulse.Inventory.DBUpdateStoreType(ownerid, classname[, limit=1], oldStorageType, newStorageType)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Inventory.GetCraftingTime">impulse.Inventory.GetCraftingTime(class)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Inventory.PickRandomCraftSound">impulse.Inventory.PickRandomCraftSound([craftType=generic])</a></li>
-									<li><span class="realm server"></span><a href="#impulse.Inventory.SpawnBench">impulse.Inventory.SpawnBench(class, pos, ang)</a></li>
-									<li><span class="realm server"></span><a href="#impulse.Inventory.SpawnItem">impulse.Inventory.SpawnItem(class, pos[, bannedPlayer[, killTime]])</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.RegisterBench">impulse.RegisterBench(benchData)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.RegisterItem">impulse.RegisterItem(itemData)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.RegisterMixture">impulse.RegisterMixture(mixData)</a></li>
-									<li><span class="realm server"></span><a href="#meta:CanHoldItem">meta:CanHoldItem(class[, amount=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:CanHoldItemStorage">meta:CanHoldItemStorage(class[, amount=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:CanMakeMix">meta:CanMakeMix(class)</a></li>
-									<li><span class="realm server"></span><a href="#meta:ClearIllegalInventory">meta:ClearIllegalInventory([storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:ClearInventory">meta:ClearInventory([storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:ClearRestrictedInventory">meta:ClearRestrictedInventory([storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:DropInventoryItem">meta:DropInventoryItem(itemid)</a></li>
-									<li><span class="realm server"></span><a href="#meta:GetInventory">meta:GetInventory([storageType=1])</a></li>
-									<li><span class="realm shared"></span><a href="#meta:GetMaxInventoryStorage">meta:GetMaxInventoryStorage()</a></li>
-									<li><span class="realm server"></span><a href="#meta:GiveInventoryItem">meta:GiveInventoryItem(itemclass[, storageType=1[, restricted=false[, isLoaded=false[, moving=false[, clip]]]]])</a></li>
-									<li><span class="realm server"></span><a href="#meta:HasIllegalInventoryItem">meta:HasIllegalInventoryItem([storageType=1])</a></li>
-									<li><span class="realm client"></span><a href="#meta:HasInventoryItem">meta:HasInventoryItem(itemId)</a></li>
-									<li><span class="realm server"></span><a href="#meta:HasInventoryItem">meta:HasInventoryItem(class[, amount=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:HasInventoryItemSpecific">meta:HasInventoryItemSpecific(itemID[, storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:HasInventoryItemStorage">meta:HasInventoryItemStorage(class[, amount=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:IsInventoryItemRestricted">meta:IsInventoryItemRestricted(itemID[, storageType=1])</a></li>
-									<li><span class="realm server"></span><a href="#meta:MoveInventoryItem">meta:MoveInventoryItem(itemid, from, to)</a></li>
-									<li><span class="realm server"></span><a href="#meta:MoveInventoryItemMass">meta:MoveInventoryItemMass(class, from, to, amount)</a></li>
-									<li><span class="realm server"></span><a href="#meta:SetInventoryItemEquipped">meta:SetInventoryItemEquipped(itemID, state)</a></li>
-									<li><span class="realm server"></span><a href="#meta:TakeInventoryItem">meta:TakeInventoryItem(itemID[, storageType=1[, moving=false]])</a></li>
-									<li><span class="realm server"></span><a href="#meta:TakeInventoryItemClass">meta:TakeInventoryItemClass(class[, storageType=1[, amount=1]])</a></li>
-									<li><span class="realm server"></span><a href="#meta:UnEquipInventory">meta:UnEquipInventory()</a></li>
-									<li><span class="realm server"></span><a href="#meta:UseInventoryItem">meta:UseInventoryItem(itemid)</a></li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID(class)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Inventory.DBAddItem">impulse.Inventory.DBAddItem(ownerid, class[, storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Inventory.DBClearInventory">impulse.Inventory.DBClearInventory(ownerid[, storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Inventory.DBRemoveItem">impulse.Inventory.DBRemoveItem(ownerid, class[, storageType=1[, limit=1]])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Inventory.DBUpdateStoreType">impulse.Inventory.DBUpdateStoreType(ownerid, classname[, limit=1], oldStorageType, newStorageType)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.Inventory.GetCraftingTime">impulse.Inventory.GetCraftingTime(class)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.Inventory.PickRandomCraftSound">impulse.Inventory.PickRandomCraftSound([craftType=generic])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Inventory.SpawnBench">impulse.Inventory.SpawnBench(class, pos, ang)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Inventory.SpawnItem">impulse.Inventory.SpawnItem(class, pos[, bannedPlayer[, killTime]])</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.RegisterBench">impulse.RegisterBench(benchData)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.RegisterItem">impulse.RegisterItem(itemData)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.RegisterMixture">impulse.RegisterMixture(mixData)</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:CanHoldItem">Player:CanHoldItem(class[, amount=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:CanHoldItemStorage">Player:CanHoldItemStorage(class[, amount=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:CanMakeMix">Player:CanMakeMix(class)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:ClearIllegalInventory">Player:ClearIllegalInventory([storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:ClearInventory">Player:ClearInventory([storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:ClearRestrictedInventory">Player:ClearRestrictedInventory([storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:DropInventoryItem">Player:DropInventoryItem(itemid)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GetInventory">Player:GetInventory([storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetMaxInventoryStorage">Player:GetMaxInventoryStorage()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GiveInventoryItem">Player:GiveInventoryItem(itemclass[, storageType=1[, restricted=false[, isLoaded=false[, moving=false[, clip]]]]])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:HasIllegalInventoryItem">Player:HasIllegalInventoryItem([storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#meta:HasInventoryItem">Player:HasInventoryItem(itemId)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:HasInventoryItem">Player:HasInventoryItem(class[, amount=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:HasInventoryItemSpecific">Player:HasInventoryItemSpecific(itemID[, storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:HasInventoryItemStorage">Player:HasInventoryItemStorage(class[, amount=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:IsInventoryItemRestricted">Player:IsInventoryItemRestricted(itemID[, storageType=1])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:MoveInventoryItem">Player:MoveInventoryItem(itemid, from, to)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:MoveInventoryItemMass">Player:MoveInventoryItemMass(class, from, to, amount)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetInventoryItemEquipped">Player:SetInventoryItemEquipped(itemID, state)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:TakeInventoryItem">Player:TakeInventoryItem(itemID[, storageType=1[, moving=false]])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:TakeInventoryItemClass">Player:TakeInventoryItemClass(class[, storageType=1[, amount=1]])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:UnEquipInventory">Player:UnEquipInventory()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:UseInventoryItem">Player:UseInventoryItem(itemid)</a>
+									</li>
 							</ul>
 							<h2>Tables</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#BENCH">BENCH</a></li>
-									<li><span class="realm client"></span><a href="#CraftingTypes">CraftingTypes</a></li>
-									<li><span class="realm server"></span><a href="#INV_ENUM">INV_ENUM</a></li>
-									<li><span class="realm shared"></span><a href="#ITEM">ITEM</a></li>
-									<li><span class="realm shared"></span><a href="#MIX">MIX</a></li>
+									<li>
+
+										<span class="realm shared"></span><a href="#BENCH">BENCH</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#CraftingTypes">CraftingTypes</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#INV_ENUM">INV_ENUM</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#ITEM">ITEM</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#MIX">MIX</a>
+									</li>
 							</ul>
 					</div>
 				</details>
@@ -788,7 +911,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:CanHoldItem">
-									<h1><span class="realm server"></span>meta:CanHoldItem(class[, amount=1])</h1>
+									<h1><span class="realm server"></span>Player:CanHoldItem(class[, amount=1])</h1>
 								</a>
 
 
@@ -844,7 +967,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:CanHoldItemStorage">
-									<h1><span class="realm server"></span>meta:CanHoldItemStorage(class[, amount=1])</h1>
+									<h1><span class="realm server"></span>Player:CanHoldItemStorage(class[, amount=1])</h1>
 								</a>
 
 
@@ -900,7 +1023,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:CanMakeMix">
-									<h1><span class="realm server"></span>meta:CanMakeMix(class)</h1>
+									<h1><span class="realm server"></span>Player:CanMakeMix(class)</h1>
 								</a>
 
 
@@ -943,7 +1066,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:ClearIllegalInventory">
-									<h1><span class="realm server"></span>meta:ClearIllegalInventory([storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:ClearIllegalInventory([storageType=1])</h1>
 								</a>
 
 
@@ -976,7 +1099,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:ClearInventory">
-									<h1><span class="realm server"></span>meta:ClearInventory([storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:ClearInventory([storageType=1])</h1>
 								</a>
 
 
@@ -1009,7 +1132,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:ClearRestrictedInventory">
-									<h1><span class="realm server"></span>meta:ClearRestrictedInventory([storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:ClearRestrictedInventory([storageType=1])</h1>
 								</a>
 
 
@@ -1042,7 +1165,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:DropInventoryItem">
-									<h1><span class="realm server"></span>meta:DropInventoryItem(itemid)</h1>
+									<h1><span class="realm server"></span>Player:DropInventoryItem(itemid)</h1>
 								</a>
 
 
@@ -1074,7 +1197,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:GetInventory">
-									<h1><span class="realm server"></span>meta:GetInventory([storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:GetInventory([storageType=1])</h1>
 								</a>
 
 
@@ -1118,7 +1241,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:GetMaxInventoryStorage">
-									<h1><span class="realm shared"></span>meta:GetMaxInventoryStorage()</h1>
+									<h1><span class="realm shared"></span>Player:GetMaxInventoryStorage()</h1>
 								</a>
 
 
@@ -1146,7 +1269,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:GiveInventoryItem">
-									<h1><span class="realm server"></span>meta:GiveInventoryItem(itemclass[, storageType=1[, restricted=false[, isLoaded=false[, moving=false[, clip]]]]])</h1>
+									<h1><span class="realm server"></span>Player:GiveInventoryItem(itemclass[, storageType=1[, restricted=false[, isLoaded=false[, moving=false[, clip]]]]])</h1>
 								</a>
 
 
@@ -1254,7 +1377,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:HasIllegalInventoryItem">
-									<h1><span class="realm server"></span>meta:HasIllegalInventoryItem([storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:HasIllegalInventoryItem([storageType=1])</h1>
 								</a>
 
 
@@ -1304,7 +1427,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:HasInventoryItem">
-									<h1><span class="realm client"></span>meta:HasInventoryItem(itemId)</h1>
+									<h1><span class="realm client"></span>Player:HasInventoryItem(itemId)</h1>
 								</a>
 
 
@@ -1357,7 +1480,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:HasInventoryItem">
-									<h1><span class="realm server"></span>meta:HasInventoryItem(class[, amount=1])</h1>
+									<h1><span class="realm server"></span>Player:HasInventoryItem(class[, amount=1])</h1>
 								</a>
 
 
@@ -1413,7 +1536,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:HasInventoryItemSpecific">
-									<h1><span class="realm server"></span>meta:HasInventoryItemSpecific(itemID[, storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:HasInventoryItemSpecific(itemID[, storageType=1])</h1>
 								</a>
 
 
@@ -1469,7 +1592,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:HasInventoryItemStorage">
-									<h1><span class="realm server"></span>meta:HasInventoryItemStorage(class[, amount=1])</h1>
+									<h1><span class="realm server"></span>Player:HasInventoryItemStorage(class[, amount=1])</h1>
 								</a>
 
 
@@ -1525,7 +1648,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:IsInventoryItemRestricted">
-									<h1><span class="realm server"></span>meta:IsInventoryItemRestricted(itemID[, storageType=1])</h1>
+									<h1><span class="realm server"></span>Player:IsInventoryItemRestricted(itemID[, storageType=1])</h1>
 								</a>
 
 
@@ -1581,7 +1704,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:MoveInventoryItem">
-									<h1><span class="realm server"></span>meta:MoveInventoryItem(itemid, from, to)</h1>
+									<h1><span class="realm server"></span>Player:MoveInventoryItem(itemid, from, to)</h1>
 								</a>
 
 
@@ -1637,7 +1760,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:MoveInventoryItemMass">
-									<h1><span class="realm server"></span>meta:MoveInventoryItemMass(class, from, to, amount)</h1>
+									<h1><span class="realm server"></span>Player:MoveInventoryItemMass(class, from, to, amount)</h1>
 								</a>
 
 
@@ -1705,7 +1828,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:SetInventoryItemEquipped">
-									<h1><span class="realm server"></span>meta:SetInventoryItemEquipped(itemID, state)</h1>
+									<h1><span class="realm server"></span>Player:SetInventoryItemEquipped(itemID, state)</h1>
 								</a>
 
 
@@ -1749,7 +1872,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:TakeInventoryItem">
-									<h1><span class="realm server"></span>meta:TakeInventoryItem(itemID[, storageType=1[, moving=false]])</h1>
+									<h1><span class="realm server"></span>Player:TakeInventoryItem(itemID[, storageType=1[, moving=false]])</h1>
 								</a>
 
 
@@ -1818,7 +1941,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:TakeInventoryItemClass">
-									<h1><span class="realm server"></span>meta:TakeInventoryItemClass(class[, storageType=1[, amount=1]])</h1>
+									<h1><span class="realm server"></span>Player:TakeInventoryItemClass(class[, storageType=1[, amount=1]])</h1>
 								</a>
 
 
@@ -1876,7 +1999,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:UnEquipInventory">
-									<h1><span class="realm server"></span>meta:UnEquipInventory()</h1>
+									<h1><span class="realm server"></span>Player:UnEquipInventory()</h1>
 								</a>
 
 
@@ -1893,7 +2016,7 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:UseInventoryItem">
-									<h1><span class="realm server"></span>meta:UseInventoryItem(itemid)</h1>
+									<h1><span class="realm server"></span>Player:UseInventoryItem(itemid)</h1>
 								</a>
 
 
