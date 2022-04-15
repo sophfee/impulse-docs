@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Skills - impulse documentation</title>
+		<title>States - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Skills - impulse documentation" />
+		<meta property="og:title" content="States - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="XP based leveling system." />
+			<meta property="og:description" content="A system to save and load player states." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -84,8 +84,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Skills</h1>
-					<h2>XP based leveling system.</h2>
+					<h1>States</h1>
+					<h2>A system to save and load player states.</h2>
 				</header>
 
 				<!-- description -->
@@ -102,15 +102,15 @@
 							<ul>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Skills.Define">impulse.Skills.Define(name, niceName)</a>
+										<span class="realm server"></span><a href="#meta:ReadState">Player:ReadState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#meta:GetSkillLevel">Player:GetSkillLevel(name)</a>
+										<span class="realm server"></span><a href="#meta:RestoreState">Player:RestoreState([name])</a>
 									</li>
 									<li>
 
-										<span class="realm client"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a>
+										<span class="realm server"></span><a href="#meta:SaveState">Player:SaveState([name])</a>
 									</li>
 							</ul>
 					</div>
@@ -121,16 +121,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Skills.Define">
-									<h1><span class="realm shared"></span>impulse.Skills.Define(name, niceName)</h1>
+								<a class="anchor" id="meta:ReadState">
+									<h1><span class="realm server"></span>Player:ReadState(name)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L14">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L69">View source &raquo;</a>
 
-								<p>Define a new Skill</p>
+								<p>Get a state from a player, this persists after a disconnect! If it's the same player, you'll have the same states!</p>
 							</header>
 
 
@@ -145,19 +145,7 @@
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> The name used in code.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">niceName</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The name shown to clients.</p>
+												<p> Index of the state.</p>
 											</li>
 									</ul>
 
@@ -165,16 +153,17 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:GetSkillLevel">
-									<h1><span class="realm shared"></span>Player:GetSkillLevel(name)</h1>
+								<a class="anchor" id="meta:RestoreState">
+									<h1><span class="realm server"></span>Player:RestoreState([name])</h1>
 								</a>
 
 
+									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L50">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L91">View source &raquo;</a>
 
-								<p>Get the player's level in a skill</p>
+								<p>Loads the players state by index.  Internally uses Player:ReadState</p>
 							</header>
 
 
@@ -186,38 +175,28 @@
 											<li>
 												<span class="tag parameter">name</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+													<span class="tag default">optional</span>
 
-												<p> The skill's internal name.</p>
+												<p> The index of the state index, if nil uses latest state.</p>
 											</li>
 									</ul>
 
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">int</span>
-
-												<p>Skill level</p>
-											</li>
-
-								</ul>
 
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:GetSkillXP">
-									<h1><span class="realm client"></span>Player:GetSkillXP(name)</h1>
+								<a class="anchor" id="meta:SaveState">
+									<h1><span class="realm server"></span>Player:SaveState([name])</h1>
 								</a>
 
 
+									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L29">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L59">View source &raquo;</a>
 
-								<p>Returns the XP level (not regular level).  Value will range for 0 -> 4500</p>
+								<p>Saves a state of the player, by default used for Moderation and Death Sting.</p>
 							</header>
 
 
@@ -231,22 +210,12 @@
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+													<span class="tag default">optional</span>
 
-												<p> The skill's internal name.</p>
+												<p> Index of the state.</p>
 											</li>
 									</ul>
 
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">int</span>
-
-												<p>XP</p>
-											</li>
-
-								</ul>
 
 						</section>
 		</article>
