@@ -64,6 +64,7 @@
 								<li><a href="../classes/Player.html">Player</a></li>
 								<li><a href="../classes/Entity.html">Entity</a></li>
 								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/State.html">State</a></li>
 								<li><a href="../classes/Compiler.html">Compiler</a></li>
 								<li><a href="../classes/Parser.html">Parser</a></li>
 								<li><a href="../classes/Process.html">Process</a></li>
@@ -102,7 +103,39 @@
 							<ul>
 									<li>
 
+										<span class="realm server"></span><a href="#meta:DeleteState">Player:DeleteState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:GetAllStates">Player:GetAllStates(table)</a>
+									</li>
+									<li>
+
 										<span class="realm server"></span><a href="#meta:ReadState">Player:ReadState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestoreAnglesFromState">Player:RestoreAnglesFromState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestoreArmorFromState">Player:RestoreArmorFromState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestoreHealthFromState">Player:RestoreHealthFromState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestoreModelFromState">Player:RestoreModelFromState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestorePositionFromState">Player:RestorePositionFromState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestoreSkinFromState">Player:RestoreSkinFromState(name)</a>
 									</li>
 									<li>
 
@@ -121,6 +154,69 @@
 
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:DeleteState">
+									<h1><span class="realm server"></span>Player:DeleteState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L110">View source &raquo;</a>
+
+								<p>Removes a state.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> index</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetAllStates">
+									<h1><span class="realm server"></span>Player:GetAllStates(table)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L103">View source &raquo;</a>
+
+								<p>Gets all the states in a table</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> of states</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:ReadState">
 									<h1><span class="realm server"></span>Player:ReadState(name)</h1>
 								</a>
@@ -128,7 +224,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L69">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L93">View source &raquo;</a>
 
 								<p>Get a state from a player, this persists after a disconnect! If it's the same player, you'll have the same states!</p>
 							</header>
@@ -153,6 +249,198 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:RestoreAnglesFromState">
+									<h1><span class="realm server"></span>Player:RestoreAnglesFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L164">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreArmorFromState">
+									<h1><span class="realm server"></span>Player:RestoreArmorFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L148">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreHealthFromState">
+									<h1><span class="realm server"></span>Player:RestoreHealthFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L140">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreModelFromState">
+									<h1><span class="realm server"></span>Player:RestoreModelFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L172">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestorePositionFromState">
+									<h1><span class="realm server"></span>Player:RestorePositionFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L156">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreSkinFromState">
+									<h1><span class="realm server"></span>Player:RestoreSkinFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L180">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:RestoreState">
 									<h1><span class="realm server"></span>Player:RestoreState([name])</h1>
 								</a>
@@ -161,7 +449,7 @@
 									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L91">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L121">View source &raquo;</a>
 
 								<p>Loads the players state by index.  Internally uses Player:ReadState</p>
 							</header>
@@ -194,7 +482,7 @@
 									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L59">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L83">View source &raquo;</a>
 
 								<p>Saves a state of the player, by default used for Moderation and Death Sting.</p>
 							</header>

@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Token - impulse documentation</title>
+		<title>State - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Token - impulse documentation" />
+		<meta property="og:title" content="State - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="Action identification and execution system for IPS." />
+			<meta property="og:description" content="State Class internally used Server-Side as part of the States Library." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -85,8 +85,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Token</h1>
-					<h2>Action identification and execution system for IPS.</h2>
+					<h1>State</h1>
+					<h2>State Class internally used Server-Side as part of the States Library.</h2>
 				</header>
 
 				<!-- description -->
@@ -103,27 +103,31 @@
 							<ul>
 									<li>
 
-										<span class="realm shared"></span><a href="#Token:Check">Token:Check()</a>
+										<span class="realm server"></span><a href="#State:Armor">State:Armor()</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#Token:Destroy">Token:Destroy()</a>
+										<span class="realm server"></span><a href="#State:GetAngles">State:GetAngles()</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#Token:New">Token:New(Process)</a>
+										<span class="realm server"></span><a href="#State:GetModel">State:GetModel()</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#Token:Process">Token:Process()</a>
+										<span class="realm server"></span><a href="#State:GetPos">State:GetPos()</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#Token:Run">Token:Run()</a>
+										<span class="realm server"></span><a href="#State:GetSkin">State:GetSkin()</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#Token:Set">Token:Set(token)</a>
+										<span class="realm server"></span><a href="#State:Health">State:Health()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#State:Team">State:Team()</a>
 									</li>
 							</ul>
 					</div>
@@ -134,17 +138,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="Token:Check">
-									<h1><span class="realm shared"></span>Token:Check()</h1>
+								<a class="anchor" id="State:Armor">
+									<h1><span class="realm server"></span>State:Armor()</h1>
 								</a>
 
 
-									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_token.lua#L24">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L62">View source &raquo;</a>
 
-								<p>Checks if the token is valid.</p>
+								<p>Returns armor at time of state.</p>
 							</header>
 
 
@@ -153,9 +156,9 @@
 								<ul>
 
 											<li>
-													<span class="type">bool</span>
+													<span class="type">int</span>
 
-												<p>token valid.</p>
+												<p>armor</p>
 											</li>
 
 								</ul>
@@ -163,78 +166,16 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="Token:Destroy">
-									<h1><span class="realm shared"></span>Token:Destroy()</h1>
+								<a class="anchor" id="State:GetAngles">
+									<h1><span class="realm server"></span>State:GetAngles()</h1>
 								</a>
 
 
-									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_token.lua#L47">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L41">View source &raquo;</a>
 
-								<p>Destroys the Token Instance.</p>
-							</header>
-
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="Token:New">
-									<h1><span class="realm shared"></span>Token:New(Process)</h1>
-								</a>
-
-
-									<div class="indev"></div>
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_token.lua#L14">View source &raquo;</a>
-
-								<p>Creates a new Token.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">Process</span>
-
-
-
-												<p> The parent Process Instance for the token.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<a class="type" href="../classes/Token.html#">Token</a>
-
-												<p>Returns a token object.</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="Token:Process">
-									<h1><span class="realm shared"></span>Token:Process()</h1>
-								</a>
-
-
-									<div class="indev"></div>
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_token.lua#L32">View source &raquo;</a>
-
-								<p>Fetches the parent process of the Token.</p>
+								<p>Returns angles at time of state.</p>
 							</header>
 
 
@@ -243,9 +184,9 @@
 								<ul>
 
 											<li>
-													<a class="type" href="../classes/Process.html#">Process</a>
+													<span class="type">angles</span>
 
-												<p>the parent process instance.</p>
+												<p>ang</p>
 											</li>
 
 								</ul>
@@ -253,53 +194,142 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="Token:Run">
-									<h1><span class="realm shared"></span>Token:Run()</h1>
+								<a class="anchor" id="State:GetModel">
+									<h1><span class="realm server"></span>State:GetModel()</h1>
 								</a>
 
 
-									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_token.lua#L54">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L48">View source &raquo;</a>
 
-								<p>Runs the token if it is valid (self-checks)</p>
+								<p>Returns model at time of state.</p>
 							</header>
 
 
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>model</p>
+											</li>
+
+								</ul>
 
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="Token:Set">
-									<h1><span class="realm shared"></span>Token:Set(token)</h1>
+								<a class="anchor" id="State:GetPos">
+									<h1><span class="realm server"></span>State:GetPos()</h1>
 								</a>
 
 
-									<div class="indev"></div>
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\ips\sh_token.lua#L40">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L34">View source &raquo;</a>
 
-								<p>Updates the tokens key.</p>
+								<p>Returns pos at time of state.</p>
 							</header>
 
 
-									<h3>Parameters</h3>
 
-
-									<ul>
+								<h3>Returns</h3>
+								<ul>
 
 											<li>
-												<span class="tag parameter">token</span>
+													<span class="type">vector</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> token key</p>
+												<p>pos</p>
 											</li>
-									</ul>
 
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="State:GetSkin">
+									<h1><span class="realm server"></span>State:GetSkin()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L55">View source &raquo;</a>
+
+								<p>Returns model skin at time of state.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>skin</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="State:Health">
+									<h1><span class="realm server"></span>State:Health()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L27">View source &raquo;</a>
+
+								<p>Returns health at time of state.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>health</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="State:Team">
+									<h1><span class="realm server"></span>State:Team()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L69">View source &raquo;</a>
+
+								<p>Returns team at time of state.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>team</p>
+											</li>
+
+								</ul>
 
 						</section>
 		</article>

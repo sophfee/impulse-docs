@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Schema - impulse documentation</title>
+		<title>PlayerStates - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Schema - impulse documentation" />
+		<meta property="og:title" content="PlayerStates - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="Allows for control of the boot process of the schema such as piggybacking from other schemas" />
+			<meta property="og:description" content="A system to save and load player states." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -41,13 +41,14 @@
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
 								<li><a href="../libraries/Music.html">Music</a></li>
+								<li><a href="../libraries/PlayerStates.html">PlayerStates</a></li>
+								<li><a href="../libraries/PlayerStates.html">PlayerStates</a></li>
 								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
 								<li><a href="../libraries/Signals.html">Signals</a></li>
 								<li><a href="../libraries/Skills.html">Skills</a></li>
-								<li><a href="../libraries/States.html">States</a></li>
 								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
 								<li><a href="../libraries/Teams.html">Teams</a></li>
@@ -85,8 +86,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Schema</h1>
-					<h2>Allows for control of the boot process of the schema such as piggybacking from other schemas</h2>
+					<h1>PlayerStates</h1>
+					<h2>A system to save and load player states.</h2>
 				</header>
 
 				<!-- description -->
@@ -103,45 +104,47 @@
 							<ul>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.Boot">impulse.Schema.Boot()</a>
-										<span class="suminternal">INTERNAL</span>
+										<span class="realm server"></span><a href="#meta:DeleteState">Player:DeleteState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.LoadBenches">impulse.Schema.LoadBenches(directory)</a>
-										<span class="suminternal">INTERNAL</span>
+										<span class="realm server"></span><a href="#meta:GetAllStates">Player:GetAllStates(table)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.LoadEntites">impulse.Schema.LoadEntites(path)</a>
-										<span class="suminternal">INTERNAL</span>
+										<span class="realm server"></span><a href="#meta:ReadState">Player:ReadState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.LoadItems">impulse.Schema.LoadItems(directory)</a>
-										<span class="suminternal">INTERNAL</span>
+										<span class="realm server"></span><a href="#meta:RestoreAnglesFromState">Player:RestoreAnglesFromState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.LoadMixtures">impulse.Schema.LoadMixtures(directory)</a>
-										<span class="suminternal">INTERNAL</span>
+										<span class="realm server"></span><a href="#meta:RestoreArmorFromState">Player:RestoreArmorFromState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.LoadVendors">impulse.Schema.LoadVendors(directory)</a>
-										<span class="suminternal">INTERNAL</span>
+										<span class="realm server"></span><a href="#meta:RestoreHealthFromState">Player:RestoreHealthFromState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.PiggyBoot">impulse.Schema.PiggyBoot(name, object)</a>
+										<span class="realm server"></span><a href="#meta:RestoreModelFromState">Player:RestoreModelFromState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.PiggyBootEntities">impulse.Schema.PiggyBootEntities(name)</a>
+										<span class="realm server"></span><a href="#meta:RestorePositionFromState">Player:RestorePositionFromState(name)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Schema.PiggyBootPlugin">impulse.Schema.PiggyBootPlugin(name, plugin)</a>
+										<span class="realm server"></span><a href="#meta:RestoreSkinFromState">Player:RestoreSkinFromState(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RestoreState">Player:RestoreState([name])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SaveState">Player:SaveState([name])</a>
 									</li>
 							</ul>
 					</div>
@@ -152,199 +155,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.Boot">
-									<h1><span class="realm shared"></span>impulse.Schema.Boot()</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L11">View source &raquo;</a>
-
-								<p>Starts the Schema boot sequence</p>
-							</header>
-
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.LoadBenches">
-									<h1><span class="realm shared"></span>impulse.Schema.LoadBenches(directory)</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L220">View source &raquo;</a>
-
-								<p>Loads a directory of benches, automatically creates tables and registers them.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">directory</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> load directory.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.LoadEntites">
-									<h1><span class="realm shared"></span>impulse.Schema.LoadEntites(path)</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L114">View source &raquo;</a>
-
-								<p>Loads entities from a selected path.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">path</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> Path to the entities.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.LoadItems">
-									<h1><span class="realm shared"></span>impulse.Schema.LoadItems(directory)</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L205">View source &raquo;</a>
-
-								<p>Loads a directory of items, automatically creates tables and registers them.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">directory</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> load directory.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.LoadMixtures">
-									<h1><span class="realm shared"></span>impulse.Schema.LoadMixtures(directory)</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L250">View source &raquo;</a>
-
-								<p>Loads a directory of mixtures, automatically creates tables and registers them.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">directory</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> load directory.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.LoadVendors">
-									<h1><span class="realm shared"></span>impulse.Schema.LoadVendors(directory)</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L235">View source &raquo;</a>
-
-								<p>Loads a directory of vendors, automatically creates tables and registers them.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">directory</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> load directory.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBoot">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBoot(name, object)</h1>
+								<a class="anchor" id="meta:DeleteState">
+									<h1><span class="realm server"></span>Player:DeleteState(name)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L89">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L113">View source &raquo;</a>
 
-								<p>Boots a specified object from a foreign schema using the piggbacking system</p>
+								<p>Removes a state.</p>
 							</header>
 
 
@@ -359,19 +179,7 @@
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">object</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The folder in the schema to load</p>
+												<p> index</p>
 											</li>
 									</ul>
 
@@ -379,16 +187,47 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBootEntities">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBootEntities(name)</h1>
+								<a class="anchor" id="meta:GetAllStates">
+									<h1><span class="realm server"></span>Player:GetAllStates(table)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L106">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L106">View source &raquo;</a>
 
-								<p>Boots all entities from a foreign schema using the piggbacking system</p>
+								<p>Gets all the states in a table</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">table</span>
+
+
+
+												<p> of states</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:ReadState">
+									<h1><span class="realm server"></span>Player:ReadState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L96">View source &raquo;</a>
+
+								<p>Get a state from a player, this persists after a disconnect! If it's the same player, you'll have the same states!</p>
 							</header>
 
 
@@ -403,7 +242,7 @@
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
+												<p> Index of the state.</p>
 											</li>
 									</ul>
 
@@ -411,16 +250,16 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Schema.PiggyBootPlugin">
-									<h1><span class="realm shared"></span>impulse.Schema.PiggyBootPlugin(name, plugin)</h1>
+								<a class="anchor" id="meta:RestoreAnglesFromState">
+									<h1><span class="realm server"></span>Player:RestoreAnglesFromState(name)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_schema.lua#L98">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L167">View source &raquo;</a>
 
-								<p>Boots a specified plugin from a foreign schema using the piggbacking system</p>
+								<p>Restores specific data.</p>
 							</header>
 
 
@@ -435,19 +274,234 @@
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Schema file name</p>
+												<p> state index to restore from</p>
 											</li>
 									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreArmorFromState">
+									<h1><span class="realm server"></span>Player:RestoreArmorFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L151">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">plugin</span>
+												<span class="tag parameter">name</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> The plugin folder name</p>
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreHealthFromState">
+									<h1><span class="realm server"></span>Player:RestoreHealthFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L143">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreModelFromState">
+									<h1><span class="realm server"></span>Player:RestoreModelFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L175">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestorePositionFromState">
+									<h1><span class="realm server"></span>Player:RestorePositionFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L159">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreSkinFromState">
+									<h1><span class="realm server"></span>Player:RestoreSkinFromState(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L183">View source &raquo;</a>
+
+								<p>Restores specific data.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> state index to restore from</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RestoreState">
+									<h1><span class="realm server"></span>Player:RestoreState([name])</h1>
+								</a>
+
+
+									<div class="indev"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L124">View source &raquo;</a>
+
+								<p>Loads the players state by index.  Internally uses Player:ReadState</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+
+													<span class="tag default">optional</span>
+
+												<p> The index of the state index, if nil uses latest state.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SaveState">
+									<h1><span class="realm server"></span>Player:SaveState([name])</h1>
+								</a>
+
+
+									<div class="indev"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_states.lua#L86">View source &raquo;</a>
+
+								<p>Saves a state of the player, by default used for Moderation and Death Sting.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Index of the state.</p>
 											</li>
 									</ul>
 
