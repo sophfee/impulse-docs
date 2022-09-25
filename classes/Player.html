@@ -58,6 +58,7 @@
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
 								<li><a href="../libraries/Music.html">Music</a></li>
+								<li><a href="../libraries/RPC.html">RPC</a></li>
 								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
@@ -156,6 +157,10 @@
 									</li>
 									<li>
 
+										<span class="realm shared"></span><a href="#meta:GetDescription">Player:GetDescription()</a>
+									</li>
+									<li>
+
 										<span class="realm server"></span><a href="#meta:GetPropCount">Player:GetPropCount([skip=true])</a>
 									</li>
 									<li>
@@ -249,7 +254,15 @@
 									</li>
 									<li>
 
+										<span class="realm shared"></span><a href="#meta:IsGameMaster">Player:IsGameMaster()</a>
+									</li>
+									<li>
+
 										<span class="realm shared"></span><a href="#meta:IsLeadAdmin">Player:IsLeadAdmin()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsPureGameMaster">Player:IsPureGameMaster()</a>
 									</li>
 									<li>
 
@@ -284,6 +297,10 @@
 
 										<span class="realm server"></span><a href="#meta:SendJailInfo">Player:SendJailInfo(time, table)</a>
 										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetAFKImmune">Player:SetAFKImmune(b)</a>
 									</li>
 									<li>
 
@@ -563,7 +580,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L53">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L65">View source &raquo;</a>
 
 								<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
 							</header>
@@ -618,7 +635,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L120">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L132">View source &raquo;</a>
 
 								<p>Returns if a player can join a team's class.</p>
 							</header>
@@ -673,7 +690,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L179">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L191">View source &raquo;</a>
 
 								<p>Returns if a player can join a team's rank.</p>
 							</header>
@@ -893,6 +910,35 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:GetDescription">
+									<h1><span class="realm shared"></span>Player:GetDescription()</h1>
+								</a>
+
+
+									<div class="indev"></div>
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_rpdesc.lua#L8">View source &raquo;</a>
+
+								<p>The players description, changes depending on the team.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>The players description, if none is set, it will return ""</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:GetPropCount">
 									<h1><span class="realm server"></span>Player:GetPropCount([skip=true])</h1>
 								</a>
@@ -1015,7 +1061,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L251">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L263">View source &raquo;</a>
 
 								<p>Returns the players class ID.</p>
 							</header>
@@ -1043,7 +1089,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L292">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L304">View source &raquo;</a>
 
 								<p>Retrieves the players class data table.</p>
 							</header>
@@ -1071,7 +1117,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L235">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L247">View source &raquo;</a>
 
 								<p>Returns the players rank name.</p>
 							</header>
@@ -1099,7 +1145,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L272">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L284">View source &raquo;</a>
 
 								<p>Returns the players rank ID.</p>
 							</header>
@@ -1127,7 +1173,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L279">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L291">View source &raquo;</a>
 
 								<p>Retrieves the players rank data table.</p>
 							</header>
@@ -1155,7 +1201,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L258">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L270">View source &raquo;</a>
 
 								<p>Returns the players rank name.</p>
 							</header>
@@ -1384,7 +1430,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L127">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L158">View source &raquo;</a>
 
 								<p>Returns if a player is in the spawn zone</p>
 							</header>
@@ -1412,7 +1458,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L43">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L50">View source &raquo;</a>
 
 								<p>Returns if a player is AFK.</p>
 							</header>
@@ -1468,7 +1514,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L210">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L244">View source &raquo;</a>
 
 								<p>Returns if the player has a female character</p>
 							</header>
@@ -1496,7 +1542,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L112">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L113">View source &raquo;</a>
 
 								<p>Returns if the player is a Community Manager or higher</p>
 							</header>
@@ -1615,6 +1661,34 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:IsGameMaster">
+									<h1><span class="realm shared"></span>Player:IsGameMaster()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L136">View source &raquo;</a>
+
+								<p>Returns if the player is a Game Master or higher</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is Game Master</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:IsLeadAdmin">
 									<h1><span class="realm shared"></span>Player:IsLeadAdmin()</h1>
 								</a>
@@ -1622,7 +1696,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L93">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L94">View source &raquo;</a>
 
 								<p>Returns if the player is a lead moderator or higher</p>
 							</header>
@@ -1636,6 +1710,34 @@
 													<span class="type">bool</span>
 
 												<p>Is Lead Admin</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsPureGameMaster">
+									<h1><span class="realm shared"></span>Player:IsPureGameMaster()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L151">View source &raquo;</a>
+
+								<p>Returns if the player is a Game Master and not higher</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is Game Master</p>
 											</li>
 
 								</ul>
@@ -1811,7 +1913,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L149">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L180">View source &raquo;</a>
 
 								<p>Sends a notification to a player.</p>
 							</header>
@@ -1902,6 +2004,38 @@
 
 
 												<p> Data for the players jail sentence.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetAFKImmune">
+									<h1><span class="realm server"></span>Player:SetAFKImmune(b)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L36">View source &raquo;</a>
+
+								<p>Sets a user to be AFK immune.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">b</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> True/False for AFK immunity</p>
 											</li>
 									</ul>
 
@@ -2341,7 +2475,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L35">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L42">View source &raquo;</a>
 
 								<p>Makes a player NOT AFK.</p>
 							</header>

@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Achievement - impulse documentation</title>
+		<title>RPC - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Achievement - impulse documentation" />
+		<meta property="og:title" content="RPC - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="Helper functions to control the achievement system" />
+			<meta property="og:description" content="RPCs are Remote Call Procedures, these are more streamlined methods of networking versus the standard network system." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -86,8 +86,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Achievement</h1>
-					<h2>Helper functions to control the achievement system</h2>
+					<h1>RPC</h1>
+					<h2>RPCs are Remote Call Procedures, these are more streamlined methods of networking versus the standard network system.</h2>
 				</header>
 
 				<!-- description -->
@@ -104,23 +104,11 @@
 							<ul>
 									<li>
 
-										<span class="realm server"></span><a href="#meta:AchievementCheck">Player:AchievementCheck(class)</a>
+										<span class="realm shared"></span><a href="#impulse.RPC.BroadcastRpc">impulse.RPC.BroadcastRpc(func)</a>
 									</li>
 									<li>
 
-										<span class="realm server"></span><a href="#meta:AchievementGive">Player:AchievementGive(class[, skipPoints=false])</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#meta:AchievementHas">Player:AchievementHas(class)</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#meta:AchievementTake">Player:AchievementTake(class)</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#meta:CalculateAchievementPoints">Player:CalculateAchievementPoints()</a>
+										<span class="realm shared"></span><a href="#impulse.RPC.ClientRpc">impulse.RPC.ClientRpc(func)</a>
 									</li>
 							</ul>
 					</div>
@@ -131,16 +119,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:AchievementCheck">
-									<h1><span class="realm server"></span>Player:AchievementCheck(class)</h1>
+								<a class="anchor" id="impulse.RPC.BroadcastRpc">
+									<h1><span class="realm shared"></span>impulse.RPC.BroadcastRpc(func)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_achievements.lua#L67">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\rpc\sh_rpc.lua#L43">View source &raquo;</a>
 
-								<p>Runs the achievement's check function and if it returns true, awards the achievement</p>
+								<p>Creates a function that is executed on the server, but runs code for <b>every</b> client.</p>
 							</header>
 
 
@@ -150,89 +138,11 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">class</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> Achievement class</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:AchievementGive">
-									<h1><span class="realm server"></span>Player:AchievementGive(class[, skipPoints=false])</h1>
-								</a>
+												<span class="tag parameter">func</span>
 
 
 
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_achievements.lua#L11">View source &raquo;</a>
-
-								<p>Gives an achievement to a player</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">class</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> Achievement class</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">skipPoints</span>
-
-													<span class="tag"><span class="type">boolean</span></span>
-
-													<span class="tag default">default: false</span>
-
-												<p> Wether to skip calculating the points from this achievement</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:AchievementHas">
-									<h1><span class="realm server"></span>Player:AchievementHas(class)</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_achievements.lua#L50">View source &raquo;</a>
-
-								<p>Returns if a player has an achievement</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">class</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> Achievement class</p>
+												<p> Function to run on all clients.</p>
 											</li>
 									</ul>
 
@@ -241,9 +151,9 @@
 								<ul>
 
 											<li>
-													<span class="type">bool</span>
+													<span class="type">function</span>
 
-												<p>Has achievement</p>
+												<p>Function call to run clientside.</p>
 											</li>
 
 								</ul>
@@ -251,16 +161,16 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:AchievementTake">
-									<h1><span class="realm server"></span>Player:AchievementTake(class)</h1>
+								<a class="anchor" id="impulse.RPC.ClientRpc">
+									<h1><span class="realm shared"></span>impulse.RPC.ClientRpc(func)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_achievements.lua#L36">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/plugins\rpc\sh_rpc.lua#L14">View source &raquo;</a>
 
-								<p>Takes an achievement from a player</p>
+								<p>Creates a function that is executed on the server, but runs code for the client.</p>
 							</header>
 
 
@@ -270,40 +180,22 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">class</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+												<span class="tag parameter">func</span>
 
 
-												<p> Achievement class</p>
+
+												<p> Function to run on the client.</p>
 											</li>
 									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:CalculateAchievementPoints">
-									<h1><span class="realm server"></span>Player:CalculateAchievementPoints()</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_achievements.lua#L83">View source &raquo;</a>
-
-								<p>Calculates the achievement points and stores them in the SYNC_TROPHYPOINTS SyncVar on the player</p>
-							</header>
-
 
 
 								<h3>Returns</h3>
 								<ul>
 
 											<li>
-													<span class="type">int</span>
+													<span class="type">function</span>
 
-												<p>Achievement points</p>
+												<p>Function call to run on the client.</p>
 											</li>
 
 								</ul>
