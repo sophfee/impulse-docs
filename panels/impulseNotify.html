@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Parser - impulse documentation</title>
+		<title>impulseNotify - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Parser - impulse documentation" />
+		<meta property="og:title" content="impulseNotify - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="An object-oriented parser system for IPS." />
+			<meta property="og:description" content="The notification hints that appear in the top-right of the players screen." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -24,23 +24,6 @@
 
 			<!-- project contents -->
 			<section>
-						<h2>Classes</h2>
-
-						<ul>
-								<li><a href="../classes/Compiler.html">Compiler</a></li>
-								<li><a href="../classes/Entity.html">Entity</a></li>
-								<li><a href="../classes/Parser.html">Parser</a></li>
-								<li><a href="../classes/Player.html">Player</a></li>
-								<li><a href="../classes/Process.html">Process</a></li>
-								<li><a href="../classes/State.html">State</a></li>
-								<li><a href="../classes/Token.html">Token</a></li>
-								<li><a href="../classes/Vendor.html">Vendor</a></li>
-						</ul>
-						<h2>Hooks</h2>
-
-						<ul>
-								<li><a href="../hooks/General.html">General</a></li>
-						</ul>
 						<h2>Panels</h2>
 
 						<ul>
@@ -49,35 +32,52 @@
 								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
 								<li><a href="../panels/impulseRichText.html">impulseRichText</a></li>
 						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
 						<h2>Libraries</h2>
 
 						<ul>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Music.html">Music</a></li>
 								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
 								<li><a href="../libraries/Anim.html">Anim</a></li>
 								<li><a href="../libraries/Business.html">Business</a></li>
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
-								<li><a href="../libraries/Data.html">Data</a></li>
-								<li><a href="../libraries/File.html">File</a></li>
-								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/IPS.html">IPS</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
 								<li><a href="../libraries/Medical.html">Medical</a></li>
-								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
-								<li><a href="../libraries/Misc.html">Misc</a></li>
-								<li><a href="../libraries/Music.html">Music</a></li>
 								<li><a href="../libraries/RPC.html">RPC</a></li>
-								<li><a href="../libraries/Refunds.html">Refunds</a></li>
-								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
-								<li><a href="../libraries/Setting.html">Setting</a></li>
-								<li><a href="../libraries/Signals.html">Signals</a></li>
 								<li><a href="../libraries/Skills.html">Skills</a></li>
-								<li><a href="../libraries/States.html">States</a></li>
-								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
 								<li><a href="../libraries/Teams.html">Teams</a></li>
-								<li><a href="../libraries/Tween.html">Tween</a></li>
+								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/File.html">File</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/States.html">States</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/State.html">State</a></li>
+								<li><a href="../classes/Compiler.html">Compiler</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+								<li><a href="../classes/Token.html">Token</a></li>
 						</ul>
 						<h2>Manual</h2>
 
@@ -94,22 +94,64 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Parser</h1>
-					<h2>An object-oriented parser system for IPS.</h2>
+					<h1>impulseNotify</h1>
+					<h2>The notification hints that appear in the top-right of the players screen.</h2>
 				</header>
 
 				<!-- description -->
-				<p> (WIP)</p>
+				<p>
+
+</p>
 
 				<!-- summary -->
 				<details open>
 					<summary>Reference</summary>
 
 					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li>
+
+										<span class="realm client"></span><a href="#PANEL:SetMessage">impulseNotify:SetMessage(tuple)</a>
+									</li>
+							</ul>
 					</div>
 				</details>
 
 				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="PANEL:SetMessage">
+									<h1><span class="realm client"></span>impulseNotify:SetMessage(tuple)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_notify.lua#L19">View source &raquo;</a>
+
+								<p>Updates the text displayed to the text provided</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">tuple</span>
+
+
+
+												<p> The text to update the panel to.</p>
+											</li>
+									</ul>
+
+
+						</section>
 		</article>
 
 		<footer>

@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Supply - impulse documentation</title>
+		<title>impulseNewPlayerMenu - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Supply - impulse documentation" />
+		<meta property="og:title" content="impulseNewPlayerMenu - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="A system for player based supply & demand." />
+			<meta property="og:description" content="Revamped player menu." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -24,41 +24,6 @@
 
 			<!-- project contents -->
 			<section>
-						<h2>Libraries</h2>
-
-						<ul>
-								<li><a href="../libraries/Achievement.html">Achievement</a></li>
-								<li><a href="../libraries/Anim.html">Anim</a></li>
-								<li><a href="../libraries/Business.html">Business</a></li>
-								<li><a href="../libraries/Chat.html">Chat</a></li>
-								<li><a href="../libraries/Currency.html">Currency</a></li>
-								<li><a href="../libraries/Data.html">Data</a></li>
-								<li><a href="../libraries/File.html">File</a></li>
-								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/IPS.html">IPS</a></li>
-								<li><a href="../libraries/Inventory.html">Inventory</a></li>
-								<li><a href="../libraries/Medical.html">Medical</a></li>
-								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
-								<li><a href="../libraries/Misc.html">Misc</a></li>
-								<li><a href="../libraries/Music.html">Music</a></li>
-								<li><a href="../libraries/RPC.html">RPC</a></li>
-								<li><a href="../libraries/Refunds.html">Refunds</a></li>
-								<li><a href="../libraries/Scenes.html">Scenes</a></li>
-								<li><a href="../libraries/Schema.html">Schema</a></li>
-								<li><a href="../libraries/Setting.html">Setting</a></li>
-								<li><a href="../libraries/Signals.html">Signals</a></li>
-								<li><a href="../libraries/Skills.html">Skills</a></li>
-								<li><a href="../libraries/States.html">States</a></li>
-								<li><a href="../libraries/Supply.html">Supply</a></li>
-								<li><a href="../libraries/Sync.html">Sync</a></li>
-								<li><a href="../libraries/Teams.html">Teams</a></li>
-								<li><a href="../libraries/Tween.html">Tween</a></li>
-						</ul>
-						<h2>Hooks</h2>
-
-						<ul>
-								<li><a href="../hooks/General.html">General</a></li>
-						</ul>
 						<h2>Panels</h2>
 
 						<ul>
@@ -66,6 +31,41 @@
 								<li><a href="../panels/impulseNotify.html">impulseNotify</a></li>
 								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
 								<li><a href="../panels/impulseRichText.html">impulseRichText</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Music.html">Music</a></li>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Chat.html">Chat</a></li>
+								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/RPC.html">RPC</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Skills.html">Skills</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/File.html">File</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/States.html">States</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
 						</ul>
 						<h2>Classes</h2>
 
@@ -94,8 +94,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Supply</h1>
-					<h2>A system for player based supply &amp; demand.</h2>
+					<h1>impulseNewPlayerMenu</h1>
+					<h2>Revamped player menu.</h2>
 				</header>
 
 				<!-- description -->
@@ -112,11 +112,11 @@
 							<ul>
 									<li>
 
-										<span class="realm server"></span><a href="#impulse.Supply.Add">impulse.Supply.Add(id, count)</a>
+										<span class="realm client"></span><a href="#PANEL:CreateSimpleTab">impulseNewPlayerMenu:CreateSimpleTab(name, icon)</a>
 									</li>
 									<li>
 
-										<span class="realm server"></span><a href="#impulse.Supply.Define">impulse.Supply.Define(data)</a>
+										<span class="realm client"></span><a href="#PANEL:Init">impulseNewPlayerMenu:Init()</a>
 									</li>
 							</ul>
 					</div>
@@ -127,16 +127,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Supply.Add">
-									<h1><span class="realm server"></span>impulse.Supply.Add(id, count)</h1>
+								<a class="anchor" id="PANEL:CreateSimpleTab">
+									<h1><span class="realm client"></span>impulseNewPlayerMenu:CreateSimpleTab(name, icon)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_supply.lua#L27">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_newplayermenu.lua#L28">View source &raquo;</a>
 
-								<p>Add supply to a stock.</p>
+								<p>Test 2</p>
 							</header>
 
 
@@ -146,24 +146,24 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">id</span>
+												<span class="tag parameter">name</span>
 
-													<span class="tag"><span class="type">int</span></span>
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Supply Id.</p>
+												<p> The display name of the tab.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">count</span>
+												<span class="tag parameter">icon</span>
 
-													<span class="tag"><span class="type">int</span></span>
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> Amount of stock to add.</p>
+												<p> The icon shown alongside it.</p>
 											</li>
 									</ul>
 
@@ -171,44 +171,19 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Supply.Define">
-									<h1><span class="realm server"></span>impulse.Supply.Define(data)</h1>
+								<a class="anchor" id="PANEL:Init">
+									<h1><span class="realm client"></span>impulseNewPlayerMenu:Init()</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_supply.lua#L14">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_newplayermenu.lua#L12">View source &raquo;</a>
 
-								<p>Creates a new stock system.</p>
+								<p>Test</p>
 							</header>
 
 
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">data</span>
-
-
-
-												<p> supply table.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">int</span>
-
-												<p>Supply ID.</p>
-											</li>
-
-								</ul>
 
 						</section>
 		</article>
