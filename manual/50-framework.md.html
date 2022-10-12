@@ -5,14 +5,17 @@
 
 <html>
 	<head>
-		<title>Making a schema - impulse documentation</title>
+		<title>Working on the Framework - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Making a schema - impulse documentation" />
+		<meta property="og:title" content="Working on the Framework - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
 			<meta property="og:description" content="
- in impulse is fairly striaghtforward, Landis developers can look [here](https://github.com/urnotnick/impulse-skeleton) for a sample schema with plugins...." />
+ This document is tailored to the Landis Builds of the impulse framework, which differ greatly from the latest public impulse build.
+
+ Understanding Core Modules
+impulse as a framework is built using modules, these are only how they are referred to in do..." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -101,8 +104,47 @@
 		<!-- library functions -->
 		<article>
 
-<h1>Making a schema</h1>
-<p>Making a schema in impulse is fairly striaghtforward, Landis developers can look <a href="https://github.com/urnotnick/impulse-skeleton">here</a> for a sample schema with plugins.</p>
+<h1>Working on the Framework</h1>
+<h5>This document is tailored to the Landis Builds of the impulse framework, which differ greatly from the latest public impulse build.</h5>
+
+<p><a name="Understanding_Core_Modules"></a></p>
+<h2>Understanding Core Modules</h2>
+<p>impulse as a framework is built using modules, these are only how they are referred to in documentation. In reality they are just loosely organized files that load before anything else.</p>
+
+<p><a name="Core_modules_purpose"></a></p>
+<h2>Core modules purpose</h2>
+<p>A core module should lay a mechanic or system that can be utilized in a full extent in a simple way by the schema. Sync is the perfect example because it provides the basics you need, while giving you the networking structure to expand the system.</p>
+
+
+<p><a name="Documentation"></a></p>
+<h2>Documentation</h2>
+<p>Documentation is done with LDoc, the framework is about 80% complete with reference documentation. Here is an example of LDoc with impulse</p>
+
+
+<pre>
+<span class="comment">--- An example module.
+</span><span class="comment">-- @module Example
+</span>
+<span class="comment">--- Just a shared function that does something.
+</span><span class="comment">-- @realm shared
+</span><span class="comment">-- @entity ent An entity.
+</span><span class="comment">-- @int number A number.
+</span><span class="comment">-- @treturn bool A boolean.
+</span><span class="keyword">function</span> SharedFunction(ent, number)
+    <span class="keyword">return</span> <span class="keyword">true</span>
+<span class="keyword">end</span>
+
+<span class="comment">--- Just an internal function that does internal stuff.
+</span><span class="comment">-- @realm shared
+</span><span class="comment">-- @internal
+</span><span class="comment">-- @entity ent An entity.
+</span><span class="comment">-- @int number A number.
+</span><span class="comment">-- @treturn bool A boolean.
+</span><span class="keyword">function</span> InternalFunction(ent, number)
+    <span class="keyword">return</span> <span class="keyword">true</span>
+<span class="keyword">end</span>
+</pre>
+
 
 		</article>
 

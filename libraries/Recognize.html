@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Skills - impulse documentation</title>
+		<title>Recognize - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Skills - impulse documentation" />
+		<meta property="og:title" content="Recognize - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="XP based leveling system." />
+			<meta property="og:description" content="Handles players being able to know other people." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -100,8 +100,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Skills</h1>
-					<h2>XP based leveling system.</h2>
+					<h1>Recognize</h1>
+					<h2>Handles players being able to know other people.</h2>
 				</header>
 
 				<!-- description -->
@@ -118,19 +118,8 @@
 							<ul>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Skills.Define">impulse.Skills.Define(name, niceName)</a>
-									</li>
-									<li>
-
-										<span class="realm client"></span><a href="#impulse.Skills.GetLevelXPRequirement">impulse.Skills.GetLevelXPRequirement(level)</a>
-									</li>
-									<li>
-
-										<span class="realm shared"></span><a href="#meta:GetSkillLevel">Player:GetSkillLevel(name)</a>
-									</li>
-									<li>
-
-										<span class="realm client"></span><a href="#meta:GetSkillXP">Player:GetSkillXP(name)</a>
+										<span class="realm server"></span><a href="#meta:Remember">Player:Remember(target)</a>
+										<span class="suminternal">INTERNAL</span>
 									</li>
 							</ul>
 					</div>
@@ -141,16 +130,19 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Skills.Define">
-									<h1><span class="realm shared"></span>impulse.Skills.Define(name, niceName)</h1>
+								<a class="anchor" id="meta:Remember">
+									<h1><span class="realm server"></span>Player:Remember(target)</h1>
 								</a>
 
+									<div class="internal"></div>
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L14">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_known.lua#L10">View source &raquo;</a>
 
-								<p>Define a new Skill</p>
+								<p>Remembers the target, their name will always appear for the given team.
+ This method is quite expensive, as it will sync a lot of values to players
+ and the Database. So use it sparingly or just let the framework do it's thing.</p>
 							</header>
 
 
@@ -160,156 +152,15 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">name</span>
+												<span class="tag parameter">target</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><span class="type">entity</span></span>
 
 
-												<p> The name used in code.</p>
+												<p> The player to remember.</p>
 											</li>
 									</ul>
 
-									<ul>
-
-											<li>
-												<span class="tag parameter">niceName</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The name shown to clients.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Skills.GetLevelXPRequirement">
-									<h1><span class="realm client"></span>impulse.Skills.GetLevelXPRequirement(level)</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L39">View source &raquo;</a>
-
-								<p>Finds the XP requirement for the level specified</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">level</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-
-												<p> The level to find.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">int</span>
-
-												<p>The XP required to reach.</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:GetSkillLevel">
-									<h1><span class="realm shared"></span>Player:GetSkillLevel(name)</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L54">View source &raquo;</a>
-
-								<p>Get the player's level in a skill</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">name</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The skill's internal name.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">int</span>
-
-												<p>Skill level</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:GetSkillXP">
-									<h1><span class="realm client"></span>Player:GetSkillXP(name)</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_skills.lua#L29">View source &raquo;</a>
-
-								<p>Returns the XP level (not regular level).  Value will range for 0 -> 4500</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">name</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The skill's internal name.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">int</span>
-
-												<p>XP</p>
-											</li>
-
-								</ul>
 
 						</section>
 		</article>

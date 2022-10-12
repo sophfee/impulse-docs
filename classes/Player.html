@@ -44,6 +44,7 @@
 						<h2>Panels</h2>
 
 						<ul>
+								<li><a href="../panels/impulseDynamicBar.html">impulseDynamicBar</a></li>
 								<li><a href="../panels/impulseNewPlayerMenu.html">impulseNewPlayerMenu</a></li>
 								<li><a href="../panels/impulseNotify.html">impulseNotify</a></li>
 								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
@@ -58,15 +59,18 @@
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/Errors.html">Errors</a></li>
 								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
 								<li><a href="../libraries/IPS.html">IPS</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Loot.html">Loot</a></li>
 								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
 								<li><a href="../libraries/Music.html">Music</a></li>
 								<li><a href="../libraries/RPC.html">RPC</a></li>
+								<li><a href="../libraries/Recognize.html">Recognize</a></li>
 								<li><a href="../libraries/Refunds.html">Refunds</a></li>
 								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
@@ -77,6 +81,7 @@
 								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
 								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Traits.html">Traits</a></li>
 								<li><a href="../libraries/Tween.html">Tween</a></li>
 						</ul>
 						<h2>Manual</h2>
@@ -87,6 +92,7 @@
 								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
 								<li><a href="../manual/30-item.md.html">Making an Item</a></li>
 								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+								<li><a href="../manual/50-framework.md.html">Working on the Framework</a></li>
 						</ul>
 			</section>
 		</aside>
@@ -112,6 +118,18 @@
 							<ul>
 									<li>
 
+										<span class="realm shared"></span><a href="#impulse.CanUseName">Playerimpulse.CanUseName(name)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.FindByDatabaseId">Playerimpulse.FindByDatabaseId(id)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.FindByDatabaseIdOnTeam">Playerimpulse.FindByDatabaseIdOnTeam(id, teamId)</a>
+									</li>
+									<li>
+
 										<span class="realm server"></span><a href="#meta:AddChatText">Player:AddChatText(...)</a>
 									</li>
 									<li>
@@ -126,6 +144,11 @@
 									<li>
 
 										<span class="realm server"></span><a href="#meta:AddXP">Player:AddXP(amount)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:AllowScenePVSControl">Player:AllowScenePVSControl(bool)</a>
+										<span class="suminternal">INTERNAL</span>
 									</li>
 									<li>
 
@@ -238,7 +261,16 @@
 									</li>
 									<li>
 
+										<span class="realm shared"></span><a href="#meta:IsAdmin">Player:IsAdmin()</a>
+									</li>
+									<li>
+
 										<span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsCP">Player:IsCP()</a>
+										<span class="sumdeprecated">DEPRECATED</span>
 									</li>
 									<li>
 
@@ -271,6 +303,14 @@
 									<li>
 
 										<span class="realm shared"></span><a href="#meta:IsPureGameMaster">Player:IsPureGameMaster()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsSuperAdmin">Player:IsSuperAdmin()</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:IsWeaponRaised">Player:IsWeaponRaised()</a>
 									</li>
 									<li>
 
@@ -340,6 +380,10 @@
 									</li>
 									<li>
 
+										<span class="realm server"></span><a href="#meta:SetWeaponRaised">Player:SetWeaponRaised(state)</a>
+									</li>
+									<li>
+
 										<span class="realm server"></span><a href="#meta:SetXP">Player:SetXP(amount)</a>
 										<span class="suminternal">INTERNAL</span>
 									</li>
@@ -362,6 +406,10 @@
 									</li>
 									<li>
 
+										<span class="realm server"></span><a href="#meta:ToggleWeaponRaised">Player:ToggleWeaponRaised()</a>
+									</li>
+									<li>
+
 										<span class="realm server"></span><a href="#meta:UnArrest">Player:UnArrest()</a>
 									</li>
 									<li>
@@ -379,6 +427,153 @@
 				<!-- methods -->
 					<h1 class="title">Functions</h1>
 
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.CanUseName">
+									<h1><span class="realm shared"></span>Playerimpulse.CanUseName(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L227">View source &raquo;</a>
+
+								<p>Checks if a name is good enough to use.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> The name to test.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can this name be used?</p>
+											</li>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>The message to display if it cannot be used.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.FindByDatabaseId">
+									<h1><span class="realm server"></span>Playerimpulse.FindByDatabaseId(id)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L168">View source &raquo;</a>
+
+								<p>Finds a player by their database id.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">id</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> The id of the player.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">entity</span>
+
+												<p>The player.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.FindByDatabaseIdOnTeam">
+									<h1><span class="realm server"></span>Playerimpulse.FindByDatabaseIdOnTeam(id, teamId)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L182">View source &raquo;</a>
+
+								<p>Finds a player by their database id and if they are on a specific team.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">id</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> The id of the player.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">teamId</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> the id of the team.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">entity</span>
+
+												<p>The player.</p>
+											</li>
+
+								</ul>
+
+						</section>
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:AddChatText">
@@ -420,7 +615,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L127">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L136">View source &raquo;</a>
 
 								<p>Adds a prop to the players prop list.</p>
 							</header>
@@ -514,6 +709,40 @@
 
 
 												<p> Amount to add.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:AllowScenePVSControl">
+									<h1><span class="realm server"></span>Player:AllowScenePVSControl(bool)</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L28">View source &raquo;</a>
+
+								<p>Determines if the player is allowed to control extra PVS (Render zones basically)
+ to render a cutscene correctly.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">bool</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Allow or not.</p>
 											</li>
 									</ul>
 
@@ -954,7 +1183,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L95">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L104">View source &raquo;</a>
 
 								<p>Returns the players prop count.</p>
 							</header>
@@ -1438,7 +1667,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L158">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L169">View source &raquo;</a>
 
 								<p>Returns if a player is in the spawn zone</p>
 							</header>
@@ -1487,6 +1716,34 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:IsAdmin">
+									<h1><span class="realm shared"></span>Player:IsAdmin()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L85">View source &raquo;</a>
+
+								<p>Returns if the player has Admin access (The normal moderation level of access.)</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has admin access</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:IsArrested">
 									<h1><span class="realm shared"></span>Player:IsArrested()</h1>
 								</a>
@@ -1515,6 +1772,35 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:IsCP">
+									<h1><span class="realm shared"></span>Player:IsCP()</h1>
+								</a>
+
+
+
+									<div class="deprecated"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_teams.lua#L318">View source &raquo;</a>
+
+								<p>Returns if they have the CP flag on their team.  Slated for removal and move to HL2RP schema.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Whether they have the .cp team flag or not.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:IsCharacterFemale">
 									<h1><span class="realm shared"></span>Player:IsCharacterFemale()</h1>
 								</a>
@@ -1522,7 +1808,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L244">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L255">View source &raquo;</a>
 
 								<p>Returns if the player has a female character</p>
 							</header>
@@ -1550,7 +1836,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L113">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L124">View source &raquo;</a>
 
 								<p>Returns if the player is a Community Manager or higher</p>
 							</header>
@@ -1578,7 +1864,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L46">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L51">View source &raquo;</a>
 
 								<p>Returns if a player is an impulse framework developer</p>
 							</header>
@@ -1606,7 +1892,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L53">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L58">View source &raquo;</a>
 
 								<p>Returns if a player has donator status</p>
 							</header>
@@ -1676,7 +1962,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L136">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L147">View source &raquo;</a>
 
 								<p>Returns if the player is a Game Master or higher</p>
 							</header>
@@ -1704,7 +1990,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L94">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L105">View source &raquo;</a>
 
 								<p>Returns if the player is a lead moderator or higher</p>
 							</header>
@@ -1732,7 +2018,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L151">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L162">View source &raquo;</a>
 
 								<p>Returns if the player is a Game Master and not higher</p>
 							</header>
@@ -1746,6 +2032,62 @@
 													<span class="type">bool</span>
 
 												<p>Is Game Master</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsSuperAdmin">
+									<h1><span class="realm shared"></span>Player:IsSuperAdmin()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L71">View source &raquo;</a>
+
+								<p>Returns if the player has Super Admin access (The highest level of access.)</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has superadmin access</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:IsWeaponRaised">
+									<h1><span class="realm shared"></span>Player:IsWeaponRaised()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L522">View source &raquo;</a>
+
+								<p>Checks whether the player has their weapon raised or not.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is the weapon raised.</p>
 											</li>
 
 								</ul>
@@ -1803,7 +2145,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L277">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L282">View source &raquo;</a>
 
 								<p>Returns the player's name that appears above their head, runs the "PlayerGetKnownName" hook to override the RP name.</p>
 							</header>
@@ -1848,7 +2190,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L270">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L275">View source &raquo;</a>
 
 								<p>Returns the player's RP name.</p>
 							</header>
@@ -1921,7 +2263,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L180">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_main.lua#L191">View source &raquo;</a>
 
 								<p>Sends a notification to a player.</p>
 							</header>
@@ -1965,7 +2307,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L143">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L152">View source &raquo;</a>
 
 								<p>Resets the players submaterials on their model.</p>
 							</header>
@@ -2314,6 +2656,38 @@
 						</section>
 						<section class="method">
 							<header>
+								<a class="anchor" id="meta:SetWeaponRaised">
+									<h1><span class="realm server"></span>Player:SetWeaponRaised(state)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L542">View source &raquo;</a>
+
+								<p>Sets whether the player has their weapon raised or not.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">state</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+
+												<p> Raised or not.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
 								<a class="anchor" id="meta:SetXP">
 									<h1><span class="realm server"></span>Player:SetXP(amount)</h1>
 								</a>
@@ -2404,7 +2778,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L263">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L268">View source &raquo;</a>
 
 								<p>Gets the player's steam name, replaces meta:Name().</p>
 							</header>
@@ -2435,6 +2809,23 @@
 									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_arrest.lua#L70">View source &raquo;</a>
 
 								<p>Stops dragging anyone if the player is dragging someone.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:ToggleWeaponRaised">
+									<h1><span class="realm server"></span>Player:ToggleWeaponRaised()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L560">View source &raquo;</a>
+
+								<p>Toggles the weapon raised bool.</p>
 							</header>
 
 

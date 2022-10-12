@@ -5,13 +5,13 @@
 
 <html>
 	<head>
-		<title>Anim - impulse documentation</title>
+		<title>Traits - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Anim - impulse documentation" />
+		<meta property="og:title" content="Traits - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
-			<meta property="og:description" content="Functions to control a player's animations, based heavily on nutscript's Anim system" />
+			<meta property="og:description" content="A character customization system with the use of perks." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -100,8 +100,8 @@
 		<!-- library functions -->
 		<article>
 				<header class="module">
-					<h1>Anim</h1>
-					<h2>Functions to control a player's animations, based heavily on nutscript's Anim system</h2>
+					<h1>Traits</h1>
+					<h2>A character customization system with the use of perks.</h2>
 				</header>
 
 				<!-- description -->
@@ -118,22 +118,31 @@
 							<ul>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Anim.GetModelClass">impulse.Anim.GetModelClass(model)</a>
+										<span class="realm client"></span><a href="#impulse.HasTrait">impulse.HasTrait(trait)</a>
 									</li>
 									<li>
 
-										<span class="realm shared"></span><a href="#impulse.Anim.SetModelClass">impulse.Anim.SetModelClass(model, class)</a>
+										<span class="realm shared"></span><a href="#impulse.Traits.Define">impulse.Traits.Define(displayName, description, traitPointCost[, forcedKey])</a>
+										<span class="suminternal">INTERNAL</span>
 									</li>
 									<li>
 
-										<span class="realm server"></span><a href="#meta:ForceSequence">Player:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</a>
+										<span class="realm server"></span><a href="#meta:AddTrait">Player:AddTrait(trait[, saveToDb=true])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:HasTrait">Player:HasTrait(trait)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:TakeTrait">Player:TakeTrait(trait[, saveToDb=true])</a>
 									</li>
 							</ul>
 							<h2>Tables</h2>
 							<ul>
 									<li>
 
-										<span class="realm shared"></span><a href="#DefaultAnimClasses">DefaultAnimClasses</a>
+										<span class="realm shared"></span><a href="#DefaultTraits">DefaultTraits</a>
 									</li>
 							</ul>
 					</div>
@@ -144,16 +153,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Anim.GetModelClass">
-									<h1><span class="realm shared"></span>impulse.Anim.GetModelClass(model)</h1>
+								<a class="anchor" id="impulse.HasTrait">
+									<h1><span class="realm client"></span>impulse.HasTrait(trait)</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L408">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\cl_traits.lua#L13">View source &raquo;</a>
 
-								<p>Gets the animation class of a specific model</p>
+								<p>Test for local player traits.</p>
 							</header>
 
 
@@ -163,12 +172,12 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">model</span>
+												<span class="tag parameter">trait</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><span class="type">number</span></span>
 
 
-												<p> The model</p>
+												<p> The trait ID to test for.</p>
 											</li>
 									</ul>
 
@@ -177,9 +186,9 @@
 								<ul>
 
 											<li>
-													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+													<span class="type">bool</span>
 
-												<p>Animation class</p>
+												<p>Does the local client have this trait.</p>
 											</li>
 
 								</ul>
@@ -187,16 +196,18 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Anim.SetModelClass">
-									<h1><span class="realm shared"></span>impulse.Anim.SetModelClass(model, class)</h1>
+								<a class="anchor" id="impulse.Traits.Define">
+									<h1><span class="realm shared"></span>impulse.Traits.Define(displayName, description, traitPointCost[, forcedKey])</h1>
 								</a>
 
+									<div class="internal"></div>
+
+									<div class="indev"></div>
 
 
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_traits.lua#L17">View source &raquo;</a>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L392">View source &raquo;</a>
-
-								<p>Sets the animation class of a specific model</p>
+								<p>Define a new trait.</p>
 							</header>
 
 
@@ -206,45 +217,66 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">model</span>
+												<span class="tag parameter">displayName</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> The model to set</p>
+												<p> The name displayed on the client.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">class</span>
+												<span class="tag parameter">description</span>
 
 													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
-												<p> The animation class</p>
+												<p> The description of the trait, displays on the client.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">traitPointCost</span>
+
+													<span class="tag"><span class="type">number</span></span>
+
+
+												<p> The amount of points it costs to get this trait, can be negative to increase the limit of traits.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">forcedKey</span>
+
+													<span class="tag"><span class="type">number</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Forced DB storage key to prevent scrambling of order.</p>
 											</li>
 									</ul>
 
 
-								<h3>See Also</h3>
-								<ul>
-										<li><a href="../libraries/Anim.html#DefaultAnimClasses">DefaultAnimClasses</a></li>
-								</ul>
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:ForceSequence">
-									<h1><span class="realm server"></span>Player:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</h1>
+								<a class="anchor" id="meta:AddTrait">
+									<h1><span class="realm server"></span>Player:AddTrait(trait[, saveToDb=true])</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L455">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_traits.lua#L34">View source &raquo;</a>
 
-								<p>Plays an animation sequence on a player</p>
+								<p>Adds a trait to a player, saves to database unless specified otherwise.</p>
 							</header>
 
 
@@ -254,51 +286,113 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">sequence</span>
+												<span class="tag parameter">trait</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><span class="type">number</span></span>
 
 
-												<p> The sequence name</p>
+												<p> The ID of the trait to add.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">callback</span>
-
-													<span class="tag"><span class="type">function</span></span>
-
-													<span class="tag default">optional</span>
-
-												<p> Called when the animation is completed</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">time</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-													<span class="tag default">optional</span>
-
-												<p> How long until we force the sequence to stop</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">noFreeze</span>
+												<span class="tag parameter">saveToDb</span>
 
 													<span class="tag"><span class="type">boolean</span></span>
 
-													<span class="tag default">default: false</span>
+													<span class="tag default">default: true</span>
 
-												<p> If the player should not freeze when the sequence is playing</p>
+												<p> If true, it saves all trait data to the database.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:HasTrait">
+									<h1><span class="realm server"></span>Player:HasTrait(trait)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_traits.lua#L13">View source &raquo;</a>
+
+								<p>Determines if a player has a trait.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">trait</span>
+
+													<span class="tag"><span class="type">number</span></span>
+
+
+												<p> The ID of the trait to test for.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Has specified trait.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:TakeTrait">
+									<h1><span class="realm server"></span>Player:TakeTrait(trait[, saveToDb=true])</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_traits.lua#L61">View source &raquo;</a>
+
+								<p>Takes a trait to a player, saves to database unless specified otherwise, throws an error if the player doesn't have the trait.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">trait</span>
+
+													<span class="tag"><span class="type">number</span></span>
+
+
+												<p> The ID of the trait to take.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">saveToDb</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: true</span>
+
+												<p> If true, it saves all trait data to the database.</p>
 											</li>
 									</ul>
 
@@ -308,16 +402,16 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="DefaultAnimClasses">
-									<h1><span class="realm shared"></span>DefaultAnimClasses</h1>
+								<a class="anchor" id="DefaultTraits">
+									<h1><span class="realm shared"></span>DefaultTraits</h1>
 								</a>
 
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_anims.lua#L385">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_traits.lua#L43">View source &raquo;</a>
 
-								<p>A collection of default animation classes</p>
+								<p>The default traits.</p>
 							</header>
 
 
@@ -327,104 +421,88 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">citizen_male</span>
+												<span class="tag parameter">TRAIT_TEST</span>
 
 
 
-												<p>
-
-</p>
+												<p> A test trait.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">citizen_female</span>
+												<span class="tag parameter">TRAIT_SOCIOPATH</span>
 
 
 
-												<p>
-
-</p>
+												<p> Increases melee damage and melee speed.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">metrocop</span>
+												<span class="tag parameter">TRAIT_ATTENTIVE</span>
 
 
 
-												<p>
-
-</p>
+												<p> Increases hearing range and noise source accuracy.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">overwatch</span>
+												<span class="tag parameter">TRAIT_UNREMARKABLE</span>
 
 
 
-												<p>
-
-</p>
+												<p> Cameras have a chance to not detect you. Even with a rebel suit or BOL.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">vort</span>
+												<span class="tag parameter">TRAIT_TOUGHSKIN</span>
 
 
 
-												<p>
-
-</p>
+												<p> Chance to not bleed when you normally would.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">player</span>
+												<span class="tag parameter">TRAIT_BLOODRUSH</span>
 
 
 
-												<p>
-
-</p>
+												<p> As health decreases, speed and accuracy increases. (Up to 33% buff)</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">zombie</span>
+												<span class="tag parameter">TRAIT_QUICK</span>
 
 
 
-												<p>
-
-</p>
+												<p> Anything that takes time to do is x2 faster.</p>
 											</li>
 									</ul>
 
 									<ul>
 
 											<li>
-												<span class="tag parameter">fastZombie</span>
+												<span class="tag parameter">TRAIT_LUCKY</span>
 
 
 
-												<p>
-
-</p>
+												<p> Today could be your lucky day!</p>
 											</li>
 									</ul>
 
