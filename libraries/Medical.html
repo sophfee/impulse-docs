@@ -33,6 +33,7 @@
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/Doors.html">Doors</a></li>
 								<li><a href="../libraries/Errors.html">Errors</a></li>
 								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
@@ -118,6 +119,10 @@
 							<ul>
 									<li>
 
+										<span class="realm shared"></span><a href="#meta:Bleeding">Player:Bleeding()</a>
+									</li>
+									<li>
+
 										<span class="realm server"></span><a href="#meta:BreakLegs">Player:BreakLegs()</a>
 									</li>
 									<li>
@@ -127,6 +132,12 @@
 									<li>
 
 										<span class="realm shared"></span><a href="#meta:GetInfection">Player:GetInfection()</a>
+										<span class="sumdeprecated">DEPRECATED</span>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#meta:GetInfectionStage">Player:GetInfectionStage()</a>
+										<span class="sumdeprecated">DEPRECATED</span>
 									</li>
 									<li>
 
@@ -143,6 +154,34 @@
 				<!-- methods -->
 					<h1 class="title">Functions</h1>
 
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:Bleeding">
+									<h1><span class="realm shared"></span>Player:Bleeding()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_medical.lua#L30">View source &raquo;</a>
+
+								<p>Returns if the player is currently bleeding.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Is the player bleeding.</p>
+											</li>
+
+								</ul>
+
+						</section>
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:BreakLegs">
@@ -185,10 +224,11 @@
 
 
 
+									<div class="deprecated"></div>
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_medical.lua#L14">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_medical.lua#L15">View source &raquo;</a>
 
-								<p>Alias of Player:GetSyncVar(SYNC_INFECTION)</p>
+								<p>Alias of Player:GetSyncVar(SYNC_INFECTION).  This is deprecated because I am upset with how I wrote the system. I can do way better.</p>
 							</header>
 
 
@@ -200,6 +240,35 @@
 													<span class="type">int</span>
 
 												<p>SYNC_INFECTION.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:GetInfectionStage">
+									<h1><span class="realm shared"></span>Player:GetInfectionStage()</h1>
+								</a>
+
+
+
+									<div class="deprecated"></div>
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_medical.lua#L23">View source &raquo;</a>
+
+								<p>Returns the sync stage of the infection.  Deprecated cuz bad code.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>SYNC<em>INFECTION</em>STAGE</p>
 											</li>
 
 								</ul>

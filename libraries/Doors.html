@@ -1,0 +1,431 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Doors - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Doors - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="Handles ownership of doors and locking, etc." />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Chat.html">Chat</a></li>
+								<li><a href="../libraries/Currency.html">Currency</a></li>
+								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/Doors.html">Doors</a></li>
+								<li><a href="../libraries/Errors.html">Errors</a></li>
+								<li><a href="../libraries/File.html">File</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/Loot.html">Loot</a></li>
+								<li><a href="../libraries/Medical.html">Medical</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Music.html">Music</a></li>
+								<li><a href="../libraries/RPC.html">RPC</a></li>
+								<li><a href="../libraries/Recognize.html">Recognize</a></li>
+								<li><a href="../libraries/Refunds.html">Refunds</a></li>
+								<li><a href="../libraries/Scenes.html">Scenes</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Signals.html">Signals</a></li>
+								<li><a href="../libraries/Skills.html">Skills</a></li>
+								<li><a href="../libraries/States.html">States</a></li>
+								<li><a href="../libraries/Supply.html">Supply</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+								<li><a href="../libraries/Teams.html">Teams</a></li>
+								<li><a href="../libraries/Traits.html">Traits</a></li>
+								<li><a href="../libraries/Tween.html">Tween</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Panels</h2>
+
+						<ul>
+								<li><a href="../panels/impulseDynamicBar.html">impulseDynamicBar</a></li>
+								<li><a href="../panels/impulseNewPlayerMenu.html">impulseNewPlayerMenu</a></li>
+								<li><a href="../panels/impulseNotify.html">impulseNotify</a></li>
+								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
+								<li><a href="../panels/impulseRichText.html">impulseRichText</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Vendor.html">Vendor</a></li>
+								<li><a href="../classes/State.html">State</a></li>
+								<li><a href="../classes/Compiler.html">Compiler</a></li>
+								<li><a href="../classes/Parser.html">Parser</a></li>
+								<li><a href="../classes/Process.html">Process</a></li>
+								<li><a href="../classes/Token.html">Token</a></li>
+						</ul>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an Item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+								<li><a href="../manual/50-framework.md.html">Working on the Framework</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Doors</h1>
+					<h2>Handles ownership of doors and locking, etc.</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li>
+
+										<span class="realm server"></span><a href="#eMeta:DoorLock">eMeta:DoorLock()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#eMeta:DoorUnlock">eMeta:DoorUnlock()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#eMeta:GetDoorMaster">eMeta:GetDoorMaster()</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Doors.Load">impulse.Doors.Load()</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#impulse.Doors.Save">impulse.Doors.Save()</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RemoveDoorMaster">Player:RemoveDoorMaster(door[, noUnlock])</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:RemoveDoorUser">Player:RemoveDoorUser(door)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetDoorMaster">Player:SetDoorMaster(door)</a>
+									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:SetDoorUser">Player:SetDoorUser(door)</a>
+									</li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="eMeta:DoorLock">
+									<h1><span class="realm server"></span>eMeta:DoorLock()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L102">View source &raquo;</a>
+
+								<p>Fires the "Lock" event to a door.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="eMeta:DoorUnlock">
+									<h1><span class="realm server"></span>eMeta:DoorUnlock()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L108">View source &raquo;</a>
+
+								<p>Fires the "Unlock" event to a door, for func_doors this function opens them.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="eMeta:GetDoorMaster">
+									<h1><span class="realm server"></span>eMeta:GetDoorMaster()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L120">View source &raquo;</a>
+
+								<p>Gives you the owner of the door, this person
+ has access to locking, unlocking, storage, and
+ can grant additional access to others.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">player</span>
+
+												<p>Door master, will be nil if nobody owns the door.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Doors.Load">
+									<h1><span class="realm server"></span>impulse.Doors.Load()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L40">View source &raquo;</a>
+
+								<p>Loads door configuration from file.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.Doors.Save">
+									<h1><span class="realm server"></span>impulse.Doors.Save()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L17">View source &raquo;</a>
+
+								<p>Saves the current door configuration to data.
+ This is a crucial file to upload on your live server
+ since without it, you will have every door be ownable.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RemoveDoorMaster">
+									<h1><span class="realm server"></span>Player:RemoveDoorMaster(door[, noUnlock])</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L147">View source &raquo;</a>
+
+								<p>Removes the player as the owner of a door.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">door</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The door that the player will be removed from as the owner.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">noUnlock</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> If true, the door will not be unlocked.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:RemoveDoorUser">
+									<h1><span class="realm server"></span>Player:RemoveDoorUser(door)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L186">View source &raquo;</a>
+
+								<p>Removes user access from a door.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">door</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The door to remove them from.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetDoorMaster">
+									<h1><span class="realm server"></span>Player:SetDoorMaster(door)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L129">View source &raquo;</a>
+
+								<p>Works different to the Entity:GetDoorMaster since
+ this runs off of the player.  This makes the player
+ own the door.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">door</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The door the player will own.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetDoorUser">
+									<h1><span class="realm server"></span>Player:SetDoorUser(door)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_doors.lua#L169">View source &raquo;</a>
+
+								<p>Makes the person able to use a door, use any storage linked,
+ but they cannot manage other users of the door.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">door</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The door they will become a user of.</p>
+											</li>
+									</ul>
+
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>

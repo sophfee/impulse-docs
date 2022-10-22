@@ -59,6 +59,7 @@
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/Doors.html">Doors</a></li>
 								<li><a href="../libraries/Errors.html">Errors</a></li>
 								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
@@ -116,10 +117,6 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li>
-
-										<span class="realm shared"></span><a href="#impulse.CanUseName">Playerimpulse.CanUseName(name)</a>
-									</li>
 									<li>
 
 										<span class="realm server"></span><a href="#impulse.FindByDatabaseId">Playerimpulse.FindByDatabaseId(id)</a>
@@ -352,6 +349,10 @@
 									</li>
 									<li>
 
+										<span class="realm server"></span><a href="#meta:SetDescription">Player:SetDescription(rpdesc[, saveOnDb=true[, onTeam]])</a>
+									</li>
+									<li>
+
 										<span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a>
 									</li>
 									<li>
@@ -420,6 +421,11 @@
 
 										<span class="realm server"></span><a href="#meta:UnMakeAFK">Player:UnMakeAFK()</a>
 									</li>
+									<li>
+
+										<span class="realm server"></span><a href="#meta:UseSavedDescription">Player:UseSavedDescription()</a>
+										<span class="suminternal">INTERNAL</span>
+									</li>
 							</ul>
 					</div>
 				</details>
@@ -429,55 +435,6 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.CanUseName">
-									<h1><span class="realm shared"></span>Playerimpulse.CanUseName(name)</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L227">View source &raquo;</a>
-
-								<p>Checks if a name is good enough to use.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">name</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The name to test.</p>
-											</li>
-									</ul>
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">bool</span>
-
-												<p>Can this name be used?</p>
-											</li>
-
-											<li>
-													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
-
-												<p>The message to display if it cannot be used.</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
 								<a class="anchor" id="impulse.FindByDatabaseId">
 									<h1><span class="realm server"></span>Playerimpulse.FindByDatabaseId(id)</h1>
 								</a>
@@ -485,7 +442,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L168">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L169">View source &raquo;</a>
 
 								<p>Finds a player by their database id.</p>
 							</header>
@@ -528,7 +485,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L182">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L183">View source &raquo;</a>
 
 								<p>Finds a player by their database id and if they are on a specific team.</p>
 							</header>
@@ -615,7 +572,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L136">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L137">View source &raquo;</a>
 
 								<p>Adds a prop to the players prop list.</p>
 							</header>
@@ -1183,7 +1140,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L104">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L105">View source &raquo;</a>
 
 								<p>Returns the players prop count.</p>
 							</header>
@@ -2145,7 +2102,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L282">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L289">View source &raquo;</a>
 
 								<p>Returns the player's name that appears above their head, runs the "PlayerGetKnownName" hook to override the RP name.</p>
 							</header>
@@ -2190,7 +2147,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L275">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L282">View source &raquo;</a>
 
 								<p>Returns the player's RP name.</p>
 							</header>
@@ -2307,7 +2264,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L152">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_main.lua#L153">View source &raquo;</a>
 
 								<p>Resets the players submaterials on their model.</p>
 							</header>
@@ -2386,6 +2343,65 @@
 
 
 												<p> True/False for AFK immunity</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:SetDescription">
+									<h1><span class="realm server"></span>Player:SetDescription(rpdesc[, saveOnDb=true[, onTeam]])</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_description.lua#L10">View source &raquo;</a>
+
+								<p>Updates a players description, only updates the
+ specific team unless otherwise specified.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">rpdesc</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> The description to update to.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">saveOnDb</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: true</span>
+
+												<p> Should we save this to the database.</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">onTeam</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> The team to have the description for, defaults to active team.</p>
 											</li>
 									</ul>
 
@@ -2778,7 +2794,7 @@
 
 
 
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L268">View source &raquo;</a>
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L275">View source &raquo;</a>
 
 								<p>Gets the player's steam name, replaces meta:Name().</p>
 							</header>
@@ -2877,6 +2893,24 @@
 									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_afk.lua#L42">View source &raquo;</a>
 
 								<p>Makes a player NOT AFK.</p>
+							</header>
+
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="meta:UseSavedDescription">
+									<h1><span class="realm server"></span>Player:UseSavedDescription()</h1>
+								</a>
+
+									<div class="internal"></div>
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_description.lua#L30">View source &raquo;</a>
+
+								<p>Updates the players description to their DB one.</p>
 							</header>
 
 

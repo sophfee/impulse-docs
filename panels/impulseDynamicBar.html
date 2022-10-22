@@ -64,6 +64,7 @@
 								<li><a href="../libraries/Teams.html">Teams</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
 								<li><a href="../libraries/File.html">File</a></li>
+								<li><a href="../libraries/Doors.html">Doors</a></li>
 								<li><a href="../libraries/Recognize.html">Recognize</a></li>
 								<li><a href="../libraries/Loot.html">Loot</a></li>
 								<li><a href="../libraries/Refunds.html">Refunds</a></li>
@@ -118,12 +119,20 @@
 							<ul>
 									<li>
 
+										<span class="realm client"></span><a href="#PANEL:GetProgress">impulseDynamicBar:GetProgress()</a>
+									</li>
+									<li>
+
 										<span class="realm client"></span><a href="#PANEL:Init">impulseDynamicBar:Init()</a>
 										<span class="suminternal">INTERNAL</span>
 									</li>
 									<li>
 
 										<span class="realm client"></span><a href="#PANEL:SetColour">impulseDynamicBar:SetColour(col)</a>
+									</li>
+									<li>
+
+										<span class="realm client"></span><a href="#PANEL:SetProgress">impulseDynamicBar:SetProgress(val)</a>
 									</li>
 									<li>
 
@@ -136,6 +145,34 @@
 				<!-- methods -->
 					<h1 class="title">Functions</h1>
 
+						<section class="method">
+							<header>
+								<a class="anchor" id="PANEL:GetProgress">
+									<h1><span class="realm client"></span>impulseDynamicBar:GetProgress()</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_bar.lua#L33">View source &raquo;</a>
+
+								<p>Returns how far along the bar is.</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">int</span>
+
+												<p>Progress.</p>
+											</li>
+
+								</ul>
+
+						</section>
 						<section class="method">
 							<header>
 								<a class="anchor" id="PANEL:Init">
@@ -181,6 +218,38 @@
 
 
 												<p> Color to update to.</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="PANEL:SetProgress">
+									<h1><span class="realm client"></span>impulseDynamicBar:SetProgress(val)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\vgui\cl_bar.lua#L40">View source &raquo;</a>
+
+								<p>Updates the progress of the bar.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">val</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> The progress value.</p>
 											</li>
 									</ul>
 

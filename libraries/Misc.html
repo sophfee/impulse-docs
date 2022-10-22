@@ -33,6 +33,7 @@
 								<li><a href="../libraries/Chat.html">Chat</a></li>
 								<li><a href="../libraries/Currency.html">Currency</a></li>
 								<li><a href="../libraries/Data.html">Data</a></li>
+								<li><a href="../libraries/Doors.html">Doors</a></li>
 								<li><a href="../libraries/Errors.html">Errors</a></li>
 								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
@@ -123,6 +124,14 @@
 									<li>
 
 										<span class="realm client"></span><a href="#impulse.BlurRect">impulse.BlurRect(x, y, w, h)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.CanUseDesc">impulse.CanUseDesc(desc)</a>
+									</li>
+									<li>
+
+										<span class="realm shared"></span><a href="#impulse.CanUseName">impulse.CanUseName(name)</a>
 									</li>
 									<li>
 
@@ -271,6 +280,98 @@
 											</li>
 									</ul>
 
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.CanUseDesc">
+									<h1><span class="realm shared"></span>impulse.CanUseDesc(desc)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_desc.lua#L8">View source &raquo;</a>
+
+								<p>Determines if you can use a description for your RP character.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">desc</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> Description to test.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can use.</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.CanUseName">
+									<h1><span class="realm shared"></span>impulse.CanUseName(name)</h1>
+								</a>
+
+
+
+
+									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_name.lua#L231">View source &raquo;</a>
+
+								<p>Checks if a name is good enough to use.</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">name</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+												<p> The name to test.</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can this name be used?</p>
+											</li>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>The message to display if it cannot be used.</p>
+											</li>
+
+								</ul>
 
 						</section>
 						<section class="method">
