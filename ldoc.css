@@ -468,7 +468,7 @@ a.reference {
 }
 
 .method ul li a {
-	color: rgb(115, 53, 142);
+	color: var(--color-accent);
 	font-weight: 600;
 }
 
