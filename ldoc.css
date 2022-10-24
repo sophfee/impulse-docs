@@ -266,7 +266,7 @@ article .wrapper > *:first-child {
 /* header */
 article header {
 	color: rgb(255, 255, 255);
-	background-color: rgb(115, 53, 142);
+	background-color: var(--color-accent);
 	padding: var(--padding-tiny);
 }
 
@@ -313,7 +313,7 @@ article h2 {
 }
 
 article h3 {
-	color: rgb(115, 53, 142);
+	color: var(--color-accent);
 	margin-top: var(--padding-tiny);
 	text-transform: uppercase;
 }
