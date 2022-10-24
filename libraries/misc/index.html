@@ -6,7 +6,7 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Misc - impulse documentation" />
-		<meta property="og:site_name" content="Helix Documentation" />
+		<meta property="og:site_name" content="impulse Documentation" />
 
 			<meta property="og:description" content="A generic module that holds anything that doesnt fit elsewhere" />
 
@@ -2408,7 +2408,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L297">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L297">View source &raquo;</a>
 
 					<p>Angle to bearing function...?  I dunno how this is useful to the framework but hey it works.</p>
 			</header>
@@ -2451,7 +2451,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_main.lua#L71">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_main.lua#L71">View source &raquo;</a>
 
 					<p>Blurs a rectangle at specified points.</p>
 			</header>
@@ -2518,7 +2518,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_desc.lua#L8">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_desc.lua#L8">View source &raquo;</a>
 
 					<p>Determines if you can use a description for your RP character.</p>
 			</header>
@@ -2560,7 +2560,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L232">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_name.lua#L232">View source &raquo;</a>
 
 					<p>Checks if a name is good enough to use.</p>
 			</header>
@@ -2611,7 +2611,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L78">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L78">View source &raquo;</a>
 
 					<p>Displays a cinematic message to all players on the server.</p>
 			</header>
@@ -2638,11 +2638,11 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.FindEmptyPos">
-					<h1><span class="realm server"></span></span>impulse.FindEmptyPos(ignore, distance, step, area)</h1>
+					<h1><span class="realm server"></span></span>impulse.FindEmptyPos(pos, ignore, distance, step, area)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L46">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L46">View source &raquo;</a>
 
 					<p>Finds an empty position nearby, pretty broken though.</p>
 			</header>
@@ -2650,6 +2650,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">pos</span>
+
+									<span class="tag"><span class="type">vector</span></span>
+
+
+								<p> Position to look around.</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -2719,7 +2731,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L270">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L270">View source &raquo;</a>
 
 					<p>Finds a player by a specific search key, if not found returns nil.</p>
 			</header>
@@ -2761,7 +2773,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L376">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L376">View source &raquo;</a>
 
 					<p>This is used for Vendors.</p>
 			</header>
@@ -2799,11 +2811,11 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.IsEmpty">
-					<h1><span class="realm server"></span></span>impulse.IsEmpty(ignore)</h1>
+					<h1><span class="realm server"></span></span>impulse.IsEmpty(vector, ignore)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L14">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L14">View source &raquo;</a>
 
 					<p>Checks if a vector position is empty.</p>
 			</header>
@@ -2811,6 +2823,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">vector</span>
+
+									<span class="tag"><span class="type">vector</span></span>
+
+
+								<p> World position.</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -2844,7 +2868,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_main.lua#L130">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_main.lua#L130">View source &raquo;</a>
 
 					<p>Creates a work bar on the players screen</p>
 			</header>
@@ -2883,7 +2907,7 @@ Set											</a>
 							<li>
 								<span class="tag parameter">onDone</span>
 
-									<span class="tag"><span class="type">func</span></span>
+									<span class="tag"><span class="type">function</span></span>
 
 									<span class="tag default">optional</span>
 
@@ -2896,7 +2920,7 @@ Set											</a>
 							<li>
 								<span class="tag parameter">popup</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">default: false</span>
 
@@ -2914,7 +2938,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L313">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L313">View source &raquo;</a>
 
 					<p>Turns a vector into code,.</p>
 			</header>
@@ -2928,11 +2952,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">pos</span>
 
+									<span class="tag"><span class="type">vector</span></span>
 
 
-								<p>
-
-</p>
+								<p> The vector to turn into a code.</p>
 							</li>
 					</ul>
 
@@ -2957,7 +2980,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L305">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L305">View source &raquo;</a>
 
 					<p>Decomposes a vector and separates each part with "|".</p>
 			</header>
@@ -2971,11 +2994,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">pos</span>
 
+									<span class="tag"><span class="type">vector</span></span>
 
 
-								<p>
-
-</p>
+								<p> The vector to turn into a string.</p>
 							</li>
 					</ul>
 
@@ -3000,7 +3022,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L321">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L321">View source &raquo;</a>
 
 					<p>Removes bad characters from strings.</p>
 			</header>
@@ -3038,11 +3060,11 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.blur">
-					<h1><span class="realm client"></span></span>impulse.blur(panel, layers, density)</h1>
+					<h1><span class="realm client"></span></span>impulse.blur(panel, layers, density, alpha)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_main.lua#L101">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_main.lua#L101">View source &raquo;</a>
 
 					<p>Renders a blur effect on a panel.  Call this inside PANEL:Paint</p>
 			</header>
@@ -3083,6 +3105,18 @@ Set											</a>
 
 
 								<p> Density</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">alpha</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p> Alpha</p>
 							</li>
 					</ul>
 

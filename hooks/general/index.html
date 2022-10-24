@@ -6,7 +6,7 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="General - impulse documentation" />
-		<meta property="og:site_name" content="Helix Documentation" />
+		<meta property="og:site_name" content="impulse Documentation" />
 
 			<meta property="og:description" content="Hooks that can be used in a Plugin or a Schema" />
 
@@ -2404,7 +2404,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanEditDoor">
-					<h1><span class="realm server"></span></span>GENERAL:CanEditDoor()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:CanEditDoor(ply, door)</h1>
 				</a>
 
 
@@ -2412,6 +2412,33 @@ Set											</a>
 					<p>Called to decide if a player can edit a door</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">door</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The door</p>
+							</li>
+					</ul>
 
 
 				<h3>Returns</h3>
@@ -2430,7 +2457,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerChangeTeam">
-					<h1><span class="realm shared"></span></span>GENERAL:CanPlayerChangeTeam(team)</h1>
+					<h1><span class="realm shared"></span></span>GENERAL:CanPlayerChangeTeam(ply, team)</h1>
 				</a>
 
 
@@ -2441,6 +2468,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -2471,7 +2510,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanStoreItem">
-					<h1><span class="realm server"></span></span>GENERAL:CanStoreItem(itemclass, from)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:CanStoreItem(ply, storage, itemclass, from)</h1>
 				</a>
 
 
@@ -2482,6 +2521,30 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storage</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The storage box</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -2541,11 +2604,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">ply</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The player that is trying to use their inventory</p>
 							</li>
 					</ul>
 
@@ -2566,7 +2628,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="ChatClassMessageSend">
-					<h1><span class="realm server"></span></span>GENERAL:ChatClassMessageSend(chatClass, message)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:ChatClassMessageSend(chatClass, sender, message)</h1>
 				</a>
 
 
@@ -2587,6 +2649,18 @@ Set											</a>
 
 
 								<p> ID of the chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sender</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The sender</p>
 							</li>
 					</ul>
 
@@ -2619,7 +2693,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="ChatStateChanged">
-					<h1><span class="realm server"></span></span>GENERAL:ChatStateChanged(oldState, newState)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:ChatStateChanged(ply, oldState, newState)</h1>
 				</a>
 
 
@@ -2634,9 +2708,21 @@ Set											</a>
 					<ul>
 
 							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
 								<span class="tag parameter">oldState</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> The old chat state</p>
@@ -2648,7 +2734,7 @@ Set											</a>
 							<li>
 								<span class="tag parameter">newState</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> The new chat state</p>
@@ -2676,7 +2762,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="ContainerPasscodeSet">
-					<h1><span class="realm server"></span></span>GENERAL:ContainerPasscodeSet()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:ContainerPasscodeSet(ply, container)</h1>
 				</a>
 
 
@@ -2684,6 +2770,33 @@ Set											</a>
 					<p>Called when a player sets a container passcode</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">container</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The container</p>
+							</li>
+					</ul>
 
 
 
@@ -2793,7 +2906,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="DoInventorySearch">
-					<h1><span class="realm server"></span></span>GENERAL:DoInventorySearch()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:DoInventorySearch(ply, target)</h1>
 				</a>
 
 
@@ -2801,6 +2914,33 @@ Set											</a>
 					<p>Called when a player inventory searches another player</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The searcher player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">target</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The target player</p>
+							</li>
+					</ul>
 
 
 
@@ -2917,7 +3057,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerAddUserToDoor">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerAddUserToDoor(owners)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerAddUserToDoor(ply, owners)</h1>
 				</a>
 
 
@@ -2928,6 +3068,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -2963,11 +3115,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">convict</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The player that has been arrested</p>
 							</li>
 					</ul>
 
@@ -2976,11 +3127,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">officer</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The officer who arrested the player</p>
 							</li>
 					</ul>
 
@@ -2990,7 +3140,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerBuyablePurchase">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerBuyablePurchase(buyable)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerBuyablePurchase(ply, buyable)</h1>
 				</a>
 
 
@@ -3001,6 +3151,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3020,7 +3182,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerCanHearCheck">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerCanHearCheck()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerCanHearCheck(listener, speaker)</h1>
 				</a>
 
 
@@ -3028,6 +3190,33 @@ Set											</a>
 					<p>Called to check if one player can hear another</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">listener</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player listening</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">speaker</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player speaking</p>
+							</li>
+					</ul>
 
 
 				<h3>Returns</h3>
@@ -3046,7 +3235,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerChangeRPName">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerChangeRPName(name)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerChangeRPName(ply, name)</h1>
 				</a>
 
 
@@ -3057,6 +3246,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3076,7 +3277,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerConfiscateItem">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerConfiscateItem(itemclass)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerConfiscateItem(ply, targ, itemclass)</h1>
 				</a>
 
 
@@ -3087,6 +3288,30 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player who is confiscating</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">targ</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player who is being targeted</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3106,7 +3331,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerCraftItem">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerCraftItem(output)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerCraftItem(ply, output)</h1>
 				</a>
 
 
@@ -3117,6 +3342,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3136,7 +3373,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerDropDeathItems">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerDropDeathItems(pos, dropped, inv)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerDropDeathItems(ply, killer, pos, dropped, inv)</h1>
 				</a>
 
 
@@ -3147,6 +3384,30 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player who died</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">killer</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The killer</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3187,7 +3448,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerDropItem">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerDropItem(itemData, invID)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerDropItem(ply, itemData, invID)</h1>
 				</a>
 
 
@@ -3198,6 +3459,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3228,7 +3501,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerDropMoney">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerDropMoney()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerDropMoney(ply, money)</h1>
 				</a>
 
 
@@ -3236,6 +3509,33 @@ Set											</a>
 					<p>Called when a player drops money</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">money</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The money</p>
+							</li>
+					</ul>
 
 
 
@@ -3284,7 +3584,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerGetKnownName">
-					<h1><span class="realm shared"></span></span>GENERAL:PlayerGetKnownName()</h1>
+					<h1><span class="realm shared"></span></span>GENERAL:PlayerGetKnownName(ply)</h1>
 				</a>
 
 
@@ -3292,6 +3592,21 @@ Set											</a>
 					<p>Called to decide what the known name of a player should be</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player to get the name of</p>
+							</li>
+					</ul>
 
 
 				<h3>Returns</h3>
@@ -3310,7 +3625,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerGetXP">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerGetXP(xp)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerGetXP(ply, xp)</h1>
 				</a>
 
 
@@ -3321,6 +3636,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3340,7 +3667,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerInitialSpawnLoaded">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerInitialSpawnLoaded()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerInitialSpawnLoaded(ply)</h1>
 				</a>
 
 
@@ -3348,6 +3675,21 @@ Set											</a>
 					<p>Called when the player has fully loaded into the server after connecting</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> Player who is now fully connected</p>
+							</li>
+					</ul>
 
 
 
@@ -3372,11 +3714,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">ply</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The player that has opened their storage</p>
 							</li>
 					</ul>
 
@@ -3385,11 +3726,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">box</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The storage box</p>
 							</li>
 					</ul>
 
@@ -3399,7 +3739,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerOpenStorage">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerOpenStorage()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerOpenStorage(ply, storage)</h1>
 				</a>
 
 
@@ -3408,13 +3748,40 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player who opened their storage</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storage</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The storage box</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerPurchaseDoor">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerPurchaseDoor()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerPurchaseDoor(ply, door)</h1>
 				</a>
 
 
@@ -3423,13 +3790,40 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">door</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The door</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerRagdollPreSpawn">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerRagdollPreSpawn()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerRagdollPreSpawn(ragdoll, ply, attacker)</h1>
 				</a>
 
 
@@ -3438,13 +3832,52 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ragdoll</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The ragdoll entity</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player who died</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">attacker</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The killer</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerSellDoor">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerSellDoor()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerSellDoor(ply, door)</h1>
 				</a>
 
 
@@ -3453,13 +3886,40 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">door</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The door</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerShouldBreakLegs">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerShouldBreakLegs(damage)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerShouldBreakLegs(ply, damage)</h1>
 				</a>
 
 
@@ -3470,6 +3930,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3500,7 +3972,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerShouldGetHungry">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerShouldGetHungry()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerShouldGetHungry(ply)</h1>
 				</a>
 
 
@@ -3508,6 +3980,21 @@ Set											</a>
 					<p>Called to decide if a player should get hungry</p>
 			</header>
 
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 
 				<h3>Returns</h3>
@@ -3543,11 +4030,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">convict</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The player that has been un-arrested</p>
 							</li>
 					</ul>
 
@@ -3556,11 +4042,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">officer</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The officer who un-arrested the player</p>
 							</li>
 					</ul>
 
@@ -3570,7 +4055,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerUnJailed">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerUnJailed()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerUnJailed(ply)</h1>
 				</a>
 
 
@@ -3579,13 +4064,28 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerVendorBuy">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerVendorBuy(itemclass, cost)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerVendorBuy(ply, vendor, itemclass, cost)</h1>
 				</a>
 
 
@@ -3596,6 +4096,30 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">vendor</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The vendor</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3627,7 +4151,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerZoneChanged">
-					<h1><span class="realm server"></span></span>GENERAL:PlayerZoneChanged(id)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PlayerZoneChanged(ply, id)</h1>
 				</a>
 
 
@@ -3638,6 +4162,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3657,7 +4193,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostChatClassMessageSend">
-					<h1><span class="realm server"></span></span>GENERAL:PostChatClassMessageSend(chatClass, message)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PostChatClassMessageSend(chatClass, message, sender)</h1>
 				</a>
 
 
@@ -3690,6 +4226,18 @@ Set											</a>
 
 
 								<p> The message</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sender</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The sender</p>
 							</li>
 					</ul>
 
@@ -3729,7 +4277,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostInventorySetup">
-					<h1><span class="realm server"></span></span>GENERAL:PostInventorySetup()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PostInventorySetup(ply)</h1>
 				</a>
 
 
@@ -3738,13 +4286,28 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostSetupPlayer">
-					<h1><span class="realm server"></span></span>GENERAL:PostSetupPlayer()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PostSetupPlayer(ply)</h1>
 				</a>
 
 
@@ -3753,13 +4316,28 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PreEarlyInventorySetup">
-					<h1><span class="realm server"></span></span>GENERAL:PreEarlyInventorySetup()</h1>
+					<h1><span class="realm server"></span></span>GENERAL:PreEarlyInventorySetup(ply)</h1>
 				</a>
 
 
@@ -3768,13 +4346,28 @@ Set											</a>
 			</header>
 
 
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="ProcessICChatMessage">
-					<h1><span class="realm server"></span></span>GENERAL:ProcessICChatMessage(message)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:ProcessICChatMessage(sender, message)</h1>
 				</a>
 
 
@@ -3785,6 +4378,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sender</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The sender</p>
+							</li>
+					</ul>
 
 					<ul>
 
@@ -3845,7 +4450,7 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="RadioMessageFallback">
-					<h1><span class="realm server"></span></span>GENERAL:RadioMessageFallback(message)</h1>
+					<h1><span class="realm server"></span></span>GENERAL:RadioMessageFallback(ply, message)</h1>
 				</a>
 
 
@@ -3856,6 +4461,18 @@ Set											</a>
 
 					<h3>Parameters</h3>
 
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player</p>
+							</li>
+					</ul>
 
 					<ul>
 

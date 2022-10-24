@@ -6,7 +6,7 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="MenuMessage - impulse documentation" />
-		<meta property="og:site_name" content="Helix Documentation" />
+		<meta property="og:site_name" content="impulse Documentation" />
 
 			<meta property="og:description" content="Allows for the creation of persistent menu messages similar in style to CS:GO&#39;s menu notifications" />
 
@@ -2404,11 +2404,11 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.MenuMessage.Add">
-					<h1><span class="realm client"></span></span>impulse.MenuMessage.Add(uid, title, message, url, urlText, expiry)</h1>
+					<h1><span class="realm client"></span></span>impulse.MenuMessage.Add(uid, title, message, col, url, urlText, expiry)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_menumessages.lua#L18">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_menumessages.lua#L18">View source &raquo;</a>
 
 					<p>Creates a new MenuMessage and displays it</p>
 			</header>
@@ -2450,6 +2450,19 @@ Set											</a>
 
 
 								<p> Message content</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">col</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The message colour</p>
 							</li>
 					</ul>
 
@@ -2506,7 +2519,7 @@ Set											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_menumessages.lua#L70">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_menumessages.lua#L70">View source &raquo;</a>
 
 					<p>Returns if a MenuMessage can be seen</p>
 			</header>
@@ -2537,7 +2550,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_menumessages.lua#L37">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_menumessages.lua#L37">View source &raquo;</a>
 
 					<p>Removes an active MenuMessage</p>
 			</header>
@@ -2568,7 +2581,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_menumessages.lua#L55">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_menumessages.lua#L55">View source &raquo;</a>
 
 					<p>Saves the specified MenuMessage to file so it persists</p>
 			</header>

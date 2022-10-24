@@ -6,7 +6,7 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Doors - impulse documentation" />
-		<meta property="og:site_name" content="Helix Documentation" />
+		<meta property="og:site_name" content="impulse Documentation" />
 
 			<meta property="og:description" content="Handles ownership of doors and locking, etc." />
 
@@ -2408,7 +2408,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L102">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L102">View source &raquo;</a>
 
 					<p>Fires the "Lock" event to a door.</p>
 			</header>
@@ -2424,7 +2424,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L108">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L108">View source &raquo;</a>
 
 					<p>Fires the "Unlock" event to a door, for func_doors this function opens them.</p>
 			</header>
@@ -2440,7 +2440,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L120">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L120">View source &raquo;</a>
 
 					<p>Gives you the owner of the door, this person
  has access to locking, unlocking, storage, and
@@ -2465,11 +2465,11 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="RemoveDoorMaster">
-					<h1><span class="realm server"></span></span>RemoveDoorMaster(noUnlock)</h1>
+					<h1><span class="realm server"></span></span>RemoveDoorMaster(door, noUnlock)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L147">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L147">View source &raquo;</a>
 
 					<p>Removes the player as the owner of a door.</p>
 			</header>
@@ -2481,9 +2481,21 @@ Set											</a>
 					<ul>
 
 							<li>
+								<span class="tag parameter">door</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The door that the player will be removed from as the owner.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
 								<span class="tag parameter">noUnlock</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">optional</span>
 
@@ -2501,7 +2513,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L186">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L186">View source &raquo;</a>
 
 					<p>Removes user access from a door.</p>
 			</header>
@@ -2515,11 +2527,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">door</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The door to remove them from.</p>
 							</li>
 					</ul>
 
@@ -2533,7 +2544,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L129">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L129">View source &raquo;</a>
 
 					<p>Works different to the Entity:GetDoorMaster since
  this runs off of the player.  This makes the player
@@ -2549,11 +2560,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">door</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The door the player will own.</p>
 							</li>
 					</ul>
 
@@ -2567,7 +2577,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L169">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L169">View source &raquo;</a>
 
 					<p>Makes the person able to use a door, use any storage linked,
  but they cannot manage other users of the door.</p>
@@ -2582,11 +2592,10 @@ Set											</a>
 							<li>
 								<span class="tag parameter">door</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> The door they will become a user of.</p>
 							</li>
 					</ul>
 
@@ -2604,7 +2613,7 @@ Set											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L40">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L40">View source &raquo;</a>
 
 					<p>Loads door configuration from file.</p>
 			</header>
@@ -2624,7 +2633,7 @@ Set											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L17">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L17">View source &raquo;</a>
 
 					<p>Saves the current door configuration to data.
  This is a crucial file to upload on your live server

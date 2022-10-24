@@ -6,7 +6,7 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Sync - impulse documentation" />
-		<meta property="og:site_name" content="Helix Documentation" />
+		<meta property="og:site_name" content="impulse Documentation" />
 
 			<meta property="og:description" content="A fast entity based synchronous networking system" />
 
@@ -2408,7 +2408,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L88">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_sync.lua#L88">View source &raquo;</a>
 
 					<p>Gets the Sync variable on an entity</p>
 			</header>
@@ -2464,7 +2464,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L218">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L218">View source &raquo;</a>
 
 					<p>Sets the Sync var on an entity but only updates the player who it is being set on</p>
 			</header>
@@ -2509,7 +2509,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L193">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L193">View source &raquo;</a>
 
 					<p>Sets the Sync var on an entity</p>
 			</header>
@@ -2546,7 +2546,7 @@ Set											</a>
 							<li>
 								<span class="tag parameter">instantSync</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">default: false</span>
 
@@ -2567,7 +2567,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L14">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L14">View source &raquo;</a>
 
 					<p>Sync will take the player and sync their all SyncVars with all clients or the single target if provided.</p>
 			</header>
@@ -2581,11 +2581,11 @@ Set											</a>
 							<li>
 								<span class="tag parameter">target</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
+									<span class="tag default">default: true</span>
 
-								<p>
-
-</p>
+								<p> Sync to a single target, if empty, syncs to all players.</p>
 							</li>
 					</ul>
 
@@ -2599,7 +2599,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L160">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L160">View source &raquo;</a>
 
 					<p>Removes all SyncVar's from an entity and update all players</p>
 			</header>
@@ -2615,7 +2615,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L174">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L174">View source &raquo;</a>
 
 					<p>Removes a specific SyncVar from an entity and update all players</p>
 			</header>
@@ -2642,11 +2642,11 @@ Set											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="SyncSingle">
-					<h1><span class="realm server"></span></span>SyncSingle(varID)</h1>
+					<h1><span class="realm server"></span></span>SyncSingle(varID, target)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L89">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L89">View source &raquo;</a>
 
 					<p>Syncs a single variable ID.  target is optional. SyncSingle will take the player and sync the SyncVar provided with all clients or the single target if provided.</p>
 			</header>
@@ -2667,6 +2667,19 @@ Set											</a>
 							</li>
 					</ul>
 
+					<ul>
+
+							<li>
+								<span class="tag parameter">target</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+									<span class="tag default">default: true</span>
+
+								<p> Sync to a single target, if empty, syncs to all players.</p>
+							</li>
+					</ul>
+
 
 
 		</section>
@@ -2681,7 +2694,7 @@ Set											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L77">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_sync.lua#L77">View source &raquo;</a>
 
 					<p>Reads or writes a value based on the SyncType provided</p>
 			</header>
@@ -2725,7 +2738,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L52">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_sync.lua#L52">View source &raquo;</a>
 
 					<p>Registers a new Sync variable for usage.  <strong>Must be called in the shared realm</strong></p>
 			</header>
@@ -2751,7 +2764,7 @@ Set											</a>
 							<li>
 								<span class="tag parameter">conditional</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">default: false</span>
 
@@ -2778,7 +2791,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L222">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_sync.lua#L222">View source &raquo;</a>
 
 					<p>Default Sync variables</p>
 			</header>
@@ -3200,7 +3213,7 @@ Set											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L33">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_sync.lua#L33">View source &raquo;</a>
 
 					<p>Types of Sync variable</p>
 			</header>

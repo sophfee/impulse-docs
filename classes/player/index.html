@@ -6,7 +6,7 @@
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Player - impulse documentation" />
-		<meta property="og:site_name" content="Helix Documentation" />
+		<meta property="og:site_name" content="impulse Documentation" />
 
 			<meta property="og:description" content="A physical player in the server" />
 
@@ -2408,7 +2408,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L12">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L12">View source &raquo;</a>
 
 					<p>Acts as a chat.AddText(...) but sent from the server.</p>
 			</header>
@@ -2442,7 +2442,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L137">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L137">View source &raquo;</a>
 
 					<p>Adds a prop to the players prop list.</p>
 			</header>
@@ -2456,11 +2456,10 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">ent</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> Entity to add.</p>
 							</li>
 					</ul>
 
@@ -2474,7 +2473,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L59">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_skills.lua#L59">View source &raquo;</a>
 
 					<p>Adds XP to a specified skill.</p>
 			</header>
@@ -2517,7 +2516,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L31">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_xp.lua#L31">View source &raquo;</a>
 
 					<p>Adds XP to the players total XP count.</p>
 			</header>
@@ -2552,7 +2551,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L28">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L28">View source &raquo;</a>
 
 					<p>Determines if the player is allowed to control extra PVS (Render zones basically)
  to render a cutscene correctly.</p>
@@ -2567,7 +2566,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">bool</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> Allow or not.</p>
@@ -2584,7 +2583,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L13">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L13">View source &raquo;</a>
 
 					<p>Detains the player, does not put them in jail.</p>
 			</header>
@@ -2596,11 +2595,11 @@ ThisIsAWIP											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanArrest">
-					<h1><span class="realm shared"></span></span>PlayerCanArrest(arrested)</h1>
+					<h1><span class="realm shared"></span></span>PlayerCanArrest(target)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_arrest.lua#L47">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_arrest.lua#L47">View source &raquo;</a>
 
 					<p>Returns if a player can arrest the target</p>
 			</header>
@@ -2612,13 +2611,12 @@ ThisIsAWIP											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">arrested</span>
+								<span class="tag parameter">target</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-
-								<p>
-
-</p>
+								<p> The target who would be arrested</p>
 							</li>
 					</ul>
 
@@ -2643,7 +2641,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L65">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L65">View source &raquo;</a>
 
 					<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
 			</header>
@@ -2669,7 +2667,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">notify</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> Should automatically notify the player.</p>
@@ -2697,7 +2695,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L132">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L132">View source &raquo;</a>
 
 					<p>Returns if a player can join a team's class.</p>
 			</header>
@@ -2723,7 +2721,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">notify</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> Should automatically notify the player.</p>
@@ -2751,7 +2749,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L191">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L191">View source &raquo;</a>
 
 					<p>Returns if a player can join a team's rank.</p>
 			</header>
@@ -2777,7 +2775,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">notify</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> Should automatically notify the player.</p>
@@ -2805,7 +2803,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_doors.lua#L59">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_doors.lua#L59">View source &raquo;</a>
 
 					<p>Retruns if a user can own a door given the parameters.</p>
 			</header>
@@ -2830,7 +2828,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">doorBuyable</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> is the door buyable?</p>
@@ -2858,7 +2856,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_doors.lua#L12">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_doors.lua#L12">View source &raquo;</a>
 
 					<p>Can the user lock or unlock the door.</p>
 			</header>
@@ -2883,7 +2881,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">doorBuyable</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> is the door buyable?</p>
@@ -2911,7 +2909,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L58">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L58">View source &raquo;</a>
 
 					<p>Drags the specified player if they pass the Player:CanArrest check.</p>
 			</header>
@@ -2925,11 +2923,10 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">ply</span>
 
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
 
-								<p>
-
-</p>
+								<p> Player to drag.</p>
 							</li>
 					</ul>
 
@@ -2943,7 +2940,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_hunger.lua#L15">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L15">View source &raquo;</a>
 
 					<p>Gives the player the amount of hunger</p>
 			</header>
@@ -2974,7 +2971,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_rpdesc.lua#L8">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_rpdesc.lua#L8">View source &raquo;</a>
 
 					<p>The players description, changes depending on the team.</p>
 			</header>
@@ -3001,7 +2998,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L105">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L105">View source &raquo;</a>
 
 					<p>Returns the players prop count.</p>
 			</header>
@@ -3015,7 +3012,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">skip</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">default: true</span>
 
@@ -3044,7 +3041,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L27">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_name.lua#L27">View source &raquo;</a>
 
 					<p>Gets the player's database RP name.</p>
 			</header>
@@ -3071,7 +3068,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L8">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_skills.lua#L8">View source &raquo;</a>
 
 					<p>Returns the players XP in a given skill.</p>
 			</header>
@@ -3113,7 +3110,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L263">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L263">View source &raquo;</a>
 
 					<p>Returns the players class ID.</p>
 			</header>
@@ -3140,7 +3137,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L304">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L304">View source &raquo;</a>
 
 					<p>Retrieves the players class data table.</p>
 			</header>
@@ -3167,7 +3164,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L247">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L247">View source &raquo;</a>
 
 					<p>Returns the players rank name.</p>
 			</header>
@@ -3194,7 +3191,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L284">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L284">View source &raquo;</a>
 
 					<p>Returns the players rank ID.</p>
 			</header>
@@ -3221,7 +3218,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L291">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L291">View source &raquo;</a>
 
 					<p>Retrieves the players rank data table.</p>
 			</header>
@@ -3248,7 +3245,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L270">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L270">View source &raquo;</a>
 
 					<p>Returns the players rank name.</p>
 			</header>
@@ -3275,7 +3272,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L332">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L332">View source &raquo;</a>
 
 					<p>Returns if the player has a whitelist for the specified team and level</p>
 			</header>
@@ -3318,7 +3315,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L7">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_xp.lua#L7">View source &raquo;</a>
 
 					<p>Returns the players XP gained on the server.</p>
 			</header>
@@ -3345,7 +3342,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_zones.lua#L16">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_zones.lua#L16">View source &raquo;</a>
 
 					<p>Returns the zone ID the player currently is in.</p>
 			</header>
@@ -3372,7 +3369,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_zones.lua#L23">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_zones.lua#L23">View source &raquo;</a>
 
 					<p>Returns the name of the current zone the player is in.</p>
 			</header>
@@ -3403,7 +3400,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L42">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_xp.lua#L42">View source &raquo;</a>
 
 					<p>Adds amount based off of XP times, ran automatically.</p>
 			</header>
@@ -3419,7 +3416,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L346">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L346">View source &raquo;</a>
 
 					<p>Returns if the player has a whitelist for the specified team and level</p>
 			</header>
@@ -3473,7 +3470,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L169">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L169">View source &raquo;</a>
 
 					<p>Returns if a player is in the spawn zone</p>
 			</header>
@@ -3500,7 +3497,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L50">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_afk.lua#L50">View source &raquo;</a>
 
 					<p>Returns if a player is AFK.</p>
 			</header>
@@ -3527,7 +3524,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L85">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L85">View source &raquo;</a>
 
 					<p>Returns if the player has Admin access (The normal moderation level of access.)</p>
 			</header>
@@ -3554,7 +3551,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_arrest.lua#L62">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_arrest.lua#L62">View source &raquo;</a>
 
 					<p>Returns if a player is arrested</p>
 			</header>
@@ -3581,7 +3578,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L318">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L318">View source &raquo;</a>
 
 					<p>Returns if they have the CP flag on their team.  Slated for removal and move to HL2RP schema.</p>
 			</header>
@@ -3608,7 +3605,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L255">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L255">View source &raquo;</a>
 
 					<p>Returns if the player has a female character</p>
 			</header>
@@ -3635,7 +3632,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L124">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L124">View source &raquo;</a>
 
 					<p>Returns if the player is a Community Manager or higher</p>
 			</header>
@@ -3662,7 +3659,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L51">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L51">View source &raquo;</a>
 
 					<p>Returns if a player is an impulse framework developer</p>
 			</header>
@@ -3689,7 +3686,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L58">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L58">View source &raquo;</a>
 
 					<p>Returns if a player has donator status</p>
 			</header>
@@ -3716,7 +3713,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_doors.lua#L47">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_doors.lua#L47">View source &raquo;</a>
 
 					<p>Retruns if a user is an owner of a set of door owners.</p>
 			</header>
@@ -3757,7 +3754,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L147">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L147">View source &raquo;</a>
 
 					<p>Returns if the player is a Game Master or higher</p>
 			</header>
@@ -3784,7 +3781,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L105">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L105">View source &raquo;</a>
 
 					<p>Returns if the player is a lead moderator or higher</p>
 			</header>
@@ -3811,7 +3808,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L162">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L162">View source &raquo;</a>
 
 					<p>Returns if the player is a Game Master and not higher</p>
 			</header>
@@ -3838,7 +3835,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L71">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L71">View source &raquo;</a>
 
 					<p>Returns if the player has Super Admin access (The highest level of access.)</p>
 			</header>
@@ -3865,7 +3862,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L522">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L522">View source &raquo;</a>
 
 					<p>Checks whether the player has their weapon raised or not.</p>
 			</header>
@@ -3892,7 +3889,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L104">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L104">View source &raquo;</a>
 
 					<p>Puts the player in prison.</p>
 			</header>
@@ -3934,7 +3931,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L290">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_name.lua#L290">View source &raquo;</a>
 
 					<p>Returns the player's name that appears above their head, runs the "PlayerGetKnownName" hook to override the RP name.</p>
 			</header>
@@ -3961,7 +3958,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L6">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_afk.lua#L6">View source &raquo;</a>
 
 					<p>Makes a player AFK.</p>
 			</header>
@@ -3977,7 +3974,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L283">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_name.lua#L283">View source &raquo;</a>
 
 					<p>Returns the player's RP name.</p>
 			</header>
@@ -4008,7 +4005,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L48">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_skills.lua#L48">View source &raquo;</a>
 
 					<p>Networks a skills XP to a specified value.</p>
 			</header>
@@ -4051,7 +4048,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L191">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L191">View source &raquo;</a>
 
 					<p>Sends a notification to a player.</p>
 			</header>
@@ -4094,7 +4091,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L153">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L153">View source &raquo;</a>
 
 					<p>Resets the players submaterials on their model.</p>
 			</header>
@@ -4114,7 +4111,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L86">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L86">View source &raquo;</a>
 
 					<p>Networks specified jail data to the player.</p>
 			</header>
@@ -4156,7 +4153,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L36">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_afk.lua#L36">View source &raquo;</a>
 
 					<p>Sets a user to be AFK immune.</p>
 			</header>
@@ -4170,7 +4167,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">b</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> True/False for AFK immunity</p>
@@ -4187,7 +4184,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_description.lua#L10">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_description.lua#L10">View source &raquo;</a>
 
 					<p>Updates a players description, only updates the
  specific team unless otherwise specified.</p>
@@ -4214,7 +4211,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">saveOnDb</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">default: true</span>
 
@@ -4245,7 +4242,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_arrest.lua#L7">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_arrest.lua#L7">View source &raquo;</a>
 
 					<p>Sets if players hands are behind their back, this can be called on the server but always be called on the client to avoid lag</p>
 			</header>
@@ -4259,7 +4256,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">state</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p>
@@ -4278,7 +4275,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_hunger.lua#L8">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L8">View source &raquo;</a>
 
 					<p>Set the hunger amount of a player</p>
 			</header>
@@ -4309,7 +4306,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L9">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_name.lua#L9">View source &raquo;</a>
 
 					<p>Changes the player's RP name.</p>
 			</header>
@@ -4335,7 +4332,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">save</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> Should this save to your database.</p>
@@ -4352,7 +4349,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L23">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_skills.lua#L23">View source &raquo;</a>
 
 					<p>Sets a skills XP to a specified value.</p>
 			</header>
@@ -4395,7 +4392,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L11">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L11">View source &raquo;</a>
 
 					<p>Sets the player to a team.</p>
 			</header>
@@ -4426,7 +4423,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L97">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L97">View source &raquo;</a>
 
 					<p>Changes the player's class.</p>
 			</header>
@@ -4452,7 +4449,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">skipLoadout</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 									<span class="tag default">optional</span>
 
@@ -4470,7 +4467,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L203">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L203">View source &raquo;</a>
 
 					<p>Changes the player's rank.</p>
 			</header>
@@ -4501,7 +4498,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L542">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L542">View source &raquo;</a>
 
 					<p>Sets whether the player has their weapon raised or not.</p>
 			</header>
@@ -4515,7 +4512,7 @@ ThisIsAWIP											</a>
 							<li>
 								<span class="tag parameter">state</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">boolean</span></span>
 
 
 								<p> Raised or not.</p>
@@ -4536,7 +4533,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L16">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_xp.lua#L16">View source &raquo;</a>
 
 					<p>Sets the players XP gained on the server.  Probably should use Player:AddXP</p>
 			</header>
@@ -4567,7 +4564,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_zones.lua#L37">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_zones.lua#L37">View source &raquo;</a>
 
 					<p>Updates the players zone and syncs to LOCAL client.</p>
 			</header>
@@ -4602,7 +4599,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L367">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L367">View source &raquo;</a>
 
 					<p>Initializes the whitelists for a user</p>
 			</header>
@@ -4618,7 +4615,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L276">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_name.lua#L276">View source &raquo;</a>
 
 					<p>Gets the player's steam name, replaces meta:Name().</p>
 			</header>
@@ -4645,7 +4642,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L70">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L70">View source &raquo;</a>
 
 					<p>Stops dragging anyone if the player is dragging someone.</p>
 			</header>
@@ -4661,7 +4658,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L560">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L560">View source &raquo;</a>
 
 					<p>Toggles the weapon raised bool.</p>
 			</header>
@@ -4677,7 +4674,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L30">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L30">View source &raquo;</a>
 
 					<p>Unrestrains the player, does not remove them in jail.</p>
 			</header>
@@ -4693,7 +4690,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L175">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_arrest.lua#L175">View source &raquo;</a>
 
 					<p>Frees the player from prison.</p>
 			</header>
@@ -4709,7 +4706,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L42">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_afk.lua#L42">View source &raquo;</a>
 
 					<p>Makes a player NOT AFK.</p>
 			</header>
@@ -4729,7 +4726,7 @@ ThisIsAWIP											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_description.lua#L30">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_description.lua#L30">View source &raquo;</a>
 
 					<p>Updates the players description to their DB one.</p>
 			</header>
@@ -4745,7 +4742,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L169">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L169">View source &raquo;</a>
 
 					<p>Finds a player by their database id.</p>
 			</header>
@@ -4787,7 +4784,7 @@ ThisIsAWIP											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L183">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L183">View source &raquo;</a>
 
 					<p>Finds a player by their database id and if they are on a specific team.</p>
 			</header>
