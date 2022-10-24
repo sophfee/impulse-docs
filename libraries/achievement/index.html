@@ -2389,7 +2389,194 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Achievement</h1>
+	<h2>Helper functions to control the achievement system</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="AchievementCheck">
+					<h1><span class="realm server"></span></span>AchievementCheck(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_achievements.lua#L67">View source &raquo;</a>
+
+					<p>Runs the achievement's check function and if it returns true, awards the achievement</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Achievement class</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AchievementGive">
+					<h1><span class="realm server"></span></span>AchievementGive(class, skipPoints)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_achievements.lua#L11">View source &raquo;</a>
+
+					<p>Gives an achievement to a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Achievement class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">skipPoints</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Wether to skip calculating the points from this achievement</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AchievementHas">
+					<h1><span class="realm server"></span></span>AchievementHas(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_achievements.lua#L50">View source &raquo;</a>
+
+					<p>Returns if a player has an achievement</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Achievement class</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has achievement</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AchievementTake">
+					<h1><span class="realm server"></span></span>AchievementTake(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_achievements.lua#L36">View source &raquo;</a>
+
+					<p>Takes an achievement from a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Achievement class</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CalculateAchievementPoints">
+					<h1><span class="realm server"></span></span>CalculateAchievementPoints()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_achievements.lua#L83">View source &raquo;</a>
+
+					<p>Calculates the achievement points and stores them in the SYNC_TROPHYPOINTS SyncVar on the player</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Achievement points</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

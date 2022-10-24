@@ -2389,7 +2389,2452 @@ ThisIsAWIP											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Player</h1>
+	<h2>A physical player in the server</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="AddChatText">
+					<h1><span class="realm server"></span></span>PlayerAddChatText(...)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L12">View source &raquo;</a>
+
+					<p>Acts as a chat.AddText(...) but sent from the server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Message to send to the player's chatbox</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AddPropCount">
+					<h1><span class="realm server"></span></span>PlayerAddPropCount(ent)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L137">View source &raquo;</a>
+
+					<p>Adds a prop to the players prop list.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ent</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AddSkillXP">
+					<h1><span class="realm server"></span></span>PlayerAddSkillXP(name, value)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L59">View source &raquo;</a>
+
+					<p>Adds XP to a specified skill.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> internal identifier.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> XP amount to add.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AddXP">
+					<h1><span class="realm server"></span></span>PlayerAddXP(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L31">View source &raquo;</a>
+
+					<p>Adds XP to the players total XP count.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount to add.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="AllowScenePVSControl">
+					<h1><span class="realm server"></span></span>PlayerAllowScenePVSControl(bool)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L28">View source &raquo;</a>
+
+					<p>Determines if the player is allowed to control extra PVS (Render zones basically)
+ to render a cutscene correctly.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">bool</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Allow or not.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Arrest">
+					<h1><span class="realm server"></span></span>PlayerArrest()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L13">View source &raquo;</a>
+
+					<p>Detains the player, does not put them in jail.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanArrest">
+					<h1><span class="realm shared"></span></span>PlayerCanArrest(arrested)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_arrest.lua#L47">View source &raquo;</a>
+
+					<p>Returns if a player can arrest the target</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">arrested</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can arrest</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanBecomeTeam">
+					<h1><span class="realm shared"></span></span>PlayerCanBecomeTeam(teamID, notify)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L65">View source &raquo;</a>
+
+					<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">teamID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> ID of team wanting to join.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">notify</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Should automatically notify the player.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can player become team.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanBecomeTeamClass">
+					<h1><span class="realm shared"></span></span>PlayerCanBecomeTeamClass(classID, notify)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L132">View source &raquo;</a>
+
+					<p>Returns if a player can join a team's class.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">classID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> ID of class wanting to join.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">notify</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Should automatically notify the player.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can player become class.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanBecomeTeamRank">
+					<h1><span class="realm shared"></span></span>PlayerCanBecomeTeamRank(rankID, notify)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L191">View source &raquo;</a>
+
+					<p>Returns if a player can join a team's rank.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">rankID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> ID of rank wanting to join.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">notify</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Should automatically notify the player.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can player become rank.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanBuyDoor">
+					<h1><span class="realm shared"></span></span>PlayerCanBuyDoor(doorOwners, doorBuyable)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_doors.lua#L59">View source &raquo;</a>
+
+					<p>Retruns if a user can own a door given the parameters.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">doorOwners</span>
+
+
+
+								<p> The door owners.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">doorBuyable</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> is the door buyable?</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>can buy door.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanLockUnlockDoor">
+					<h1><span class="realm shared"></span></span>PlayerCanLockUnlockDoor(doorOwners, doorBuyable)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_doors.lua#L12">View source &raquo;</a>
+
+					<p>Can the user lock or unlock the door.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">doorOwners</span>
+
+
+
+								<p> The door owners.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">doorBuyable</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> is the door buyable?</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>can buy door.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DragPlayer">
+					<h1><span class="realm server"></span></span>PlayerDragPlayer(ply)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L58">View source &raquo;</a>
+
+					<p>Drags the specified player if they pass the Player:CanArrest check.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="FeedHunger">
+					<h1><span class="realm server"></span></span>PlayerFeedHunger(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_hunger.lua#L15">View source &raquo;</a>
+
+					<p>Gives the player the amount of hunger</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of hunger (0-100)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetDescription">
+					<h1><span class="realm shared"></span></span>PlayerGetDescription()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_rpdesc.lua#L8">View source &raquo;</a>
+
+					<p>The players description, changes depending on the team.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The players description, if none is set, it will return ""</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetPropCount">
+					<h1><span class="realm server"></span></span>PlayerGetPropCount(skip)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L105">View source &raquo;</a>
+
+					<p>Returns the players prop count.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">skip</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: true</span>
+
+								<p> Skip syncing the prop count to the player.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Prop count.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetSavedRPName">
+					<h1><span class="realm server"></span></span>PlayerGetSavedRPName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L27">View source &raquo;</a>
+
+					<p>Gets the player's database RP name.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Player's RP name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetSkillXP">
+					<h1><span class="realm server"></span></span>PlayerGetSkillXP(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L8">View source &raquo;</a>
+
+					<p>Returns the players XP in a given skill.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> internal identifier of the given skill.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>skill xp amount or 0.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamClass">
+					<h1><span class="realm shared"></span></span>PlayerGetTeamClass()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L263">View source &raquo;</a>
+
+					<p>Returns the players class ID.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>classID of the player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamClassData">
+					<h1><span class="realm shared"></span></span>PlayerGetTeamClassData()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L304">View source &raquo;</a>
+
+					<p>Retrieves the players class data table.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>Rank data.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamClassName">
+					<h1><span class="realm shared"></span></span>PlayerGetTeamClassName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L247">View source &raquo;</a>
+
+					<p>Returns the players rank name.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>class name of the player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamRank">
+					<h1><span class="realm shared"></span></span>PlayerGetTeamRank()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L284">View source &raquo;</a>
+
+					<p>Returns the players rank ID.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>rankID of the player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamRankData">
+					<h1><span class="realm shared"></span></span>PlayerGetTeamRankData()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L291">View source &raquo;</a>
+
+					<p>Retrieves the players rank data table.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>Rank data.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamRankName">
+					<h1><span class="realm shared"></span></span>PlayerGetTeamRankName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L270">View source &raquo;</a>
+
+					<p>Returns the players rank name.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>rank name of the player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetTeamWhitelist">
+					<h1><span class="realm server"></span></span>PlayerGetTeamWhitelist(team)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L332">View source &raquo;</a>
+
+					<p>Returns if the player has a whitelist for the specified team and level</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">team</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The whitelist identifier (doesn't really need to be a team.) Defaults to player's active team whitelist.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Whitelist level</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetXP">
+					<h1><span class="realm shared"></span></span>PlayerGetXP()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L7">View source &raquo;</a>
+
+					<p>Returns the players XP gained on the server.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>xp</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetZone">
+					<h1><span class="realm shared"></span></span>PlayerGetZone()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_zones.lua#L16">View source &raquo;</a>
+
+					<p>Returns the zone ID the player currently is in.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>zone id</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetZoneName">
+					<h1><span class="realm shared"></span></span>PlayerGetZoneName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_zones.lua#L23">View source &raquo;</a>
+
+					<p>Returns the name of the current zone the player is in.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>zone name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GiveTimedXP">
+					<h1><span class="realm server"></span></span>PlayerGiveTimedXP()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L42">View source &raquo;</a>
+
+					<p>Adds amount based off of XP times, ran automatically.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasTeamWhitelist">
+					<h1><span class="realm server"></span></span>PlayerHasTeamWhitelist(team, level)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L346">View source &raquo;</a>
+
+					<p>Returns if the player has a whitelist for the specified team and level</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">team</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The whitelist identifier (doesn't really need to be a team.)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">level</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The level to check for</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has whitelist</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="InSpawn">
+					<h1><span class="realm shared"></span></span>PlayerInSpawn()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L169">View source &raquo;</a>
+
+					<p>Returns if a player is in the spawn zone</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is in spawn</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsAFK">
+					<h1><span class="realm server"></span></span>PlayerIsAFK()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L50">View source &raquo;</a>
+
+					<p>Returns if a player is AFK.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">afk</span>
+
+								<p>is afk.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsAdmin">
+					<h1><span class="realm shared"></span></span>PlayerIsAdmin()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L85">View source &raquo;</a>
+
+					<p>Returns if the player has Admin access (The normal moderation level of access.)</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has admin access</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsArrested">
+					<h1><span class="realm shared"></span></span>PlayerIsArrested()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_arrest.lua#L62">View source &raquo;</a>
+
+					<p>Returns if a player is arrested</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is arrested</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsCP">
+					<h1><span class="realm shared"></span></span>PlayerIsCP()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L318">View source &raquo;</a>
+
+					<p>Returns if they have the CP flag on their team.  Slated for removal and move to HL2RP schema.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Whether they have the .cp team flag or not.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsCharacterFemale">
+					<h1><span class="realm shared"></span></span>PlayerIsCharacterFemale()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L255">View source &raquo;</a>
+
+					<p>Returns if the player has a female character</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is female</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsCommunityManager">
+					<h1><span class="realm shared"></span></span>PlayerIsCommunityManager()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L124">View source &raquo;</a>
+
+					<p>Returns if the player is a Community Manager or higher</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is Community Manager</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsDeveloper">
+					<h1><span class="realm shared"></span></span>PlayerIsDeveloper()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L51">View source &raquo;</a>
+
+					<p>Returns if a player is an impulse framework developer</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is developer</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsDonator">
+					<h1><span class="realm shared"></span></span>PlayerIsDonator()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L58">View source &raquo;</a>
+
+					<p>Returns if a player has donator status</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is donator</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsDoorOwner">
+					<h1><span class="realm shared"></span></span>PlayerIsDoorOwner(doorOwners)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_doors.lua#L47">View source &raquo;</a>
+
+					<p>Retruns if a user is an owner of a set of door owners.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">doorOwners</span>
+
+
+
+								<p> The door owners.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>is owner.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsGameMaster">
+					<h1><span class="realm shared"></span></span>PlayerIsGameMaster()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L147">View source &raquo;</a>
+
+					<p>Returns if the player is a Game Master or higher</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is Game Master</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsLeadAdmin">
+					<h1><span class="realm shared"></span></span>PlayerIsLeadAdmin()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L105">View source &raquo;</a>
+
+					<p>Returns if the player is a lead moderator or higher</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is Lead Admin</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsPureGameMaster">
+					<h1><span class="realm shared"></span></span>PlayerIsPureGameMaster()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L162">View source &raquo;</a>
+
+					<p>Returns if the player is a Game Master and not higher</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is Game Master</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsSuperAdmin">
+					<h1><span class="realm shared"></span></span>PlayerIsSuperAdmin()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L71">View source &raquo;</a>
+
+					<p>Returns if the player has Super Admin access (The highest level of access.)</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has superadmin access</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsWeaponRaised">
+					<h1><span class="realm shared"></span></span>PlayerIsWeaponRaised()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L522">View source &raquo;</a>
+
+					<p>Checks whether the player has their weapon raised or not.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is the weapon raised.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Jail">
+					<h1><span class="realm server"></span></span>PlayerJail(time, jailData)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L104">View source &raquo;</a>
+
+					<p>Puts the player in prison.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">time</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> A 16-bit unsigned integer.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">jailData</span>
+
+
+
+								<p> Data for the players jail sentence.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="KnownName">
+					<h1><span class="realm shared"></span></span>PlayerKnownName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L290">View source &raquo;</a>
+
+					<p>Returns the player's name that appears above their head, runs the "PlayerGetKnownName" hook to override the RP name.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Player's visible name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="MakeAFK">
+					<h1><span class="realm server"></span></span>PlayerMakeAFK()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L6">View source &raquo;</a>
+
+					<p>Makes a player AFK.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Name">
+					<h1><span class="realm shared"></span></span>PlayerName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L283">View source &raquo;</a>
+
+					<p>Returns the player's RP name.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The player's RP name if they have one, otherwise returns their Steam Name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="NetworkSkill">
+					<h1><span class="realm server"></span></span>PlayerNetworkSkill(name, value)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L48">View source &raquo;</a>
+
+					<p>Networks a skills XP to a specified value.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> internal identifier.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> XP amount.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Notify">
+					<h1><span class="realm shared"></span></span>PlayerNotify(message, class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L191">View source &raquo;</a>
+
+					<p>Sends a notification to a player.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The notification message</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Notification class ID.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ResetSubMaterials">
+					<h1><span class="realm server"></span></span>PlayerResetSubMaterials()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L153">View source &raquo;</a>
+
+					<p>Resets the players submaterials on their model.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SendJailInfo">
+					<h1><span class="realm server"></span></span>PlayerSendJailInfo(time, jailData)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L86">View source &raquo;</a>
+
+					<p>Networks specified jail data to the player.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">time</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> A 16-bit unsigned integer.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">jailData</span>
+
+
+
+								<p> Data for the players jail sentence.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetAFKImmune">
+					<h1><span class="realm server"></span></span>PlayerSetAFKImmune(b)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L36">View source &raquo;</a>
+
+					<p>Sets a user to be AFK immune.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">b</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> True/False for AFK immunity</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetDescription">
+					<h1><span class="realm server"></span></span>PlayerSetDescription(rpdesc, saveOnDb, onTeam)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_description.lua#L10">View source &raquo;</a>
+
+					<p>Updates a players description, only updates the
+ specific team unless otherwise specified.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">rpdesc</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The description to update to.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">saveOnDb</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: true</span>
+
+								<p> Should we save this to the database.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">onTeam</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The team to have the description for, defaults to active team.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetHandsBehindBack">
+					<h1><span class="realm shared"></span></span>PlayerSetHandsBehindBack(state)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_arrest.lua#L7">View source &raquo;</a>
+
+					<p>Sets if players hands are behind their back, this can be called on the server but always be called on the client to avoid lag</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">state</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetHunger">
+					<h1><span class="realm server"></span></span>PlayerSetHunger(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_hunger.lua#L8">View source &raquo;</a>
+
+					<p>Set the hunger amount of a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of hunger (0-100)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetRPName">
+					<h1><span class="realm server"></span></span>PlayerSetRPName(name, save)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L9">View source &raquo;</a>
+
+					<p>Changes the player's RP name.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Name to change to.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">save</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Should this save to your database.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetSkillXP">
+					<h1><span class="realm server"></span></span>PlayerSetSkillXP(name, value)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_skills.lua#L23">View source &raquo;</a>
+
+					<p>Sets a skills XP to a specified value.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> internal identifier.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> XP amount.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetTeam">
+					<h1><span class="realm server"></span></span>PlayerSetTeam(teamID)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L11">View source &raquo;</a>
+
+					<p>Sets the player to a team.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">teamID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The ID of the team to switch to.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetTeamClass">
+					<h1><span class="realm server"></span></span>PlayerSetTeamClass(classID, skipLoadout)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L97">View source &raquo;</a>
+
+					<p>Changes the player's class.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">classID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> the ID of the team's class.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">skipLoadout</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Should it skip giving the player items / weapons?</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetTeamRank">
+					<h1><span class="realm server"></span></span>PlayerSetTeamRank(rankID)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L203">View source &raquo;</a>
+
+					<p>Changes the player's rank.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">rankID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> the ID of the team's rank.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetWeaponRaised">
+					<h1><span class="realm server"></span></span>PlayerSetWeaponRaised(state)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L542">View source &raquo;</a>
+
+					<p>Sets whether the player has their weapon raised or not.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">state</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Raised or not.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetXP">
+					<h1><span class="realm server"></span></span>PlayerSetXP(amount)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_xp.lua#L16">View source &raquo;</a>
+
+					<p>Sets the players XP gained on the server.  Probably should use Player:AddXP</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> XP to set to.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetZone">
+					<h1><span class="realm server"></span></span>PlayerSetZone(id)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_zones.lua#L37">View source &raquo;</a>
+
+					<p>Updates the players zone and syncs to LOCAL client.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> zone id.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetupWhitelists">
+					<h1><span class="realm server"></span></span>PlayerSetupWhitelists()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L367">View source &raquo;</a>
+
+					<p>Initializes the whitelists for a user</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SteamName">
+					<h1><span class="realm shared"></span></span>PlayerSteamName()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L276">View source &raquo;</a>
+
+					<p>Gets the player's steam name, replaces meta:Name().</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Player's steam name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="StopDrag">
+					<h1><span class="realm server"></span></span>PlayerStopDrag()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L70">View source &raquo;</a>
+
+					<p>Stops dragging anyone if the player is dragging someone.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ToggleWeaponRaised">
+					<h1><span class="realm server"></span></span>PlayerToggleWeaponRaised()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L560">View source &raquo;</a>
+
+					<p>Toggles the weapon raised bool.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="UnArrest">
+					<h1><span class="realm server"></span></span>PlayerUnArrest()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L30">View source &raquo;</a>
+
+					<p>Unrestrains the player, does not remove them in jail.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="UnJail">
+					<h1><span class="realm server"></span></span>PlayerUnJail()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_arrest.lua#L175">View source &raquo;</a>
+
+					<p>Frees the player from prison.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="UnMakeAFK">
+					<h1><span class="realm server"></span></span>PlayerUnMakeAFK()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_afk.lua#L42">View source &raquo;</a>
+
+					<p>Makes a player NOT AFK.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="UseSavedDescription">
+					<h1><span class="realm server"></span></span>PlayerUseSavedDescription()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_description.lua#L30">View source &raquo;</a>
+
+					<p>Updates the players description to their DB one.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.FindByDatabaseId">
+					<h1><span class="realm server"></span></span>Playerimpulse.FindByDatabaseId(id)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L169">View source &raquo;</a>
+
+					<p>Finds a player by their database id.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The id of the player.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">entity</span>
+
+								<p>The player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.FindByDatabaseIdOnTeam">
+					<h1><span class="realm server"></span></span>Playerimpulse.FindByDatabaseIdOnTeam(id, teamId)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L183">View source &raquo;</a>
+
+					<p>Finds a player by their database id and if they are on a specific team.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The id of the player.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">teamId</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> the id of the team.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">entity</span>
+
+								<p>The player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

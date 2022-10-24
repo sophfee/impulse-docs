@@ -2389,7 +2389,357 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>States</h1>
+	<h2>A system to save and load player states.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="DeleteState">
+					<h1><span class="realm server"></span></span>DeleteState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L110">View source &raquo;</a>
+
+					<p>Removes a state.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> index</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetAllStates">
+					<h1><span class="realm server"></span></span>GetAllStates()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L103">View source &raquo;</a>
+
+					<p>Gets all the states in a table</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>states</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ReadState">
+					<h1><span class="realm server"></span></span>ReadState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L93">View source &raquo;</a>
+
+					<p>Get a state from a player, this persists after a disconnect! If it's the same player, you'll have the same states!</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Index of the state.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestoreAnglesFromState">
+					<h1><span class="realm server"></span></span>RestoreAnglesFromState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L162">View source &raquo;</a>
+
+					<p>Restores specific data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> state index to restore from</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestoreArmorFromState">
+					<h1><span class="realm server"></span></span>RestoreArmorFromState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L146">View source &raquo;</a>
+
+					<p>Restores specific data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> state index to restore from</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestoreHealthFromState">
+					<h1><span class="realm server"></span></span>RestoreHealthFromState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L138">View source &raquo;</a>
+
+					<p>Restores specific data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> state index to restore from</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestoreModelFromState">
+					<h1><span class="realm server"></span></span>RestoreModelFromState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L170">View source &raquo;</a>
+
+					<p>Restores specific data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> state index to restore from</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestorePositionFromState">
+					<h1><span class="realm server"></span></span>RestorePositionFromState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L154">View source &raquo;</a>
+
+					<p>Restores specific data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> state index to restore from</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestoreSkinFromState">
+					<h1><span class="realm server"></span></span>RestoreSkinFromState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L178">View source &raquo;</a>
+
+					<p>Restores specific data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> state index to restore from</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RestoreState">
+					<h1><span class="realm server"></span></span>RestoreState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L121">View source &raquo;</a>
+
+					<p>Loads the players state by index.  Internally uses Player:ReadState</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+
+									<span class="tag default">optional</span>
+
+								<p> The index of the state index, if nil uses latest state.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SaveState">
+					<h1><span class="realm server"></span></span>SaveState(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_states.lua#L83">View source &raquo;</a>
+
+					<p>Saves a state of the player, by default used for Moderation and Death Sting.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Index of the state.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

@@ -2389,7 +2389,217 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>File</h1>
+	<h2>impulse Unique File storage system, using custom written .dat files</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.File.DoType">
+					<h1><span class="realm server"></span></span>impulse.File.DoType(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_data.lua#L92">View source &raquo;</a>
+
+					<p>Returns a function to use for the given header</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Header class</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">func</span>
+
+								<p>Header function</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.File.HandleType">
+					<h1><span class="realm server"></span></span>impulse.File.HandleType(class, func)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_data.lua#L83">View source &raquo;</a>
+
+					<p>Sets a new way to handle a header</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Header string class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">func</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p> Callback function, table data given as parameter.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.File.Read">
+					<h1><span class="realm server"></span></span>impulse.File.Read(name, handle)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_data.lua#L105">View source &raquo;</a>
+
+					<p>Reads a file, optionally handles all the data by default header functions.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> File name, relative to impulse/, omit .dat from name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">handle</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Give true to use solver functions.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">any</span>
+
+								<p>Data from the file.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.File.Write">
+					<h1><span class="realm server"></span></span>impulse.File.Write(name, header, data)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_data.lua#L136">View source &raquo;</a>
+
+					<p>Writes a file.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> File name, relative to impulse/, omit .dat from name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">header</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Header class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">data</span>
+
+
+
+								<p> should be a table.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

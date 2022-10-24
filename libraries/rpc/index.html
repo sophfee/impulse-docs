@@ -2389,7 +2389,101 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>RPC</h1>
+	<h2>RPCs are Remote Call Procedures, these are more streamlined methods of networking versus the standard network system.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.RPC.BroadcastRpc">
+					<h1><span class="realm shared"></span></span>impulse.RPC.BroadcastRpc(func)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_rpc.lua#L43">View source &raquo;</a>
+
+					<p>Creates a function that is executed on the server, but runs code for <b>every</b> client.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">func</span>
+
+
+
+								<p> Function to run on all clients.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">function</span>
+
+								<p>Function call to run clientside.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.RPC.ClientRpc">
+					<h1><span class="realm shared"></span></span>impulse.RPC.ClientRpc(func)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_rpc.lua#L14">View source &raquo;</a>
+
+					<p>Creates a function that is executed on the server, but runs code for the client.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">func</span>
+
+
+
+								<p> Function to run on the client.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">function</span>
+
+								<p>Function call to run on the client.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

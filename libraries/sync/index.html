@@ -2389,7 +2389,907 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Sync</h1>
+	<h2>A fast entity based synchronous networking system</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetSyncVar">
+					<h1><span class="realm shared"></span></span>GetSyncVar(varID, fallback)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L88">View source &raquo;</a>
+
+					<p>Gets the Sync variable on an entity</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">varID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Sync variable (EG: SYNC_MONEY)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fallback</span>
+
+
+
+								<p> If we don't know the value we will fallback to this value</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="tag type">any</span>
+
+								<p>value</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>local xp = ply:GetSyncVar(SYNC_XP, 0)
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetLocalSyncVar">
+					<h1><span class="realm server"></span></span>SetLocalSyncVar(varID, newValue)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L218">View source &raquo;</a>
+
+					<p>Sets the Sync var on an entity but only updates the player who it is being set on</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">varID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Sync variable (EG: SYNC_MONEY)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">newValue</span>
+
+
+
+								<p> Value to set</p>
+							</li>
+					</ul>
+
+
+				<h3>Example Usage</h3>
+					<pre><code>ply:SetLocalSyncVar(SYNC_BANKMONEY, 600)
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetSyncVar">
+					<h1><span class="realm server"></span></span>SetSyncVar(varID, newValue, instantSync)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L193">View source &raquo;</a>
+
+					<p>Sets the Sync var on an entity</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">varID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Sync variable (EG: SYNC_MONEY)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">newValue</span>
+
+
+
+								<p> Value to set</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">instantSync</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> If we should network this to all players</p>
+							</li>
+					</ul>
+
+
+				<h3>Example Usage</h3>
+					<pre><code>ply:SetSyncVar(SYNC_XP, 60, true) -- sets money to 60 and networks the new value to all players
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Sync">
+					<h1><span class="realm server"></span></span>Sync(target)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L14">View source &raquo;</a>
+
+					<p>Sync will take the player and sync their all SyncVars with all clients or the single target if provided.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">target</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SyncRemove">
+					<h1><span class="realm server"></span></span>SyncRemove()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L160">View source &raquo;</a>
+
+					<p>Removes all SyncVar's from an entity and update all players</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SyncRemoveVar">
+					<h1><span class="realm server"></span></span>SyncRemoveVar(varID)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L174">View source &raquo;</a>
+
+					<p>Removes a specific SyncVar from an entity and update all players</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">varID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Sync variable</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SyncSingle">
+					<h1><span class="realm server"></span></span>SyncSingle(varID)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_sync.lua#L89">View source &raquo;</a>
+
+					<p>Syncs a single variable ID.  target is optional. SyncSingle will take the player and sync the SyncVar provided with all clients or the single target if provided.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">varID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Sync var ID.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Sync.DoType">
+					<h1><span class="realm shared"></span></span>impulse.Sync.DoType(type, value)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L77">View source &raquo;</a>
+
+					<p>Reads or writes a value based on the SyncType provided</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">type</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> SyncType</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Sync.RegisterVar">
+					<h1><span class="realm shared"></span></span>impulse.Sync.RegisterVar(type, conditional)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L52">View source &raquo;</a>
+
+					<p>Registers a new Sync variable for usage.  <strong>Must be called in the shared realm</strong></p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">type</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> SyncType</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">conditional</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Is conditional</p>
+							</li>
+					</ul>
+
+
+				<h3>Example Usage</h3>
+					<pre><code>SYNC_XP = impulse.Sync.RegisterVar(SYNC_INT)
+</code></pre>
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/sync/#SyncTypes">SyncTypes</a></li>
+				</ul>
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="SyncDefaults">
+					<h1><span class="realm shared"></span></span>SyncDefaults</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L222">View source &raquo;</a>
+
+					<p>Default Sync variables</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_RPNAME</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_XP</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNX_MONEY</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_BANKMONEY</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_WEPRAISED</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_CLASS</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_RANK</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_ARRESTED</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_HUNGER</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_TYPING</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_BROKENLEGS</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_PROPCOUNT</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_CRAFTLEVEL</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_THROPHYPOINTS</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_INCOGNITO</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_GROUP_NAME</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_GROUP_RANK</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_COS_FACE</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_COS_HEAD</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_COS_CHEST</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_DOOR_NAME</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_DOOR_GROUP</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_DOOR_BUYABLE</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_DOOR_OWNERS</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_TESTER</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_EVENT_TEAM</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_INFECTION</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_INFECTION_STAGE</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_BLEEDING</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_ZONE</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_EFFECT</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SyncTypes">
+					<h1><span class="realm shared"></span></span>SyncTypes</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_sync.lua#L33">View source &raquo;</a>
+
+					<p>Types of Sync variable</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_BOOL</span>
+
+
+
+								<p> A boolean</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_STRING</span>
+
+
+
+								<p> An ASCII string of any length</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_INT</span>
+
+
+
+								<p> An unsigned 8 bit integer</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_BIGINT</span>
+
+
+
+								<p> An unsigned 16 bit integer</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_HUGEINT</span>
+
+
+
+								<p> An unsigned 32 bit integer</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_MINITABLE</span>
+
+
+
+								<p> (Avoid using) A 32 bit compressed table</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">SYNC_INTSTACK</span>
+
+
+
+								<p> A collection of up to 255 8 bit unsigned integers</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

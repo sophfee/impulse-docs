@@ -2389,7 +2389,180 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Tween</h1>
+	<h2>An easing system utilizing a tweening library.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Tween.Define">
+					<h1><span class="realm shared"></span></span>impulse.Tween.Define(name, easing, duration, from, to)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_animate.lua#L16">View source &raquo;</a>
+
+					<p>Creates a new tween and starts it automatically.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> An identifier for the tween</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">easing</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Easing style, see tween.lua</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">duration</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Length of the animation</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">from</span>
+
+
+
+								<p> Starting value</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">to</span>
+
+
+
+								<p> End value</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Tween.Get">
+					<h1><span class="realm shared"></span></span>impulse.Tween.Get(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_animate.lua#L26">View source &raquo;</a>
+
+					<p>Returns the value of the tween.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The tween's identifier</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">value</span>
+
+								<p>Value of the tween</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Tween.Set">
+					<h1><span class="realm shared"></span></span>impulse.Tween.Set(name, value)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_animate.lua#L35">View source &raquo;</a>
+
+					<p>Sets the value of a tween.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The tween's identifier</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value</span>
+
+
+
+								<p> Value to set to</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

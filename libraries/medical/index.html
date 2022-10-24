@@ -2389,7 +2389,203 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Medical</h1>
+	<h2>A system for medical/health dynamic systems.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="Bleeding">
+					<h1><span class="realm shared"></span></span>Bleeding()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_medical.lua#L30">View source &raquo;</a>
+
+					<p>Returns if the player is currently bleeding.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is the player bleeding.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="BreakLegs">
+					<h1><span class="realm server"></span></span>BreakLegs()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_medical.lua#L65">View source &raquo;</a>
+
+					<p>Breaks the players legs.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="FixLegs">
+					<h1><span class="realm server"></span></span>FixLegs()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_medical.lua#L84">View source &raquo;</a>
+
+					<p>Fixes the players legs.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetInfection">
+					<h1><span class="realm shared"></span></span>GetInfection()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_medical.lua#L15">View source &raquo;</a>
+
+					<p>Alias of Player:GetSyncVar(SYNC_INFECTION).  This is deprecated because I am upset with how I wrote the system. I can do way better.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>SYNC_INFECTION.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetInfectionStage">
+					<h1><span class="realm shared"></span></span>GetInfectionStage()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_medical.lua#L23">View source &raquo;</a>
+
+					<p>Returns the sync stage of the infection.  Deprecated cuz bad code.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>SYNC<em>INFECTION</em>STAGE</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GiveInfection">
+					<h1><span class="realm server"></span></span>GiveInfection(id, stage)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_medical.lua#L32">View source &raquo;</a>
+
+					<p>Gives the player an infection.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Infection ID.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">stage</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Infection Stage.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasBrokenLegs">
+					<h1><span class="realm shared"></span></span>HasBrokenLegs()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_medical.lua#L7">View source &raquo;</a>
+
+					<p>Does the player have broken legs?</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has broken legs</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

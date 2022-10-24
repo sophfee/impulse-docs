@@ -2389,7 +2389,374 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Currency</h1>
+	<h2>Allows players to store and spend money.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanAfford">
+					<h1><span class="realm shared"></span></span>CanAfford(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_currency.lua#L22">View source &raquo;</a>
+
+					<p>Returns if the player can spend money in their pocket without going negative.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Cost</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can the player afford it.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanAffordBank">
+					<h1><span class="realm shared"></span></span>CanAffordBank(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_currency.lua#L30">View source &raquo;</a>
+
+					<p>Returns if the player can spend money in their ATM without going negative.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Cost</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can the player afford it from their ATM.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetBankMoney">
+					<h1><span class="realm shared"></span></span>GetBankMoney()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_currency.lua#L14">View source &raquo;</a>
+
+					<p>The amount of money a player has in their ATM.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>How much money the player has their ATM.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetMoney">
+					<h1><span class="realm shared"></span></span>GetMoney()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_currency.lua#L7">View source &raquo;</a>
+
+					<p>The amount of money a player has.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>How much money the player has.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GiveBankMoney">
+					<h1><span class="realm server"></span></span>GiveBankMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L37">View source &raquo;</a>
+
+					<p>Adds an amount of money to a player's ATM.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money to add.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GiveMoney">
+					<h1><span class="realm server"></span></span>GiveMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L51">View source &raquo;</a>
+
+					<p>Gives an amount of money to a player.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money to give.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetBankMoney">
+					<h1><span class="realm server"></span></span>SetBankMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L22">View source &raquo;</a>
+
+					<p>Set's amount of money in a player's ATM</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetMoney">
+					<h1><span class="realm server"></span></span>SetMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L7">View source &raquo;</a>
+
+					<p>Set's a player's money</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="TakeBankMoney">
+					<h1><span class="realm server"></span></span>TakeBankMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L44">View source &raquo;</a>
+
+					<p>Takes an amount of money from a player's ATM.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money to take</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="TakeMoney">
+					<h1><span class="realm server"></span></span>TakeMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L58">View source &raquo;</a>
+
+					<p>Takes an amount of money from a player.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money to take</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.SpawnMoney">
+					<h1><span class="realm server"></span></span>impulse.SpawnMoney(amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_currency.lua#L67">View source &raquo;</a>
+
+					<p>Spawns a money entity.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of money the money entity has.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

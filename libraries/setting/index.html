@@ -2389,7 +2389,245 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Setting</h1>
+	<h2>Allows the creation, updating and reading of persistent settings</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.DefineSetting">
+					<h1><span class="realm client"></span></span>impulse.DefineSetting(name, settingData)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_settings.lua#L24">View source &raquo;</a>
+
+					<p>Defines a new setting for use - only call this inside the DefineSettings hook</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Setting class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">settingData</span>
+
+
+
+								<p> A table containg setting data (see below)</p>
+							</li>
+					</ul>
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/setting/#SettingData">SettingData</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.LoadSettings">
+					<h1><span class="realm client"></span></span>impulse.LoadSettings()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_settings.lua#L52">View source &raquo;</a>
+
+					<p>Loads the settings from the clientside database</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.SetSetting">
+					<h1><span class="realm client"></span></span>impulse.SetSetting(name, value)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_settings.lua#L75">View source &raquo;</a>
+
+					<p>Sets a setting to a specified value</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Setting class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value</span>
+
+
+
+								<p> New value</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="SettingData">
+					<h1><span class="realm client"></span></span>SettingData</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_settings.lua#L19">View source &raquo;</a>
+
+					<p>A collection of data that defines how a setting will behave</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The pretty name for the setting (we'll see this in the settings menu)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">category</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The category the setting will belong to</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">type</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> tickbox, dropdown, slider, plainint</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">default</span>
+
+
+
+								<p> The default value of the setting</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">minValue</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Minimum value (slider only)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">maxValue</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Maximum value (slider only)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">options</span>
+
+
+
+								<p> A table of string options (dropdown only)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">onChanged</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Called when setting is changed</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

@@ -2389,7 +2389,378 @@ ThisIsAWIP											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Entity</h1>
+	<h2>Physical object in the game world</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanBeCarried">
+					<h1><span class="realm shared"></span></span>EntityCanBeCarried()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L84">View source &raquo;</a>
+
+					<p>Returns if a entity can be carried</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can be carried</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="EmitBudgetSound">
+					<h1><span class="realm server"></span></span>EntityEmitBudgetSound(sound, range, volume, pitch)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L146">View source &raquo;</a>
+
+					<p>Emits a that is only networked to nearby players</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sound</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Sound path</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">range</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 660</span>
+
+								<p> Radius in Source units to network the sound to</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">volume</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Volume of the sound</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">pitch</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 100</span>
+
+								<p> Pitch of the sound</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="EmitQueuedSounds">
+					<h1><span class="realm shared"></span></span>EntityEmitQueuedSounds(sounds, delay, spacing, volume, pitch)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L108">View source &raquo;</a>
+
+					<p>Emits queued sounds on an entity one by one</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sounds</span>
+
+
+
+								<p> A table of all the sounds</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">delay</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 0</span>
+
+								<p> The delay between each sound</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">spacing</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 0.1</span>
+
+								<p> The spacing between each sound</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">volume</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> The volume of each sound</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">pitch</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 100</span>
+
+								<p> The pitch of each sound</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>How long it will take to emit all the sounds</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsButton">
+					<h1><span class="realm shared"></span></span>EntityIsButton()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L55">View source &raquo;</a>
+
+					<p>Returns if entity is a button</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is button</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsChair">
+					<h1><span class="realm shared"></span></span>EntityIsChair()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L77">View source &raquo;</a>
+
+					<p>Returns if a entity is a chair</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is chair</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsDoor">
+					<h1><span class="realm shared"></span></span>EntityIsDoor()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L17">View source &raquo;</a>
+
+					<p>Returns if the entity is a door</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is door</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsDoorLocked">
+					<h1><span class="realm shared"></span></span>EntityIsDoorLocked()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L62">View source &raquo;</a>
+
+					<p>Returns if a door is locked</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is locked</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsPropDoor">
+					<h1><span class="realm shared"></span></span>EntityIsPropDoor()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L24">View source &raquo;</a>
+
+					<p>Helper function that can detect if the door is a players prop door</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is player prop door</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetParentAttachment">
+					<h1><span class="realm shared"></span></span>EntitySetParentAttachment(attachment)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_ents.lua#L180">View source &raquo;</a>
+
+					<p>Change this entity to attach to a specific attachment point on its parent.
+ The entity will teleport so that the position of its root bone matches that
+ of the attachment. Entities must be parented before being sent this input.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">attachment</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

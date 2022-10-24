@@ -2389,7 +2389,303 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Anim</h1>
+	<h2>Functions to control a player's animations, based heavily on nutscript's Anim system</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ForceSequence">
+					<h1><span class="realm server"></span></span>ForceSequence(sequence, callback, time, noFreeze)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L455">View source &raquo;</a>
+
+					<p>Plays an animation sequence on a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sequence</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The sequence name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">callback</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Called when the animation is completed</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">time</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> How long until we force the sequence to stop</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">noFreeze</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> If the player should not freeze when the sequence is playing</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Anim.GetModelClass">
+					<h1><span class="realm shared"></span></span>impulse.Anim.GetModelClass(model)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L408">View source &raquo;</a>
+
+					<p>Gets the animation class of a specific model</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">model</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The model</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Animation class</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Anim.SetModelClass">
+					<h1><span class="realm shared"></span></span>impulse.Anim.SetModelClass(model, class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L392">View source &raquo;</a>
+
+					<p>Sets the animation class of a specific model</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">model</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The model to set</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The animation class</p>
+							</li>
+					</ul>
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/anim/#DefaultAnimClasses">DefaultAnimClasses</a></li>
+				</ul>
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="DefaultAnimClasses">
+					<h1><span class="realm shared"></span></span>DefaultAnimClasses</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_anims.lua#L385">View source &raquo;</a>
+
+					<p>A collection of default animation classes</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">citizen_male</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">citizen_female</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">metrocop</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">overwatch</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">vort</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">player</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">zombie</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fastZombie</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

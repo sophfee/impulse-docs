@@ -2389,7 +2389,2598 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Inventory</h1>
+	<h2>Allows interactions with the players inventory</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanHoldItem">
+					<h1><span class="realm server"></span></span>CanHoldItem(class, amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L203">View source &raquo;</a>
+
+					<p>Returns if a player can hold an item in their local inventory</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Amount of the item</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can hold item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanHoldItemStorage">
+					<h1><span class="realm server"></span></span>CanHoldItemStorage(class, amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L215">View source &raquo;</a>
+
+					<p>Returns if a player can hold an item in their storage chest</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Amount of the item</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can hold item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanMakeMix">
+					<h1><span class="realm server"></span></span>CanMakeMix(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L750">View source &raquo;</a>
+
+					<p>Returns if a player can make a mix</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Mixture class name</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can make mixture</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ClearIllegalInventory">
+					<h1><span class="realm server"></span></span>ClearIllegalInventory(storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L495">View source &raquo;</a>
+
+					<p>Clears illegal items from a players inventory</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ClearInventory">
+					<h1><span class="realm server"></span></span>ClearInventory(storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L455">View source &raquo;</a>
+
+					<p>Clears a players inventory</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ClearRestrictedInventory">
+					<h1><span class="realm server"></span></span>ClearRestrictedInventory(storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L475">View source &raquo;</a>
+
+					<p>Clears restricted items from a players inventory</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DropInventoryItem">
+					<h1><span class="realm server"></span></span>DropInventoryItem(itemid)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L609">View source &raquo;</a>
+
+					<p>Drops a specific inventory item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetInventory">
+					<h1><span class="realm server"></span></span>GetInventory(storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L194">View source &raquo;</a>
+
+					<p>Gets a players inventory table</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>Inventory</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetMaxInventoryStorage">
+					<h1><span class="realm shared"></span></span>GetMaxInventoryStorage()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L246">View source &raquo;</a>
+
+					<p>Returns the max capacity of the players storage box</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Capacity (in kg)</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GiveInventoryItem">
+					<h1><span class="realm server"></span></span>GiveInventoryItem(itemclass, storageType, restricted, isLoaded, moving, clip)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L341">View source &raquo;</a>
+
+					<p>Gives an inventory item to a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemclass</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">restricted</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Is item restricted</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">isLoaded</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> (INTERNAL) Used for first time setup when player connects</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">moving</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> (INTERNAL) Is item just being moved? (stops database requests)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">clip</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> (INTERNAL) (Only used for weapons) Item clip</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>ItemID</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasIllegalInventoryItem">
+					<h1><span class="realm server"></span></span>HasIllegalInventoryItem(storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L298">View source &raquo;</a>
+
+					<p>Returns if a player has an illegal inventory item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has illegal item</p>
+							</li>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Item ID of illegal item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasInventoryItem">
+					<h1><span class="realm server"></span></span>HasInventoryItem(class, amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L235">View source &raquo;</a>
+
+					<p>Returns if a player has an item in their local inventory</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Amount of the item</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasInventoryItem">
+					<h1><span class="realm client"></span></span>HasInventoryItem(itemId)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L261">View source &raquo;</a>
+
+					<p>Returns if a client has an inventory item and how much they have</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemId</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item Network ID (use impulse.Inventory.ClassToNetID)</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has item</p>
+							</li>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Amount</p>
+							</li>
+
+				</ul>
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/inventory/#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasInventoryItemSpecific">
+					<h1><span class="realm server"></span></span>HasInventoryItemSpecific(itemID, storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L281">View source &raquo;</a>
+
+					<p>Returns if a player has an specific item.  This is used to check if they have the exact item, not just an item of the class specified</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasInventoryItemStorage">
+					<h1><span class="realm server"></span></span>HasInventoryItemStorage(class, amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L258">View source &raquo;</a>
+
+					<p>Returns if a player has an item in their storage chest</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Amount of the item</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsInventoryItemRestricted">
+					<h1><span class="realm server"></span></span>IsInventoryItemRestricted(itemID, storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L320">View source &raquo;</a>
+
+					<p>Returns if a specific inventory item is restricted</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Is restricted</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="MoveInventoryItem">
+					<h1><span class="realm server"></span></span>MoveInventoryItem(itemid, from, to)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L697">View source &raquo;</a>
+
+					<p>Moves a specific inventory item across storages (to move several of the same items use MoveInventoryItemMass as it is faster)</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">from</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Old storage type</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">to</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> New storage type</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="MoveInventoryItemMass">
+					<h1><span class="realm server"></span></span>MoveInventoryItemMass(class, from, to, amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L721">View source &raquo;</a>
+
+					<p>Moves a collection of the same items across storages</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">from</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Old storage type</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">to</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> New storage type</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount to move</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetInventoryItemEquipped">
+					<h1><span class="realm server"></span></span>SetInventoryItemEquipped(itemID, state)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L539">View source &raquo;</a>
+
+					<p>Sets a specific inventory item as equipped or not</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">state</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Is equipped</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="TakeInventoryItem">
+					<h1><span class="realm server"></span></span>TakeInventoryItem(itemID, storageType, moving)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L397">View source &raquo;</a>
+
+					<p>Takes an inventory item from a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">moving</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> (INTERNAL) Is item just being moved? (stops database requests)</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Clip</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="TakeInventoryItemClass">
+					<h1><span class="realm server"></span></span>TakeInventoryItemClass(class, storageType, amount)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L515">View source &raquo;</a>
+
+					<p>Takes an item from a players inventory by class name</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Amount to take</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="UnEquipInventory">
+					<h1><span class="realm server"></span></span>UnEquipInventory()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L594">View source &raquo;</a>
+
+					<p>Un equips all iventory items for a player</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="UseInventoryItem">
+					<h1><span class="realm server"></span></span>UseInventoryItem(itemid)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L662">View source &raquo;</a>
+
+					<p>Uses a specific inventory item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Item ID</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.ClassToNetID">
+					<h1><span class="realm shared"></span></span>impulse.Inventory.ClassToNetID(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L167">View source &raquo;</a>
+
+					<p>Used to convert the class to the item's NetID (or table ref)</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Item net ID</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.DBAddItem">
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBAddItem(ownerid, class, storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L78">View source &raquo;</a>
+
+					<p>Inserts an inventory item into the database.  This can be used to control the inventory of offline users</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> OwnerID number</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Class name of the item to add</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.DBClearInventory">
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBClearInventory(ownerid, storageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L106">View source &raquo;</a>
+
+					<p>Clears a players inventory.  This can be used to control the inventory of offline users</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> OwnerID number</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.DBRemoveItem">
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBRemoveItem(ownerid, class, storageType, limit)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L92">View source &raquo;</a>
+
+					<p>Deletes an inventory item from the database.  This can be used to control the inventory of offline users</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> OwnerID number</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Class name of the item to remove</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">storageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">limit</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> The amount of items to remove</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.DBUpdateStoreType">
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBUpdateStoreType(ownerid, classname, limit, oldStorageType, newStorageType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L120">View source &raquo;</a>
+
+					<p>Updates the storage type for an existing item.  This can be used to control the inventory of offline users</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> OwnerID number</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">classname</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Class name of the item to update</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">limit</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 1</span>
+
+								<p> The amount of items to update</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">oldStorageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Old storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">newStorageType</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> New storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.GetCraftingTime">
+					<h1><span class="realm shared"></span></span>impulse.Inventory.GetCraftingTime(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L176">View source &raquo;</a>
+
+					<p>Used to get the crafting time and the sounds to play</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Item class name</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Time</p>
+							</li>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>Table of sounds</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.PickRandomCraftSound">
+					<h1><span class="realm shared"></span></span>impulse.Inventory.PickRandomCraftSound(craftType)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L233">View source &raquo;</a>
+
+					<p>Used to pick a random crafting sound for the correct crafting type</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">craftType</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">default: generic</span>
+
+								<p> Crafting type</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The random crafting sound based on the crafting type (eg: if type is wood then return wood2.wav)</p>
+							</li>
+
+				</ul>
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/inventory/#CraftingTypes">CraftingTypes</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.SpawnBench">
+					<h1><span class="realm server"></span></span>impulse.Inventory.SpawnBench(class)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L177">View source &raquo;</a>
+
+					<p>Spawns a workbench</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Class name of the workbench</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">entity</span>
+
+								<p>Spawned workbench</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.SpawnItem">
+					<h1><span class="realm server"></span></span>impulse.Inventory.SpawnItem(class, killTime)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L150">View source &raquo;</a>
+
+					<p>Spawns an inventory item as an Entity</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Class name of the item to spawn</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">killTime</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Time until the item is removed automatically</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">entity</span>
+
+								<p>Spawned item</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.RegisterBench">
+					<h1><span class="realm shared"></span></span>impulse.RegisterBench(benchData)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L122">View source &raquo;</a>
+
+					<p>Registers a new workbench</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">benchData</span>
+
+
+
+								<p> Bench data</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.RegisterItem">
+					<h1><span class="realm shared"></span></span>impulse.RegisterItem(itemData)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L27">View source &raquo;</a>
+
+					<p>Registers a new inventory item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemData</span>
+
+
+
+								<p> Item data</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.RegisterMixture">
+					<h1><span class="realm shared"></span></span>impulse.RegisterMixture(mixData)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L141">View source &raquo;</a>
+
+					<p>Registers a new mixture</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">mixData</span>
+
+
+
+								<p> Mixture data</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="BENCH">
+					<h1><span class="realm shared"></span></span>BENCH</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L70">View source &raquo;</a>
+
+					<p>Fields that are usable for benches.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Desc</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Model</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Skill</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Illegal</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">NotIllegalFor</span>
+
+
+
+								<p> Table of team IDs that the bench isn't illegal for.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CanUse</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CraftingTypes">
+					<h1><span class="realm client"></span></span>CraftingTypes</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_inventory.lua#L212">View source &raquo;</a>
+
+					<p>A collection of crafting types, each uses a different set of sounds</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[chemical]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[electronics]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[fabric]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[fuel]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[generic]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[gunmetal]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[metal]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[nuclear]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[plastic]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[powder]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[rock]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[water]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">[wood]</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="INV_ENUM">
+					<h1><span class="realm server"></span></span>INV_ENUM</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L15">View source &raquo;</a>
+
+					<p>Enums indicating where an item is stored.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">INV_CONFISCATED</span>
+
+
+
+								<p> Indicates a confiscated item.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">INV_PLAYER</span>
+
+
+
+								<p> Indicates an item located in a players current inventory.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">INV_STORAGE</span>
+
+
+
+								<p> Indicates an item stored in a players storage box.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ITEM">
+					<h1><span class="realm shared"></span></span>ITEM</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L48">View source &raquo;</a>
+
+					<p>Fields that are available for items.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">UniqueID</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">WeaponClass</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">AttachmentClass</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Weight</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CraftSound</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CraftTime</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Desc</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Model</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">FOV</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">NoCenter</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Droppable</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">DropOnDeath</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">DropIfRestricted</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">DropOnDeathIfRestricted</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CraftIfRestricted</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Illegal</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CanStack</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Equipable</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">EquipGroup</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CanEquip</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">OnEquip</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">UnEquip</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">UseTime</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">FreezeOwnerOnUse</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CanUse</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">OnUse</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CustomActions</span>
+
+
+
+								<p> Use keys paired to functions for custom interactions.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="MIX">
+					<h1><span class="realm shared"></span></span>MIX</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_inventory.lua#L58">View source &raquo;</a>
+
+					<p>Fields that are usable for mixtures.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Level</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Bench</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Skill</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Output</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Input</span>
+
+
+
+								<p> Table, keys are UniqueIDs for items, and the value is a table with a "take" key and an integer.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

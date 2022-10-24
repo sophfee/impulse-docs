@@ -2389,7 +2389,264 @@ ThisIsAWIP											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Process</h1>
+	<h2>A object-oriented class used internally with IPS.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="Buffer">
+					<h1><span class="realm shared"></span></span>ProcessBuffer()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L29">View source &raquo;</a>
+
+					<p>Returns the raw buffer to read.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Buffer string.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Ex">
+					<h1><span class="realm shared"></span></span>ProcessEx(msg)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L15">View source &raquo;</a>
+
+					<p>Creates a special error for the process.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">msg</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Error message.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Head">
+					<h1><span class="realm shared"></span></span>ProcessHead()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L42">View source &raquo;</a>
+
+					<p>Returns the position of the reader.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Cursor head.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="MoveHead">
+					<h1><span class="realm shared"></span></span>ProcessMoveHead(len)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L70">View source &raquo;</a>
+
+					<p>Moves the cursor head.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">len</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount to move the cursor head.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="New">
+					<h1><span class="realm shared"></span></span>ProcessNew(buffer)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L113">View source &raquo;</a>
+
+					<p>Start a new process.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">buffer</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Raw string to parse and process.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Read">
+					<h1><span class="realm shared"></span></span>ProcessRead(len)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L51">View source &raquo;</a>
+
+					<p>Reads a specified length in the Processes buffer.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">len</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Read length.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Run">
+					<h1><span class="realm shared"></span></span>ProcessRun()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L98">View source &raquo;</a>
+
+					<p>[incomplete] Does the main systems of the Process (find token, resolve token parameters, execute, pass all variables to scopes).</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Single">
+					<h1><span class="realm shared"></span></span>ProcessSingle()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/home/runner/work/impulse/impulse/impulse/plugins/ips/sh_process.lua#L88">View source &raquo;</a>
+
+					<p>Reads a single character of the buffer.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>A singular string character.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

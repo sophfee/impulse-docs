@@ -2389,7 +2389,196 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Chat</h1>
+	<h2>A way for players to communicate and run commands.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.RegisterChatCommand">
+					<h1><span class="realm shared"></span></span>impulse.RegisterChatCommand(name, cmdData)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_chat.lua#L31">View source &raquo;</a>
+
+					<p>Registers a new chat command for players, must be ran on both client &amp; server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Command name, must begin with "/".</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">cmdData</span>
+
+
+
+								<p> Command data.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="cmdData">
+					<h1><span class="realm shared"></span></span>cmdData</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_chat.lua#L27">View source &raquo;</a>
+
+					<p>Data required to build a command.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">onRun</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p> Callback when the command is run.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">adminOnly</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Admin Only Command.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">leadAdminOnly</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Lead Admin Only Command.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">communityManagerOnly</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Community Manager Only Command.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">superAdminOnly</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Super Admin Only Command.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">requiresArg</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Command requires additional arguments?</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">requiresAlive</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Command runner is alive.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">description</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Command description.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">descriptors</span>
+
+
+									<span class="tag default">optional</span>
+
+								<p> A table of descriptors to assist users.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

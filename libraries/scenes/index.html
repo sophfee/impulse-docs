@@ -2389,7 +2389,157 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Scenes</h1>
+	<h2>A cutscene playing system, best used with the event tools.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Scenes.Play">
+					<h1><span class="realm client"></span></span>impulse.Scenes.Play(stage, sceneData, onDone, skipPVS, preLoad)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_scenes.lua#L45">View source &raquo;</a>
+
+					<p>Plays a singular scene.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">stage</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Stage of the set that is currently playing.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sceneData</span>
+
+									<span class="tag"><span class="type">tab</span></span>
+
+
+								<p> Data used to play the scene</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">onDone</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+									<span class="tag default">default: true</span>
+
+								<p> Callback function when done.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">skipPVS</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> Skips adding the Scene's PVS to clients.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">preLoad</span>
+
+
+
+								<p> should preload</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Scenes.PlaySet">
+					<h1><span class="realm client"></span></span>impulse.Scenes.PlaySet(set, music, onDone)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_scenes.lua#L161">View source &raquo;</a>
+
+					<p>Plays a set of scenes.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">set</span>
+
+									<span class="tag"><span class="type">tab</span></span>
+
+
+								<p> Set of scenes to play.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">music</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Can be a sound file path OR a CDN URL (Content Download Network).</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">onDone</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p> Callback func.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

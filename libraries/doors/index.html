@@ -2389,7 +2389,253 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Doors</h1>
+	<h2>Handles ownership of doors and locking, etc.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="DoorLock">
+					<h1><span class="realm server"></span></span>DoorLock()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L102">View source &raquo;</a>
+
+					<p>Fires the "Lock" event to a door.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DoorUnlock">
+					<h1><span class="realm server"></span></span>DoorUnlock()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L108">View source &raquo;</a>
+
+					<p>Fires the "Unlock" event to a door, for func_doors this function opens them.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetDoorMaster">
+					<h1><span class="realm server"></span></span>GetDoorMaster()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L120">View source &raquo;</a>
+
+					<p>Gives you the owner of the door, this person
+ has access to locking, unlocking, storage, and
+ can grant additional access to others.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">player</span>
+
+								<p>Door master, will be nil if nobody owns the door.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RemoveDoorMaster">
+					<h1><span class="realm server"></span></span>RemoveDoorMaster(noUnlock)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L147">View source &raquo;</a>
+
+					<p>Removes the player as the owner of a door.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">noUnlock</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> If true, the door will not be unlocked.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RemoveDoorUser">
+					<h1><span class="realm server"></span></span>RemoveDoorUser(door)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L186">View source &raquo;</a>
+
+					<p>Removes user access from a door.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">door</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetDoorMaster">
+					<h1><span class="realm server"></span></span>SetDoorMaster(door)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L129">View source &raquo;</a>
+
+					<p>Works different to the Entity:GetDoorMaster since
+ this runs off of the player.  This makes the player
+ own the door.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">door</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetDoorUser">
+					<h1><span class="realm server"></span></span>SetDoorUser(door)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L169">View source &raquo;</a>
+
+					<p>Makes the person able to use a door, use any storage linked,
+ but they cannot manage other users of the door.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">door</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Doors.Load">
+					<h1><span class="realm server"></span></span>impulse.Doors.Load()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L40">View source &raquo;</a>
+
+					<p>Loads door configuration from file.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Doors.Save">
+					<h1><span class="realm server"></span></span>impulse.Doors.Save()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_doors.lua#L17">View source &raquo;</a>
+
+					<p>Saves the current door configuration to data.
+ This is a crucial file to upload on your live server
+ since without it, you will have every door be ownable.</p>
+			</header>
+
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

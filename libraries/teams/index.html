@@ -2389,7 +2389,256 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Teams</h1>
+	<h2>Role selection and organization system.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Teams.Define">
+					<h1><span class="realm shared"></span></span>impulse.Teams.Define(teamData)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_teams.lua#L20">View source &raquo;</a>
+
+					<p>Creates a new team, should run on both client and server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">teamData</span>
+
+
+
+								<p> teamsData, see teamData structure.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">teamID</span>
+
+								<p>Teams identifier, save this as a global variable.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Teams.GetAllWhitelists">
+					<h1><span class="realm server"></span></span>impulse.Teams.GetAllWhitelists(team, callback)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L442">View source &raquo;</a>
+
+					<p>Get all player a whitelist has.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">team</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The whitelists name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">callback</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p> Executed when DB has a result.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Teams.GetAllWhitelistsPlayer">
+					<h1><span class="realm server"></span></span>impulse.Teams.GetAllWhitelistsPlayer(steamid, callback)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L459">View source &raquo;</a>
+
+					<p>Get all whitelists a player has.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">steamid</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The SteamID32 of the player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">callback</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p> Executed when DB has a result.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Teams.GetWhitelist">
+					<h1><span class="realm server"></span></span>impulse.Teams.GetWhitelist(steamid, team, callback)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L477">View source &raquo;</a>
+
+					<p>Get whitelist of a player.  Use GetTeamWhitelist</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">steamid</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The SteamID32 of the player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">team</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Whitelist team</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">callback</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+
+								<p> Executed when DB has a result.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Teams.SetWhitelist">
+					<h1><span class="realm server"></span></span>impulse.Teams.SetWhitelist(steamid, team, level)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_teams.lua#L409">View source &raquo;</a>
+
+					<p>Sets the whitelist of a user, or creates on if none exist.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">steamid</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The SteamID32 of the player</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">team</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Whitelist team</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">level</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The whitelist level to set the player to</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

@@ -2389,7 +2389,707 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Misc</h1>
+	<h2>A generic module that holds anything that doesnt fit elsewhere</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.AngleToBearing">
+					<h1><span class="realm shared"></span></span>impulse.AngleToBearing(ang)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L297">View source &raquo;</a>
+
+					<p>Angle to bearing function...?  I dunno how this is useful to the framework but hey it works.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ang</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Bearing.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.BlurRect">
+					<h1><span class="realm client"></span></span>impulse.BlurRect(x, y, w, h)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_main.lua#L71">View source &raquo;</a>
+
+					<p>Blurs a rectangle at specified points.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">x</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> X pos.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">y</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Y pos.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">w</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Width.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">h</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Height.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.CanUseDesc">
+					<h1><span class="realm shared"></span></span>impulse.CanUseDesc(desc)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_desc.lua#L8">View source &raquo;</a>
+
+					<p>Determines if you can use a description for your RP character.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">desc</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Description to test.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can use.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.CanUseName">
+					<h1><span class="realm shared"></span></span>impulse.CanUseName(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_name.lua#L232">View source &raquo;</a>
+
+					<p>Checks if a name is good enough to use.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The name to test.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can this name be used?</p>
+							</li>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The message to display if it cannot be used.</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>local canUse, reason = impulse.CanUseName("john") -- Returns false, too short.
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.CinematicIntro">
+					<h1><span class="realm server"></span></span>impulse.CinematicIntro(message)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L78">View source &raquo;</a>
+
+					<p>Displays a cinematic message to all players on the server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Message to appear in the cinematic intro.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.FindEmptyPos">
+					<h1><span class="realm server"></span></span>impulse.FindEmptyPos(ignore, distance, step, area)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L46">View source &raquo;</a>
+
+					<p>Finds an empty position nearby, pretty broken though.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ignore</span>
+
+
+
+								<p> Entity list to ignore.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">distance</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The distance to move around to find a new space.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">step</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The amount of change in a move.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">area</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Honestly dunno what this one does.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">vector</span>
+
+								<p>Position.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.FindPlayer">
+					<h1><span class="realm shared"></span></span>impulse.FindPlayer(searchKey)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L270">View source &raquo;</a>
+
+					<p>Finds a player by a specific search key, if not found returns nil.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">searchKey</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Players name, RP name, or Steam ID 32.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/player/#">Player</a>
+
+								<p>Player found, or nil.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.GetRandomAmbientVO">
+					<h1><span class="realm shared"></span></span>impulse.GetRandomAmbientVO(gender)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L376">View source &raquo;</a>
+
+					<p>This is used for Vendors.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">gender</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> male, fisherman, cp, zombie, or female.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">sound</span>
+
+								<p>This is a sound path, not a CSoundPatch or anything.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.IsEmpty">
+					<h1><span class="realm server"></span></span>impulse.IsEmpty(ignore)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_main.lua#L14">View source &raquo;</a>
+
+					<p>Checks if a vector position is empty.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ignore</span>
+
+
+
+								<p> Entity list to ignore, this should be a table.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>is Empty.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.MakeWorkbar">
+					<h1><span class="realm client"></span></span>impulse.MakeWorkbar(time, text, onDone, popup)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_main.lua#L130">View source &raquo;</a>
+
+					<p>Creates a work bar on the players screen</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">time</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The time it will take to complete the bar</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">text</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Text to display on the bar</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">onDone</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Called when bar is complete</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">popup</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> If the bar should stop player input</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.PosToCode">
+					<h1><span class="realm shared"></span></span>impulse.PosToCode(pos)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L313">View source &raquo;</a>
+
+					<p>Turns a vector into code,.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">pos</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The vector written as code.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.PosToString">
+					<h1><span class="realm shared"></span></span>impulse.PosToString(pos)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L305">View source &raquo;</a>
+
+					<p>Decomposes a vector and separates each part with "|".</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">pos</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The readable version of the vector.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.SafeString">
+					<h1><span class="realm shared"></span></span>impulse.SafeString(str)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_main.lua#L321">View source &raquo;</a>
+
+					<p>Removes bad characters from strings.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">str</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The input string.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>A safe string.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.blur">
+					<h1><span class="realm client"></span></span>impulse.blur(panel, layers, density)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_main.lua#L101">View source &raquo;</a>
+
+					<p>Renders a blur effect on a panel.  Call this inside PANEL:Paint</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">panel</span>
+
+
+
+								<p> The panel to blur</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">layers</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Unknown</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">density</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Density</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

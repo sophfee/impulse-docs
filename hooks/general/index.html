@@ -2389,7 +2389,1516 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>General</h1>
+	<h2>Hooks that can be used in a Plugin or a Schema</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanEditDoor">
+					<h1><span class="realm server"></span></span>GENERAL:CanEditDoor()</h1>
+				</a>
+
+
+
+					<p>Called to decide if a player can edit a door</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can edit</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanPlayerChangeTeam">
+					<h1><span class="realm shared"></span></span>GENERAL:CanPlayerChangeTeam(team)</h1>
+				</a>
+
+
+
+					<p>Called to decide if a player can change team</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">team</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The team to switch to</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can we switch team?</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanStoreItem">
+					<h1><span class="realm server"></span></span>GENERAL:CanStoreItem(itemclass, from)</h1>
+				</a>
+
+
+
+					<p>Called to decide if a player can store/unstore an item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemclass</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The item class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">from</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Is this to or from the players inventory?</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Allow the item to be stored or unstored?</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanUseInventory">
+					<h1><span class="realm shared"></span></span>GENERAL:CanUseInventory(ply)</h1>
+				</a>
+
+
+
+					<p>Controls wether a player can use their inventory, returning false stops all inventory interaction and stops the inventory from displaying</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can use inventory</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ChatClassMessageSend">
+					<h1><span class="realm server"></span></span>GENERAL:ChatClassMessageSend(chatClass, message)</h1>
+				</a>
+
+
+
+					<p>Called when an chat class message is sent</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">chatClass</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> ID of the chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The message</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The new message</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ChatStateChanged">
+					<h1><span class="realm server"></span></span>GENERAL:ChatStateChanged(oldState, newState)</h1>
+				</a>
+
+
+
+					<p>Called when a players chat state changes</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">oldState</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> The old chat state</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">newState</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+
+								<p> The new chat state</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CheckMenuInput">
+					<h1><span class="realm client"></span></span>GENERAL:CheckMenuInput()</h1>
+				</a>
+
+
+
+					<p>Called every tick, use this to check for key presses to open user interface elements (input.IsKeyDown)</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ContainerPasscodeSet">
+					<h1><span class="realm server"></span></span>GENERAL:ContainerPasscodeSet()</h1>
+				</a>
+
+
+
+					<p>Called when a player sets a container passcode</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CreateMenuMessages">
+					<h1><span class="realm client"></span></span>GENERAL:CreateMenuMessages()</h1>
+				</a>
+
+
+
+					<p>Called when the menu is active and MenuMessages are ready to be created</p>
+			</header>
+
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/menumessage/#">MenuMessage</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CreateSubMenu">
+					<h1><span class="realm client"></span></span>GENERAL:CreateSubMenu(identifier)</h1>
+				</a>
+
+
+
+					<p>Called when a new menu panel is opened.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">identifier</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Submenu identifier.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">func</span>
+
+								<p>Panel creation function.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DefineSettings">
+					<h1><span class="realm client"></span></span>GENERAL:DefineSettings()</h1>
+				</a>
+
+
+
+					<p>Called when you can define settings, all settings you want to define should be done inside this hook</p>
+			</header>
+
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/setting/#">Setting</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DisplayMenuMessages">
+					<h1><span class="realm client"></span></span>GENERAL:DisplayMenuMessages()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<p>Called when the menu is active and MenuMessages are ready to be displayed</p>
+			</header>
+
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/menumessage/#">MenuMessage</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DoInventorySearch">
+					<h1><span class="realm server"></span></span>GENERAL:DoInventorySearch()</h1>
+				</a>
+
+
+
+					<p>Called when a player inventory searches another player</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetDeathSound">
+					<h1><span class="realm client"></span></span>GENERAL:GetDeathSound()</h1>
+				</a>
+
+
+
+					<p>Returns a custom death sound to override the default impulse one</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Sound path</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="LoadAnimationClasses">
+					<h1><span class="realm shared"></span></span>GENERAL:LoadAnimationClasses()</h1>
+				</a>
+
+
+
+					<p>Called when animation classes have been loaded</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="OnSchemaLoaded">
+					<h1><span class="realm shared"></span></span>GENERAL:OnSchemaLoaded()</h1>
+				</a>
+
+
+
+					<p>Called when the schema has loaded fully</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="OnSyncUpdate">
+					<h1><span class="realm shared"></span></span>GENERAL:OnSyncUpdate(varID, targetID, any)</h1>
+				</a>
+
+
+
+					<p>Called when a Sync variable is updated</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">varID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The sync variable ID</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">targetID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The entity ID of the target</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">any</span>
+
+
+
+								<p> The new value</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerAddUserToDoor">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerAddUserToDoor(owners)</h1>
+				</a>
+
+
+
+					<p>Called when a player adds a user to a door</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">owners</span>
+
+
+
+								<p> Table of owners</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerArrested">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerArrested(convict, officer)</h1>
+				</a>
+
+
+
+					<p>Called when a player is arrested</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">convict</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">officer</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerBuyablePurchase">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerBuyablePurchase(buyable)</h1>
+				</a>
+
+
+
+					<p>Called when a player purchases a buyable</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">buyable</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The buyable name</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerCanHearCheck">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerCanHearCheck()</h1>
+				</a>
+
+
+
+					<p>Called to check if one player can hear another</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Can the listener hear the speaker?</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerChangeRPName">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerChangeRPName(name)</h1>
+				</a>
+
+
+
+					<p>Called when a player changes their RP name</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The new name</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerConfiscateItem">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerConfiscateItem(itemclass)</h1>
+				</a>
+
+
+
+					<p>Called when a player confiscates an item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemclass</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The item class of the confiscated item</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerCraftItem">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerCraftItem(output)</h1>
+				</a>
+
+
+
+					<p>Called when a player crafts an item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">output</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The item class of the output</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerDropDeathItems">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerDropDeathItems(pos, dropped, inv)</h1>
+				</a>
+
+
+
+					<p>Called when a player dies, you can drop loot in this hook</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">pos</span>
+
+
+
+								<p> The pos to spawn any droppable items at</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">dropped</span>
+
+
+
+								<p> A table of dropped items</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">inv</span>
+
+
+
+								<p> The players inventory on death</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerDropItem">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerDropItem(itemData, invID)</h1>
+				</a>
+
+
+
+					<p>Called when a player drops an item</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemData</span>
+
+
+
+								<p> A table of item data</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">invID</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The inventory ID of the item</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerDropMoney">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerDropMoney()</h1>
+				</a>
+
+
+
+					<p>Called when a player drops money</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerGetJailData">
+					<h1><span class="realm client"></span></span>GENERAL:PlayerGetJailData(endTime, jailData)</h1>
+				</a>
+
+
+
+					<p>Called when the local player is sent to jail, provides jail sentence data</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">endTime</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> When the jail sentence will end</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">jailData</span>
+
+
+
+								<p> Data regarding the sentence including crimes commited</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerGetKnownName">
+					<h1><span class="realm shared"></span></span>GENERAL:PlayerGetKnownName()</h1>
+				</a>
+
+
+
+					<p>Called to decide what the known name of a player should be</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The known name</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerGetXP">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerGetXP(xp)</h1>
+				</a>
+
+
+
+					<p>Called when a player gains XP</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">xp</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The amount gained</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerInitialSpawnLoaded">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerInitialSpawnLoaded()</h1>
+				</a>
+
+
+
+					<p>Called when the player has fully loaded into the server after connecting</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerOpenStorage">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerOpenStorage(ply, box)</h1>
+				</a>
+
+
+
+					<p>Called when a player opens their storage box</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">box</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerOpenStorage">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerOpenStorage()</h1>
+				</a>
+
+
+
+					<p>Called when the player accesses their storage container</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerPurchaseDoor">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerPurchaseDoor()</h1>
+				</a>
+
+
+
+					<p>Called when a player purchases a door</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerRagdollPreSpawn">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerRagdollPreSpawn()</h1>
+				</a>
+
+
+
+					<p>Called before a players death ragdoll spawns</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerSellDoor">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerSellDoor()</h1>
+				</a>
+
+
+
+					<p>Called when a player sells a door</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerShouldBreakLegs">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerShouldBreakLegs(damage)</h1>
+				</a>
+
+
+
+					<p>Called to decide if a player should break their legs</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">damage</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The fall damage</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Should their legs break?</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerShouldGetHungry">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerShouldGetHungry()</h1>
+				</a>
+
+
+
+					<p>Called to decide if a player should get hungry</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Should they get hungry?</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerUnArrested">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerUnArrested(convict, officer)</h1>
+				</a>
+
+
+
+					<p>Called when a player is un-arrested</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">convict</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">officer</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerUnJailed">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerUnJailed()</h1>
+				</a>
+
+
+
+					<p>Called when a player is unjailed</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerVendorBuy">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerVendorBuy(itemclass, cost)</h1>
+				</a>
+
+
+
+					<p>Called when a player buys an item from a vendor</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">itemclass</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The item class of the bought item</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">cost</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The cost of the purchase</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerZoneChanged">
+					<h1><span class="realm server"></span></span>GENERAL:PlayerZoneChanged(id)</h1>
+				</a>
+
+
+
+					<p>Called when a player changes zone</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The new zone ID</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PostChatClassMessageSend">
+					<h1><span class="realm server"></span></span>GENERAL:PostChatClassMessageSend(chatClass, message)</h1>
+				</a>
+
+
+
+					<p>Called after a chat class message is sent</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">chatClass</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> ID of the chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The message</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PostConfigLoad">
+					<h1><span class="realm shared"></span></span>GENERAL:PostConfigLoad()</h1>
+				</a>
+
+
+
+					<p>Called after the config has loaded</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PostInitPostEntity">
+					<h1><span class="realm server"></span></span>GENERAL:PostInitPostEntity()</h1>
+				</a>
+
+
+
+					<p>Called after impulse has setup it's entities</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PostInventorySetup">
+					<h1><span class="realm server"></span></span>GENERAL:PostInventorySetup()</h1>
+				</a>
+
+
+
+					<p>Called after a players inventory has been setup</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PostSetupPlayer">
+					<h1><span class="realm server"></span></span>GENERAL:PostSetupPlayer()</h1>
+				</a>
+
+
+
+					<p>Called after a player has been fully setup by impulse</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PreEarlyInventorySetup">
+					<h1><span class="realm server"></span></span>GENERAL:PreEarlyInventorySetup()</h1>
+				</a>
+
+
+
+					<p>Called before a players inventory is queried from the database</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ProcessICChatMessage">
+					<h1><span class="realm server"></span></span>GENERAL:ProcessICChatMessage(message)</h1>
+				</a>
+
+
+
+					<p>Called when an in-character chat message is sent</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The message</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The new message</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ProcessOOCMessage">
+					<h1><span class="realm server"></span></span>GENERAL:ProcessOOCMessage(message)</h1>
+				</a>
+
+
+
+					<p>Called when an OOC message is sent</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The message</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="RadioMessageFallback">
+					<h1><span class="realm server"></span></span>GENERAL:RadioMessageFallback(message)</h1>
+				</a>
+
+
+
+					<p>Called when a player tries to use /r or /radio, but is not a CP</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The message</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ShouldDrawHUDBox">
+					<h1><span class="realm client"></span></span>GENERAL:ShouldDrawHUDBox()</h1>
+				</a>
+
+
+
+					<p>Called after a chat class message is sent</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Should we draw the HUD box?</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

@@ -2389,7 +2389,372 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Traits</h1>
+	<h2>A character customization system with the use of perks.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="AddTrait">
+					<h1><span class="realm server"></span></span>AddTrait(trait, saveToDb)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_traits.lua#L34">View source &raquo;</a>
+
+					<p>Adds a trait to a player, saves to database unless specified otherwise.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">trait</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The ID of the trait to add.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">saveToDb</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: true</span>
+
+								<p> If true, it saves all trait data to the database.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="HasTrait">
+					<h1><span class="realm server"></span></span>HasTrait(trait)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_traits.lua#L13">View source &raquo;</a>
+
+					<p>Determines if a player has a trait.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">trait</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The ID of the trait to test for.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Has specified trait.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="TakeTrait">
+					<h1><span class="realm server"></span></span>TakeTrait(trait, saveToDb)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sv_traits.lua#L61">View source &raquo;</a>
+
+					<p>Takes a trait to a player, saves to database unless specified otherwise, throws an error if the player doesn't have the trait.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">trait</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The ID of the trait to take.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">saveToDb</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: true</span>
+
+								<p> If true, it saves all trait data to the database.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.HasTrait">
+					<h1><span class="realm client"></span></span>impulse.HasTrait(trait)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/cl_traits.lua#L13">View source &raquo;</a>
+
+					<p>Test for local player traits.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">trait</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The trait ID to test for.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Does the local client have this trait.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Traits.Define">
+					<h1><span class="realm shared"></span></span>impulse.Traits.Define(displayName, description, traitPointCost, forcedKey)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_traits.lua#L17">View source &raquo;</a>
+
+					<p>Define a new trait.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">displayName</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The name displayed on the client.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">description</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The description of the trait, displays on the client.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">traitPointCost</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The amount of points it costs to get this trait, can be negative to increase the limit of traits.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">forcedKey</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Forced DB storage key to prevent scrambling of order.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="DefaultTraits">
+					<h1><span class="realm shared"></span></span>DefaultTraits</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_traits.lua#L43">View source &raquo;</a>
+
+					<p>The default traits.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_TEST</span>
+
+
+
+								<p> A test trait.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_SOCIOPATH</span>
+
+
+
+								<p> Increases melee damage and melee speed.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_ATTENTIVE</span>
+
+
+
+								<p> Increases hearing range and noise source accuracy.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_UNREMARKABLE</span>
+
+
+
+								<p> Cameras have a chance to not detect you. Even with a rebel suit or BOL.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_TOUGHSKIN</span>
+
+
+
+								<p> Chance to not bleed when you normally would.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_BLOODRUSH</span>
+
+
+
+								<p> As health decreases, speed and accuracy increases. (Up to 33% buff)</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_QUICK</span>
+
+
+
+								<p> Anything that takes time to do is x2 faster.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">TRAIT_LUCKY</span>
+
+
+
+								<p> Today could be your lucky day!</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>

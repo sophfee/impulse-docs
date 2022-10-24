@@ -2389,7 +2389,303 @@ Set											</a>
 
 			<article>
 					<div class="wrapper">
-						docs/templates/module.ltp
+
+<header class="module">
+	<h1>Business</h1>
+	<h2>Controls the business system which allows players to purchase items</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="CanBuy">
+					<h1><span class="realm shared"></span></span>CanBuy(name)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_business.lua#L30">View source &raquo;</a>
+
+					<p>Returns if a player can buy a buyable</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Buyable name</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Business.Define">
+					<h1><span class="realm shared"></span></span>impulse.Business.Define(name, buyableData)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_business.lua#L20">View source &raquo;</a>
+
+					<p>Renders a blur effect on a panel.  Call this inside PANEL:Paint</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Buyable name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">buyableData</span>
+
+
+
+								<p> Buyable data</p>
+							</li>
+					</ul>
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/business/#BuyableData">BuyableData</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.SpawnBuyable">
+					<h1><span class="realm server"></span></span>impulse.SpawnBuyable(buyable)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_business.lua#L55">View source &raquo;</a>
+
+					<p>Spawns a buyable as an entity</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">buyable</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Buyable name</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="BuyableData">
+					<h1><span class="realm shared"></span></span>BuyableData</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/nebulouscloud/helix/tree/master/gamemode/core/sh_business.lua#L112">View source &raquo;</a>
+
+					<p>A collection of data that defines how a buyable will behave</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">entity</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Entity class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">bench</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Bench class name</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">model</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Model</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">description</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Buyable description</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">price</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Price</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">teams</span>
+
+
+									<span class="tag default">optional</span>
+
+								<p> A table of teams that can buy this buyable</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">classes</span>
+
+
+									<span class="tag default">optional</span>
+
+								<p> A table of classes that can buy this buyable</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">refund</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Should this buyable be refunded on server crashes</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">refundAdd</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 0</span>
+
+								<p> The amount to add to the price in the event of a refund being issued</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">removeOnTeamSwitch</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Should the buyable be removed on team switch</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">postSpawn</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Called after the buyable is spawned (ent, ply) arguments passed</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">customCheck</span>
+
+									<span class="tag"><span class="type">func</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Determines if the buyable can be spawned based on return value (ply) arguments passed</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+
 					</div>
 			</article>
 		</main>
