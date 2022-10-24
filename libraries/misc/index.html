@@ -1149,6 +1149,16 @@ impulse.CinematicIntro											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/misc/#impulse.FindByDatabaseId">
+impulse.FindByDatabaseId											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/misc/#impulse.FindByDatabaseIdOnTeam">
+impulse.FindByDatabaseIdOnTeam											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/misc/#impulse.FindEmptyPos">
 impulse.FindEmptyPos											</a>
 										</li>
@@ -1706,16 +1716,6 @@ impulse.Set											</a>
 									<ul>
 
 
-										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/player/#impulse.FindByDatabaseId">
-impulse.FindByDatabaseId											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/player/#impulse.FindByDatabaseIdOnTeam">
-impulse.FindByDatabaseIdOnTeam											</a>
-										</li>
 										<li>
 											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:AddChatText">
@@ -2506,6 +2506,104 @@ SetParentAttachment											</a>
 							</li>
 					</ul>
 
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.FindByDatabaseId">
+					<h1><span class="realm server"></span></span>impulse.FindByDatabaseId(id)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L172">View source &raquo;</a>
+
+					<p>Finds a player by their database id.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The id of the player.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">entity</span>
+
+								<p>The player.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.FindByDatabaseIdOnTeam">
+					<h1><span class="realm server"></span></span>impulse.FindByDatabaseIdOnTeam(id, teamId)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_main.lua#L186">View source &raquo;</a>
+
+					<p>Finds a player by their database id and if they are on a specific team.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The id of the player.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">teamId</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> the id of the team.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">entity</span>
+
+								<p>The player.</p>
+							</li>
+
+				</ul>
 
 
 		</section>
