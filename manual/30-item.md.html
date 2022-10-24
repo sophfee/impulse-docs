@@ -5,14 +5,14 @@
 
 <html>
 	<head>
-		<title>Making an Item - impulse documentation</title>
+		<title>Making an item - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Making an Item - impulse documentation" />
+		<meta property="og:title" content="Making an item - impulse documentation" />
 		<meta property="og:site_name" content="impulse documentation" />
 
 			<meta property="og:description" content="
-When designing an item, impulse makes it fairly straight forward. Your best tool is the [Reference Documentation](https://urnotnick.github.io/impulse-docs/libraries/Inventory.htmlITEM). At it's core, Items are made through the ITEM table, provided to fil..." />
+lol..." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -31,23 +31,13 @@ When designing an item, impulse makes it fairly straight forward. Your best tool
 								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
 								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
 								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
-								<li><a href="../manual/30-item.md.html">Making an Item</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
 								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
-								<li><a href="../manual/50-framework.md.html">Working on the Framework</a></li>
 						</ul>
 						<h2>Hooks</h2>
 
 						<ul>
 								<li><a href="../hooks/General.html">General</a></li>
-						</ul>
-						<h2>Panels</h2>
-
-						<ul>
-								<li><a href="../panels/impulseDynamicBar.html">impulseDynamicBar</a></li>
-								<li><a href="../panels/impulseNewPlayerMenu.html">impulseNewPlayerMenu</a></li>
-								<li><a href="../panels/impulseNotify.html">impulseNotify</a></li>
-								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
-								<li><a href="../panels/impulseRichText.html">impulseRichText</a></li>
 						</ul>
 						<h2>Libraries</h2>
 
@@ -55,46 +45,20 @@ When designing an item, impulse makes it fairly straight forward. Your best tool
 								<li><a href="../libraries/Achievement.html">Achievement</a></li>
 								<li><a href="../libraries/Anim.html">Anim</a></li>
 								<li><a href="../libraries/Business.html">Business</a></li>
-								<li><a href="../libraries/Chat.html">Chat</a></li>
-								<li><a href="../libraries/Currency.html">Currency</a></li>
-								<li><a href="../libraries/Data.html">Data</a></li>
-								<li><a href="../libraries/Doors.html">Doors</a></li>
-								<li><a href="../libraries/Errors.html">Errors</a></li>
-								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
-								<li><a href="../libraries/Loot.html">Loot</a></li>
-								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
-								<li><a href="../libraries/Music.html">Music</a></li>
-								<li><a href="../libraries/RPC.html">RPC</a></li>
-								<li><a href="../libraries/Recognize.html">Recognize</a></li>
-								<li><a href="../libraries/Refunds.html">Refunds</a></li>
-								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
-								<li><a href="../libraries/Signals.html">Signals</a></li>
-								<li><a href="../libraries/Skills.html">Skills</a></li>
-								<li><a href="../libraries/States.html">States</a></li>
-								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
-								<li><a href="../libraries/Teams.html">Teams</a></li>
-								<li><a href="../libraries/Traits.html">Traits</a></li>
-								<li><a href="../libraries/Tween.html">Tween</a></li>
 						</ul>
 						<h2>Classes</h2>
 
 						<ul>
-								<li><a href="../classes/Compiler.html">Compiler</a></li>
 								<li><a href="../classes/Entity.html">Entity</a></li>
-								<li><a href="../classes/Parser.html">Parser</a></li>
 								<li><a href="../classes/Player.html">Player</a></li>
-								<li><a href="../classes/Process.html">Process</a></li>
-								<li><a href="../classes/State.html">State</a></li>
-								<li><a href="../classes/Token.html">Token</a></li>
-								<li><a href="../classes/Vendor.html">Vendor</a></li>
 						</ul>
 			</section>
 		</aside>
@@ -102,86 +66,8 @@ When designing an item, impulse makes it fairly straight forward. Your best tool
 		<!-- library functions -->
 		<article>
 
-<h1>Making an Item</h1>
-<p>When designing an item, impulse makes it fairly straight forward. Your best tool is the <a href="https://urnotnick.github.io/impulse-docs/libraries/Inventory.html#ITEM">Reference Documentation</a>. At it's core, Items are made through the ITEM table, provided to files loaded from a /items directory.</p>
-
-<h1>Example Item.</h1>
-<p>Here is an example item to see how everything works.</p>
-
-<pre>
-ITEM.UniqueID = <span class="string">"testitem"</span>
-ITEM.Name = <span class="string">"Nick's Test Item"</span>
-ITEM.Desc =  <span class="string">"A hidden item used to test the inventory system."</span>
-<span class="comment">-- This data can be automatically generated with impulse_debug_icon
-</span>ITEM.Model = Model(<span class="string">"models/props_lab/box01a.mdl"</span>)
-ITEM.FOV = <span class="number">20.392550143266</span>
-ITEM.CamPos = Vector(<span class="number">22.005731582642</span>, <span class="number">25</span>, <span class="number">9</span>)
-ITEM.Weight = <span class="number">2</span>
-
-ITEM.Colour = Color(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)
-
-ITEM.Droppable = <span class="keyword">true</span>
-ITEM.DropOnDeath = <span class="keyword">false</span>
-
-ITEM.DropIfRestricted = <span class="keyword">false</span>
-ITEM.DropOnDeathIfRestricted = <span class="keyword">false</span>
-ITEM.CraftIfRestricted = <span class="keyword">false</span>
-
-ITEM.Illegal = <span class="keyword">false</span>
-ITEM.Equipable = <span class="keyword">true</span>
-ITEM.EquipGroup = <span class="string">"hat"</span>
-ITEM.CanStack = <span class="keyword">true</span>
-
-ITEM.UseTime = <span class="number">50</span>
-ITEM.FreezeOwnerOnUse = <span class="keyword">true</span>
-
-<span class="keyword">function</span> ITEM:OnEquip(ply)
-<span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:UnEquip(ply)
-<span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:CanUse(owner, userEnt)
-    <span class="comment">-- Return either true or false here.
-</span><span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:OnUse(ply)
-    <span class="comment">-- Write code that executes on successful pass of CanUse here, return true to remove item.
-</span><span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:OnDrop(ply, ent)
-<span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:OnReload(ply)
-    <span class="comment">-- Custom option!
-</span><span class="keyword">end</span>
-
-ITEM.CustomActions = {}
-ITEM.CustomActions[<span class="string">"Reload"</span>] = ITEM.OnReload
-</pre>
-
-
-<h1>Designing a SWEP linked Item.</h1>
-<p>Items that give the player a SWEP have 1 property in the table to do this, <code>WeaponClass</code>.</p>
-
-<p>This will give the player a Gravity Gun upon equipping the Item.</p>
-
-<pre>
-ITEM.WeaponClass = "weapon_physcannon`
-</pre>
-
-<p>The rest of the design is the same as any other Item.</p>
-
-<h1>Designing an Attachment linked Item (Longsword Weapon Base)</h1>
-<p>Items that give the player an Attachment have 1 property in the table to do this, <code>AttachmentClass</code>.</p>
-
-<p>This will give the player a Hunting Scope (if the server is running the HL2RP schema) upon equipping the Item.</p>
-
-<pre>
-ITEM.AttachmentClass = "hunting_scope`
-</pre>
-
-<p>The rest of the design is the same as any other Item.</p>
+<h1>Making an item</h1>
+<p>lol</p>
 
 		</article>
 

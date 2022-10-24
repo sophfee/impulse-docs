@@ -30,60 +30,25 @@
 								<li><a href="../libraries/Achievement.html">Achievement</a></li>
 								<li><a href="../libraries/Anim.html">Anim</a></li>
 								<li><a href="../libraries/Business.html">Business</a></li>
-								<li><a href="../libraries/Chat.html">Chat</a></li>
-								<li><a href="../libraries/Currency.html">Currency</a></li>
-								<li><a href="../libraries/Data.html">Data</a></li>
-								<li><a href="../libraries/Doors.html">Doors</a></li>
-								<li><a href="../libraries/Errors.html">Errors</a></li>
-								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
-								<li><a href="../libraries/Loot.html">Loot</a></li>
-								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
-								<li><a href="../libraries/Music.html">Music</a></li>
-								<li><a href="../libraries/RPC.html">RPC</a></li>
-								<li><a href="../libraries/Recognize.html">Recognize</a></li>
-								<li><a href="../libraries/Refunds.html">Refunds</a></li>
-								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
-								<li><a href="../libraries/Signals.html">Signals</a></li>
-								<li><a href="../libraries/Skills.html">Skills</a></li>
-								<li><a href="../libraries/States.html">States</a></li>
-								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
-								<li><a href="../libraries/Teams.html">Teams</a></li>
-								<li><a href="../libraries/Traits.html">Traits</a></li>
-								<li><a href="../libraries/Tween.html">Tween</a></li>
 						</ul>
 						<h2>Hooks</h2>
 
 						<ul>
 								<li><a href="../hooks/General.html">General</a></li>
 						</ul>
-						<h2>Panels</h2>
-
-						<ul>
-								<li><a href="../panels/impulseDynamicBar.html">impulseDynamicBar</a></li>
-								<li><a href="../panels/impulseNewPlayerMenu.html">impulseNewPlayerMenu</a></li>
-								<li><a href="../panels/impulseNotify.html">impulseNotify</a></li>
-								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
-								<li><a href="../panels/impulseRichText.html">impulseRichText</a></li>
-						</ul>
 						<h2>Classes</h2>
 
 						<ul>
 								<li><a href="../classes/Player.html">Player</a></li>
 								<li><a href="../classes/Entity.html">Entity</a></li>
-								<li><a href="../classes/Vendor.html">Vendor</a></li>
-								<li><a href="../classes/State.html">State</a></li>
-								<li><a href="../classes/Compiler.html">Compiler</a></li>
-								<li><a href="../classes/Parser.html">Parser</a></li>
-								<li><a href="../classes/Process.html">Process</a></li>
-								<li><a href="../classes/Token.html">Token</a></li>
 						</ul>
 						<h2>Manual</h2>
 
@@ -91,9 +56,8 @@
 								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
 								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
 								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
-								<li><a href="../manual/30-item.md.html">Making an Item</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
 								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
-								<li><a href="../manual/50-framework.md.html">Working on the Framework</a></li>
 						</ul>
 			</section>
 		</aside>
@@ -115,268 +79,10 @@
 					<summary>Reference</summary>
 
 					<div class="contents">
-							<h2>Functions</h2>
-							<ul>
-									<li>
-
-										<span class="realm server"></span><a href="#impulse.Group.DBCreate">impulse.Group.DBCreate(name, ownerid, maxsize[, maxstorage=true[, ranks=true[, callback]]])</a>
-										<span class="suminternal">INTERNAL</span>
-									</li>
-									<li>
-
-										<span class="realm shared"></span><a href="#meta:GroupHasPermission">Player:GroupHasPermission(act)</a>
-									</li>
-							</ul>
-							<h2>Tables</h2>
-							<ul>
-									<li>
-
-										<span class="realm shared"></span><a href="#RPGROUP_Enums">RPGROUP_Enums</a>
-									</li>
-							</ul>
 					</div>
 				</details>
 
 				<!-- methods -->
-					<h1 class="title">Functions</h1>
-
-						<section class="method">
-							<header>
-								<a class="anchor" id="impulse.Group.DBCreate">
-									<h1><span class="realm server"></span>impulse.Group.DBCreate(name, ownerid, maxsize[, maxstorage=true[, ranks=true[, callback]]])</h1>
-								</a>
-
-									<div class="internal"></div>
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_rpgroup.lua#L31">View source &raquo;</a>
-
-								<p>Creates a new RP Group in the database.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">name</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> Group name.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">ownerid</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-
-												<p> Owners impulse DB Id.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">maxsize</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-
-												<p> Max players in the group.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">maxstorage</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-													<span class="tag default">default: true</span>
-
-												<p> Max storage, goes unused.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">ranks</span>
-
-
-													<span class="tag default">default: true</span>
-
-												<p> Ranks within the group.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">callback</span>
-
-													<span class="tag"><span class="type">function</span></span>
-
-													<span class="tag default">optional</span>
-
-												<p> optional callback.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:GroupHasPermission">
-									<h1><span class="realm shared"></span>Player:GroupHasPermission(act)</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_rpgroup.lua#L44">View source &raquo;</a>
-
-								<p>Does the player have permission to perform an action for their group.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">act</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-
-												<p> Action enum.</p>
-											</li>
-									</ul>
-
-
-						</section>
-					<h1 class="title">Tables</h1>
-
-						<section class="method">
-							<header>
-								<a class="anchor" id="RPGROUP_Enums">
-									<h1><span class="realm shared"></span>RPGROUP_Enums</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_rpgroup.lua#L19">View source &raquo;</a>
-
-								<p>Different permissions that can be assigned to group roles</p>
-							</header>
-
-
-									<h3>Fields</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_DEFAULT</span>
-
-
-
-												<p> Is default group.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_POST</span>
-
-
-
-												<p> Post to group chat.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_ADD_MEMBER</span>
-
-
-
-												<p> Can add members.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_RMV_MEMBER</span>
-
-
-
-												<p> Can remove members.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_MNG_MEMBER</span>
-
-
-
-												<p> Can promote/demote members.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_RANK_EDITOR</span>
-
-
-
-												<p> Can edit ranks.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_INFO_EDITOR</span>
-
-
-
-												<p> Can edit info page.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">RPGROUP_OWNER</span>
-
-
-
-												<p> Is owner of group.</p>
-											</li>
-									</ul>
-
-
-						</section>
 		</article>
 
 		<footer>

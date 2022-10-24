@@ -30,60 +30,25 @@
 								<li><a href="../libraries/Achievement.html">Achievement</a></li>
 								<li><a href="../libraries/Anim.html">Anim</a></li>
 								<li><a href="../libraries/Business.html">Business</a></li>
-								<li><a href="../libraries/Chat.html">Chat</a></li>
-								<li><a href="../libraries/Currency.html">Currency</a></li>
-								<li><a href="../libraries/Data.html">Data</a></li>
-								<li><a href="../libraries/Doors.html">Doors</a></li>
-								<li><a href="../libraries/Errors.html">Errors</a></li>
-								<li><a href="../libraries/File.html">File</a></li>
 								<li><a href="../libraries/Group.html">Group</a></li>
-								<li><a href="../libraries/IPS.html">IPS</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
 								<li><a href="../libraries/Inventory.html">Inventory</a></li>
-								<li><a href="../libraries/Loot.html">Loot</a></li>
-								<li><a href="../libraries/Medical.html">Medical</a></li>
 								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../libraries/Misc.html">Misc</a></li>
-								<li><a href="../libraries/Music.html">Music</a></li>
-								<li><a href="../libraries/RPC.html">RPC</a></li>
-								<li><a href="../libraries/Recognize.html">Recognize</a></li>
-								<li><a href="../libraries/Refunds.html">Refunds</a></li>
-								<li><a href="../libraries/Scenes.html">Scenes</a></li>
 								<li><a href="../libraries/Schema.html">Schema</a></li>
 								<li><a href="../libraries/Setting.html">Setting</a></li>
-								<li><a href="../libraries/Signals.html">Signals</a></li>
-								<li><a href="../libraries/Skills.html">Skills</a></li>
-								<li><a href="../libraries/States.html">States</a></li>
-								<li><a href="../libraries/Supply.html">Supply</a></li>
 								<li><a href="../libraries/Sync.html">Sync</a></li>
-								<li><a href="../libraries/Teams.html">Teams</a></li>
-								<li><a href="../libraries/Traits.html">Traits</a></li>
-								<li><a href="../libraries/Tween.html">Tween</a></li>
 						</ul>
 						<h2>Hooks</h2>
 
 						<ul>
 								<li><a href="../hooks/General.html">General</a></li>
 						</ul>
-						<h2>Panels</h2>
-
-						<ul>
-								<li><a href="../panels/impulseDynamicBar.html">impulseDynamicBar</a></li>
-								<li><a href="../panels/impulseNewPlayerMenu.html">impulseNewPlayerMenu</a></li>
-								<li><a href="../panels/impulseNotify.html">impulseNotify</a></li>
-								<li><a href="../panels/impulseQuiz.html">impulseQuiz</a></li>
-								<li><a href="../panels/impulseRichText.html">impulseRichText</a></li>
-						</ul>
 						<h2>Classes</h2>
 
 						<ul>
 								<li><a href="../classes/Player.html">Player</a></li>
 								<li><a href="../classes/Entity.html">Entity</a></li>
-								<li><a href="../classes/Vendor.html">Vendor</a></li>
-								<li><a href="../classes/State.html">State</a></li>
-								<li><a href="../classes/Compiler.html">Compiler</a></li>
-								<li><a href="../classes/Parser.html">Parser</a></li>
-								<li><a href="../classes/Process.html">Process</a></li>
-								<li><a href="../classes/Token.html">Token</a></li>
 						</ul>
 						<h2>Manual</h2>
 
@@ -91,9 +56,8 @@
 								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
 								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
 								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
-								<li><a href="../manual/30-item.md.html">Making an Item</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
 								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
-								<li><a href="../manual/50-framework.md.html">Working on the Framework</a></li>
 						</ul>
 			</section>
 		</aside>
@@ -117,54 +81,18 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li>
-
-										<span class="realm shared"></span><a href="#entMeta:GetSyncVar">Entity:GetSyncVar(varID, fallback)</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#entMeta:SetSyncVar">Entity:SetSyncVar(varID, value[, instantSync=false])</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#entMeta:Sync">Entity:Sync([target=true])</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#entMeta:SyncRemove">Entity:SyncRemove()</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#entMeta:SyncRemoveVar">Entity:SyncRemoveVar(varID)</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#entMeta:SyncSingle">Entity:SyncSingle(varID[, target=true])</a>
-									</li>
-									<li>
-
-										<span class="realm shared"></span><a href="#impulse.Sync.DoType">impulse.Sync.DoType(type, value)</a>
-										<span class="suminternal">INTERNAL</span>
-									</li>
-									<li>
-
-										<span class="realm shared"></span><a href="#impulse.Sync.RegisterVar">impulse.Sync.RegisterVar(type[, conditional=false])</a>
-									</li>
-									<li>
-
-										<span class="realm server"></span><a href="#meta:SetLocalSyncVar">Player:SetLocalSyncVar(varID, value)</a>
-									</li>
+									<li><span class="realm shared"></span><a href="#entMeta:GetSyncVar">entMeta:GetSyncVar(varID, fallback)</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SetSyncVar">entMeta:SetSyncVar(varID, value[, instantSync=false])</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SyncRemove">entMeta:SyncRemove()</a></li>
+									<li><span class="realm server"></span><a href="#entMeta:SyncRemoveVar">entMeta:SyncRemoveVar(varID)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Sync.DoType">impulse.Sync.DoType(type, value)</a></li>
+									<li><span class="realm shared"></span><a href="#impulse.Sync.RegisterVar">impulse.Sync.RegisterVar(type[, conditional=false])</a></li>
+									<li><span class="realm server"></span><a href="#meta:SetLocalSyncVar">meta:SetLocalSyncVar(varID, value)</a></li>
 							</ul>
 							<h2>Tables</h2>
 							<ul>
-									<li>
-
-										<span class="realm shared"></span><a href="#SyncDefaults">SyncDefaults</a>
-									</li>
-									<li>
-
-										<span class="realm shared"></span><a href="#SyncTypes">SyncTypes</a>
-									</li>
+									<li><span class="realm shared"></span><a href="#SyncDefaults">SyncDefaults</a></li>
+									<li><span class="realm shared"></span><a href="#SyncTypes">SyncTypes</a></li>
 							</ul>
 					</div>
 				</details>
@@ -179,13 +107,11 @@
 								</aside>
 							<header>
 								<a class="anchor" id="entMeta:GetSyncVar">
-									<h1><span class="realm shared"></span>Entity:GetSyncVar(varID, fallback)</h1>
+									<h1><span class="realm shared"></span>entMeta:GetSyncVar(varID, fallback)</h1>
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L88">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_sync.lua#L88">View source &raquo;</a>
 
 								<p>Gets the Sync variable on an entity</p>
 							</header>
@@ -237,13 +163,11 @@
 								</aside>
 							<header>
 								<a class="anchor" id="entMeta:SetSyncVar">
-									<h1><span class="realm server"></span>Entity:SetSyncVar(varID, value[, instantSync=false])</h1>
+									<h1><span class="realm server"></span>entMeta:SetSyncVar(varID, value[, instantSync=false])</h1>
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L193">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sv_sync.lua#L188">View source &raquo;</a>
 
 								<p>Sets the Sync var on an entity</p>
 							</header>
@@ -292,47 +216,12 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="entMeta:Sync">
-									<h1><span class="realm server"></span>Entity:Sync([target=true])</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L14">View source &raquo;</a>
-
-								<p>Sync will take the player and sync their all SyncVars with all clients or the single target if provided.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">target</span>
-
-													<span class="tag"><span class="type">entity</span></span>
-
-													<span class="tag default">default: true</span>
-
-												<p> Sync to a single target, if empty, syncs to all players.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
 								<a class="anchor" id="entMeta:SyncRemove">
-									<h1><span class="realm server"></span>Entity:SyncRemove()</h1>
+									<h1><span class="realm server"></span>entMeta:SyncRemove()</h1>
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L160">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sv_sync.lua#L155">View source &raquo;</a>
 
 								<p>Removes all SyncVar's from an entity and update all players</p>
 							</header>
@@ -343,13 +232,11 @@
 						<section class="method">
 							<header>
 								<a class="anchor" id="entMeta:SyncRemoveVar">
-									<h1><span class="realm server"></span>Entity:SyncRemoveVar(varID)</h1>
+									<h1><span class="realm server"></span>entMeta:SyncRemoveVar(varID)</h1>
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L174">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sv_sync.lua#L169">View source &raquo;</a>
 
 								<p>Removes a specific SyncVar from an entity and update all players</p>
 							</header>
@@ -374,60 +261,13 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="entMeta:SyncSingle">
-									<h1><span class="realm server"></span>Entity:SyncSingle(varID[, target=true])</h1>
-								</a>
-
-
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L89">View source &raquo;</a>
-
-								<p>Syncs a single variable ID.  target is optional. SyncSingle will take the player and sync the SyncVar provided with all clients or the single target if provided.</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">varID</span>
-
-													<span class="tag"><span class="type">int</span></span>
-
-
-												<p> Sync var ID.</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">target</span>
-
-													<span class="tag"><span class="type">entity</span></span>
-
-													<span class="tag default">default: true</span>
-
-												<p> Sync to a single target, if empty, syncs to all players.</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
 								<a class="anchor" id="impulse.Sync.DoType">
 									<h1><span class="realm shared"></span>impulse.Sync.DoType(type, value)</h1>
 								</a>
 
 									<div class="internal"></div>
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L77">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_sync.lua#L77">View source &raquo;</a>
 
 								<p>Reads or writes a value based on the SyncType provided</p>
 							</header>
@@ -474,9 +314,7 @@
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L52">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_sync.lua#L52">View source &raquo;</a>
 
 								<p>Registers a new Sync variable for usage.  <strong>Must be called in the shared realm</strong></p>
 							</header>
@@ -523,13 +361,11 @@
 								</aside>
 							<header>
 								<a class="anchor" id="meta:SetLocalSyncVar">
-									<h1><span class="realm server"></span>Player:SetLocalSyncVar(varID, value)</h1>
+									<h1><span class="realm server"></span>meta:SetLocalSyncVar(varID, value)</h1>
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sv_sync.lua#L218">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sv_sync.lua#L213">View source &raquo;</a>
 
 								<p>Sets the Sync var on an entity but only updates the player who it is being set on</p>
 							</header>
@@ -572,9 +408,7 @@
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L222">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_sync.lua#L215">View source &raquo;</a>
 
 								<p>Default Sync variables</p>
 							</header>
@@ -895,97 +729,6 @@
 											</li>
 									</ul>
 
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_TESTER</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_EVENT_TEAM</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_INFECTION</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_INFECTION_STAGE</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_BLEEDING</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_ZONE</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">SYNC_EFFECT</span>
-
-
-
-												<p>
-
-</p>
-											</li>
-									</ul>
-
 
 						</section>
 						<section class="method">
@@ -995,9 +738,7 @@
 								</a>
 
 
-
-
-									<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\core\sh_sync.lua#L33">View source &raquo;</a>
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_sync.lua#L33">View source &raquo;</a>
 
 								<p>Types of Sync variable</p>
 							</header>
