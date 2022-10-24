@@ -326,7 +326,7 @@ article p a,
 article ul li a,
 article h1 a,
 article h2 a {
-	color: rgb(115, 53, 142);
+	color: rgb(--color-accent);
 	font-weight: 600;
 }
 
