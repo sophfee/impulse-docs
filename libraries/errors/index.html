@@ -1,235 +1,2412 @@
 
-# local root = ldoc.css:gsub("ldoc.css", "")
-# local iter = ldoc.modules.iter
-# local repo = "https://github.com/urnotnick/impulse/"
-# local base = "a:\\steamlibrary\\steamapps\\common\\garrysmod\\garrysmod\\gamemodes\\impulse\\"
-# local pageTitle = module and (ldoc.display_name(module) .. " - " .. ldoc.title) or ldoc.title
-
-# local function markup(text, item)
-#	return ldoc.markup(text, item, ldoc.plain)
-# end
-
-# local function moduleDescription(mod)
-#	if (mod.type == "topic") then
-#		return mod.body:gsub(mod.display_name, ""):gsub("#", ""):sub(1, 256) .. "..."
-#	end
-#	return mod.summary
-# end
-
-# local function repoReference(item)
-#   return repo .. "tree/master" .. item.file.filename:gsub(base, "/") .. "#L" .. item.lineno
-# end
 
 <html>
 	<head>
-		<title>$(pageTitle)</title>
+		<title>Errors - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="$(pageTitle)" />
-		<meta property="og:site_name" content="impulse documentation" />
+		<meta property="og:title" content="Errors - impulse documentation" />
+		<meta property="og:site_name" content="Helix Documentation" />
 
-#		if (module) then
-			<meta property="og:description" content="$(moduleDescription(module))" />
-#		else
-			<meta property="og:description" content="Documentation for the impulse framework." />
-#		end
+			<meta property="og:description" content="A system that lets us debug things and find errors in the framework." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
-		<link rel="stylesheet" href="$(ldoc.css)" />
-		<link rel="stylesheet" href="$(root)highlight.css" />
+		<link rel="stylesheet" href="../../ldoc.css" />
+		<link rel="stylesheet" href="../../highlight.css" />
 	</head>
 
 	<body>
-		<aside>
-			<h1>impulse docs</h1>
+		<main>
 
-			<!-- project contents -->
-			<section>
-#				for kind, mods, type in ldoc.kinds() do
-#					if (ldoc.allowed_in_contents(type, module)) then
-						<h2>$(kind)</h2>
 
-						<ul>
-#							for mod in mods() do
-#								local name = ldoc.display_name(mod)
-								<li><a href="$(ldoc.ref_to_module(mod))">$(name)</a></li>
-#							end
-						</ul>
-#					end
-#				end
-			</section>
-		</aside>
+<nav>
+	<header>
+			<h1><a href="../../">Helix Documentation</a></h1>
+		<input id="search" type="search" autocomplete="off" placeholder="Search..." />
+	</header>
 
-		<!-- library functions -->
-		<article>
-#			if (ldoc.body) then -- we're rendering non-code elements
-				$(ldoc.body)
-#			elseif (module) then -- we're rendering libary contents
-				<header class="module">
-					<h1>$(module.name)</h1>
-					<h2>$(markup(module.summary))</h2>
-				</header>
+	<section>
+				<details class="category" open>
+					<summary>
+						<h2>Hooks</h2>
+					</summary>
 
-				<!-- description -->
-				<p>$(markup(module.description))</p>
-
-				<!-- summary -->
-				<details open>
-					<summary>Reference</summary>
-
-					<div class="contents">
-#						for kind, items in module.kinds() do
-							<h2>$(kind)</h2>
-							<ul>
-#								for item in items() do
-									<li>
-
-										<span class="realm $(item.tags.realm[1])"></span><a href="#$(item.name)">$(ldoc.display_name(item))</a>
-# if item.tags.internal then
-										<span class="suminternal">INTERNAL</span>
-# end
-# if item.tags.deprecated then
-										<span class="sumdeprecated">DEPRECATED</span>
-# end
-									</li>
-#								end
-							</ul>
-#						end
-					</div>
-				</details>
-
-				<!-- methods -->
-#				for kind, items in module.kinds() do
-					<h1 class="title">$(kind)</h1>
-
-#					for item in items() do
-						<section class="method">
-#							if (item.usage) then -- function usage
-								<aside>
-#									for usage in iter(item.usage) do
-										<pre><code>$(usage)</code></pre>
-#									end
-								</aside>
-#							end
-							<header>
-								<a class="anchor" id="$(item.name)">
-									<h1><span class="realm $(item.tags.realm[1])"></span>$(ldoc.display_name(item))</h1>
-								</a>
-
-#								if (item.tags.internal) then
-									<div class="internal"></div>
-#								end
-
-#								if (item.tags.indev) then
-									<div class="indev"></div>
-#								end
-
-#								if (item.tags.deprecated) then
-									<div class="deprecated"></div>
-#								end
-
-#								if (item.module and item.module.type ~= "hooks") then
-									<a class="reference" href="$(repoReference(item))">View source &raquo;</a>
-#								end
-
-								<p>$(markup(ldoc.descript(item)))</p>
-							</header>
-
-#							if (item.params and #item.params > 0) then -- function arguments
-#								local subnames = module.kinds:type_of(item).subnames
-
-#								if (subnames) then
-									<h3>$(subnames)</h3>
-#								end
-
-#								for argument in iter(item.params) do
-#									local argument, sublist = item:subparam(argument)
+					<ul>
+							<li>
+									<details >
+									<summary><a href="../../hooks/general/">General</a></summary>
 
 									<ul>
-#
-#										for argumentName in iter(argument) do
-#											local displayName = item:display_name_of(argumentName)
-#											local type = ldoc.typename(item:type_of_param(argumentName))
-#											local default = item:default_of_param(argumentName)
 
-											<li>
-												<span class="tag parameter">$(displayName)</span>
 
-#												if (type ~= "") then -- type
-													<span class="tag">$(type)</span>
-#												end
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#CanEditDoor">
+CanEditDoor											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#CanPlayerChangeTeam">
+CanPlayerChangeTeam											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#CanStoreItem">
+CanStoreItem											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#CanUseInventory">
+CanUseInventory											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#ChatClassMessageSend">
+ChatClassMessageSend											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#ChatStateChanged">
+ChatStateChanged											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#CheckMenuInput">
+CheckMenuInput											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#ContainerPasscodeSet">
+ContainerPasscodeSet											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#CreateMenuMessages">
+CreateMenuMessages											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#CreateSubMenu">
+CreateSubMenu											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#DefineSettings">
+DefineSettings											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#DisplayMenuMessages">
+DisplayMenuMessages											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#DoInventorySearch">
+DoInventorySearch											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#GetDeathSound">
+GetDeathSound											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#LoadAnimationClasses">
+LoadAnimationClasses											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#OnSchemaLoaded">
+OnSchemaLoaded											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#OnSyncUpdate">
+OnSyncUpdate											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerAddUserToDoor">
+PlayerAddUserToDoor											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerArrested">
+PlayerArrested											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerBuyablePurchase">
+PlayerBuyablePurchase											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerCanHearCheck">
+PlayerCanHearCheck											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerChangeRPName">
+PlayerChangeRPName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerConfiscateItem">
+PlayerConfiscateItem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerCraftItem">
+PlayerCraftItem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerDropDeathItems">
+PlayerDropDeathItems											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerDropItem">
+PlayerDropItem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerDropMoney">
+PlayerDropMoney											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#PlayerGetJailData">
+PlayerGetJailData											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#PlayerGetKnownName">
+PlayerGetKnownName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerGetXP">
+PlayerGetXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerInitialSpawnLoaded">
+PlayerInitialSpawnLoaded											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerOpenStorage">
+PlayerOpenStorage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerOpenStorage">
+PlayerOpenStorage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerPurchaseDoor">
+PlayerPurchaseDoor											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerRagdollPreSpawn">
+PlayerRagdollPreSpawn											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerSellDoor">
+PlayerSellDoor											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerShouldBreakLegs">
+PlayerShouldBreakLegs											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerShouldGetHungry">
+PlayerShouldGetHungry											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerUnArrested">
+PlayerUnArrested											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerUnJailed">
+PlayerUnJailed											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerVendorBuy">
+PlayerVendorBuy											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PlayerZoneChanged">
+PlayerZoneChanged											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PostChatClassMessageSend">
+PostChatClassMessageSend											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/general/#PostConfigLoad">
+PostConfigLoad											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PostInitPostEntity">
+PostInitPostEntity											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PostInventorySetup">
+PostInventorySetup											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PostSetupPlayer">
+PostSetupPlayer											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#PreEarlyInventorySetup">
+PreEarlyInventorySetup											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#ProcessICChatMessage">
+ProcessICChatMessage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#ProcessOOCMessage">
+ProcessOOCMessage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/general/#RadioMessageFallback">
+RadioMessageFallback											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/general/#ShouldDrawHUDBox">
+ShouldDrawHUDBox											</a>
+										</li>
 
-#												if (default and default ~= true) then
-													<span class="tag default">default: $(default)</span>
-#												elseif (default) then
-													<span class="tag default">optional</span>
-#												end
-
-												<p>$(markup(item.params.map[argumentName]))</p>
-											</li>
-#										end
 									</ul>
-#								end
-#							end
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Panels</h2>
+					</summary>
 
-#							if ((not ldoc.no_return_or_parms) and item.retgroups) then -- function returns
-#								local groups = item.retgroups
+					<ul>
+							<li>
+									<details >
+									<summary><a href="../../panels/impulsedynamicbar/">impulseDynamicBar</a></summary>
 
-								<h3>Returns</h3>
-								<ul>
-#									for i, group in ldoc.ipairs(groups) do
-#										for returnValue in group:iter() do
-#											local type, ctypes = item:return_type(returnValue)
-#											type = ldoc.typename(type)
+									<ul>
 
-											<li>
-#												if (type ~= "") then
-													$(type)
-#												else -- we'll assume that it will return a variable type if none is set
-													<span class="tag type">any</span>
-#												end
 
-												<p>$(markup(returnValue.text))</p>
-											</li>
-#										end
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsedynamicbar/#GetProgress">
+GetProgress											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsedynamicbar/#Init">
+Init											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsedynamicbar/#SetColour">
+SetColour											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsedynamicbar/#SetProgress">
+SetProgress											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsedynamicbar/#SetTime">
+SetTime											</a>
+										</li>
 
-#										if (i ~= #groups) then
-											<div class="or"><span>OR</span></div>
-#										end
-#									end
-								</ul>
-#							end
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../panels/impulsenewplayermenu/">impulseNewPlayerMenu</a></summary>
 
-#							if (item.see) then
-								<h3>See Also</h3>
-								<ul>
-#									for see in iter(item.see) do
-										<li><a href="$(ldoc.href(see))">$(see.label)</a></li>
-#									end
-								</ul>
-#							end
-						</section>
-#					end
-#				end
-# 			end
-		</article>
+									<ul>
 
-		<footer>
-			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc $(ldoc.version)</a></p>
-		</footer>
 
-		<script type="text/javascript" src="$(root)highlight.min.js"></script>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsenewplayermenu/#CreateSimpleTab">
+CreateSimpleTab											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsenewplayermenu/#Init">
+Init											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../panels/impulsenotify/">impulseNotify</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsenotify/#SetMessage">
+SetMessage											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../panels/impulsequiz/">impulseQuiz</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulsequiz/#SetQuiz">
+SetQuiz											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../panels/impulserichtext/">impulseRichText</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulserichtext/#AddText">
+AddText											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulserichtext/#SetScrollBarVisible">
+SetScrollBarVisible											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/impulserichtext/#SetTextRaw">
+SetTextRaw											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Libraries</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="../../libraries/achievement/">Achievement</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/achievement/#AchievementCheck">
+heck											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/achievement/#AchievementGive">
+ive											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/achievement/#AchievementHas">
+as											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/achievement/#AchievementTake">
+ake											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/achievement/#CalculateAchievementPoints">
+Calculateoints											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/anim/">Anim</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/anim/#ForceSequence">
+ForceSequence											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/anim/#impulse.Anim.GetModelClass">
+impulse.GetModelClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/anim/#impulse.Anim.SetModelClass">
+impulse.SetModelClass											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/business/">Business</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/business/#CanBuy">
+CanBuy											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/business/#impulse.Business.Define">
+impulse.Define											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/business/#impulse.SpawnBuyable">
+impulse.SpawnBuyable											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/chat/">Chat</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/chat/#impulse.RegisterChatCommand">
+impulse.Registerommand											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/currency/">Currency</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/currency/#CanAfford">
+CanAfford											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/currency/#CanAffordBank">
+CanAffordBank											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/currency/#GetBankMoney">
+GetBankMoney											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/currency/#GetMoney">
+GetMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#GiveBankMoney">
+GiveBankMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#GiveMoney">
+GiveMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#SetBankMoney">
+SetBankMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#SetMoney">
+SetMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#TakeBankMoney">
+TakeBankMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#TakeMoney">
+TakeMoney											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/currency/#impulse.SpawnMoney">
+impulse.SpawnMoney											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/data/">Data</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/data/#GetData">
+GetData											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/data/#SaveData">
+SaveData											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/doors/">Doors</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#DoorLock">
+DoorLock											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#DoorUnlock">
+DoorUnlock											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#GetDoorMaster">
+GetDoorMaster											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#RemoveDoorMaster">
+RemoveDoorMaster											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#RemoveDoorUser">
+RemoveDoorUser											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#SetDoorMaster">
+SetDoorMaster											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#SetDoorUser">
+SetDoorUser											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#impulse.Doors.Load">
+impulse.Load											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#impulse.Doors.Save">
+impulse.Save											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details open>
+									<summary><a href="../../libraries/errors/">Errors</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/errors/#impulse.Errors.CreateInfo">
+impulse.CreateInfo											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/file/">File</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/file/#impulse.File.DoType">
+impulse.DoType											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/file/#impulse.File.HandleType">
+impulse.HandleType											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/file/#impulse.File.Read">
+impulse.Read											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/file/#impulse.File.Write">
+impulse.Write											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/fonts/">Fonts</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/group/">Group</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/group/#GroupHasPermission">
+asPermission											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBAddPlayer">
+impulse.DBAddPlayer											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBCreate">
+impulse.DBCreate											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBPlayerRankShift">
+impulse.DBPlayerRankShift											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBRemove">
+impulse.DBRemove											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBRemoveByName">
+impulse.DBRemoveByName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBRemovePlayer">
+impulse.DBRemovePlayer											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBRemovePlayerMass">
+impulse.DBRemovePlayerMass											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBUpdateData">
+impulse.DBUpdateData											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBUpdateMaxMembers">
+impulse.DBUpdateMaxMembers											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBUpdatePlayerRank">
+impulse.DBUpdatePlayerRank											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.DBUpdateRanks">
+impulse.DBUpdateRanks											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/ips/">IPS</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ips/#GetVar">
+GetVar											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ips/#IsStrict">
+IsStrict											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ips/#SetVar">
+SetVar											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/inventory/">Inventory</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#CanHoldItem">
+CanHoldItem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#CanHoldItemStorage">
+CanHoldItemStorage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#CanMakeMix">
+CanMakeMix											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#ClearIllegalInventory">
+ClearIllegalInventory											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#ClearInventory">
+ClearInventory											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#ClearRestrictedInventory">
+ClearRestrictedInventory											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#DropInventoryItem">
+Droptem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#GetInventory">
+GetInventory											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#GetMaxInventoryStorage">
+GetMaxtorage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#GiveInventoryItem">
+Givetem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#HasIllegalInventoryItem">
+HasIllegaltem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#HasInventoryItem">
+Hastem											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/inventory/#HasInventoryItem">
+Hastem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#HasInventoryItemSpecific">
+HastemSpecific											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#HasInventoryItemStorage">
+HastemStorage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#IsInventoryItemRestricted">
+IstemRestricted											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#MoveInventoryItem">
+Movetem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#MoveInventoryItemMass">
+MovetemMass											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#SetInventoryItemEquipped">
+SettemEquipped											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#TakeInventoryItem">
+Taketem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#TakeInventoryItemClass">
+TaketemClass											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#UnEquipInventory">
+UnEquipInventory											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#UseInventoryItem">
+Usetem											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.ClassToNetID">
+impulse.ClassToNetID											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBAddItem">
+impulse.DBAddItem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBClearInventory">
+impulse.DBClearInventory											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBRemoveItem">
+impulse.DBRemoveItem											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBUpdateStoreType">
+impulse.DBUpdateStoreType											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.GetCraftingTime">
+impulse.GetCraftingTime											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.PickRandomCraftSound">
+impulse.PickRandomCraftSound											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.SpawnBench">
+impulse.SpawnBench											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.SpawnItem">
+impulse.SpawnItem											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.RegisterBench">
+impulse.RegisterBench											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.RegisterItem">
+impulse.RegisterItem											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.RegisterMixture">
+impulse.RegisterMixture											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/loot/">Loot</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/loot/#impulse.Loot.GenerateFromPool">
+impulse.GenerateFromPool											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/medical/">Medical</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/medical/#Bleeding">
+Bleeding											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/medical/#BreakLegs">
+BreakLegs											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/medical/#FixLegs">
+FixLegs											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/medical/#GetInfection">
+GetInfection											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/medical/#GetInfectionStage">
+GetInfectionStage											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/medical/#GiveInfection">
+GiveInfection											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/medical/#HasBrokenLegs">
+HasBrokenLegs											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/menumessage/">MenuMessage</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/menumessage/#impulse.MenuMessage.Add">
+impulse.Add											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/menumessage/#impulse.MenuMessage.CanSee">
+impulse.CanSee											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/menumessage/#impulse.MenuMessage.Remove">
+impulse.Remove											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/menumessage/#impulse.MenuMessage.Save">
+impulse.Save											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/misc/">Misc</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.AngleToBearing">
+impulse.AngleToBearing											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#impulse.BlurRect">
+impulse.BlurRect											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.CanUseDesc">
+impulse.CanUseDesc											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.CanUseName">
+impulse.CanUseName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/misc/#impulse.CinematicIntro">
+impulse.CinematicIntro											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/misc/#impulse.FindEmptyPos">
+impulse.FindEmptyPos											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.FindPlayer">
+impulse.FindPlayer											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.GetRandomAmbientVO">
+impulse.GetRandomAmbientVO											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/misc/#impulse.IsEmpty">
+impulse.IsEmpty											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#impulse.MakeWorkbar">
+impulse.MakeWorkbar											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.PosToCode">
+impulse.PosToCode											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.PosToString">
+impulse.PosToString											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/misc/#impulse.SafeString">
+impulse.SafeString											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#impulse.blur">
+impulse.blur											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/music/">Music</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/rpc/">RPC</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/rpc/#impulse.RPC.BroadcastRpc">
+impulse.BroadcastRpc											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/rpc/#impulse.RPC.ClientRpc">
+impulse.ClientRpc											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/recognize/">Recognize</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#Remember">
+Remember											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/refunds/">Refunds</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/refunds/#impulse.Refunds.Add">
+impulse.Add											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/refunds/#impulse.Refunds.Clean">
+impulse.Clean											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/refunds/#impulse.Refunds.Remove">
+impulse.Remove											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/refunds/#impulse.Refunds.RemoveAll">
+impulse.RemoveAll											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/scenes/">Scenes</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/scenes/#impulse.Scenes.Play">
+impulse.Play											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/scenes/#impulse.Scenes.PlaySet">
+impulse.PlaySet											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/schema/">Schema</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.Boot">
+impulse.Boot											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadBenches">
+impulse.LoadBenches											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadEntites">
+impulse.LoadEntites											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadHooks">
+impulse.LoadHooks											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadItems">
+impulse.LoadItems											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadMixtures">
+impulse.LoadMixtures											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadPlugin">
+impulse.LoadPlugin											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.LoadVendors">
+impulse.LoadVendors											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.PiggyBoot">
+impulse.PiggyBoot											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.PiggyBootEntities">
+impulse.PiggyBootEntities											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/schema/#impulse.Schema.PiggyBootPlugin">
+impulse.PiggyBootPlugin											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/setting/">Setting</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/setting/#impulse.DefineSetting">
+impulse.DefineSetting											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/setting/#impulse.LoadSettings">
+impulse.Load											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/setting/#impulse.SetSetting">
+impulse.SetSetting											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/signals/">Signals</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/signals/#impulse.Signals.Hook">
+impulse.Hook											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/signals/#impulse.Signals.ReadAll">
+impulse.ReadAll											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/signals/#impulse.Signals.Send">
+impulse.Send											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/skills/">Skills</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/skills/#GetSkillLevel">
+GetSkillLevel											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/skills/#GetSkillXP">
+GetSkillXP											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/skills/#impulse.Skills.Define">
+impulse.Define											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/skills/#impulse.Skills.GetLevelXPRequirement">
+impulse.GetLevelXPRequirement											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/skills/#impulse.Skills.GetNiceName">
+impulse.GetNiceName											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/states/">States</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#DeleteState">
+DeleteState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#GetAllStates">
+GetAllStates											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#ReadState">
+ReadState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestoreAnglesFromState">
+RestoreAnglesFromState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestoreArmorFromState">
+RestoreArmorFromState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestoreHealthFromState">
+RestoreHealthFromState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestoreModelFromState">
+RestoreModelFromState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestorePositionFromState">
+RestorePositionFromState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestoreSkinFromState">
+RestoreSkinFromState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#RestoreState">
+RestoreState											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/states/#SaveState">
+SaveState											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/supply/">Supply</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/supply/#impulse.Supply.Add">
+impulse.Add											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/supply/#impulse.Supply.Define">
+impulse.Define											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/sync/">Sync</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/sync/#GetSyncVar">
+Getar											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/sync/#SetLocalSyncVar">
+SetLocalar											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/sync/#SetSyncVar">
+Setar											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/sync/#Sync">
+Sync											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/sync/#SyncRemove">
+emove											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/sync/#SyncRemoveVar">
+emoveVar											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/sync/#SyncSingle">
+ingle											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/sync/#impulse.Sync.DoType">
+impulse.DoType											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/sync/#impulse.Sync.RegisterVar">
+impulse.RegisterVar											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/teams/">Teams</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#impulse.Teams.Define">
+impulse.Define											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/teams/#impulse.Teams.GetAllWhitelists">
+impulse.GetAllWhitelists											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/teams/#impulse.Teams.GetAllWhitelistsPlayer">
+impulse.GetAllWhitelistsPlayer											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/teams/#impulse.Teams.GetWhitelist">
+impulse.GetWhitelist											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/teams/#impulse.Teams.SetWhitelist">
+impulse.SetWhitelist											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/traits/">Traits</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/traits/#AddTrait">
+AddTrait											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/traits/#HasTrait">
+HasTrait											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/traits/#TakeTrait">
+TakeTrait											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/traits/#impulse.HasTrait">
+impulse.HasTrait											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/traits/#impulse.Traits.Define">
+impulse.Define											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/tween/">Tween</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/tween/#impulse.Tween.Define">
+impulse.Define											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/tween/#impulse.Tween.Get">
+impulse.Get											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/tween/#impulse.Tween.Set">
+impulse.Set											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Classes</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="../../classes/player/">Player</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#AddChatText">
+AddChatText											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#AddPropCount">
+AddPropCount											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#AddSkillXP">
+AddSkillXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#AddXP">
+AddXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#AllowScenePVSControl">
+AllowScenePVSControl											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#Arrest">
+Arrest											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanArrest">
+CanArrest											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanBecomeTeam">
+CanBecomeTeam											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanBecomeTeamClass">
+CanBecomeTeamClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanBecomeTeamRank">
+CanBecomeTeamRank											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanBuyDoor">
+CanBuyDoor											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanLockUnlockDoor">
+CanLockUnlockDoor											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#DragPlayer">
+DragPlayer											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#FeedHunger">
+FeedHunger											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetDescription">
+GetDescription											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#GetPropCount">
+GetPropCount											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#GetSavedRPName">
+GetSavedRPName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#GetSkillXP">
+GetSkillXP											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetTeamClass">
+GetTeamClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetTeamClassData">
+GetTeamClassData											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetTeamClassName">
+GetTeamClassName											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetTeamRank">
+GetTeamRank											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetTeamRankData">
+GetTeamRankData											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetTeamRankName">
+GetTeamRankName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#GetTeamWhitelist">
+GetTeamWhitelist											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetXP">
+GetXP											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetZone">
+GetZone											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetZoneName">
+GetZoneName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#GiveTimedXP">
+GiveTimedXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#HasTeamWhitelist">
+HasTeamWhitelist											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#InSpawn">
+InSpawn											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#IsAFK">
+IsAFK											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsAdmin">
+IsAdmin											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsArrested">
+IsArrested											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsCP">
+IsCP											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsCharacterFemale">
+IsCharacterFemale											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsCommunityManager">
+IsCommunityManager											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsDeveloper">
+IsDeveloper											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsDonator">
+IsDonator											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsDoorOwner">
+IsDoorOwner											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsGameMaster">
+IsGameMaster											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsLeadAdmin">
+IsLeadAdmin											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsPureGameMaster">
+IsPureGameMaster											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsSuperAdmin">
+IsSuperAdmin											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsWeaponRaised">
+IsWeaponRaised											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#Jail">
+Jail											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#KnownName">
+KnownName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#MakeAFK">
+MakeAFK											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#Name">
+Name											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#NetworkSkill">
+NetworkSkill											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#Notify">
+Notify											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#ResetSubMaterials">
+ResetSubMaterials											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SendJailInfo">
+SendJailInfo											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetAFKImmune">
+SetAFKImmune											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetDescription">
+SetDescription											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#SetHandsBehindBack">
+SetHandsBehindBack											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetHunger">
+SetHunger											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetRPName">
+SetRPName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetSkillXP">
+SetSkillXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetTeam">
+SetTeam											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetTeamClass">
+SetTeamClass											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetTeamRank">
+SetTeamRank											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetWeaponRaised">
+SetWeaponRaised											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetXP">
+SetXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetZone">
+SetZone											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetupWhitelists">
+SetupWhitelists											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#SteamName">
+SteamName											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#StopDrag">
+StopDrag											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#ToggleWeaponRaised">
+ToggleWeaponRaised											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#UnArrest">
+UnArrest											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#UnJail">
+UnJail											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#UnMakeAFK">
+UnMakeAFK											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#UseSavedDescription">
+UseSavedDescription											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#impulse.FindByDatabaseId">
+impulse.FindByDatabaseId											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#impulse.FindByDatabaseIdOnTeam">
+impulse.FindByDatabaseIdOnTeam											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/entity/">Entity</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#CanBeCarried">
+CanBeCarried											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#EmitBudgetSound">
+EmitBudgetSound											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#EmitQueuedSounds">
+EmitQueuedSounds											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsButton">
+IsButton											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsChair">
+IsChair											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsDoor">
+IsDoor											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsDoorLocked">
+IsDoorLocked											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsPropDoor">
+IsPropDoor											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#SetParentAttachment">
+SetParentAttachment											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/vendor/">Vendor</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/vendor/#ThisIsAWIP">
+ThisIsAWIP											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/state/">State</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#Armor">
+Armor											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#GetAngles">
+GetAngles											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#GetModel">
+GetModel											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#GetPos">
+GetPos											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#GetSkin">
+GetSkin											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#Health">
+Health											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/state/#Team">
+Team											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/compiler/">Compiler</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/compiler/#Feed">
+Feed											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/compiler/#New">
+New											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/compiler/#ProcessAll">
+ProcessAll											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/compiler/#RetrieveNextBuffer">
+RetrieveNextBuffer											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/parser/">Parser</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/process/">Process</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#Buffer">
+Buffer											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#Ex">
+Ex											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#Head">
+Head											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#MoveHead">
+MoveHead											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#New">
+New											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#Read">
+Read											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#Run">
+Run											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/process/#Single">
+Single											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/token/">Token</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/token/#Check">
+Check											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/token/#Destroy">
+Destroy											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/token/#New">
+New											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/token/#Process">
+Process											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/token/#Run">
+Run											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/token/#Set">
+Set											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Manual</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<a href="../../manual/00-installing/">Installing impulse on a server</a>
+
+
+
+							</li>
+							<li>
+									<a href="../../manual/10-devsetup/">Installing impulse locally (for development)</a>
+
+
+
+							</li>
+							<li>
+									<a href="../../manual/20-makingschema/">Making a schema</a>
+
+
+
+							</li>
+							<li>
+									<a href="../../manual/30-item/">Making an Item</a>
+
+
+
+							</li>
+							<li>
+									<a href="../../manual/40-plugin/">Making a plugin</a>
+
+
+
+							</li>
+							<li>
+									<a href="../../manual/50-framework/">Working on the Framework</a>
+
+
+
+							</li>
+					</ul>
+				</details>
+	</section>
+</nav>
+
+
+			<article>
+					<div class="wrapper">
+						docs/templates/module.ltp
+					</div>
+			</article>
+		</main>
+
+		<script type="text/javascript" src="../../app.js"></script>
+		<script type="text/javascript" src="../../highlight.min.js"></script>
 		<script type="text/javascript">
-		var elements = document.querySelectorAll("aside code, pre code")
+			var elements = document.querySelectorAll("pre code")
 
-		hljs.configure({
-			languages: ["lua"]
-		});
+			hljs.configure({
+				languages: ["lua"]
+			});
 
-		for (var i = 0; i < elements.length; i++)
-		{
-			hljs.highlightBlock(elements[i]);
-		}
+			for (var i = 0; i < elements.length; i++)
+			{
+				hljs.highlightBlock(elements[i]);
+			}
 		</script>
 	</body>
 </html>
