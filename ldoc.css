@@ -332,7 +332,7 @@ article h2 a {
 
 article h1.title {
 	color: rgb(255, 255, 255);
-	background-color: rgb(115, 53, 142);
+	background-color: var(--color-accent);
 	margin-top: var(--padding-small);
 	margin-bottom: 0;
 	padding: var(--padding-tiny);
@@ -344,7 +344,7 @@ article h1.title {
 }
 
 a.reference {
-	color: rgb(115, 53, 142);
+	color: var(--color-accent);
 	float: right;
 	margin-top: 8px;
 	padding-left: 8px;
@@ -361,7 +361,7 @@ a.reference {
 }
 
 .notice.error {
-	--color-notice-background: rgb(194, 52, 130);
+	--color-notice-background: var(--color-accent);
 }
 
 .notice.warning {
@@ -409,7 +409,7 @@ a.reference {
 }
 
 .method header .anchor:target h1 {
-	background-color: rgba(115, 53, 142, 0.2);
+	background-color: var(--color-accent-dark);
 	background-clip: content-box;
 }
 
@@ -483,11 +483,11 @@ a.reference {
 }
 
 .parameter {
-	background-color: rgb(115, 53, 142);
+	background-color: var(--color-accent);
 }
 
 .type {
-	background-color: rgb(31, 141, 155);
+	background-color: var(--color-accent-dark);
 }
 
 a.type {
@@ -504,7 +504,7 @@ a.type {
 }
 
 .or {
-	color: rgba(115, 53, 142, 0.5);
+	color: var(--color-accent);
 	background-color: inherit;
 
 	width: calc(100% - 32px);
@@ -513,7 +513,7 @@ a.type {
 
 	text-align: center;
 	font-weight: 600;
-	border-bottom: 1px solid rgba(115, 53, 142, 0.5);
+	border-bottom: 1px solid var(--color-accent);
 }
 
 .or span {
