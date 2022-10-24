@@ -1,0 +1,248 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Misc - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Misc - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="A generic module that holds anything that doesnt fit elsewhere" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Player.html">Player</a></li>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+						</ul>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Misc</h1>
+					<h2>A generic module that holds anything that doesnt fit elsewhere</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm client"></span><a href="#impulse.MakeWorkbar">impulse.MakeWorkbar(time[, text[, onDone[, popup=false]]])</a></li>
+									<li><span class="realm client"></span><a href="#impulse.blur">impulse.blur(panel, layers, density, alpha)</a></li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.MakeWorkbar">
+									<h1><span class="realm client"></span>impulse.MakeWorkbar(time[, text[, onDone[, popup=false]]])</h1>
+								</a>
+
+
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\cl_main.lua#L90">View source &raquo;</a>
+
+								<p>Creates a work bar on the players screen</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">time</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> The time it will take to complete the bar</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">text</span>
+
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Text to display on the bar</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">onDone</span>
+
+													<span class="tag"><span class="type">function</span></span>
+
+													<span class="tag default">optional</span>
+
+												<p> Called when bar is complete</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">popup</span>
+
+													<span class="tag"><span class="type">boolean</span></span>
+
+													<span class="tag default">default: false</span>
+
+												<p> If the bar should stop player input</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="impulse.blur">
+									<h1><span class="realm client"></span>impulse.blur(panel, layers, density, alpha)</h1>
+								</a>
+
+
+									<a class="reference" href="https://github.com/vingard/impulse/tree/mastera:\steamlibrary\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\cl_main.lua#L61">View source &raquo;</a>
+
+								<p>Renders a blur effect on a panel.  Call this inside PANEL:Paint</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">panel</span>
+
+													<span class="tag"><span class="type">panel</span></span>
+
+
+												<p> The panel to blur</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">layers</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Unknown</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">density</span>
+
+													<span class="tag"><span class="type">int</span></span>
+
+
+												<p> Density</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">alpha</span>
+
+													<span class="tag"><span class="type">color</span></span>
+
+
+												<p> Alpha</p>
+											</li>
+									</ul>
+
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,159 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Installing impulse locally (for development) - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Installing impulse locally (for development) - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content=" Installing impulse locally (for development)
+Installing impulse locally lets you test out the framework and schema, or develop a new schema. Follow the steps below to install it. When your ready to set it up on a live server, take a look at the [server in..." />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Manual</h2>
+
+						<ul>
+								<li><a href="../manual/00-installing.md.html">Installing impulse on a server</a></li>
+								<li><a href="../manual/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
+								<li><a href="../manual/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../manual/30-item.md.html">Making an item</a></li>
+								<li><a href="../manual/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/General.html">General</a></li>
+						</ul>
+						<h2>Libraries</h2>
+
+						<ul>
+								<li><a href="../libraries/Achievement.html">Achievement</a></li>
+								<li><a href="../libraries/Anim.html">Anim</a></li>
+								<li><a href="../libraries/Business.html">Business</a></li>
+								<li><a href="../libraries/Group.html">Group</a></li>
+								<li><a href="../libraries/Hunger.html">Hunger</a></li>
+								<li><a href="../libraries/Inventory.html">Inventory</a></li>
+								<li><a href="../libraries/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../libraries/Misc.html">Misc</a></li>
+								<li><a href="../libraries/Schema.html">Schema</a></li>
+								<li><a href="../libraries/Setting.html">Setting</a></li>
+								<li><a href="../libraries/Sync.html">Sync</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+								<li><a href="../classes/Player.html">Player</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+
+<h1>Installing impulse locally (for development)</h1>
+<p>Installing impulse locally lets you test out the framework and schema, or develop a new schema. Follow the steps below to install it. When your ready to set it up on a live server, take a look at the <a href="https://vingard.github.io/impulsedocs/topics/00-installing.md.html">server install guide</a>.</p>
+
+<p><a name="Warning"></a></p>
+<h2>Warning</h2>
+<p>impulse is a <strong>framework</strong>, a framework is similar to a game engine, if there is an issue with your schema, it is not the frameworks fault. Please consult the developer of the schema for help regarding those issues. impulse was designed to be proprietary software, and as a result has some compatability issues with other admin mods or prop protection systems. This issue is planned to be addressed in future versions of the framework by using CAMI and CPPI.</p>
+
+<p><a name="Installation"></a></p>
+<h2>Installation</h2>
+<p><strong>Step 1</strong> Install <a href="https://github.com/FredyH/MySQLOO/releases">mysqloo</a> onto your game client.<br/>
+<strong>Step 2</strong> Make sure you remove ULX if you have it already, it is not compatible with impulse.<br/>
+<strong>Step 3</strong> Install <a href="https://github.com/FPtje/Falcos-Prop-protection">FPP</a> onto your game client.<br/>
+<strong>Step 4</strong> Install <a href="https://www.apachefriends.org/index.html">XAMPP</a> to your computer, <strong>you will need to select to install Apache and MySQL</strong>. (<em>advanced users can skip this if they don't want to use XAMPP but you will have to declare database details for your alternative database in data/impulse/config.yml</em>)<br/>
+<strong>Step 5</strong> Make sure you have XAMPP started, and have pressed the start button on MySQL and Apache.<br/>
+<strong>Step 6</strong> In XAMPP, click the admin button next to MySQL. Then, in the top left, click the New button and create a database called 'impulse_development'.<br/>
+<strong>Step 7</strong> Download the <a href="https://github.com/vingard/impulse">impulse framework</a> and put it in your gamemodes folder.<br/>
+<strong>Step 8</strong> Download your schema of choice and also put it in your gamemodes folder. If you don't have a schema, you can use the <a href="https://github.com/vingard/impulseskeleton">skeleton schema</a>.<br/>
+<strong>Step 9</strong> Goto garrysmod/data on your server and create a folder called 'impulse'.<br/>
+<strong>Step 10</strong> Inside the impulse folder create a file called config.yml, you can leave it empty.<br/>
+<strong>Step 11</strong> Make sure the map you are running has a map config inside the schema, go into the schema gamemode folder, then check schema/config/maps/<strong>MAP NAME HERE</strong>.lua.<br/>
+<strong>Step 12</strong> Set your gamemode to the folder name of the schema. You can do this by typing 'gamemode <strong>SCHEMA NAME HERE</strong>' on the menu.<br/>
+<strong>Step 13</strong> Start a <strong>peer-to-peer game</strong> confirm if everything is working. If it's not working, check the console for errors and read the message on the in-game error screen.<br/>
+<strong>Step 14</strong> Give yourself superadmin, to do this open your console and type 'impulse<em>setgroup YOUR</em>STEAMID_HERE superadmin', after you give yourself this, you will probably want to reload your game for the changes to update.<br/>
+<strong>Step 15</strong> Your done, remember, whenever you want to start impulse again, just open XAMPP, start MySQL and Apache and set your gamemode to the schema folder name. Then start a peer-to-peer game.<br/></p>
+
+<p><a name="Issues_with_your_database_connecting"></a></p>
+<h2>Issues with your database connecting</h2>
+<p>In some cases you may have issues with your database connecting, this can happen when your computer is already using ports needed or your XAMPP config has been altered before. In this case, you'll need to find the details of your XAMPP MySQL server and set them in the config.yml file. By default impulse will use the default XAMPP values, but you can override them as shown below. </p>
+<pre><code> db:
+  ip: "localhost"
+  username: "root"
+  password: "secretpass"
+  database: "impulse_development"
+  port: 3306
+</code></pre>
+
+
+<p><a name="Advanced_settings"></a></p>
+<h2>Advanced settings</h2>
+<p>You can configure your <strong>config.yml</strong> file to do a bunch of helpful things for development.</p>
+
+<h3>API features</h3>
+<p>If you want anti-family sharing features and slack logging, you'll need to provide your Steam API key and a Slack webhook URL. Just add this to the config.yml file:</p>
+<pre><code> apis:
+  steam_key: "XXXXXXXXXXXXXXXXXXXXXXX"
+  slack_webhook: "https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
+</code></pre>
+
+
+<h3>Signals</h3>
+<p>Signals is a system in impulse that allows for simple cross-server communication. You'll need to create a signals database first. Then, add the stuff below, and configure it for your config.yml:</p>
+<pre><code> signals:
+  serverid: 1
+  ip: "127.0.0.1"
+  username: "root"
+  password: ""
+  database: "impulse_development_signals"
+  port: 3306
+</code></pre>
+
+<p>Remember to make your serverid unique, each server on the same signals database needs a new serverid, for example, server 1 has an serverid of 1, 2 has serverid of 2, ect.</p>
+
+<h3>Seperating databases</h3>
+<p>If you work on several schemas, you'll probably want to use a different database for each one. Changing the name of the database in config.yml each time you switch is a pain, so, you can just add this to your config.yml file to auto switch depending on the schema you are playing:</p>
+<pre><code> schemadb:
+  impulseskeleton: "impulse_development_skeleton"
+  impulseotherschema: "impulse_development_otherone"
+</code></pre>
+
+
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>
