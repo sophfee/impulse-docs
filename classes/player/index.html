@@ -736,6 +736,37 @@ meta:SaveData											</a>
 							</li>
 							<li>
 									<details >
+									<summary><a href="../../libraries/description/">Description</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/description/#impulse.Description.DBCache">
+impulse.DBCache											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/description/#impulse.Description.DBSet">
+impulse.DBSet											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/description/#meta:SetDescription">
+meta:SetDescription											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/description/#meta:UseSavedDescription">
+meta:UseSavedDescription											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
 									<summary><a href="../../libraries/doors/">Doors</a></summary>
 
 									<ul>
@@ -2300,11 +2331,6 @@ SendJailInfo											</a>
 SetAFKImmune											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/player/#meta:SetDescription">
-SetDescription											</a>
-										</li>
-										<li>
 											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:SetHandsBehindBack">
 SetHandsBehindBack											</a>
@@ -2368,11 +2394,6 @@ UnJail											</a>
 											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:UnMakeAFK">
 UnMakeAFK											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/player/#meta:UseSavedDescription">
-UseSavedDescription											</a>
 										</li>
 
 									</ul>
@@ -3857,65 +3878,6 @@ UseSavedDescription											</a>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="meta:SetDescription">
-					<h1><span class="realm server"></span></span>Player:SetDescription(rpdesc, saveOnDb, onTeam)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_description.lua#L10">View source &raquo;</a>
-
-					<p>Updates a players description, only updates the
- specific team unless otherwise specified.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">rpdesc</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The description to update to.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">saveOnDb</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-									<span class="tag default">default: true</span>
-
-								<p> Should we save this to the database.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">onTeam</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p> The team to have the description for, defaults to active team.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
 				<a class="anchor" id="meta:SetHandsBehindBack">
 					<h1><span class="realm shared"></span></span>Player:SetHandsBehindBack(state)</h1>
 				</a>
@@ -4275,27 +4237,6 @@ UseSavedDescription											</a>
 					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_afk.lua#L42">View source &raquo;</a>
 
 					<p>Makes a player NOT AFK.</p>
-			</header>
-
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:UseSavedDescription">
-					<h1><span class="realm server"></span></span>Player:UseSavedDescription()</h1>
-				</a>
-
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_description.lua#L30">View source &raquo;</a>
-
-					<p>Updates the players description to their DB one.</p>
 			</header>
 
 
