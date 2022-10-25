@@ -2258,7 +2258,8 @@ SetParentAttachment											</a>
 			<article>
 
 <div class="landing">
-	<h1>impulse</h1>
+	<!-- Massive for the landing page, looks nice. -->
+	<h1 style="font-size: 78px;">impulse</h1>
 	<h2 style="text-align: center;">built for <span id="landing-subtitle">you</span>.</h3>
 </div>
 
@@ -2296,7 +2297,7 @@ SetParentAttachment											</a>
 	]
 
 	setInterval(() => {
-		document.getElementById("landing-subtitle").innerHTML = landingSubtitles[Math.random() * landingSubtitles.length]
+		document.getElementById("landing-subtitle").innerHTML = landingSubtitles[Math.floor(Math.random() * landingSubtitles.length)]
 	}, 8000);
 </script>
 
