@@ -1806,7 +1806,7 @@ meta:SetLocalar											</a>
 impulse.Define											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
 											<a href="../../libraries/teams/#impulse.Teams.DefineGroup">
 impulse.DefineGroup											</a>
 										</li>
@@ -1831,6 +1831,51 @@ impulse.GetWhitelist											</a>
 impulse.SetWhitelist											</a>
 										</li>
 										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:CanBecomeTeam">
+meta:CanBecomeTeam											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:CanBecomeTeamClass">
+meta:CanBecomeTeamClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:CanBecomeTeamRank">
+meta:CanBecomeTeamRank											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:GetTeamClass">
+meta:GetTeamClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:GetTeamClassData">
+meta:GetTeamClassData											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:GetTeamClassName">
+meta:GetTeamClassName											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:GetTeamRank">
+meta:GetTeamRank											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:GetTeamRankData">
+meta:GetTeamRankData											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:GetTeamRankName">
+meta:GetTeamRankName											</a>
+										</li>
+										<li>
 											<span class="realm server"></span>
 											<a href="../../libraries/teams/#meta:GetTeamWhitelist">
 meta:GetTeamWhitelist											</a>
@@ -1839,6 +1884,16 @@ meta:GetTeamWhitelist											</a>
 											<span class="realm server"></span>
 											<a href="../../libraries/teams/#meta:HasTeamWhitelist">
 meta:HasTeamWhitelist											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:InGroup">
+meta:InGroup											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/teams/#meta:IsCP">
+meta:IsCP											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -2056,21 +2111,6 @@ CanArrest											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:CanBecomeTeam">
-CanBecomeTeam											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:CanBecomeTeamClass">
-CanBecomeTeamClass											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:CanBecomeTeamRank">
-CanBecomeTeamRank											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:CanBuyDoor">
 CanBuyDoor											</a>
 										</li>
@@ -2111,36 +2151,6 @@ GetSkillXP											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetTeamClass">
-GetTeamClass											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetTeamClassData">
-GetTeamClassData											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetTeamClassName">
-GetTeamClassName											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetTeamRank">
-GetTeamRank											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetTeamRankData">
-GetTeamRankData											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetTeamRankName">
-GetTeamRankName											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:GetXP">
 GetXP											</a>
 										</li>
@@ -2178,11 +2188,6 @@ IsAdmin											</a>
 											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:IsArrested">
 IsArrested											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:IsCP">
-IsCP											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
@@ -2707,171 +2712,6 @@ UseSavedDescription											</a>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="meta:CanBecomeTeam">
-					<h1><span class="realm shared"></span></span>Player:CanBecomeTeam(teamID, notify)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L77">View source &raquo;</a>
-
-					<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">teamID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> ID of team wanting to join.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">notify</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Should automatically notify the player.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Can player become team.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:CanBecomeTeamClass">
-					<h1><span class="realm shared"></span></span>Player:CanBecomeTeamClass(classID, notify)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L144">View source &raquo;</a>
-
-					<p>Returns if a player can join a team's class.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">classID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> ID of class wanting to join.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">notify</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Should automatically notify the player.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Can player become class.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:CanBecomeTeamRank">
-					<h1><span class="realm shared"></span></span>Player:CanBecomeTeamRank(rankID, notify)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L203">View source &raquo;</a>
-
-					<p>Returns if a player can join a team's rank.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">rankID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> ID of rank wanting to join.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">notify</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Should automatically notify the player.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Can player become rank.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
 				<a class="anchor" id="meta:CanBuyDoor">
 					<h1><span class="realm shared"></span></span>Player:CanBuyDoor(doorOwners, doorBuyable)</h1>
 				</a>
@@ -3187,174 +3027,6 @@ UseSavedDescription											</a>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="meta:GetTeamClass">
-					<h1><span class="realm shared"></span></span>Player:GetTeamClass()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L275">View source &raquo;</a>
-
-					<p>Returns the players class ID.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>classID of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamClassData">
-					<h1><span class="realm shared"></span></span>Player:GetTeamClassData()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L316">View source &raquo;</a>
-
-					<p>Retrieves the players class data table.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
-
-								<p>Rank data.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamClassName">
-					<h1><span class="realm shared"></span></span>Player:GetTeamClassName()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L259">View source &raquo;</a>
-
-					<p>Returns the players rank name.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>class name of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamRank">
-					<h1><span class="realm shared"></span></span>Player:GetTeamRank()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L296">View source &raquo;</a>
-
-					<p>Returns the players rank ID.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>rankID of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamRankData">
-					<h1><span class="realm shared"></span></span>Player:GetTeamRankData()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L303">View source &raquo;</a>
-
-					<p>Retrieves the players rank data table.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
-
-								<p>Rank data.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamRankName">
-					<h1><span class="realm shared"></span></span>Player:GetTeamRankName()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L282">View source &raquo;</a>
-
-					<p>Returns the players rank name.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>rank name of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
 				<a class="anchor" id="meta:GetXP">
 					<h1><span class="realm shared"></span></span>Player:GetXP()</h1>
 				</a>
@@ -3564,38 +3236,6 @@ UseSavedDescription											</a>
 									<span class="type">bool</span>
 
 								<p>Is arrested</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:IsCP">
-					<h1><span class="realm shared"></span></span>Player:IsCP()</h1>
-				</a>
-
-
-					<div class="notice error">
-						<div class="title">Deprecated</div>
-						<p>This is a deprecated function! You are able to use it, but you risk breaking code when the function is eventually removed..</p>
-					</div>
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L330">View source &raquo;</a>
-
-					<p>Returns if they have the CP flag on their team.  Slated for removal and move to HL2RP schema.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Whether they have the .cp team flag or not.</p>
 							</li>
 
 				</ul>
