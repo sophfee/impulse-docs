@@ -863,6 +863,11 @@ impulse.Write											</a>
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.ComputeMembers">
+impulse.ComputeMembers											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/group/#impulse.Group.DBAddPlayer">
 impulse.DBAddPlayer											</a>
 										</li>
@@ -915,6 +920,31 @@ impulse.DBUpdatePlayerRank											</a>
 											<span class="realm server"></span>
 											<a href="../../libraries/group/#impulse.Group.DBUpdateRanks">
 impulse.DBUpdateRanks											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.GetDefaultRank">
+impulse.GetDefaultRank											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.NetworkMetaData">
+impulse.NetworkMetaData											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.NetworkMetaDataToOnline">
+impulse.NetworkMetaDataToOnline											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.RankShift">
+impulse.RankShift											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/group/#impulse.Group.SetMetaData">
+impulse.SetMetaData											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
@@ -2387,6 +2417,54 @@ SetParentAttachment											</a>
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="impulse.Group.ComputeMembers">
+					<h1><span class="realm server"></span></span>impulse.Group.ComputeMembers(name, callback)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L205">View source &raquo;</a>
+
+					<p>Computes members for a given group.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Name of group.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">callback</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+
+								<p> Callback function.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
 				<a class="anchor" id="impulse.Group.DBAddPlayer">
 					<h1><span class="realm server"></span></span>impulse.Group.DBAddPlayer(steamid, groupid, rank, callback)</h1>
 				</a>
@@ -2570,7 +2648,7 @@ SetParentAttachment											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L152">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L153">View source &raquo;</a>
 
 					<p>Shifts all players of a given rank to a different rank.
  This will not automatically sync to active server! If any players
@@ -2619,6 +2697,10 @@ SetParentAttachment											</a>
 
 
 
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/group/#impulse.Group.RankShift">impulse.Group.RankShift</a></li>
+				</ul>
 		</section>
 		<section class="method">
 			<header>
@@ -2797,7 +2879,7 @@ SetParentAttachment											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L192">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L193">View source &raquo;</a>
 
 					<p>Updates the group data.
  You should never run this, it is all handled internally.</p>
@@ -2846,7 +2928,7 @@ SetParentAttachment											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L179">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L180">View source &raquo;</a>
 
 					<p>Updates the max size of the group.
  You should never run this, it is all handled internally.</p>
@@ -2945,7 +3027,7 @@ SetParentAttachment											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L166">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L167">View source &raquo;</a>
 
 					<p>Updates the rank structure of the group.
  You should never run this, it is all handled internally.</p>
@@ -2976,6 +3058,245 @@ SetParentAttachment											</a>
 
 
 								<p> The rank structure.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Group.GetDefaultRank">
+					<h1><span class="realm server"></span></span>impulse.Group.GetDefaultRank(name)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L267">View source &raquo;</a>
+
+					<p>Returns the default rank of a given group, or Member.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Group name.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Default rank name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Group.NetworkMetaData">
+					<h1><span class="realm server"></span></span>impulse.Group.NetworkMetaData(player, name)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L301">View source &raquo;</a>
+
+					<p>Networks the metadata of a given group to a player.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">player</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The player who will receive the metadata informatiom.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The name of the group.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Group.NetworkMetaDataToOnline">
+					<h1><span class="realm server"></span></span>impulse.Group.NetworkMetaDataToOnline(name)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L320">View source &raquo;</a>
+
+					<p>Networks the metadata of a given group to all members of the group.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The name of the group.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Group.RankShift">
+					<h1><span class="realm server"></span></span>impulse.Group.RankShift(name, rank, newrank)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L241">View source &raquo;</a>
+
+					<p>Shifts all players of a given rank to a different rank.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The name of the group.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">rank</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The ID of the rank.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">newrank</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The new rank to give the users.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Group.SetMetaData">
+					<h1><span class="realm server"></span></span>impulse.Group.SetMetaData(name, info, col)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_rpgroup.lua#L284">View source &raquo;</a>
+
+					<p>Updates the groups metadata.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Group name.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">info</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Metadata for the group.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">col</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p> The groups color.</p>
 							</li>
 					</ul>
 
