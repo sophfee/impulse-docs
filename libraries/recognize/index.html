@@ -1219,6 +1219,11 @@ meta:GiveInfection											</a>
 											<a href="../../libraries/medical/#meta:HasBrokenLegs">
 meta:HasBrokenLegs											</a>
 										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/medical/#meta:StopBleeding">
+meta:StopBleeding											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -1386,8 +1391,23 @@ impulse.ClientRpc											</a>
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#meta:InitializeKnownPlayers">
+meta:InitializeKnownPlayers											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#meta:RefreshKnown">
+meta:RefreshKnown											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/recognize/#meta:Remember">
 meta:Remember											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#meta:ResetMemory">
+meta:ResetMemory											</a>
 										</li>
 
 									</ul>
@@ -1419,6 +1439,27 @@ impulse.Remove											</a>
 											<span class="realm server"></span>
 											<a href="../../libraries/refunds/#impulse.Refunds.RemoveAll">
 impulse.RemoveAll											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/saves/">Saves</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/saves/#LoadSaveEnts">
+LoadSaveEnts											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/saves/#impulse.Saves.Load">
+impulse.Load											</a>
 										</li>
 
 									</ul>
@@ -1681,6 +1722,16 @@ impulse.Add											</a>
 											<span class="realm server"></span>
 											<a href="../../libraries/supply/#impulse.Supply.Define">
 impulse.Define											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/supply/#impulse.Supply.Get">
+impulse.Get											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/supply/#impulse.Supply.Take">
+impulse.Take											</a>
 										</li>
 
 									</ul>
@@ -2411,6 +2462,68 @@ SetParentAttachment											</a>
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="meta:InitializeKnownPlayers">
+					<h1><span class="realm server"></span></span>Player:InitializeKnownPlayers()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<div class="notice error">
+						<div class="title">Deprecated</div>
+						<p>This is a deprecated function! You are able to use it, but you risk breaking code when the function is eventually removed..</p>
+					</div>
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_known.lua#L31">View source &raquo;</a>
+
+					<p>Init function.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:RefreshKnown">
+					<h1><span class="realm server"></span></span>Player:RefreshKnown(currentData)</h1>
+				</a>
+
+
+					<div class="notice error">
+						<div class="title">Deprecated</div>
+						<p>This is a deprecated function! You are able to use it, but you risk breaking code when the function is eventually removed..</p>
+					</div>
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_known.lua#L24">View source &raquo;</a>
+
+					<p>Refresh memory for player.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">currentData</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
 				<a class="anchor" id="meta:Remember">
 					<h1><span class="realm server"></span></span>Player:Remember(target)</h1>
 				</a>
@@ -2420,8 +2533,12 @@ SetParentAttachment											</a>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+					<div class="notice error">
+						<div class="title">Deprecated</div>
+						<p>This is a deprecated function! You are able to use it, but you risk breaking code when the function is eventually removed..</p>
+					</div>
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_known.lua#L10">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_known.lua#L11">View source &raquo;</a>
 
 					<p>Remembers the target, their name will always appear for the given team.
  This method is quite expensive, as it will sync a lot of values to players
@@ -2441,6 +2558,42 @@ SetParentAttachment											</a>
 
 
 								<p> The player to remember.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:ResetMemory">
+					<h1><span class="realm server"></span></span>Player:ResetMemory(target)</h1>
+				</a>
+
+
+					<div class="notice error">
+						<div class="title">Deprecated</div>
+						<p>This is a deprecated function! You are able to use it, but you risk breaking code when the function is eventually removed..</p>
+					</div>
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_known.lua#L18">View source &raquo;</a>
+
+					<p>Resets memory for target.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">target</span>
+
+									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p> The person to forget.</p>
 							</li>
 					</ul>
 

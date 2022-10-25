@@ -1219,6 +1219,11 @@ meta:GiveInfection											</a>
 											<a href="../../libraries/medical/#meta:HasBrokenLegs">
 meta:HasBrokenLegs											</a>
 										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/medical/#meta:StopBleeding">
+meta:StopBleeding											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -1386,8 +1391,23 @@ impulse.ClientRpc											</a>
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#meta:InitializeKnownPlayers">
+meta:InitializeKnownPlayers											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#meta:RefreshKnown">
+meta:RefreshKnown											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/recognize/#meta:Remember">
 meta:Remember											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/recognize/#meta:ResetMemory">
+meta:ResetMemory											</a>
 										</li>
 
 									</ul>
@@ -1419,6 +1439,27 @@ impulse.Remove											</a>
 											<span class="realm server"></span>
 											<a href="../../libraries/refunds/#impulse.Refunds.RemoveAll">
 impulse.RemoveAll											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/saves/">Saves</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/saves/#LoadSaveEnts">
+LoadSaveEnts											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/saves/#impulse.Saves.Load">
+impulse.Load											</a>
 										</li>
 
 									</ul>
@@ -1681,6 +1722,16 @@ impulse.Add											</a>
 											<span class="realm server"></span>
 											<a href="../../libraries/supply/#impulse.Supply.Define">
 impulse.Define											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/supply/#impulse.Supply.Get">
+impulse.Get											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/supply/#impulse.Supply.Take">
+impulse.Take											</a>
 										</li>
 
 									</ul>
@@ -2492,6 +2543,93 @@ SetParentAttachment											</a>
 							</li>
 
 				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Supply.Get">
+					<h1><span class="realm server"></span></span>impulse.Supply.Get(id)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_supply.lua#L62">View source &raquo;</a>
+
+					<p>Gets the amount of supply a given id has.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The id of the supply.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>The stock.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Supply.Take">
+					<h1><span class="realm server"></span></span>impulse.Supply.Take(id, count)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_supply.lua#L46">View source &raquo;</a>
+
+					<p>Takes supply away.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The supply id.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">count</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> How much to take away.</p>
+							</li>
+					</ul>
+
 
 
 		</section>
