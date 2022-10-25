@@ -1267,6 +1267,21 @@ impulse.Save											</a>
 
 
 										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#SizeH">
+SizeH											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#SizeW">
+SizeW											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#SizeWH">
+SizeWH											</a>
+										</li>
+										<li>
 											<span class="realm shared"></span>
 											<a href="../../libraries/misc/#impulse.AngleToBearing">
 impulse.AngleToBearing											</a>
@@ -2470,6 +2485,153 @@ SetParentAttachment											</a>
 
 	<h1 class="title">Functions</h1>
 
+		<section class="method">
+			<header>
+				<a class="anchor" id="SizeH">
+					<h1><span class="realm client"></span></span>SizeH(height)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_main.lua#L162">View source &raquo;</a>
+
+					<p>Scales size to fit different resolutions better.  Write sizes based on 1080p resolution.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">height</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Height based on 1080P.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Height scaled to client resolution.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SizeW">
+					<h1><span class="realm client"></span></span>SizeW(width)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_main.lua#L153">View source &raquo;</a>
+
+					<p>Scales size to fit different resolutions better.  Write sizes based on 1080p resolution.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">width</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Width based on 1080P.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Width scaled to client resolution.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SizeWH">
+					<h1><span class="realm client"></span></span>SizeWH(width, height)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_main.lua#L174">View source &raquo;</a>
+
+					<p>Scales size to fit different resolutions better.  Write sizes based on 1080p resolution.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">width</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Width based on 1080P.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">height</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Height based on 1080P.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Width scaled to client resolution.</p>
+							</li>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Height scaled to client resolution.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.AngleToBearing">
