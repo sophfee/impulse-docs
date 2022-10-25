@@ -18,6 +18,8 @@
 	--font-style-code: Consolas, monospace;
 
 	--color-accent: rgb(0, 122, 255);
+	--color-accent-a: rgba(0, 122, 255, 0.5);
+	--color-accent-b: rgba(0, 122, 255, 0.2);
 	--color-accent-dark: rgb(0, 80, 150);
 	--color-white: rgb(255, 255, 255);
 	--color-offwhite: rgb(200, 200, 200);
@@ -409,7 +411,7 @@ a.reference {
 }
 
 .method header .anchor:target h1 {
-	background-color: var(--color-accent-dark);
+	background-color: var(--color-accent-b);
 	background-clip: content-box;
 }
 
@@ -504,7 +506,7 @@ a.type {
 }
 
 .or {
-	color: var(--color-accent);
+	color: var(--color-accent-a);
 	background-color: inherit;
 
 	width: calc(100% - 32px);
@@ -513,7 +515,7 @@ a.type {
 
 	text-align: center;
 	font-weight: 600;
-	border-bottom: 1px solid var(--color-accent);
+	border-bottom: 1px solid var(--color-accent-a);
 }
 
 .or span {
