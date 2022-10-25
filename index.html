@@ -2258,13 +2258,47 @@ SetParentAttachment											</a>
 			<article>
 
 <div class="landing">
-	<h1>impulse Documentation</h1>
+	<h1>impulse</h1>
+	<h3>built for <span id="landing-subtitle">you</span>.</h3>
 </div>
 
 <div class="wrapper">
-	<p style="text-align: center;">Welcome to the documentation for the impulse framework.</p>
+	<h2 style="text-align: center;">Security above all.</h2>
+	<p style="text-align: center;">
+		Keeping you and your players safe is our top priority.
+		Paired with our custom built <a style="color: var(--color-accent);" href="https://github.com/urnotnick/iac-v2">anti-cheat</a>,
+		weeding out the troublemakers is easier than ever before.
+	</p>
+	<h2 style="text-align: center;">Interfaces built for accessibility.</h2>
+	<p style="text-align: center;">
+		Easy to understand and expand utilities to give your
+		players a visually appearing experience without
+		sacrificing performance or usability.
+	</p>
+	<h2 style="text-align: center;">Customizable to your liking.</h2>
+	<p style="text-align: center;">
+		Easy and intuitive modules built to be configured any
+		way you set your mind to. The sky is the limit here.
+	</p>
 </div>
 
+<script>
+	const landingSubtitles = [
+		"developers",
+		"all",
+		"world making",
+		"experience",
+		"performance",
+		"you",
+		"the big servers",
+		"the small servers",
+		"players"
+	]
+
+	setInterval(() => {
+		document.getElementById("landing-subtitle").innerHTML = landingSubtitles[Math.random() * landingSubtitles.length]
+	}, 8000);
+</script>
 			</article>
 		</main>
 
