@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>impulseNewPlayerMenu - impulse documentation</title>
+		<title>DComboBox - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="impulseNewPlayerMenu - impulse documentation" />
+		<meta property="og:title" content="DComboBox - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="Revamped player menu." />
+			<meta property="og:description" content="in an awesome move dcombobox has had some legacy functionality broken, so here we are again." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -312,7 +312,7 @@ ShouldDrawHUDBox											</a>
 
 					<ul>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../panels/dcombobox/">DComboBox</a></summary>
 
 									<ul>
@@ -463,7 +463,7 @@ SetTime											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../panels/impulsenewplayermenu/">impulseNewPlayerMenu</a></summary>
 
 									<ul>
@@ -2375,8 +2375,8 @@ SetParentAttachment											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>impulseNewPlayerMenu</h1>
-	<h2>Revamped player menu.</h2>
+	<h1>DComboBox</h1>
+	<h2>in an awesome move dcombobox has had some legacy functionality broken, so here we are again.</h2>
 </header>
 
 <p>
@@ -2387,15 +2387,32 @@ SetParentAttachment											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="PANEL:CreateSimpleTab">
-					<h1><span class="realm client"></span></span>impulseNewPlayerMenu:CreateSimpleTab(name, icon)</h1>
+				<a class="anchor" id="PANEL:Clear">
+					<h1><span class="realm client"></span></span>DComboBox:Clear()</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_newplayermenu.lua#L28">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_dcomboboxreplace.lua#L33">View source &raquo;</a>
 
-					<p>Test 2</p>
+					<p>Clears all choices and data.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PANEL:GetOptionData">
+					<h1><span class="realm client"></span></span>DComboBox:GetOptionData(id)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_dcomboboxreplace.lua#L61">View source &raquo;</a>
+
+					<p>Returns the data associated with a given ID.</p>
 			</header>
 
 
@@ -2405,24 +2422,78 @@ SetParentAttachment											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">name</span>
+								<span class="tag parameter">id</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><span class="type">int</span></span>
 
 
-								<p> The display name of the tab.</p>
+								<p> The numerical index for the option text.</p>
 							</li>
 					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PANEL:GetOptionText">
+					<h1><span class="realm client"></span></span>DComboBox:GetOptionText(id)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_dcomboboxreplace.lua#L52">View source &raquo;</a>
+
+					<p>Returns the option text of a given ID.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">icon</span>
+								<span class="tag parameter">id</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><span class="type">int</span></span>
 
 
-								<p> The icon shown alongside it.</p>
+								<p> The numerical index for the option text.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PANEL:GetOptionTextByData">
+					<h1><span class="realm client
+ @"></span></span>DComboBox:GetOptionTextByData(data)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_dcomboboxreplace.lua#L70">View source &raquo;</a>
+
+					<p>Finds the option text given the data.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">data</span>
+
+
+
+								<p>
+
+</p>
 							</li>
 					</ul>
 
@@ -2432,14 +2503,14 @@ SetParentAttachment											</a>
 		<section class="method">
 			<header>
 				<a class="anchor" id="PANEL:Init">
-					<h1><span class="realm client"></span></span>impulseNewPlayerMenu:Init()</h1>
+					<h1><span class="realm client"></span></span>DComboBox:Init()</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_newplayermenu.lua#L12">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/vgui/cl_dcomboboxreplace.lua#L14">View source &raquo;</a>
 
-					<p>Test</p>
+					<p>Initializes the panel.</p>
 			</header>
 
 
