@@ -2,14 +2,13 @@
 
 <html>
 	<head>
-		<title>Making an Item - impulse documentation</title>
+		<title>UI - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Making an Item - impulse documentation" />
+		<meta property="og:title" content="UI - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="
-When designing an item, impulse makes it fairly straight forward. Your best tool is the [Reference Documentation](https:&#47;&#47;urnotnick.github.io&#47;impulse-docs&#47;libraries&#47;Inventory.htmlITEM). At it&#39;s core, Items are made through the ITEM table, provided to fil..." />
+			<meta property="og:description" content="All functions related to drawing the HUD." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -2070,7 +2069,7 @@ impulse.Set											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/ui/">UI</a></summary>
 
 									<ul>
@@ -2098,84 +2097,6 @@ meta:GetKnownHealth											</a>
 					</summary>
 
 					<ul>
-							<li>
-									<details >
-									<summary><a href="../../classes/compiler/">Compiler</a></summary>
-
-									<ul>
-
-
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
-									<summary><a href="../../classes/entity/">Entity</a></summary>
-
-									<ul>
-
-
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:CanBeCarried">
-CanBeCarried											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/entity/#entityMeta:EmitBudgetSound">
-EmitBudgetSound											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:EmitQueuedSounds">
-EmitQueuedSounds											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:IsButton">
-IsButton											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:IsChair">
-IsChair											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:IsDoor">
-IsDoor											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:IsDoorLocked">
-IsDoorLocked											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:IsPropDoor">
-IsPropDoor											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/entity/#entityMeta:SetParentAttachment">
-SetParentAttachment											</a>
-										</li>
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
-									<summary><a href="../../classes/parser/">Parser</a></summary>
-
-									<ul>
-
-
-
-									</ul>
-									</details>
-							</li>
 							<li>
 									<details >
 									<summary><a href="../../classes/player/">Player</a></summary>
@@ -2464,7 +2385,63 @@ UnMakeAFK											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../classes/process/">Process</a></summary>
+									<summary><a href="../../classes/entity/">Entity</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:CanBeCarried">
+CanBeCarried											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#entityMeta:EmitBudgetSound">
+EmitBudgetSound											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:EmitQueuedSounds">
+EmitQueuedSounds											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:IsButton">
+IsButton											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:IsChair">
+IsChair											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:IsDoor">
+IsDoor											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:IsDoorLocked">
+IsDoorLocked											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:IsPropDoor">
+IsPropDoor											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#entityMeta:SetParentAttachment">
+SetParentAttachment											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/vendor/">Vendor</a></summary>
 
 									<ul>
 
@@ -2486,7 +2463,7 @@ UnMakeAFK											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../classes/token/">Token</a></summary>
+									<summary><a href="../../classes/compiler/">Compiler</a></summary>
 
 									<ul>
 
@@ -2497,7 +2474,29 @@ UnMakeAFK											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../classes/vendor/">Vendor</a></summary>
+									<summary><a href="../../classes/parser/">Parser</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/process/">Process</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../classes/token/">Token</a></summary>
 
 									<ul>
 
@@ -2564,86 +2563,104 @@ UnMakeAFK											</a>
 			<article>
 					<div class="wrapper">
 
-<h1>Making an Item</h1>
-<p>When designing an item, impulse makes it fairly straight forward. Your best tool is the <a href="https://urnotnick.github.io/impulse-docs/libraries/Inventory.html#ITEM">Reference Documentation</a>. At it's core, Items are made through the ITEM table, provided to files loaded from a /items directory.</p>
+<header class="module">
+	<h1>UI</h1>
+	<h2>All functions related to drawing the HUD.</h2>
+</header>
 
-<h1>Example Item.</h1>
-<p>Here is an example item to see how everything works.</p>
+<p> Stuff can be used in other places though.</p>
 
-<pre>
-ITEM.UniqueID = <span class="string">"testitem"</span>
-ITEM.Name = <span class="string">"Nick's Test Item"</span>
-ITEM.Desc =  <span class="string">"A hidden item used to test the inventory system."</span>
-<span class="comment">-- This data can be automatically generated with impulse_debug_icon
-</span>ITEM.Model = Model(<span class="string">"models/props_lab/box01a.mdl"</span>)
-ITEM.FOV = <span class="number">20.392550143266</span>
-ITEM.CamPos = Vector(<span class="number">22.005731582642</span>, <span class="number">25</span>, <span class="number">9</span>)
-ITEM.Weight = <span class="number">2</span>
+	<h1 class="title">Functions</h1>
 
-ITEM.Colour = Color(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)
-
-ITEM.Droppable = <span class="keyword">true</span>
-ITEM.DropOnDeath = <span class="keyword">false</span>
-
-ITEM.DropIfRestricted = <span class="keyword">false</span>
-ITEM.DropOnDeathIfRestricted = <span class="keyword">false</span>
-ITEM.CraftIfRestricted = <span class="keyword">false</span>
-
-ITEM.Illegal = <span class="keyword">false</span>
-ITEM.Equipable = <span class="keyword">true</span>
-ITEM.EquipGroup = <span class="string">"hat"</span>
-ITEM.CanStack = <span class="keyword">true</span>
-
-ITEM.UseTime = <span class="number">50</span>
-ITEM.FreezeOwnerOnUse = <span class="keyword">true</span>
-
-<span class="keyword">function</span> ITEM:OnEquip(ply)
-<span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:UnEquip(ply)
-<span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:CanUse(owner, userEnt)
-    <span class="comment">-- Return either true or false here.
-</span><span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:OnUse(ply)
-    <span class="comment">-- Write code that executes on successful pass of CanUse here, return true to remove item.
-</span><span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:OnDrop(ply, ent)
-<span class="keyword">end</span>
-
-<span class="keyword">function</span> ITEM:OnReload(ply)
-    <span class="comment">-- Custom option!
-</span><span class="keyword">end</span>
-
-ITEM.CustomActions = {}
-ITEM.CustomActions[<span class="string">"Reload"</span>] = ITEM.OnReload
-</pre>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.ColorMultiply">
+					<h1><span class="realm client"></span></span>impulse.ColorMultiply(col, mul)</h1>
+				</a>
 
 
-<h1>Designing a SWEP linked Item.</h1>
-<p>Items that give the player a SWEP have 1 property in the table to do this, <code>WeaponClass</code>.</p>
 
-<p>This will give the player a Gravity Gun upon equipping the Item.</p>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_hud.lua#L287">View source &raquo;</a>
 
-<pre>
-ITEM.WeaponClass = "weapon_physcannon`
-</pre>
+					<p>Allows you to effectively darken or brighten colors, don't pass global things like color_white, that is how you fuck up the whole framework.</p>
+			</header>
 
-<p>The rest of the design is the same as any other Item.</p>
 
-<h1>Designing an Attachment linked Item (Longsword Weapon Base)</h1>
-<p>Items that give the player an Attachment have 1 property in the table to do this, <code>AttachmentClass</code>.</p>
+					<h3>Parameters</h3>
 
-<p>This will give the player a Hunting Scope (if the server is running the HL2RP schema) upon equipping the Item.</p>
 
-<pre>
-ITEM.AttachmentClass = "hunting_scope`
-</pre>
+					<ul>
 
-<p>The rest of the design is the same as any other Item.</p>
+							<li>
+								<span class="tag parameter">col</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p> The color to multiply.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">mul</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The amount to multiply by.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">color</span>
+
+								<p>The color multiplied.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:GetKnownHealth">
+					<h1><span class="realm client"></span></span>Player:GetKnownHealth()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_hud.lua#L100">View source &raquo;</a>
+
+					<p>Get's a text version of the players health amount.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The players health described in text.</p>
+							</li>
+
+							<li>
+									<span class="type">color</span>
+
+								<p>The color to draw in.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
 
 					</div>
 			</article>
