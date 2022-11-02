@@ -2232,6 +2232,11 @@ FeedHunger											</a>
 GetDescription											</a>
 										</li>
 										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#meta:GetHunger">
+GetHunger											</a>
+										</li>
+										<li>
 											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:GetPropCount">
 GetPropCount											</a>
@@ -2945,7 +2950,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L15">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L23">View source &raquo;</a>
 
 					<p>Gives the player the amount of hunger</p>
 			</header>
@@ -2991,6 +2996,50 @@ UnMakeAFK											</a>
 									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
 
 								<p>The players description, if none is set, it will return ""</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:GetHunger">
+					<h1><span class="realm shared"></span></span>Player:GetHunger(fallback)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L8">View source &raquo;</a>
+
+					<p>Returns the players hunger value.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fallback</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The value to fallback to if the SyncVar is nil.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Hunger amount.</p>
 							</li>
 
 				</ul>
@@ -3969,7 +4018,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L8">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L16">View source &raquo;</a>
 
 					<p>Set the hunger amount of a player</p>
 			</header>
