@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Teams - impulse documentation</title>
+		<title>UI - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Teams - impulse documentation" />
+		<meta property="og:title" content="UI - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="Role selection and organization system." />
+			<meta property="og:description" content="All functions related to drawing the HUD." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -1928,7 +1928,7 @@ meta:SetLocalar											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/teams/">Teams</a></summary>
 
 									<ul>
@@ -2116,7 +2116,7 @@ impulse.Set											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/ui/">UI</a></summary>
 
 									<ul>
@@ -2627,27 +2627,25 @@ SetParentAttachment											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>Teams</h1>
-	<h2>Role selection and organization system.</h2>
+	<h1>UI</h1>
+	<h2>All functions related to drawing the HUD.</h2>
 </header>
 
-<p>
-
-</p>
+<p> Stuff can be used in other places though.</p>
 
 	<h1 class="title">Functions</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="impulse.Teams.Define">
-					<h1><span class="realm shared"></span></span>impulse.Teams.Define(teamData)</h1>
+				<a class="anchor" id="impulse.ColorMultiply">
+					<h1><span class="realm client"></span></span>impulse.ColorMultiply(col, mul)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L43">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_hud.lua#L287">View source &raquo;</a>
 
-					<p>Creates a new team, should run on both client and server.</p>
+					<p>Allows you to effectively darken or brighten colors, don't pass global things like color_white, that is how you fuck up the whole framework.</p>
 			</header>
 
 
@@ -2657,312 +2655,24 @@ SetParentAttachment											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">teamData</span>
+								<span class="tag parameter">col</span>
+
+									<span class="tag"><span class="type">color</span></span>
 
 
-
-								<p> teamsData, see teamData structure.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">teamID</span>
-
-								<p>Teams identifier, save this as a global variable.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="impulse.Teams.DefineGroup">
-					<h1><span class="realm shared"></span></span>impulse.Teams.DefineGroup(name)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L21">View source &raquo;</a>
-
-					<p>Defines a group, this generates a Player method, see usage.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">name</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The name of the group, this is used in codegen.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>The group ID, for alternative use with Player:InGroup(int)</p>
-							</li>
-
-				</ul>
-
-				<h3>Example Usage</h3>
-					<pre><code>impulse.Teams.DefineGroup("Police"); Player(10):IsPolice() -- This function was generated!
-</code></pre>
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="impulse.Teams.GetAllWhitelists">
-					<h1><span class="realm server"></span></span>impulse.Teams.GetAllWhitelists(team, callback)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L444">View source &raquo;</a>
-
-					<p>Get all player a whitelist has.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">team</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The whitelists name</p>
+								<p> The color to multiply.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">callback</span>
-
-									<span class="tag"><span class="type">function</span></span>
-
-
-								<p> Executed when DB has a result.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="impulse.Teams.GetAllWhitelistsPlayer">
-					<h1><span class="realm server"></span></span>impulse.Teams.GetAllWhitelistsPlayer(steamid, callback)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L461">View source &raquo;</a>
-
-					<p>Get all whitelists a player has.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">steamid</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The SteamID32 of the player</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">callback</span>
-
-									<span class="tag"><span class="type">function</span></span>
-
-
-								<p> Executed when DB has a result.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="impulse.Teams.GetWhitelist">
-					<h1><span class="realm server"></span></span>impulse.Teams.GetWhitelist(steamid, team, callback)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L479">View source &raquo;</a>
-
-					<p>Get whitelist of a player.  Use GetTeamWhitelist</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">steamid</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The SteamID32 of the player</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">team</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Whitelist team</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">callback</span>
-
-									<span class="tag"><span class="type">function</span></span>
-
-
-								<p> Executed when DB has a result.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="impulse.Teams.SetWhitelist">
-					<h1><span class="realm server"></span></span>impulse.Teams.SetWhitelist(steamid, team, level)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L411">View source &raquo;</a>
-
-					<p>Sets the whitelist of a user, or creates on if none exist.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">steamid</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The SteamID32 of the player</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">team</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Whitelist team</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">level</span>
+								<span class="tag parameter">mul</span>
 
 									<span class="tag"><span class="type">int</span></span>
 
 
-								<p> The whitelist level to set the player to</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:CanBecomeTeam">
-					<h1><span class="realm shared"></span></span>Player:CanBecomeTeam(teamID, notify)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L82">View source &raquo;</a>
-
-					<p>Returns if a player can become a part of a team, internally also runs hook CanPlayerChangeTeam.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">teamID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> ID of team wanting to join.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">notify</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Should automatically notify the player.</p>
+								<p> The amount to multiply by.</p>
 							</li>
 					</ul>
 
@@ -2971,9 +2681,9 @@ SetParentAttachment											</a>
 				<ul>
 
 							<li>
-									<span class="type">bool</span>
+									<span class="type">color</span>
 
-								<p>Can player become team.</p>
+								<p>The color multiplied.</p>
 							</li>
 
 				</ul>
@@ -2982,181 +2692,15 @@ SetParentAttachment											</a>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="meta:CanBecomeTeamClass">
-					<h1><span class="realm shared"></span></span>Player:CanBecomeTeamClass(classID, notify)</h1>
+				<a class="anchor" id="meta:GetKnownHealth">
+					<h1><span class="realm client"></span></span>Player:GetKnownHealth()</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L149">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_hud.lua#L100">View source &raquo;</a>
 
-					<p>Returns if a player can join a team's class.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">classID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> ID of class wanting to join.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">notify</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Should automatically notify the player.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Can player become class.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:CanBecomeTeamRank">
-					<h1><span class="realm shared"></span></span>Player:CanBecomeTeamRank(rankID, notify)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L208">View source &raquo;</a>
-
-					<p>Returns if a player can join a team's rank.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">rankID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> ID of rank wanting to join.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">notify</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Should automatically notify the player.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Can player become rank.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamClass">
-					<h1><span class="realm shared"></span></span>Player:GetTeamClass()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L280">View source &raquo;</a>
-
-					<p>Returns the players class ID.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>classID of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamClassData">
-					<h1><span class="realm shared"></span></span>Player:GetTeamClassData()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L321">View source &raquo;</a>
-
-					<p>Retrieves the players class data table.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
-
-								<p>Rank data.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamClassName">
-					<h1><span class="realm shared"></span></span>Player:GetTeamClassName()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L264">View source &raquo;</a>
-
-					<p>Returns the players rank name.</p>
+					<p>Get's a text version of the players health amount.</p>
 			</header>
 
 
@@ -3167,399 +2711,16 @@ SetParentAttachment											</a>
 							<li>
 									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
 
-								<p>class name of the player.</p>
+								<p>The players health described in text.</p>
+							</li>
+
+							<li>
+									<span class="type">color</span>
+
+								<p>The color to draw in.</p>
 							</li>
 
 				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamRank">
-					<h1><span class="realm shared"></span></span>Player:GetTeamRank()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L301">View source &raquo;</a>
-
-					<p>Returns the players rank ID.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>rankID of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamRankData">
-					<h1><span class="realm shared"></span></span>Player:GetTeamRankData()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L308">View source &raquo;</a>
-
-					<p>Retrieves the players rank data table.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
-
-								<p>Rank data.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamRankName">
-					<h1><span class="realm shared"></span></span>Player:GetTeamRankName()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L287">View source &raquo;</a>
-
-					<p>Returns the players rank name.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>rank name of the player.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:GetTeamWhitelist">
-					<h1><span class="realm server"></span></span>Player:GetTeamWhitelist(team)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L334">View source &raquo;</a>
-
-					<p>Returns if the player has a whitelist for the specified team and level</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">team</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-									<span class="tag default">optional</span>
-
-								<p> The whitelist identifier (doesn't really need to be a team.) Defaults to player's active team whitelist.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Whitelist level</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:HasTeamWhitelist">
-					<h1><span class="realm server"></span></span>Player:HasTeamWhitelist(team, level)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L348">View source &raquo;</a>
-
-					<p>Returns if the player has a whitelist for the specified team and level</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">team</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The whitelist identifier (doesn't really need to be a team.)</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">level</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> The level to check for</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Has whitelist</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:InGroup">
-					<h1><span class="realm shared"></span></span>Player:InGroup(group)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L35">View source &raquo;</a>
-
-					<p>Alternative to using codegen, works identical but
- you have to supply the group id.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">group</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Group ID.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">boolean</span>
-
-								<p>In group or not.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:IsCP">
-					<h1><span class="realm shared"></span></span>Player:IsCP()</h1>
-				</a>
-
-
-					<div class="notice error">
-						<div class="title">Deprecated</div>
-						<p>This is a deprecated function! You are able to use it, but you risk breaking code when the function is eventually removed..</p>
-					</div>
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_teams.lua#L335">View source &raquo;</a>
-
-					<p>Returns if they have the CP flag on their team.  Removed as of 25 October 2022. Use groups!</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Whether they have the .cp team flag or not.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:SetTeam">
-					<h1><span class="realm server"></span></span>Player:SetTeam(teamID)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L11">View source &raquo;</a>
-
-					<p>Sets the player to a team.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">teamID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> The ID of the team to switch to.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:SetTeamClass">
-					<h1><span class="realm server"></span></span>Player:SetTeamClass(classID, skipLoadout)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L97">View source &raquo;</a>
-
-					<p>Changes the player's class.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">classID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> the ID of the team's class.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skipLoadout</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p> Should it skip giving the player items / weapons?</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:SetTeamRank">
-					<h1><span class="realm server"></span></span>Player:SetTeamRank(rankID)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L205">View source &raquo;</a>
-
-					<p>Changes the player's rank.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">rankID</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> the ID of the team's rank.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:SetupWhitelists">
-					<h1><span class="realm server"></span></span>Player:SetupWhitelists()</h1>
-				</a>
-
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_teams.lua#L369">View source &raquo;</a>
-
-					<p>Initializes the whitelists for a user</p>
-			</header>
-
-
 
 
 		</section>
