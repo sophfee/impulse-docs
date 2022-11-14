@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Scenes - impulse documentation</title>
+		<title>Movement - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Scenes - impulse documentation" />
+		<meta property="og:title" content="Movement - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="A cutscene playing system, best used with the event tools." />
+			<meta property="og:description" content="Vaulting, mantling, etc." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -1454,7 +1454,7 @@ impulse.blur											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/movement/">Movement</a></summary>
 
 									<ul>
@@ -1600,7 +1600,7 @@ impulse.Load											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/scenes/">Scenes</a></summary>
 
 									<ul>
@@ -2622,8 +2622,8 @@ SetParentAttachment											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>Scenes</h1>
-	<h2>A cutscene playing system, best used with the event tools.</h2>
+	<h1>Movement</h1>
+	<h2>Vaulting, mantling, etc.</h2>
 </header>
 
 <p>
@@ -2634,8 +2634,25 @@ SetParentAttachment											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="impulse.Scenes.Play">
-					<h1><span class="realm client"></span></span>impulse.Scenes.Play(stage, sceneData, onDone, skipPVS, preLoad)</h1>
+				<a class="anchor" id="meta:FindVaultPos">
+					<h1><span class="realm server"></span></span>Player:FindVaultPos()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_vaulting.lua#L6">View source &raquo;</a>
+
+					<p>Finds a suitable position to vault.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:Vault">
+					<h1><span class="realm server"></span></span>Player:Vault()</h1>
 				</a>
 
 					<div class="notice error">
@@ -2644,130 +2661,11 @@ SetParentAttachment											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_scenes.lua#L57">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_vaulting.lua#L23">View source &raquo;</a>
 
-					<p>Plays a singular scene.</p>
+					<p>Experimental vaulting over a ledge.</p>
 			</header>
 
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">stage</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Stage of the set that is currently playing.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">sceneData</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
-
-
-								<p> Data used to play the scene</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">onDone</span>
-
-									<span class="tag"><span class="type">function</span></span>
-
-									<span class="tag default">default: true</span>
-
-								<p> Callback function when done.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skipPVS</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-								<p> Skips adding the Scene's PVS to clients.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">preLoad</span>
-
-
-
-								<p> should preload</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="impulse.Scenes.PlaySet">
-					<h1><span class="realm client"></span></span>impulse.Scenes.PlaySet(set, music, onDone)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_scenes.lua#L173">View source &raquo;</a>
-
-					<p>Plays a set of scenes.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">set</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
-
-
-								<p> Set of scenes to play.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">music</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Can be a sound file path OR a CDN URL (Content Download Network).</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">onDone</span>
-
-									<span class="tag"><span class="type">function</span></span>
-
-
-								<p> Callback func.</p>
-							</li>
-					</ul>
 
 
 
