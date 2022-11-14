@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>core.cl_hud - impulse documentation</title>
+		<title>UI - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="core.cl_hud - impulse documentation" />
+		<meta property="og:title" content="UI - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="Get&#39;s a text version of the players health amount." />
+			<meta property="og:description" content="All functions related to drawing the HUD." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -2117,11 +2117,21 @@ impulse.Set											</a>
 							</li>
 							<li>
 									<details open>
-									<summary><a href="../../libraries/core.cl_hud/">core.cl_hud</a></summary>
+									<summary><a href="../../libraries/ui/">UI</a></summary>
 
 									<ul>
 
 
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ui/#impulse.ColorMultiply">
+impulse.ColorMultiply											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ui/#meta:GetKnownHealth">
+meta:GetKnownHealth											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -2622,14 +2632,103 @@ SetParentAttachment											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>core.cl_hud</h1>
-	<h2>Get's a text version of the players health amount.</h2>
+	<h1>UI</h1>
+	<h2>All functions related to drawing the HUD.</h2>
 </header>
 
-<p>
+<p> Stuff can be used in other places though.</p>
 
-</p>
+	<h1 class="title">Functions</h1>
 
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.ColorMultiply">
+					<h1><span class="realm client"></span></span>impulse.ColorMultiply(col, mul)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_hud.lua#L298">View source &raquo;</a>
+
+					<p>Allows you to effectively darken or brighten colors, don't pass global things like color_white, that is how you fuck up the whole framework.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">col</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p> The color to multiply.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">mul</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The amount to multiply by.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">color</span>
+
+								<p>The color multiplied.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:GetKnownHealth">
+					<h1><span class="realm client"></span></span>Player:GetKnownHealth()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_hud.lua#L111">View source &raquo;</a>
+
+					<p>Get's a text version of the players health amount.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The players health described in text.</p>
+							</li>
+
+							<li>
+									<span class="type">color</span>
+
+								<p>The color to draw in.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
 
 					</div>
 			</article>
