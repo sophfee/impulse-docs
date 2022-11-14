@@ -2333,6 +2333,11 @@ GetSkillXP											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/player/#meta:GetThirst">
+GetThirst											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:GetXP">
 GetXP											</a>
 										</li>
@@ -2453,6 +2458,11 @@ Notify											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
+											<a href="../../classes/player/#meta:QuenchThirst">
+QuenchThirst											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:ResetSubMaterials">
 ResetSubMaterials											</a>
 										</li>
@@ -2485,6 +2495,11 @@ SetRPName											</a>
 											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:SetSkillXP">
 SetSkillXP											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#meta:SetThirst">
+SetThirst											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -3030,7 +3045,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L37">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L47">View source &raquo;</a>
 
 					<p>Gives the player the amount of hunger</p>
 			</header>
@@ -3235,6 +3250,50 @@ UnMakeAFK											</a>
 									<span class="type">int</span>
 
 								<p>skill xp amount or 0.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:GetThirst">
+					<h1><span class="realm shared"></span></span>Player:GetThirst(fallback)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L27">View source &raquo;</a>
+
+					<p>Returns the players thirst value.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fallback</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The value to fallback if no value is found in Sync.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>Thirst amount.</p>
 							</li>
 
 				</ul>
@@ -3962,6 +4021,38 @@ UnMakeAFK											</a>
 		</section>
 		<section class="method">
 			<header>
+				<a class="anchor" id="meta:QuenchThirst">
+					<h1><span class="realm server"></span></span>Player:QuenchThirst(amount)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L64">View source &raquo;</a>
+
+					<p>Quenches a players thirst by the given amount.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of thirst (0-100)</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
 				<a class="anchor" id="meta:ResetSubMaterials">
 					<h1><span class="realm server"></span></span>Player:ResetSubMaterials()</h1>
 				</a>
@@ -4098,7 +4189,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L27">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L37">View source &raquo;</a>
 
 					<p>Set the hunger amount of a player</p>
 			</header>
@@ -4204,6 +4295,38 @@ UnMakeAFK											</a>
 
 
 								<p> XP amount.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:SetThirst">
+					<h1><span class="realm server"></span></span>Player:SetThirst(amount)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L54">View source &raquo;</a>
+
+					<p>Set the thirst amount of a player</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">amount</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> Amount of thirst (0-100)</p>
 							</li>
 					</ul>
 
