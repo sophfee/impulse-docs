@@ -344,22 +344,6 @@ Init											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../panels/impulsechoicebox/">impulseChoiceBox</a></summary>
-
-									<ul>
-
-
-										<li>
-											<span class="realm client"></span>
-											<a href="../../panels/impulsechoicebox/#PANEL:Init">
-Init											</a>
-										</li>
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
 									<summary><a href="../../panels/impulsecraftingitem/">impulseCraftingItem</a></summary>
 
 									<ul>
@@ -1455,27 +1439,6 @@ impulse.blur											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../libraries/movement/">Movement</a></summary>
-
-									<ul>
-
-
-										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/movement/#meta:FindVaultPos">
-meta:FindVaultPos											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/movement/#meta:Vault">
-meta:Vault											</a>
-										</li>
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
 									<summary><a href="../../libraries/music/">Music</a></summary>
 
 									<ul>
@@ -2117,28 +2080,7 @@ impulse.Set											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../libraries/ui/">UI</a></summary>
-
-									<ul>
-
-
-										<li>
-											<span class="realm client"></span>
-											<a href="../../libraries/ui/#impulse.ColorMultiply">
-impulse.ColorMultiply											</a>
-										</li>
-										<li>
-											<span class="realm client"></span>
-											<a href="../../libraries/ui/#meta:GetKnownHealth">
-meta:GetKnownHealth											</a>
-										</li>
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
-									<summary><a href="../../libraries/core.vgui.cl_teampill/">core.vgui.cl_teampill</a></summary>
+									<summary><a href="../../libraries/core.cl_hud/">core.cl_hud</a></summary>
 
 									<ul>
 
@@ -2333,11 +2275,6 @@ GetSkillXP											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
-											<a href="../../classes/player/#meta:GetThirst">
-GetThirst											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:GetXP">
 GetXP											</a>
 										</li>
@@ -2458,11 +2395,6 @@ Notify											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
-											<a href="../../classes/player/#meta:QuenchThirst">
-QuenchThirst											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:ResetSubMaterials">
 ResetSubMaterials											</a>
 										</li>
@@ -2495,11 +2427,6 @@ SetRPName											</a>
 											<span class="realm server"></span>
 											<a href="../../classes/player/#meta:SetSkillXP">
 SetSkillXP											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/player/#meta:SetThirst">
-SetThirst											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -2812,7 +2739,7 @@ UnMakeAFK											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L40">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L39">View source &raquo;</a>
 
 					<p>Determines if the player is allowed to control extra PVS (Render zones basically)
  to render a cutscene correctly.</p>
@@ -3045,7 +2972,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L47">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L37">View source &raquo;</a>
 
 					<p>Gives the player the amount of hunger</p>
 			</header>
@@ -3258,50 +3185,6 @@ UnMakeAFK											</a>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="meta:GetThirst">
-					<h1><span class="realm shared"></span></span>Player:GetThirst(fallback)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L27">View source &raquo;</a>
-
-					<p>Returns the players thirst value.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">fallback</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p> The value to fallback if no value is found in Sync.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Thirst amount.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
 				<a class="anchor" id="meta:GetXP">
 					<h1><span class="realm shared"></span></span>Player:GetXP()</h1>
 				</a>
@@ -3413,7 +3296,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L181">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L180">View source &raquo;</a>
 
 					<p>Returns if a player is in the spawn zone</p>
 			</header>
@@ -3469,7 +3352,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L97">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L96">View source &raquo;</a>
 
 					<p>Returns if the player has Admin access (The normal moderation level of access.)</p>
 			</header>
@@ -3525,7 +3408,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L267">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L266">View source &raquo;</a>
 
 					<p>Returns if the player has a female character</p>
 			</header>
@@ -3553,7 +3436,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L136">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L135">View source &raquo;</a>
 
 					<p>Returns if the player is a Community Manager or higher</p>
 			</header>
@@ -3581,7 +3464,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L63">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L62">View source &raquo;</a>
 
 					<p>Returns if a player is an impulse framework developer</p>
 			</header>
@@ -3609,7 +3492,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L70">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L69">View source &raquo;</a>
 
 					<p>Returns if a player has donator status</p>
 			</header>
@@ -3679,7 +3562,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L159">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L158">View source &raquo;</a>
 
 					<p>Returns if the player is a Game Master or higher</p>
 			</header>
@@ -3707,7 +3590,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L117">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L116">View source &raquo;</a>
 
 					<p>Returns if the player is a lead moderator or higher</p>
 			</header>
@@ -3735,7 +3618,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L174">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L173">View source &raquo;</a>
 
 					<p>Returns if the player is a Game Master and not higher</p>
 			</header>
@@ -3763,7 +3646,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L83">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L82">View source &raquo;</a>
 
 					<p>Returns if the player has Super Admin access (The highest level of access.)</p>
 			</header>
@@ -3983,7 +3866,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L203">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_main.lua#L202">View source &raquo;</a>
 
 					<p>Sends a notification to a player.</p>
 			</header>
@@ -4013,38 +3896,6 @@ UnMakeAFK											</a>
 
 
 								<p> Notification class ID.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:QuenchThirst">
-					<h1><span class="realm server"></span></span>Player:QuenchThirst(amount)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L64">View source &raquo;</a>
-
-					<p>Quenches a players thirst by the given amount.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">amount</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Amount of thirst (0-100)</p>
 							</li>
 					</ul>
 
@@ -4189,7 +4040,7 @@ UnMakeAFK											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L37">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L27">View source &raquo;</a>
 
 					<p>Set the hunger amount of a player</p>
 			</header>
@@ -4295,38 +4146,6 @@ UnMakeAFK											</a>
 
 
 								<p> XP amount.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:SetThirst">
-					<h1><span class="realm server"></span></span>Player:SetThirst(amount)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_hunger.lua#L54">View source &raquo;</a>
-
-					<p>Set the thirst amount of a player</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">amount</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Amount of thirst (0-100)</p>
 							</li>
 					</ul>
 
