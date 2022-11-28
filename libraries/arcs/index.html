@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Anim - impulse documentation</title>
+		<title>Arcs - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Anim - impulse documentation" />
+		<meta property="og:title" content="Arcs - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="Functions to control a player&#39;s animations, based heavily on nutscript&#39;s Anim system" />
+			<meta property="og:description" content="Draw very cool circles, external library." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -637,7 +637,7 @@ meta:Calculateoints											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/anim/">Anim</a></summary>
 
 									<ul>
@@ -663,7 +663,7 @@ meta:ForceSequence											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/arcs/">Arcs</a></summary>
 
 									<ul>
@@ -2673,8 +2673,8 @@ SetParentAttachment											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>Anim</h1>
-	<h2>Functions to control a player's animations, based heavily on nutscript's Anim system</h2>
+	<h1>Arcs</h1>
+	<h2>Draw very cool circles, external library.</h2>
 </header>
 
 <p>
@@ -2685,15 +2685,15 @@ SetParentAttachment											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="impulse.Anim.GetModelClass">
-					<h1><span class="realm shared"></span></span>impulse.Anim.GetModelClass(model)</h1>
+				<a class="anchor" id="impulse.Arcs.Draw">
+					<h1><span class="realm client"></span></span>impulse.Arcs.Draw(cx, cy, radius, thickness, startAngle, endAngle, segments, color)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L481">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_arcs.lua#L18">View source &raquo;</a>
 
-					<p>Gets the animation class of a specific model</p>
+					<p>Draws an arc with the given parameters.</p>
 			</header>
 
 
@@ -2703,40 +2703,113 @@ SetParentAttachment											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">model</span>
+								<span class="tag parameter">cx</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><span class="type">number</span></span>
 
 
-								<p> The model</p>
+								<p> The center on the X axis.</p>
 							</li>
 					</ul>
 
-
-				<h3>Returns</h3>
-				<ul>
+					<ul>
 
 							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+								<span class="tag parameter">cy</span>
 
-								<p>Animation class</p>
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The center on the Y axis.</p>
 							</li>
+					</ul>
 
-				</ul>
+					<ul>
+
+							<li>
+								<span class="tag parameter">radius</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The radius of the arc.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">thickness</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The thickness of the arc.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">startAngle</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The starting angle of the arc.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">endAngle</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The ending angle of the arc.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">segments</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The amount of segments to draw.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">color</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p> The color of the arc.</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="impulse.Anim.SetModelClass">
-					<h1><span class="realm shared"></span></span>impulse.Anim.SetModelClass(model, class)</h1>
+				<a class="anchor" id="impulse.Arcs.DrawPrecached">
+					<h1><span class="realm client"></span></span>impulse.Arcs.DrawPrecached(arc)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L465">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_arcs.lua#L26">View source &raquo;</a>
 
-					<p>Sets the animation class of a specific model</p>
+					<p>Draws an arc that has been precached, this saves resources when you have an arc that doesn't change.</p>
 			</header>
 
 
@@ -2746,45 +2819,29 @@ SetParentAttachment											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">model</span>
+								<span class="tag parameter">arc</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The model to set</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">class</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
 
 
-								<p> The animation class</p>
+								<p> The arc to draw.</p>
 							</li>
 					</ul>
 
 
 
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../libraries/anim/#DefaultAnimClasses">DefaultAnimClasses</a></li>
-				</ul>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="meta:ForceSequence">
-					<h1><span class="realm server"></span></span>Player:ForceSequence(sequence, callback, time, noFreeze)</h1>
+				<a class="anchor" id="impulse.Arcs.Precache">
+					<h1><span class="realm client"></span></span>impulse.Arcs.Precache(cx, cy, radius, thickness, startAngle, endAngle, roughness)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L528">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_arcs.lua#L41">View source &raquo;</a>
 
-					<p>Plays an animation sequence on a player</p>
+					<p>Precaches an arc with the given parameters.</p>
 			</header>
 
 
@@ -2794,177 +2851,84 @@ SetParentAttachment											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">sequence</span>
+								<span class="tag parameter">cx</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><span class="type">number</span></span>
 
 
-								<p> The sequence name</p>
+								<p> The center on the X axis.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">callback</span>
+								<span class="tag parameter">cy</span>
 
-									<span class="tag"><span class="type">function</span></span>
+									<span class="tag"><span class="type">number</span></span>
 
-									<span class="tag default">optional</span>
 
-								<p> Called when the animation is completed</p>
+								<p> The center on the Y axis.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">time</span>
+								<span class="tag parameter">radius</span>
 
-									<span class="tag"><span class="type">int</span></span>
+									<span class="tag"><span class="type">number</span></span>
 
-									<span class="tag default">optional</span>
 
-								<p> How long until we force the sequence to stop</p>
+								<p> The radius of the arc.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">noFreeze</span>
+								<span class="tag parameter">thickness</span>
 
-									<span class="tag"><span class="type">boolean</span></span>
-
-									<span class="tag default">default: false</span>
-
-								<p> If the player should not freeze when the sequence is playing</p>
-							</li>
-					</ul>
+									<span class="tag"><span class="type">number</span></span>
 
 
-
-		</section>
-	<h1 class="title">Tables</h1>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="DefaultAnimClasses">
-					<h1><span class="realm shared"></span></span>DefaultAnimClasses</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L458">View source &raquo;</a>
-
-					<p>A collection of default animation classes</p>
-			</header>
-
-
-					<h3>Fields</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">citizen_male</span>
-
-
-
-								<p>
-
-</p>
+								<p> The thickness of the arc.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">citizen_female</span>
+								<span class="tag parameter">startAngle</span>
+
+									<span class="tag"><span class="type">number</span></span>
 
 
-
-								<p>
-
-</p>
+								<p> The starting angle of the arc.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">metrocop</span>
+								<span class="tag parameter">endAngle</span>
+
+									<span class="tag"><span class="type">number</span></span>
 
 
-
-								<p>
-
-</p>
+								<p> The ending angle of the arc.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">overwatch</span>
+								<span class="tag parameter">roughness</span>
+
+									<span class="tag"><span class="type">number</span></span>
 
 
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">vort</span>
-
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">player</span>
-
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">zombie</span>
-
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">fastZombie</span>
-
-
-
-								<p>
-
-</p>
+								<p> The amount of segments to draw.</p>
 							</li>
 					</ul>
 
