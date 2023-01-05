@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>core.cl_hud - impulse documentation</title>
+		<title>Surface - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="core.cl_hud - impulse documentation" />
+		<meta property="og:title" content="Surface - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="Get&#39;s a text version of the players health amount." />
+			<meta property="og:description" content="Surface functions that aid in minimizing boilerplate but maintaining high performance." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -680,9 +680,19 @@ meta:CanBuy											</a>
 
 
 										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/chat/#impulse.RegisterChatClass">
+impulse.Registerlass											</a>
+										</li>
+										<li>
 											<span class="realm shared"></span>
 											<a href="../../libraries/chat/#impulse.RegisterChatCommand">
 impulse.Registerommand											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/chat/#meta:SendChatClassMessage">
+meta:SendlassMessage											</a>
 										</li>
 
 									</ul>
@@ -1245,6 +1255,17 @@ meta:Usetem											</a>
 											<a href="../../libraries/loot/#impulse.Loot.GenerateFromPool">
 impulse.GenerateFromPool											</a>
 										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="../../libraries/markup/">Markup</a></summary>
+
+									<ul>
+
+
 
 									</ul>
 									</details>
@@ -1835,6 +1856,27 @@ impulse.Take											</a>
 									</details>
 							</li>
 							<li>
+									<details open>
+									<summary><a href="../../libraries/surface/">Surface</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.DefineTypeFace">
+impulse.DefineTypeFace											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.DrawText">
+impulse.DrawText											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
 									<details >
 									<summary><a href="../../libraries/sync/">Sync</a></summary>
 
@@ -2079,17 +2121,6 @@ impulse.Set											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
-									<summary><a href="../../libraries/core.cl_hud/">core.cl_hud</a></summary>
-
-									<ul>
-
-
-
-									</ul>
-									</details>
-							</li>
-							<li>
 									<details >
 									<summary><a href="../../libraries/shared/">shared</a></summary>
 
@@ -2179,6 +2210,11 @@ GetDescription											</a>
 											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:GetHunger">
 GetHunger											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../classes/player/#meta:GetKnownHealth">
+GetKnownHealth											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -2574,14 +2610,216 @@ SetParentAttachment											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>core.cl_hud</h1>
-	<h2>Get's a text version of the players health amount.</h2>
+	<h1>Surface</h1>
+	<h2>Surface functions that aid in minimizing boilerplate but maintaining high performance.</h2>
 </header>
 
 <p>
 
 </p>
 
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Surface.DefineTypeFace">
+					<h1><span class="realm client"></span></span>impulse.Surface.DefineTypeFace(fontFace, offsetx, offsety, alpha)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L13">View source &raquo;</a>
+
+					<p>Defines a typeface's properties in handling text shadow.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fontFace</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The font.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">offsetx</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 2</span>
+
+								<p> The offset that the drop shadow will be.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">offsety</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 2</span>
+
+								<p> The offset that the drop shadow will be.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">alpha</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+									<span class="tag default">default: 255</span>
+
+								<p> The alpha of the shadow, recommended to keep at 255.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Surface.DrawText">
+					<h1><span class="realm client"></span></span>impulse.Surface.DrawText(text, font, x, y, color, alignX, alignY)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L41">View source &raquo;</a>
+
+					<p>Draws text with a high quality shadow effect.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">text</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">font</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">x</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">y</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">color</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">alignX</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">alignY</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">int</span>
+
+								<p>The text width.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
 
 					</div>
 			</article>
