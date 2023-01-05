@@ -680,19 +680,9 @@ meta:CanBuy											</a>
 
 
 										<li>
-											<span class="realm client"></span>
-											<a href="../../libraries/chat/#impulse.RegisterChatClass">
-impulse.Registerlass											</a>
-										</li>
-										<li>
 											<span class="realm shared"></span>
 											<a href="../../libraries/chat/#impulse.RegisterChatCommand">
 impulse.Registerommand											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/chat/#meta:SendChatClassMessage">
-meta:SendlassMessage											</a>
 										</li>
 
 									</ul>
@@ -1255,17 +1245,6 @@ meta:Usetem											</a>
 											<a href="../../libraries/loot/#impulse.Loot.GenerateFromPool">
 impulse.GenerateFromPool											</a>
 										</li>
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
-									<summary><a href="../../libraries/markup/">Markup</a></summary>
-
-									<ul>
-
-
 
 									</ul>
 									</details>
@@ -1857,27 +1836,6 @@ impulse.Take											</a>
 							</li>
 							<li>
 									<details >
-									<summary><a href="../../libraries/surface/">Surface</a></summary>
-
-									<ul>
-
-
-										<li>
-											<span class="realm client"></span>
-											<a href="../../libraries/surface/#impulse.Surface.DefineTypeFace">
-impulse.DefineTypeFace											</a>
-										</li>
-										<li>
-											<span class="realm client"></span>
-											<a href="../../libraries/surface/#impulse.Surface.DrawText">
-impulse.DrawText											</a>
-										</li>
-
-									</ul>
-									</details>
-							</li>
-							<li>
-									<details >
 									<summary><a href="../../libraries/sync/">Sync</a></summary>
 
 									<ul>
@@ -2122,6 +2080,17 @@ impulse.Set											</a>
 							</li>
 							<li>
 									<details >
+									<summary><a href="../../libraries/core.cl_hud/">core.cl_hud</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
 									<summary><a href="../../libraries/shared/">shared</a></summary>
 
 									<ul>
@@ -2210,11 +2179,6 @@ GetDescription											</a>
 											<span class="realm shared"></span>
 											<a href="../../classes/player/#meta:GetHunger">
 GetHunger											</a>
-										</li>
-										<li>
-											<span class="realm client"></span>
-											<a href="../../classes/player/#meta:GetKnownHealth">
-GetKnownHealth											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -2622,50 +2586,6 @@ SetParentAttachment											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="impulse.RegisterChatClass">
-					<h1><span class="realm client"></span></span>impulse.RegisterChatClass(id, onReceive)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_chat.lua#L78">View source &raquo;</a>
-
-					<p>Registered a new chat class for players, must be ran on the client, IDs must match the servers to work properly.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">id</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Chat class ID.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">onReceive</span>
-
-									<span class="tag"><span class="type">function</span></span>
-
-
-								<p> Callback when the chat class is received</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
 				<a class="anchor" id="impulse.RegisterChatCommand">
 					<h1><span class="realm shared"></span></span>impulse.RegisterChatCommand(name, cmdData)</h1>
 				</a>
@@ -2701,63 +2621,6 @@ SetParentAttachment											</a>
 
 
 								<p> Command data.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:SendChatClassMessage">
-					<h1><span class="realm server"></span></span>Player:SendChatClassMessage(id, message, target)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_chat.lua#L64">View source &raquo;</a>
-
-					<p>Sends a chat class to the associated player.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">id</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Chat class ID.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">message</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Message to send.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">target</span>
-
-									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
-
-									<span class="tag default">optional</span>
-
-								<p> Target player.</p>
 							</li>
 					</ul>
 
