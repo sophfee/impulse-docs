@@ -2,14 +2,13 @@
 
 <html>
 	<head>
-		<title>Making a schema - impulse documentation</title>
+		<title>Soundscape - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Making a schema - impulse documentation" />
+		<meta property="og:title" content="Soundscape - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="
- in impulse is fairly striaghtforward, Landis developers can look [here](https:&#47;&#47;github.com&#47;urnotnick&#47;impulse-skeleton) for a sample schema with plugins...." />
+			<meta property="og:description" content="A soundscape controller." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -2542,7 +2541,7 @@ UnMakeAFK											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../classes/soundscape/">Soundscape</a></summary>
 
 									<ul>
@@ -2637,8 +2636,159 @@ UnMakeAFK											</a>
 			<article>
 					<div class="wrapper">
 
-<h1>Making a schema</h1>
-<p>Making a schema in impulse is fairly striaghtforward, Landis developers can look <a href="https://github.com/urnotnick/impulse-skeleton">here</a> for a sample schema with plugins.</p>
+<header class="module">
+	<h1>Soundscape</h1>
+	<h2>A soundscape controller.</h2>
+</header>
+
+<p>
+
+</p>
+
+	<h1 class="title">Methods</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="Soundscape:AddSting">
+					<h1><span class="realm client"></span></span>Soundscape:AddSting(soundName, instances, distance, frequency)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_soundscapes.lua#L19">View source &raquo;</a>
+
+					<p>Adds a Sting, this is a sound that repeats at intervals.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">soundName</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The sound file path.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">instances</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The number of occurances this has, this basically is equivalent to adding several stingers of the same sound.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">distance</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The distance this sound will play from the player.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">frequency</span>
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+								<p> The frequency this'll play in seconds.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Soundscape:GenerateTimerHash">
+					<h1><span class="realm client"></span></span>Soundscape:GenerateTimerHash()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_soundscapes.lua#L34">View source &raquo;</a>
+
+					<p>Used to generate timers for a soundscape.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Timerhash.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Soundscape:Play">
+					<h1><span class="realm client"></span></span>Soundscape:Play()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_soundscapes.lua#L64">View source &raquo;</a>
+
+					<p>Plays the soundscape.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Soundscape:Stop">
+					<h1><span class="realm client"></span></span>Soundscape:Stop()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_soundscapes.lua#L43">View source &raquo;</a>
+
+					<p>Stops the soundscape.</p>
+			</header>
+
+
+
+
+		</section>
 
 					</div>
 			</article>
