@@ -642,6 +642,16 @@ impulse.SetModelClass											</a>
 											<a href="../../libraries/anim/#meta:ForceSequence">
 meta:ForceSequence											</a>
 										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/anim/#meta:enterSequence">
+meta:enterSequence											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/anim/#meta:leaveSequence">
+meta:leaveSequence											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -2810,6 +2820,63 @@ SetParentAttachment											</a>
 								<p> If the player should not freeze when the sequence is playing</p>
 							</li>
 					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:enterSequence">
+					<h1><span class="realm server"></span></span>Player:enterSequence(sequence)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L576">View source &raquo;</a>
+
+					<p>Enters an animation sequence on a player.  Requires manual call of leaveSequence()</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sequence</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The sequence name</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:leaveSequence">
+					<h1><span class="realm server"></span></span>Player:leaveSequence()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sh_anims.lua#L610">View source &raquo;</a>
+
+					<p>Leaves an animation sequence on a player.</p>
+			</header>
+
 
 
 
