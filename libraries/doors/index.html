@@ -850,6 +850,16 @@ eMeta:GetDoorMaster											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/doors/#eMeta:IsDoorFullyOpen">
+eMeta:IsDoorFullyOpen											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/doors/#eMeta:IsDoorOpen">
+eMeta:IsDoorOpen											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/doors/#impulse.Doors.Load">
 impulse.Load											</a>
 										</li>
@@ -2709,7 +2719,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L131">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L146">View source &raquo;</a>
 
 					<p>Gives you the owner of the door, this person
  has access to locking, unlocking, storage, and
@@ -2725,6 +2735,62 @@ SetParentAttachment											</a>
 									<span class="type">player</span>
 
 								<p>Door master, will be nil if nobody owns the door.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="eMeta:IsDoorFullyOpen">
+					<h1><span class="realm server"></span></span>eMeta:IsDoorFullyOpen()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L137">View source &raquo;</a>
+
+					<p>Returns whether the door is fully open or not.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Door open state.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="eMeta:IsDoorOpen">
+					<h1><span class="realm server"></span></span>eMeta:IsDoorOpen()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L129">View source &raquo;</a>
+
+					<p>Returns whether the door is open or not.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Door open state.</p>
 							</li>
 
 				</ul>
@@ -2783,7 +2849,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L158">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L173">View source &raquo;</a>
 
 					<p>Removes the player as the owner of a door.</p>
 			</header>
@@ -2828,7 +2894,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L197">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L212">View source &raquo;</a>
 
 					<p>Removes user access from a door.</p>
 			</header>
@@ -2860,7 +2926,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L140">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L155">View source &raquo;</a>
 
 					<p>Works different to the Entity:GetDoorMaster since
  this runs off of the player.  This makes the player
@@ -2894,7 +2960,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L180">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_doors.lua#L195">View source &raquo;</a>
 
 					<p>Makes the person able to use a door, use any storage linked,
  but they cannot manage other users of the door.</p>
