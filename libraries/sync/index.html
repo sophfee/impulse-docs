@@ -1946,6 +1946,11 @@ entMeta:Sync											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/sync/#entMeta:SyncBudget">
+entMeta:udget											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/sync/#entMeta:SyncRemove">
 entMeta:emove											</a>
 										</li>
@@ -2742,7 +2747,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L209">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L255">View source &raquo;</a>
 
 					<p>Sets the Sync var on an entity</p>
 			</header>
@@ -2828,13 +2833,30 @@ SetParentAttachment											</a>
 		</section>
 		<section class="method">
 			<header>
+				<a class="anchor" id="entMeta:SyncBudget">
+					<h1><span class="realm server"></span></span>Entity:SyncBudget()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L176">View source &raquo;</a>
+
+					<p>Sync's to only people nearby, use for unimportant data that's not always neccessary to transfer all the time.</p>
+			</header>
+
+
+
+
+		</section>
+		<section class="method">
+			<header>
 				<a class="anchor" id="entMeta:SyncRemove">
 					<h1><span class="realm server"></span></span>Entity:SyncRemove()</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L176">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L222">View source &raquo;</a>
 
 					<p>Removes all SyncVar's from an entity and update all players</p>
 			</header>
@@ -2851,7 +2873,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L190">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L236">View source &raquo;</a>
 
 					<p>Removes a specific SyncVar from an entity and update all players</p>
 			</header>
@@ -3029,7 +3051,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L234">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/sv_sync.lua#L280">View source &raquo;</a>
 
 					<p>Sets the Sync var on an entity but only updates the player who it is being set on</p>
 			</header>
