@@ -2139,6 +2139,11 @@ impulse.DrawText											</a>
 										</li>
 										<li>
 											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.GetScreen">
+impulse.GetScreen											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
 											<a href="../../libraries/surface/#impulse.Surface.Message">
 impulse.Message											</a>
 										</li>
@@ -2146,6 +2151,11 @@ impulse.Message											</a>
 											<span class="realm client"></span>
 											<a href="../../libraries/surface/#impulse.Surface.Query">
 impulse.Query											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.ScreenScale">
+impulse.ScreenScale											</a>
 										</li>
 
 									</ul>
@@ -2990,7 +3000,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L41">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L80">View source &raquo;</a>
 
 					<p>Draws text with a high quality shadow effect.</p>
 			</header>
@@ -3113,13 +3123,41 @@ SetParentAttachment											</a>
 		</section>
 		<section class="method">
 			<header>
+				<a class="anchor" id="impulse.Surface.GetScreen">
+					<h1><span class="realm client"></span></span>impulse.Surface.GetScreen()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L43">View source &raquo;</a>
+
+					<p>Gets the current screen scale.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../libraries/surface/#ScreenScale">ScreenScale</a>
+
+								<p>The current screen scale.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
 				<a class="anchor" id="impulse.Surface.Message">
 					<h1><span class="realm client"></span></span>impulse.Surface.Message(title, body, closeButtonText)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L170">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L209">View source &raquo;</a>
 
 					<p>A better Derma<em>Message.  Returned panel can access the close button with PANEL.m</em>dCloseBtn.</p>
 			</header>
@@ -3192,7 +3230,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L87">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L126">View source &raquo;</a>
 
 					<p>A better Derma<em>Query.  Unlike your standard Derma</em>Query, this
  Can handle as many buttons as you want, see QueryButton table
@@ -3248,6 +3286,76 @@ SetParentAttachment											</a>
 
 
 		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Surface.ScreenScale">
+					<h1><span class="realm client"></span></span>impulse.Surface.ScreenScale(low, mid, high)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L63">View source &raquo;</a>
+
+					<p>Scales between the three values to the screenscale.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">low</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">mid</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">high</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">any</span>
+
+								<p>The scaled value.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
 	<h1 class="title">Tables</h1>
 
 		<section class="method">
@@ -3258,7 +3366,7 @@ SetParentAttachment											</a>
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L80">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L119">View source &raquo;</a>
 
 					<p>Fields for Derma_Query</p>
 			</header>
@@ -3286,6 +3394,65 @@ SetParentAttachment											</a>
 								<span class="tag parameter">onpress</span>
 
 									<span class="tag"><span class="type">function</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ScreenScale">
+					<h1><span class="realm client"></span></span>ScreenScale</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode/core/cl_asurface.lua#L36">View source &raquo;</a>
+
+					<p>Determines enumerations that aid in easily scaled UI</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">LowRes</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">FullRes</span>
+
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">HighRes</span>
+
 
 
 								<p>
