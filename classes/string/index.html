@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Entity - impulse documentation</title>
+		<title>string - impulse documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Entity - impulse documentation" />
+		<meta property="og:title" content="string - impulse documentation" />
 		<meta property="og:site_name" content="impulse Documentation" />
 
-			<meta property="og:description" content="Physical object in the game world" />
+			<meta property="og:description" content="Extra string methods." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -4796,7 +4796,7 @@ impulse.Crosshair.Create
 
 							<li>
 
-									<details open>
+									<details >
 									<summary><a href="../../classes/entity/">Entity</a></summary>
 
 									<ul>
@@ -5587,7 +5587,7 @@ UnMakeAFK
 
 							<li>
 
-									<details >
+									<details open>
 									<summary><a href="../../classes/string/">string</a></summary>
 
 									<ul>
@@ -5779,8 +5779,8 @@ UnMakeAFK
 					<div class="wrapper">
 
 <header class="module">
-	<h1>Entity</h1>
-	<h2>Physical object in the game world</h2>
+	<h1>string</h1>
+	<h2>Extra string methods.</h2>
 </header>
 
 <p>
@@ -5788,14 +5788,14 @@ UnMakeAFK
 </p>
 
 
-	<h1 class="title">Functions</h1>
+	<h1 class="title">Methods</h1>
 
 
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="entityMeta:CanBeCarried">
-					<h1><span class="realm shared"></span></span>Entity:CanBeCarried()</h1>
+				<a class="anchor" id="string:ToCamelCase">
+					<h1><span class="realm shared"></span></span>string:ToCamelCase(str)</h1>
 				</a>
 
 
@@ -5803,64 +5803,11 @@ UnMakeAFK
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L95">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_string.lua#L28">View source &raquo;</a>
 
 
 
-					<p>Returns if a entity can be carried</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Can be carried</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="entityMeta:EmitBudgetSound">
-					<h1><span class="realm server"></span></span>Entity:EmitBudgetSound(sound, range, volume, pitch)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L157">View source &raquo;</a>
-
-
-
-					<p>Emits a that is only networked to nearby players</p>
+					<p>Returns the string without any spaces and each words first letter capitalized except the first word.</p>
 
 			</header>
 
@@ -5882,7 +5829,7 @@ UnMakeAFK
 
 
 							<li>
-								<span class="tag parameter">sound</span>
+								<span class="tag parameter">str</span>
 
 
 									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
@@ -5890,86 +5837,36 @@ UnMakeAFK
 
 
 
-								<p> Sound path</p>
+								<p> The string to convert.</p>
 							</li>
 
 					</ul>
 
 
 
-					<ul>
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
 
 
 
 
 
 							<li>
-								<span class="tag parameter">range</span>
+
+									<a class="type" href="../../classes/string/#">string</a>
 
 
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 660</span>
-
-
-								<p> Radius in Source units to network the sound to</p>
+								<p>The converted string.</p>
 							</li>
 
-					</ul>
 
 
 
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">volume</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 1</span>
-
-
-								<p> Volume of the sound</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">pitch</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 100</span>
-
-
-								<p> Pitch of the sound</p>
-							</li>
-
-					</ul>
-
-
-
-
+				</ul>
 
 
 
@@ -5980,8 +5877,8 @@ UnMakeAFK
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="entityMeta:EmitQueuedSounds">
-					<h1><span class="realm shared"></span></span>Entity:EmitQueuedSounds(sounds, delay, spacing, volume, pitch)</h1>
+				<a class="anchor" id="string:ToPascalCase">
+					<h1><span class="realm shared"></span></span>string:ToPascalCase(str)</h1>
 				</a>
 
 
@@ -5989,11 +5886,11 @@ UnMakeAFK
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L119">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_string.lua#L34">View source &raquo;</a>
 
 
 
-					<p>Emits queued sounds on an entity one by one</p>
+					<p>Returns the string without any spaces and each words first letter capitalized.</p>
 
 			</header>
 
@@ -6015,109 +5912,15 @@ UnMakeAFK
 
 
 							<li>
-								<span class="tag parameter">sounds</span>
+								<span class="tag parameter">str</span>
 
 
+									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
 
 
 
-								<p> A table of all the sounds</p>
-							</li>
 
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">delay</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 0</span>
-
-
-								<p> The delay between each sound</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">spacing</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 0.1</span>
-
-
-								<p> The spacing between each sound</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">volume</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 1</span>
-
-
-								<p> The volume of each sound</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">pitch</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-									<span class="tag default">default: 100</span>
-
-
-								<p> The pitch of each sound</p>
+								<p> The string to convert.</p>
 							</li>
 
 					</ul>
@@ -6137,10 +5940,10 @@ UnMakeAFK
 
 							<li>
 
-									<span class="type">int</span>
+									<a class="type" href="../../classes/string/#">string</a>
 
 
-								<p>How long it will take to emit all the sounds</p>
+								<p>The converted string.</p>
 							</li>
 
 
@@ -6157,8 +5960,8 @@ UnMakeAFK
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="entityMeta:IsButton">
-					<h1><span class="realm shared"></span></span>Entity:IsButton()</h1>
+				<a class="anchor" id="string:ToSnakeCase">
+					<h1><span class="realm shared"></span></span>string:ToSnakeCase(str)</h1>
 				</a>
 
 
@@ -6166,278 +5969,11 @@ UnMakeAFK
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L66">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_string.lua#L16">View source &raquo;</a>
 
 
 
-					<p>Returns if entity is a button</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Is button</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="entityMeta:IsChair">
-					<h1><span class="realm shared"></span></span>Entity:IsChair()</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L88">View source &raquo;</a>
-
-
-
-					<p>Returns if a entity is a chair</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Is chair</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="entityMeta:IsDoor">
-					<h1><span class="realm shared"></span></span>Entity:IsDoor()</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L28">View source &raquo;</a>
-
-
-
-					<p>Returns if the entity is a door</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Is door</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="entityMeta:IsDoorLocked">
-					<h1><span class="realm shared"></span></span>Entity:IsDoorLocked()</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L73">View source &raquo;</a>
-
-
-
-					<p>Returns if a door is locked</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Is locked</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="entityMeta:IsPropDoor">
-					<h1><span class="realm shared"></span></span>Entity:IsPropDoor()</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L35">View source &raquo;</a>
-
-
-
-					<p>Helper function that can detect if the door is a players prop door</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Is player prop door</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="entityMeta:SetParentAttachment">
-					<h1><span class="realm shared"></span></span>Entity:SetParentAttachment(attachment)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_ents.lua#L191">View source &raquo;</a>
-
-
-
-					<p>Change this entity to attach to a specific attachment point on its parent.
- The entity will teleport so that the position of its root bone matches that
- of the attachment. Entities must be parented before being sent this input.</p>
+					<p>Returns the string with an _ between each word and all words lowercased.</p>
 
 			</header>
 
@@ -6459,15 +5995,15 @@ UnMakeAFK
 
 
 							<li>
-								<span class="tag parameter">attachment</span>
+								<span class="tag parameter">str</span>
+
+
+									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
 
 
 
 
-
-								<p>
-
-</p>
+								<p> The string to convert.</p>
 							</li>
 
 					</ul>
@@ -6475,6 +6011,194 @@ UnMakeAFK
 
 
 
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<a class="type" href="../../classes/string/#">string</a>
+
+
+								<p>The converted string.</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+		</section>
+
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="string:ToUpperCamelCase">
+					<h1><span class="realm shared"></span></span>string:ToUpperCamelCase(str)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_string.lua#L22">View source &raquo;</a>
+
+
+
+					<p>Returns the string without any spaces and each words first letter capitalized.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">str</span>
+
+
+									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
+
+
+
+
+								<p> The string to convert.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<a class="type" href="../../classes/string/#">string</a>
+
+
+								<p>The converted string.</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+		</section>
+
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="string:ToUpperSnakeCase">
+					<h1><span class="realm shared"></span></span>string:ToUpperSnakeCase(str)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_string.lua#L10">View source &raquo;</a>
+
+
+
+					<p>Returns the string with an _ between each word and all words capitalized.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">str</span>
+
+
+									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
+
+
+
+
+								<p> The string to convert.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<a class="type" href="../../classes/string/#">string</a>
+
+
+								<p>The converted string.</p>
+							</li>
+
+
+
+
+				</ul>
 
 
 
