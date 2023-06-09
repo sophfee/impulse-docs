@@ -1605,24 +1605,6 @@ meta:leaveSequence
 
 
 										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/baseclass/#ITEM:GiveFlag">
-ITEM:GiveFlag
-											</a>
-										</li>
-
-
-
-										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/baseclass/#ITEM:RemoveFlag">
-ITEM:RemoveFlag
-											</a>
-										</li>
-
-
-
-										<li>
 											<span class="realm shared"></span>
 											<a href="../../libraries/baseclass/#impulse.BaseClass.Constructor">
 impulse.Constructor
@@ -4589,9 +4571,36 @@ GetID
 
 
 										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/item/#ITEM:GetOwner">
+GetOwner
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/item/#ITEM:GiveFlag">
+GiveFlag
+											</a>
+										</li>
+
+
+
+										<li>
 											<span class="realm shared"></span>
 											<a href="../../classes/item/#ITEM:HasFlag">
 HasFlag
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/item/#ITEM:RemoveFlag">
+RemoveFlag
 											</a>
 										</li>
 
@@ -5539,6 +5548,119 @@ UnMakeAFK
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="ITEM:GetOwner">
+					<h1><span class="realm server"></span></span>Item:GetOwner()</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_item.lua#L36">View source &raquo;</a>
+
+
+
+					<p>Returns the owner of the item.  This only works on the server because only the server manages
+ this information, on the client we should always assume the owner is the local player.</p>
+
+			</header>
+
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<a class="type" href="../../classes/player/#">Player</a>
+
+
+								<p>The owner of the item.</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ITEM:GiveFlag">
+					<h1><span class="realm server"></span></span>Item:GiveFlag(flag)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_item.lua#L17">View source &raquo;</a>
+
+
+
+					<p>Gives a given flag to the item.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">flag</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The flag to give.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
 				<a class="anchor" id="ITEM:HasFlag">
 					<h1><span class="realm shared"></span></span>Item:HasFlag(flag)</h1>
 				</a>
@@ -5612,6 +5734,66 @@ UnMakeAFK
 
 
 				</ul>
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ITEM:RemoveFlag">
+					<h1><span class="realm server"></span></span>Item:RemoveFlag(flag)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_item.lua#L43">View source &raquo;</a>
+
+
+
+					<p>Removes a given flag from the item.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">flag</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The flag to remove.</p>
+							</li>
+
+					</ul>
+
+
+
+
 
 
 
