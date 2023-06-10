@@ -2388,15 +2388,6 @@ meta:asPermission
 
 										<li>
 											<span class="realm shared"></span>
-											<a href="../../libraries/inventory/#impulse.DefineBitFlag">
-impulse.DefineBitFlag
-											</a>
-										</li>
-
-
-
-										<li>
-											<span class="realm shared"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.ClassToNetID">
 impulse.ClassToNetID
 											</a>
@@ -2408,6 +2399,15 @@ impulse.ClassToNetID
 											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.DBAddItem">
 impulse.DBAddItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBChangeOwner">
+impulse.DBChangeOwner
 											</a>
 										</li>
 
@@ -2433,6 +2433,15 @@ impulse.DBRemoveItem
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBUpdateItem">
+impulse.DBUpdateItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.DBUpdateStoreType">
 impulse.DBUpdateStoreType
 											</a>
@@ -2444,6 +2453,15 @@ impulse.DBUpdateStoreType
 											<span class="realm shared"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.GetCraftingTime">
 impulse.GetCraftingTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.Item">
+impulse.Item
 											</a>
 										</li>
 
@@ -2471,6 +2489,15 @@ impulse.SpawnBench
 											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.SpawnItem">
 impulse.SpawnItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.MakeCallable">
+impulse.MakeCallable
 											</a>
 										</li>
 
@@ -2604,6 +2631,15 @@ meta:Givetem
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#meta:GiveRestrictedInventoryItem">
+meta:GiveRestrictedtem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#meta:HasIllegalInventoryItem">
 meta:HasIllegaltem
 											</a>
@@ -2612,7 +2648,7 @@ meta:HasIllegaltem
 
 
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -2621,7 +2657,7 @@ meta:Hastem
 
 
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -3867,6 +3903,24 @@ impulse.DefineTypeFace
 
 										<li>
 											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.DrawArc">
+impulse.DrawArc
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.DrawPrecachedArc">
+impulse.DrawPrecachedArc
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
 											<a href="../../libraries/surface/#impulse.Surface.DrawText">
 impulse.DrawText
 											</a>
@@ -3896,6 +3950,15 @@ impulse.LongAffirm
 											<span class="realm client"></span>
 											<a href="../../libraries/surface/#impulse.Surface.Message">
 impulse.Message
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.PrecacheArc">
+impulse.PrecacheArc
 											</a>
 										</li>
 
@@ -4991,6 +5054,15 @@ GetID
 
 
 										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#ITEM:GetName">
+GetName
+											</a>
+										</li>
+
+
+
+										<li>
 											<span class="realm server"></span>
 											<a href="../../classes/item/#ITEM:GetOwner">
 GetOwner
@@ -5018,18 +5090,18 @@ HasFlag
 
 
 										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/item/#ITEM:RemoveFlag">
-RemoveFlag
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#ITEM:Set">
+Set
 											</a>
 										</li>
 
 
 
 										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/item/#ITEM:Set">
-Set
+											<span class="realm server"></span>
+											<a href="../../classes/item/#ITEM:TakeFlag">
+TakeFlag
 											</a>
 										</li>
 
@@ -5414,110 +5486,6 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="impulse.DefineBitFlag">
-					<h1><span class="realm shared"></span></span>impulse.DefineBitFlag(name, group)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L52">View source &raquo;</a>
-
-
-
-					<p>Defines an item flag, you really really shouldn't use this as if the order of flags changes it will destroy your database.</p>
-
-			</header>
-
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">name</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
-
-
-
-
-								<p> Flag name as an enum, eg: ITEMFLAG<em>WAS</em>REPAIRED</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">group</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
-
-
-
-
-								<p> Flag group, eg: "itemflags"</p>
-							</li>
-
-					</ul>
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">int</span>
-
-
-								<p>Item bit flag number.</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
 				<a class="anchor" id="impulse.Inventory.ClassToNetID">
 					<h1><span class="realm shared"></span></span>impulse.Inventory.ClassToNetID(class)</h1>
 				</a>
@@ -5527,7 +5495,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L230">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L246">View source &raquo;</a>
 
 
 
@@ -5601,7 +5569,7 @@ SetParentAttachment
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.Inventory.DBAddItem">
-					<h1><span class="realm server"></span></span>impulse.Inventory.DBAddItem(ownerid, class, storageType)</h1>
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBAddItem(ownerid, class, netid, storageType, flags, metadata)</h1>
 				</a>
 
 
@@ -5609,7 +5577,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L89">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L93">View source &raquo;</a>
 
 
 
@@ -5679,6 +5647,28 @@ SetParentAttachment
 
 
 							<li>
+								<span class="tag parameter">netid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> NetID of the item.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
 								<span class="tag parameter">storageType</span>
 
 
@@ -5690,6 +5680,136 @@ SetParentAttachment
 
 
 								<p> Storage type (1 is player inventory, 2 is storage)</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">flags</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+									<span class="tag default">default: 0</span>
+
+
+								<p> Bitflags for the item</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">metadata</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+									<span class="tag default">default: {}</span>
+
+
+								<p> Metadata for the item</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.DBChangeOwner">
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBChangeOwner(databaseid, newowner)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L140">View source &raquo;</a>
+
+
+
+					<p>Changes the owner of an inventory item in the database.  This can be used to control the inventory of offline users</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">databaseid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The database ID of the item to change the owner of</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">newowner</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The new owner ID</p>
 							</li>
 
 					</ul>
@@ -5715,7 +5835,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L124">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L169">View source &raquo;</a>
 
 
 
@@ -5791,7 +5911,7 @@ SetParentAttachment
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.Inventory.DBRemoveItem">
-					<h1><span class="realm server"></span></span>impulse.Inventory.DBRemoveItem(ownerid, class, storageType, limit)</h1>
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBRemoveItem(ownerid, invid)</h1>
 				</a>
 
 
@@ -5799,7 +5919,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L108">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L152">View source &raquo;</a>
 
 
 
@@ -5847,15 +5967,103 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">class</span>
+								<span class="tag parameter">invid</span>
 
 
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
+									<span class="tag"><span class="type">int</span></span>
 
 
 
 
-								<p> Class name of the item to remove</p>
+								<p> Inventory item ID</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Inventory.DBUpdateItem">
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBUpdateItem(ownerid, invid, storageType, flags, metadata)</h1>
+				</a>
+
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L120">View source &raquo;</a>
+
+
+
+					<p>Updates an inventory item in the database.  This can be used to control the inventory
+ of offline users, primarily used for updating item flags and metadata. Use with caution.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> OwnerID number.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">invid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> Inventory item ID.</p>
 							</li>
 
 					</ul>
@@ -5893,17 +6101,41 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">limit</span>
+								<span class="tag parameter">flags</span>
 
 
 									<span class="tag"><span class="type">int</span></span>
 
 
 
-									<span class="tag default">default: 1</span>
+									<span class="tag default">default: 0</span>
 
 
-								<p> The amount of items to remove</p>
+								<p> Bitflags for the item</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">metadata</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+									<span class="tag default">default: {}</span>
+
+
+								<p> Metadata for the item</p>
 							</li>
 
 					</ul>
@@ -5921,7 +6153,7 @@ SetParentAttachment
 		<section class="method">
 			<header>
 				<a class="anchor" id="impulse.Inventory.DBUpdateStoreType">
-					<h1><span class="realm server"></span></span>impulse.Inventory.DBUpdateStoreType(ownerid, classname, limit, oldStorageType, newStorageType)</h1>
+					<h1><span class="realm server"></span></span>impulse.Inventory.DBUpdateStoreType(ownerid, invid, oldStorageType, newStorageType, queueQuery)</h1>
 				</a>
 
 
@@ -5929,7 +6161,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L138">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L183">View source &raquo;</a>
 
 
 
@@ -5977,39 +6209,15 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">classname</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
-
-
-
-
-								<p> Class name of the item to update</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">limit</span>
+								<span class="tag parameter">invid</span>
 
 
 									<span class="tag"><span class="type">int</span></span>
 
 
 
-									<span class="tag default">default: 1</span>
 
-
-								<p> The amount of items to update</p>
+								<p> Inventory item ID</p>
 							</li>
 
 					</ul>
@@ -6060,6 +6268,28 @@ SetParentAttachment
 
 
 
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">queueQuery</span>
+
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+
+
+
+								<p> Queue the query to be executed later, this is used for mass updates to prevent spamming the database.</p>
+							</li>
+
+					</ul>
+
+
+
 
 
 
@@ -6079,7 +6309,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L239">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L255">View source &raquo;</a>
 
 
 
@@ -6163,6 +6393,134 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="impulse.Inventory.Item">
+					<h1><span class="realm shared"></span></span>impulse.Inventory.Item(ownerid, storagetype, invid)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L67">View source &raquo;</a>
+
+
+
+					<p>Returns a complete object reference to an inventory item, this is used to call
+ functions on the item or otherwise access it's data.  This is used to avoid
+ complex data structures and to make it easier to access the data.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> Owner ID</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">storagetype</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> Storage type</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">invid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> Inventory ID</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
+
+								<p>Item data</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
 				<a class="anchor" id="impulse.Inventory.PickRandomCraftSound">
 					<h1><span class="realm shared"></span></span>impulse.Inventory.PickRandomCraftSound(craftType)</h1>
 				</a>
@@ -6172,7 +6530,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L296">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L312">View source &raquo;</a>
 
 
 
@@ -6263,7 +6621,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L197">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L241">View source &raquo;</a>
 
 
 
@@ -6389,7 +6747,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L168">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L212">View source &raquo;</a>
 
 
 
@@ -6532,6 +6890,110 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="impulse.MakeCallable">
+					<h1><span class="realm shared"></span></span>impulse.MakeCallable(itemData, itemMeta)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L55">View source &raquo;</a>
+
+
+
+					<p>Combines two tables together, used for items and stuff.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">itemData</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+
+								<p> Item data</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">itemMeta</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+
+								<p> Item meta</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
+
+								<p>Combined table</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
 				<a class="anchor" id="impulse.RegisterBench">
 					<h1><span class="realm shared"></span></span>impulse.RegisterBench(benchData)</h1>
 				</a>
@@ -6546,7 +7008,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L179">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L195">View source &raquo;</a>
 
 
 
@@ -6609,7 +7071,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L72">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L77">View source &raquo;</a>
 
 
 
@@ -6672,7 +7134,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L198">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L214">View source &raquo;</a>
 
 
 
@@ -6790,7 +7252,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L223">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L267">View source &raquo;</a>
 
 
 
@@ -6896,7 +7358,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L235">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L279">View source &raquo;</a>
 
 
 
@@ -7002,7 +7464,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L784">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L922">View source &raquo;</a>
 
 
 
@@ -7084,7 +7546,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L520">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L654">View source &raquo;</a>
 
 
 
@@ -7146,7 +7608,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L480">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L614">View source &raquo;</a>
 
 
 
@@ -7208,7 +7670,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L500">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L634">View source &raquo;</a>
 
 
 
@@ -7270,7 +7732,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L634">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L768">View source &raquo;</a>
 
 
 
@@ -7330,7 +7792,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L214">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L258">View source &raquo;</a>
 
 
 
@@ -7414,7 +7876,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L309">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L325">View source &raquo;</a>
 
 
 
@@ -7458,7 +7920,7 @@ SetParentAttachment
 		<section class="method">
 			<header>
 				<a class="anchor" id="meta:GiveInventoryItem">
-					<h1><span class="realm server"></span></span>Player:GiveInventoryItem(itemclass, storageType, restricted, isLoaded, moving, clip)</h1>
+					<h1><span class="realm server"></span></span>Player:GiveInventoryItem(itemclass, storageType, itemflags, metadata, databaseid, isLoaded)</h1>
 				</a>
 
 
@@ -7466,7 +7928,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L361">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L405">View source &raquo;</a>
 
 
 
@@ -7538,17 +8000,65 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">restricted</span>
+								<span class="tag parameter">itemflags</span>
 
 
-									<span class="tag"><span class="type">boolean</span></span>
+									<span class="tag"><span class="type">int</span></span>
 
 
 
-									<span class="tag default">default: false</span>
+									<span class="tag default">optional</span>
 
 
-								<p> Is item restricted</p>
+								<p> Item flags.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">metadata</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+									<span class="tag default">default: {}</span>
+
+
+								<p> Item metadata.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">databaseid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+									<span class="tag default">optional</span>
+
+
+								<p> Database ID of item, nil means this is a new item, rather than operating on an existing item in the database.</p>
 							</li>
 
 					</ul>
@@ -7569,10 +8079,92 @@ SetParentAttachment
 
 
 
-									<span class="tag default">default: false</span>
+									<span class="tag default">optional</span>
 
 
-								<p> (INTERNAL) Used for first time setup when player connects</p>
+								<p> Is this being called from the database load function, if so, don't abide by the same rules as a normal give.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<span class="type">int</span>
+
+
+								<p>ItemID</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:GiveRestrictedInventoryItem">
+					<h1><span class="realm server"></span></span>Player:GiveRestrictedInventoryItem(itemclass, itemflags, metadata)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L487">View source &raquo;</a>
+
+
+
+					<p>Gives an inventory item to a player</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">itemclass</span>
+
+
+									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
+
+
+
+
+								<p> Item class name</p>
 							</li>
 
 					</ul>
@@ -7586,31 +8178,7 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">moving</span>
-
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-
-									<span class="tag default">default: false</span>
-
-
-								<p> (INTERNAL) Is item just being moved? (stops database requests)</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">clip</span>
+								<span class="tag parameter">itemflags</span>
 
 
 									<span class="tag"><span class="type">int</span></span>
@@ -7620,7 +8188,31 @@ SetParentAttachment
 									<span class="tag default">optional</span>
 
 
-								<p> (INTERNAL) (Only used for weapons) Item clip</p>
+								<p> Item flags.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">metadata</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+									<span class="tag default">default: {}</span>
+
+
+								<p> Item metadata.</p>
 							</li>
 
 					</ul>
@@ -7668,7 +8260,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L318">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L362">View source &raquo;</a>
 
 
 
@@ -7763,7 +8355,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L255">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L299">View source &raquo;</a>
 
 
 
@@ -7869,7 +8461,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L324">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L340">View source &raquo;</a>
 
 
 
@@ -7969,7 +8561,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L301">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L345">View source &raquo;</a>
 
 
 
@@ -8075,7 +8667,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L278">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L322">View source &raquo;</a>
 
 
 
@@ -8181,7 +8773,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L340">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L384">View source &raquo;</a>
 
 
 
@@ -8287,7 +8879,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L731">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L872">View source &raquo;</a>
 
 
 
@@ -8391,7 +8983,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L755">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L892">View source &raquo;</a>
 
 
 
@@ -8517,7 +9109,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L805">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L943">View source &raquo;</a>
 
 
 
@@ -8577,7 +9169,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L564">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L698">View source &raquo;</a>
 
 
 
@@ -8651,7 +9243,7 @@ SetParentAttachment
 		<section class="method">
 			<header>
 				<a class="anchor" id="meta:TakeInventoryItem">
-					<h1><span class="realm server"></span></span>Player:TakeInventoryItem(itemID, storageType, moving)</h1>
+					<h1><span class="realm server"></span></span>Player:TakeInventoryItem(itemID, storageType, keep, dontKeepLocally)</h1>
 				</a>
 
 
@@ -8659,7 +9251,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L422">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L547">View source &raquo;</a>
 
 
 
@@ -8731,7 +9323,7 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">moving</span>
+								<span class="tag parameter">keep</span>
 
 
 									<span class="tag"><span class="type">boolean</span></span>
@@ -8741,7 +9333,31 @@ SetParentAttachment
 									<span class="tag default">default: false</span>
 
 
-								<p> (INTERNAL) Is item just being moved? (stops database requests)</p>
+								<p> Keep the item in the database and don't remove it, instead assigns it to ownerid 0, removed at startup/shutdown.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">dontKeepLocally</span>
+
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+
+
+									<span class="tag default">default: false</span>
+
+
+								<p> Don't keep the item in the local inventory table, only the database, if nil follows keep.</p>
 							</li>
 
 					</ul>
@@ -8764,7 +9380,7 @@ SetParentAttachment
 									<span class="type">int</span>
 
 
-								<p>Clip</p>
+								<p>Database ID of item removed</p>
 							</li>
 
 
@@ -8789,7 +9405,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L540">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L674">View source &raquo;</a>
 
 
 
@@ -8897,7 +9513,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L619">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L753">View source &raquo;</a>
 
 
 
@@ -8927,7 +9543,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L696">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sv_inventory.lua#L831">View source &raquo;</a>
 
 
 
@@ -9217,7 +9833,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L275">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L291">View source &raquo;</a>
 
 
 

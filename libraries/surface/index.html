@@ -2388,15 +2388,6 @@ meta:asPermission
 
 										<li>
 											<span class="realm shared"></span>
-											<a href="../../libraries/inventory/#impulse.DefineBitFlag">
-impulse.DefineBitFlag
-											</a>
-										</li>
-
-
-
-										<li>
-											<span class="realm shared"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.ClassToNetID">
 impulse.ClassToNetID
 											</a>
@@ -2408,6 +2399,15 @@ impulse.ClassToNetID
 											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.DBAddItem">
 impulse.DBAddItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBChangeOwner">
+impulse.DBChangeOwner
 											</a>
 										</li>
 
@@ -2433,6 +2433,15 @@ impulse.DBRemoveItem
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.DBUpdateItem">
+impulse.DBUpdateItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.DBUpdateStoreType">
 impulse.DBUpdateStoreType
 											</a>
@@ -2444,6 +2453,15 @@ impulse.DBUpdateStoreType
 											<span class="realm shared"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.GetCraftingTime">
 impulse.GetCraftingTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.Inventory.Item">
+impulse.Item
 											</a>
 										</li>
 
@@ -2471,6 +2489,15 @@ impulse.SpawnBench
 											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#impulse.Inventory.SpawnItem">
 impulse.SpawnItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/inventory/#impulse.MakeCallable">
+impulse.MakeCallable
 											</a>
 										</li>
 
@@ -2604,6 +2631,15 @@ meta:Givetem
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../libraries/inventory/#meta:GiveRestrictedInventoryItem">
+meta:GiveRestrictedtem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#meta:HasIllegalInventoryItem">
 meta:HasIllegaltem
 											</a>
@@ -2612,7 +2648,7 @@ meta:HasIllegaltem
 
 
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -2621,7 +2657,7 @@ meta:Hastem
 
 
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -3867,6 +3903,24 @@ impulse.DefineTypeFace
 
 										<li>
 											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.DrawArc">
+impulse.DrawArc
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.DrawPrecachedArc">
+impulse.DrawPrecachedArc
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
 											<a href="../../libraries/surface/#impulse.Surface.DrawText">
 impulse.DrawText
 											</a>
@@ -3896,6 +3950,15 @@ impulse.LongAffirm
 											<span class="realm client"></span>
 											<a href="../../libraries/surface/#impulse.Surface.Message">
 impulse.Message
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/surface/#impulse.Surface.PrecacheArc">
+impulse.PrecacheArc
 											</a>
 										</li>
 
@@ -4991,6 +5054,15 @@ GetID
 
 
 										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#ITEM:GetName">
+GetName
+											</a>
+										</li>
+
+
+
+										<li>
 											<span class="realm server"></span>
 											<a href="../../classes/item/#ITEM:GetOwner">
 GetOwner
@@ -5018,18 +5090,18 @@ HasFlag
 
 
 										<li>
-											<span class="realm server"></span>
-											<a href="../../classes/item/#ITEM:RemoveFlag">
-RemoveFlag
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#ITEM:Set">
+Set
 											</a>
 										</li>
 
 
 
 										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/item/#ITEM:Set">
-Set
+											<span class="realm server"></span>
+											<a href="../../classes/item/#ITEM:TakeFlag">
+TakeFlag
 											</a>
 										</li>
 
@@ -5576,6 +5648,280 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="impulse.Surface.DrawArc">
+					<h1><span class="realm client"></span></span>impulse.Surface.DrawArc(cx, cy, radius, thickness, startang, endang, roughness, color)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\cl_asurface.lua#L476">View source &raquo;</a>
+
+
+
+					<p>Draws an arc, no precaching required, lazy though.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">cx</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The center x.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">cy</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The center y.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">radius</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The radius.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">thickness</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The thickness.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">startang</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The start angle.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">endang</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The end angle.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">roughness</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The roughness.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">color</span>
+
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+
+
+								<p> The color.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Surface.DrawPrecachedArc">
+					<h1><span class="realm client"></span></span>impulse.Surface.DrawPrecachedArc(arc)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\cl_asurface.lua#L484">View source &raquo;</a>
+
+
+
+					<p>Draws a precached arc.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">arc</span>
+
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+
+								<p> The arc.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
 				<a class="anchor" id="impulse.Surface.DrawText">
 					<h1><span class="realm client"></span></span>impulse.Surface.DrawText(text, font, x, y, color, alignX, alignY)</h1>
 				</a>
@@ -6009,6 +6355,198 @@ SetParentAttachment
 
 
 				</ul>
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="impulse.Surface.PrecacheArc">
+					<h1><span class="realm client"></span></span>impulse.Surface.PrecacheArc(cx, cy, radius, thickness, startang, endang, roughness)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\cl_asurface.lua#L499">View source &raquo;</a>
+
+
+
+					<p>Precaches an arc.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">cx</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The center x.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">cy</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The center y.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">radius</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The radius.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">thickness</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The thickness.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">startang</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The start angle.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">endang</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The end angle.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">roughness</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The roughness.</p>
+							</li>
+
+					</ul>
+
+
+
+
 
 
 
