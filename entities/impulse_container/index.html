@@ -1470,6 +1470,14 @@ Think
 
 
 
+
+
+
+
+
+
+
+
 										<li>
 											<span class="realm server"></span>
 											<a href="../../entities/impulse_container/#ENT:AddAuthorised">
@@ -1553,6 +1561,15 @@ SetCode
 
 										<li>
 											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:StoreItem">
+StoreItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
 											<a href="../../entities/impulse_container/#ENT:TakeItem">
 TakeItem
 											</a>
@@ -1564,6 +1581,54 @@ TakeItem
 											<span class="realm server"></span>
 											<a href="../../entities/impulse_container/#ENT:UpdateUsers">
 UpdateUsers
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../entities/impulse_item/">impulse_item</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../entities/impulse_item/#ENT:GetItemID">
+GetItemID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_item/#ENT:SetItem">
+SetItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../entities/impulse_item/#ENT:SetItemID">
+SetItemID
 											</a>
 										</li>
 
@@ -5655,7 +5720,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L181">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L208">View source &raquo;</a>
 
 
 
@@ -5715,7 +5780,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L117">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L134">View source &raquo;</a>
 
 
 
@@ -5821,7 +5886,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L188">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L215">View source &raquo;</a>
 
 
 
@@ -5881,7 +5946,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L171">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L198">View source &raquo;</a>
 
 
 
@@ -5963,7 +6028,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L156">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L183">View source &raquo;</a>
 
 
 
@@ -6020,7 +6085,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L12">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L28">View source &raquo;</a>
 
 
 
@@ -6055,7 +6120,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L79">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L96">View source &raquo;</a>
 
 
 
@@ -6085,7 +6150,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L210">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L237">View source &raquo;</a>
 
 
 
@@ -6145,7 +6210,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L107">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L124">View source &raquo;</a>
 
 
 
@@ -6196,6 +6261,88 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
+				<a class="anchor" id="ENT:StoreItem">
+					<h1><span class="realm server"></span></span>impulse_container:StoreItem(ownerid, invid)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L152">View source &raquo;</a>
+
+
+
+					<p>Store an item in the container.</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">ownerid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The owner of the item.</p>
+							</li>
+
+					</ul>
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">invid</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> The inventory ID of the item.</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
 				<a class="anchor" id="ENT:TakeItem">
 					<h1><span class="realm server"></span></span>impulse_container:TakeItem(itemclass, amount, noUpdate)</h1>
 				</a>
@@ -6205,7 +6352,7 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L136">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L163">View source &raquo;</a>
 
 
 
@@ -6311,11 +6458,135 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L217">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L244">View source &raquo;</a>
 
 
 
 					<p>Updates the users of the container.</p>
+
+			</header>
+
+
+
+
+
+
+
+
+
+
+		</section>
+
+
+	<h1 class="title">Tables</h1>
+
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ENT.Authorised">
+					<h1><span class="realm server"></span></span>ENT.Authorised</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L15">View source &raquo;</a>
+
+
+
+					<p>The authorised players of the container.</p>
+
+			</header>
+
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ENT.Inventory">
+					<h1><span class="realm server"></span></span>ENT.Inventory</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L19">View source &raquo;</a>
+
+
+
+					<p>The loot inventory of the container.</p>
+
+			</header>
+
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ENT.Storage">
+					<h1><span class="realm server"></span></span>ENT.Storage</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L23">View source &raquo;</a>
+
+
+
+					<p>The data contained stored item, this is used for non loot containers.</p>
+
+			</header>
+
+
+
+
+
+
+
+
+
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ENT.Users">
+					<h1><span class="realm server"></span></span>ENT.Users</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L11">View source &raquo;</a>
+
+
+
+					<p>The users interacting with the container.</p>
 
 			</header>
 
