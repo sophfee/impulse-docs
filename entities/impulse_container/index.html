@@ -1525,15 +1525,6 @@ GetStorageWeight
 
 										<li>
 											<span class="realm server"></span>
-											<a href="../../entities/impulse_container/#ENT:Initialize">
-Initialize
-											</a>
-										</li>
-
-
-
-										<li>
-											<span class="realm server"></span>
 											<a href="../../entities/impulse_container/#ENT:MakeLoot">
 MakeLoot
 											</a>
@@ -1581,6 +1572,67 @@ TakeItem
 											<span class="realm server"></span>
 											<a href="../../entities/impulse_container/#ENT:UpdateUsers">
 UpdateUsers
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details open>
+									<summary><a href="../../entities/impulse_container/">impulse_container</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../entities/impulse_container/#ENT:GetCapacity">
+GetCapacity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../entities/impulse_container/#ENT:GetLoot">
+GetLoot
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../entities/impulse_container/#ENT:SetCapacity">
+SetCapacity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../entities/impulse_container/#ENT:SetLoot">
+SetLoot
 											</a>
 										</li>
 
@@ -3004,7 +3056,7 @@ meta:HasIllegaltem
 
 
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -3013,7 +3065,7 @@ meta:Hastem
 
 
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -5711,8 +5763,8 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ENT:AddAuthorised">
-					<h1><span class="realm server"></span></span>impulse_container:AddAuthorised(ply)</h1>
+				<a class="anchor" id="ENT:GetCapacity">
+					<h1><span class="realm shared"></span></span>impulse_container:GetCapacity()</h1>
 				</a>
 
 
@@ -5720,11 +5772,11 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L208">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\shared.lua#L45">View source &raquo;</a>
 
 
 
-					<p>Adds a player to the container's authorised list.</p>
+					<p>Gets the container's capacity.</p>
 
 			</header>
 
@@ -5733,35 +5785,27 @@ SetParentAttachment
 
 
 
-					<h3>Parameters</h3>
 
 
-
-
-
-					<ul>
+				<h3>Returns</h3>
+				<ul>
 
 
 
 
 
 							<li>
-								<span class="tag parameter">ply</span>
+
+									<span class="type">int</span>
 
 
-									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
-
-
-
-
-								<p> The player to add.</p>
+								<p>The container's capacity.</p>
 							</li>
 
-					</ul>
 
 
 
-
+				</ul>
 
 
 
@@ -5771,8 +5815,8 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ENT:AddItem">
-					<h1><span class="realm server"></span></span>impulse_container:AddItem(itemclass, amount, noUpdate)</h1>
+				<a class="anchor" id="ENT:GetLoot">
+					<h1><span class="realm shared"></span></span>impulse_container:GetLoot()</h1>
 				</a>
 
 
@@ -5780,210 +5824,14 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L134">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\shared.lua#L34">View source &raquo;</a>
 
 
 
-					<p>Adds an item to the container.  This is only to be used for loot, using this for storage will not work.</p>
+					<p>Gets whether the container is lootable or not.</p>
 
 			</header>
 
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">itemclass</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
-
-
-
-
-								<p> The item class to add.</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">amount</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-
-								<p> The amount of the item to add.</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">noUpdate</span>
-
-
-									<span class="tag"><span class="type">boolean</span></span>
-
-
-
-									<span class="tag default">default: false</span>
-
-
-								<p> Whether or not to update the users of the container.</p>
-							</li>
-
-					</ul>
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:AddUser">
-					<h1><span class="realm server"></span></span>impulse_container:AddUser(ply)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L215">View source &raquo;</a>
-
-
-
-					<p>Marks a user as using the container.</p>
-
-			</header>
-
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">ply</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
-
-
-
-
-								<p> The player to add.</p>
-							</li>
-
-					</ul>
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:CanHoldItem">
-					<h1><span class="realm server"></span></span>impulse_container:CanHoldItem(itemclass)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L198">View source &raquo;</a>
-
-
-
-					<p>Returns if the container can hold an item.</p>
-
-			</header>
-
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">itemclass</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
-
-
-
-
-								<p> The item class to check.</p>
-							</li>
-
-					</ul>
 
 
 
@@ -6003,7 +5851,7 @@ SetParentAttachment
 									<span class="type">bool</span>
 
 
-								<p>Whether or not the container can hold the item.</p>
+								<p>Whether the container is lootable or not.</p>
 							</li>
 
 
@@ -6019,8 +5867,8 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ENT:GetStorageWeight">
-					<h1><span class="realm server"></span></span>impulse_container:GetStorageWeight()</h1>
+				<a class="anchor" id="ENT:SetCapacity">
+					<h1><span class="realm shared"></span></span>impulse_container:SetCapacity(iCapacity)</h1>
 				</a>
 
 
@@ -6028,133 +5876,12 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L183">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\shared.lua#L40">View source &raquo;</a>
 
 
 
-					<p>Gets the weight of the container.</p>
-
-			</header>
-
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">number</span>
-
-
-								<p>The weight of the container.</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:Initialize">
-					<h1><span class="realm server"></span></span>impulse_container:Initialize()</h1>
-				</a>
-
-
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L28">View source &raquo;</a>
-
-
-
-					<p>Initializes the container.</p>
-
-			</header>
-
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:MakeLoot">
-					<h1><span class="realm server"></span></span>impulse_container:MakeLoot()</h1>
-				</a>
-
-
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L96">View source &raquo;</a>
-
-
-
-					<p>Gives the container loot, only works if you mark it as such.</p>
-
-			</header>
-
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:RemoveUser">
-					<h1><span class="realm server"></span></span>impulse_container:RemoveUser(ply)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L237">View source &raquo;</a>
-
-
-
-					<p>Removes a user from the container.</p>
+					<p>Sets the container's capacity.  This is set by server
+ and does nothing within the client realm.</p>
 
 			</header>
 
@@ -6176,15 +5903,15 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">ply</span>
+								<span class="tag parameter">iCapacity</span>
 
 
-									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+									<span class="tag"><span class="type">int</span></span>
 
 
 
 
-								<p> The player to remove.</p>
+								<p> The container's capacity.</p>
 							</li>
 
 					</ul>
@@ -6201,8 +5928,8 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ENT:SetCode">
-					<h1><span class="realm server"></span></span>impulse_container:SetCode(code)</h1>
+				<a class="anchor" id="ENT:SetLoot">
+					<h1><span class="realm shared"></span></span>impulse_container:SetLoot(bLootable)</h1>
 				</a>
 
 
@@ -6210,11 +5937,12 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L124">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\shared.lua#L29">View source &raquo;</a>
 
 
 
-					<p>Sets the code of the container.</p>
+					<p>Sets the container to be lootable.  This is set by server
+ and does nothing within the client realm.</p>
 
 			</header>
 
@@ -6236,203 +5964,15 @@ SetParentAttachment
 
 
 							<li>
-								<span class="tag parameter">code</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-
-								<p> The code to set.</p>
-							</li>
-
-					</ul>
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:StoreItem">
-					<h1><span class="realm server"></span></span>impulse_container:StoreItem(ownerid, invid)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L152">View source &raquo;</a>
-
-
-
-					<p>Store an item in the container.</p>
-
-			</header>
-
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">ownerid</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-
-								<p> The owner of the item.</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">invid</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-
-								<p> The inventory ID of the item.</p>
-							</li>
-
-					</ul>
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT:TakeItem">
-					<h1><span class="realm server"></span></span>impulse_container:TakeItem(itemclass, amount, noUpdate)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L163">View source &raquo;</a>
-
-
-
-					<p>Takes an item from the container.  This is only to be used for loot, using this for storage will not work.</p>
-
-			</header>
-
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">itemclass</span>
-
-
-									<span class="tag"><a class="type" href="../../classes/string/#">string</a></span>
-
-
-
-
-								<p> The item class to take.</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">amount</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-
-								<p> The amount of the item to take.</p>
-							</li>
-
-					</ul>
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">noUpdate</span>
+								<span class="tag parameter">bLootable</span>
 
 
 									<span class="tag"><span class="type">boolean</span></span>
 
 
 
-									<span class="tag default">default: false</span>
 
-
-								<p> Whether or not to update the users of the container.</p>
+								<p> Whether the container is lootable or not.</p>
 							</li>
 
 					</ul>
@@ -6447,10 +5987,14 @@ SetParentAttachment
 
 		</section>
 
+
+	<h1 class="title">Fields</h1>
+
+
 		<section class="method">
 			<header>
-				<a class="anchor" id="ENT:UpdateUsers">
-					<h1><span class="realm server"></span></span>impulse_container:UpdateUsers()</h1>
+				<a class="anchor" id="ENT.HUDDesc">
+					<h1><span class="realm shared."></span></span>ENT.HUDDesc</h1>
 				</a>
 
 
@@ -6458,45 +6002,11 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L244">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\shared.lua#L21">View source &raquo;</a>
 
 
 
-					<p>Updates the users of the container.</p>
-
-			</header>
-
-
-
-
-
-
-
-
-
-
-		</section>
-
-
-	<h1 class="title">Tables</h1>
-
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT.Authorised">
-					<h1><span class="realm server"></span></span>ENT.Authorised</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L15">View source &raquo;</a>
-
-
-
-					<p>The authorised players of the container.</p>
+					<p>The HUD element description</p>
 
 			</header>
 
@@ -6513,8 +6023,8 @@ SetParentAttachment
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ENT.Inventory">
-					<h1><span class="realm server"></span></span>ENT.Inventory</h1>
+				<a class="anchor" id="ENT.HUDName">
+					<h1><span class="realm shared"></span></span>ENT.HUDName</h1>
 				</a>
 
 
@@ -6522,71 +6032,11 @@ SetParentAttachment
 
 
 
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L19">View source &raquo;</a>
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\shared.lua#L17">View source &raquo;</a>
 
 
 
-					<p>The loot inventory of the container.</p>
-
-			</header>
-
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT.Storage">
-					<h1><span class="realm server"></span></span>ENT.Storage</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L23">View source &raquo;</a>
-
-
-
-					<p>The data contained stored item, this is used for non loot containers.</p>
-
-			</header>
-
-
-
-
-
-
-
-
-
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="ENT.Users">
-					<h1><span class="realm server"></span></span>ENT.Users</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\entities\entities\impulse_container\init.lua#L11">View source &raquo;</a>
-
-
-
-					<p>The users interacting with the container.</p>
+					<p>The HUD element name.</p>
 
 			</header>
 
