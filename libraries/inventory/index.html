@@ -1452,6 +1452,138 @@ Think
 
 				<details class="category" open>
 					<summary>
+						<h2>Entities</h2>
+					</summary>
+
+					<ul>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../entities/impulse_container/">impulse_container</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:AddAuthorised">
+AddAuthorised
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:AddItem">
+AddItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:AddUser">
+AddUser
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:CanHoldItem">
+CanHoldItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:GetStorageWeight">
+GetStorageWeight
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:Initialize">
+Initialize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:MakeLoot">
+MakeLoot
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:RemoveUser">
+RemoveUser
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:SetCode">
+SetCode
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:TakeItem">
+TakeItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../entities/impulse_container/#ENT:UpdateUsers">
+UpdateUsers
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+					</ul>
+				</details>
+
+
+
+				<details class="category" open>
+					<summary>
 						<h2>Libraries</h2>
 					</summary>
 
@@ -2648,7 +2780,7 @@ meta:HasIllegaltem
 
 
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -2657,7 +2789,7 @@ meta:Hastem
 
 
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/inventory/#meta:HasInventoryItem">
 meta:Hastem
 											</a>
@@ -3143,6 +3275,15 @@ impulse.PosToString
 											<span class="realm shared"></span>
 											<a href="../../libraries/misc/#impulse.SafeString">
 impulse.SafeString
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/misc/#impulse.ViewBob">
+impulse.ViewBob
 											</a>
 										</li>
 
@@ -4456,6 +4597,27 @@ Crosshair:Append
 impulse.Crosshair.Create
 											</a>
 										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/gamemode.core.sv_sql/">gamemode.core.sv_sql</a></summary>
+
+									<ul>
+
+
+
 
 
 
@@ -8347,6 +8509,106 @@ SetParentAttachment
 		<section class="method">
 			<header>
 				<a class="anchor" id="meta:HasInventoryItem">
+					<h1><span class="realm client"></span></span>Player:HasInventoryItem(itemId)</h1>
+				</a>
+
+
+
+
+
+
+					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L340">View source &raquo;</a>
+
+
+
+					<p>Returns if a client has an inventory item and how much they have</p>
+
+			</header>
+
+
+
+
+
+
+					<h3>Parameters</h3>
+
+
+
+
+
+					<ul>
+
+
+
+
+
+							<li>
+								<span class="tag parameter">itemId</span>
+
+
+									<span class="tag"><span class="type">int</span></span>
+
+
+
+
+								<p> Item Network ID (use impulse.Inventory.ClassToNetID)</p>
+							</li>
+
+					</ul>
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<span class="type">bool</span>
+
+
+								<p>Has item</p>
+							</li>
+
+
+
+
+							<li>
+
+									<span class="type">int</span>
+
+
+								<p>Amount</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+
+
+				<h3>See Also</h3>
+				<ul>
+
+						<li><a href="../../libraries/inventory/#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID</a></li>
+
+				</ul>
+
+		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="meta:HasInventoryItem">
 					<h1><span class="realm server"></span></span>Player:HasInventoryItem(class, amount)</h1>
 				</a>
 
@@ -8447,106 +8709,6 @@ SetParentAttachment
 
 
 
-
-		</section>
-
-		<section class="method">
-			<header>
-				<a class="anchor" id="meta:HasInventoryItem">
-					<h1><span class="realm client"></span></span>Player:HasInventoryItem(itemId)</h1>
-				</a>
-
-
-
-
-
-
-					<a class="reference" href="https://github.com/urnotnick/impulse/tree/master/gamemode\gamemode\core\sh_inventory.lua#L340">View source &raquo;</a>
-
-
-
-					<p>Returns if a client has an inventory item and how much they have</p>
-
-			</header>
-
-
-
-
-
-
-					<h3>Parameters</h3>
-
-
-
-
-
-					<ul>
-
-
-
-
-
-							<li>
-								<span class="tag parameter">itemId</span>
-
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-
-
-								<p> Item Network ID (use impulse.Inventory.ClassToNetID)</p>
-							</li>
-
-					</ul>
-
-
-
-
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-
-
-
-
-							<li>
-
-									<span class="type">bool</span>
-
-
-								<p>Has item</p>
-							</li>
-
-
-
-
-							<li>
-
-									<span class="type">int</span>
-
-
-								<p>Amount</p>
-							</li>
-
-
-
-
-				</ul>
-
-
-
-
-
-				<h3>See Also</h3>
-				<ul>
-
-						<li><a href="../../libraries/inventory/#impulse.Inventory.ClassToNetID">impulse.Inventory.ClassToNetID</a></li>
-
-				</ul>
 
 		</section>
 
